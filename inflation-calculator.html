@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>Inflation Calculator – Future Value of Money in India | InvestSmartCalc</title>
+  <meta name="description" content="Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement planning in India.">
+  <meta name="keywords" content="inflation calculator India, purchasing power calculator, future value of money calculator, inflation rate calculator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.investsmartcalc.in/inflation-calculator.html">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.investsmartcalc.in/inflation-calculator.html">
+  <meta property="og:title" content="Inflation Calculator – Future Value of Money in India">
+  <meta property="og:description" content="Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement planning in India.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Inflation Calculator – Future Value of Money in India">
+  <meta name="twitter:description" content="Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement planning in India."><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://www.investsmartcalc.in",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.investsmartcalc.in/logo.png",
+    "width": 200,
+    "height": 60
+  },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Inflation Calculator",
+  "url": "https://www.investsmartcalc.in/inflation-calculator.html",
+  "description": "Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement and financial goal planning in India.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "InvestSmartCalc",
+    "url": "https://www.investsmartcalc.in"
+  },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Free to use",
+    "No signup required",
+    "Mobile responsive",
+    "Instant calculations",
+    "Year-wise breakdown"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.investsmartcalc.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Inflation Calculator",
+      "item": "https://www.investsmartcalc.in/inflation-calculator.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the current inflation rate in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "India's CPI (Consumer Price Index) inflation has ranged between 4-6% in recent years, with food inflation sometimes higher at 6-8%. The Reserve Bank of India targets 4% as the medium-term inflation goal (with a band of 2-6%). For conservative financial planning, using 6% as an assumed inflation rate is recommended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does inflation affect my investments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any investment earning less than the inflation rate is losing value in real terms. If inflation is 6% and your FD earns 7%, your real return is only about 1%. To beat inflation, your investments need to grow faster than the inflation rate. Equity mutual funds (12-15% historically) and gold (8-10%) have typically outpaced inflation in India over long periods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is real return vs nominal return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nominal return is the stated return before adjusting for inflation (e.g., 7% FD rate). Real return is approximately equal to nominal return minus inflation rate — representing actual gain in purchasing power. If inflation is 6% and an FD earns 7%, the real return is approximately 1%. Always evaluate long-term investments on real returns for accurate financial planning."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="sip-calculator.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="fd-calculator.html">FD</a>
+        <a href="ppf-calculator.html">PPF</a><a href="swp-calculator.html">SWP</a><a href="tax-calculator.html">Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">All Calculators</a></div>
+  </nav>
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="index.html">Home</a> › Inflation Calculator</div>
+      <h1>Inflation Calculator</h1>
+      <p>Find the real value of money adjusted for inflation over time</p>
+    </div>
+    <div class="calc-layout">
+      <div class="input-panel">
+        <div class="input-group">
+          <div class="input-label"><span>Current Amount</span><span class="input-value" id="amtLabel">₹1,00,000</span></div>
+          <input type="range" id="amount" min="1000" max="10000000" step="1000" value="100000"
+            oninput="syncInput(this,'amtNum','amtLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="amtNum" value="100000"
+            oninput="syncSlider(this,'amount','amtLabel','₹',true);calculate()">
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(50000)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000)">₹1L</button><button class="preset-btn" onclick="setPreset(500000)">₹5L</button><button class="preset-btn" onclick="setPreset(1000000)">₹10L</button></div>
+        </div>
+        <div class="input-group">
+          <div class="input-label"><span>Inflation Rate (p.a.)</span><span class="input-value" id="rateLabel">6%</span></div>
+          <input type="range" id="rate" min="1" max="20" step="0.5" value="6"
+            oninput="syncInput(this,'rateNum','rateLabel','',false,'%');calculate()">
+          <input type="number" class="number-input" id="rateNum" value="6" step="0.5"
+            oninput="syncSlider(this,'rate','rateLabel','',false,'%');calculate()">
+        </div>
+        <div class="input-group">
+          <div class="input-label"><span>Time Period</span><span class="input-value" id="yearLabel">10 yr</span></div>
+          <input type="range" id="years" min="1" max="40" step="1" value="10"
+            oninput="syncInput(this,'yearNum','yearLabel','',false,' yr');calculate()">
+          <input type="number" class="number-input" id="yearNum" value="10"
+            oninput="syncSlider(this,'years','yearLabel','',false,' yr');calculate()">
+        </div>
+      </div>
+      <div class="result-panel">
+        <div class="result-card result-highlight">
+          <div class="result-label">Future Cost (Inflation Adjusted)</div>
+          <div class="result-amount" id="futureVal">₹1.79 L</div><div class="result-sub">
+          <div class="result-sub-item">
+            <span class="result-sub-label">Today's value</span>
+            <span class="result-sub-value" id="subToday">—</span>
+          </div>
+          <div class="result-sub-item">
+            <span class="result-sub-label">Purchasing power lost</span>
+            <span class="result-sub-value" id="subLoss">—</span>
+          </div>
+        </div>
+        </div>
+        <div class="result-card">
+          <div class="result-row"><span>Today's Value</span><span id="r1">₹1,00,000</span></div>
+          <div class="result-row"><span>Future Value</span><span id="r2">₹1,79,085</span></div>
+          <div class="result-row"><span>Purchasing Power Loss</span><span id="r3" style="color:#e65100">₹79,085</span></div>
+          <div class="result-row"><span>Inflation Rate</span><span id="r4">6% p.a.</span></div>
+        </div>
+        <div class="info-box">💡 To maintain the same purchasing power, your investments must grow at a rate higher than inflation.
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`🔥 Inflation Impact Calculation\n💰 Today's Value: ${document.getElementById('amtLabel').textContent}\n📊 Inflation Rate: ${document.getElementById('rateLabel').textContent}\n⏳ After: ${document.getElementById('yearLabel').textContent}\n📈 Future Cost: ${document.getElementById('futureVal').textContent}\n\nCheck your purchasing power 👇`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg> WhatsApp</button>
+            <button class="share-btn twitter" onclick="shareTwitter(`Inflation reality check: ${document.getElementById('amtLabel').textContent} today will cost ${document.getElementById('futureVal').textContent} after ${document.getElementById('yearLabel').textContent} at ${document.getElementById('rateLabel').textContent} inflation! Invest wisely 🔥 #Inflation #Finance`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter / X</button>
+            <button class="share-btn copylink" onclick="copyLink(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link</button>
+            <button class="share-btn download" onclick="downloadPDF('Inflation Calculator')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Save PDF</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  
+
+<div class="related-section">
+  <div class="related-header">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Related Calculators
+  </div>
+  <div class="related-grid">
+    <a href="sip-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div>
+        <div class="related-name">SIP Calculator</div>
+        <div class="related-desc">Monthly SIP returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="lumpsum-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+      <div>
+        <div class="related-name">Lumpsum Calculator</div>
+        <div class="related-desc">One-time investment</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="fd-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div>
+        <div class="related-name">FD Calculator</div>
+        <div class="related-desc">Fixed Deposit returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="ppf-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#f3e5f5;color:#7b1fa2">🛡️</div>
+      <div>
+        <div class="related-name">PPF Calculator</div>
+        <div class="related-desc">Tax-free PF returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="cagr-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#e8eaf6;color:#3949ab">📉</div>
+      <div>
+        <div class="related-name">CAGR Calculator</div>
+        <div class="related-desc">Annual growth rate</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+  </div>
+</div>
+<div class="seo-section">
+  <hr class="seo-divider">
+
+  <h2>What is Inflation?</h2>
+  <p>Inflation is the rate at which the general price level of goods and services rises over time, eroding the purchasing power of money. In simple terms: ₹1,00,000 today will not buy the same amount of goods 10 years from now. In India, the RBI targets a CPI (Consumer Price Index) inflation rate of 4% (with a tolerance band of 2–6%). Historically, India's average inflation has been around 5–6% per year.</p>
+  <p>Understanding inflation is crucial for financial planning. Any investment that earns less than the inflation rate is actually <em>losing you money in real terms</em> — even if the nominal value appears to grow.</p>
+
+  <h2>Inflation Formula</h2>
+  <div class="formula-box">
+    <span class="f-label">Future Cost due to Inflation</span>
+    <span class="f-main">Future Cost = Present Cost × (1 + Inflation Rate)ᵗ</span>
+    <div class="f-vars">
+      t = Number of years &nbsp;|&nbsp; Inflation Rate expressed as decimal (e.g., 6% = 0.06)<br>
+      Real Value = Nominal Value ÷ (1 + Inflation Rate)ᵗ
+    </div>
+  </div>
+
+  <h2>Impact of Inflation on Goals</h2>
+  <table class="seo-table">
+    <thead><tr><th>Goal (Today's Cost)</th><th>In 10 years @ 6%</th><th>In 20 years @ 6%</th></tr></thead>
+    <tbody>
+      <tr><td>Child's Education: ₹10L</td><td>₹17.9L</td><td>₹32.1L</td></tr>
+      <tr><td>Wedding: ₹20L</td><td>₹35.8L</td><td>₹64.1L</td></tr>
+      <tr><td>House: ₹60L</td><td>₹1.07 Cr</td><td>₹1.93 Cr</td></tr>
+      <tr class="highlight"><td>Retirement Fund: ₹1 Cr</td><td>₹1.79 Cr needed</td><td>₹3.21 Cr needed</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the current inflation rate in India?<span class="faq-icon">+</span></button>
+      <div class="faq-a">India's CPI (Consumer Price Index) inflation has ranged between 4–6% in recent years, with food inflation being higher at times (6–8%). The RBI's Monetary Policy Committee (MPC) sets the repo rate to control inflation, targeting 4% as the medium-term goal. For financial planning, using 6% as the assumed inflation rate is a commonly recommended conservative estimate.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How can I beat inflation with my investments?<span class="faq-icon">+</span></button>
+      <div class="faq-a">To beat inflation, your investments need to generate returns higher than the inflation rate — typically 6%+ in India. Equity mutual funds (12–15% historically), gold (8–10%), and real estate have beaten inflation over long periods. Fixed income options like FDs (6–7%) and savings accounts (3–4%) barely match or slightly beat inflation after tax. Diversifying across asset classes is the safest inflation-beating strategy.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is real return vs nominal return?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Nominal return is the stated return before adjusting for inflation (e.g., FD at 7%). Real return is nominal return minus inflation rate — what you actually gain in purchasing power. If inflation is 6% and your FD earns 7%, your real return is only ~1%. For equity funds earning 14% with 6% inflation, real return is ~8%. Always evaluate investments on real returns for accurate financial planning.</div>
+    </div>
+  </div>
+</div>
+
+</main>
+    <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="sip-calculator.html">SIP Calculator</a></li>
+        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+        <li><a href="fd-calculator.html">FD Calculator</a></li>
+        <li><a href="ppf-calculator.html">PPF Calculator</a></li>
+        <li><a href="tax-calculator.html">Income Tax</a></li>
+        <li><a href="salary.html">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="swp-calculator.html">SWP Calculator</a></li>
+        <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
+        <li><a href="rd-calculator.html">RD Calculator</a></li>
+        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
+        <li><a href="hra-calculator.html">HRA Calculator</a></li>
+        <li><a href="gratuity-calculator.html">Gratuity</a></li>
+        <li><a href="inflation-calculator.html">Inflation</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(slider.value); document.getElementById(numId).value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function syncSlider(input, sliderId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(input.value); const slider = document.getElementById(sliderId); slider.value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function calculate() {
+      const P = parseFloat(document.getElementById('amtNum').value)||100000;
+      const r = (parseFloat(document.getElementById('rateNum').value)||6)/100;
+      const t = parseFloat(document.getElementById('yearNum').value)||10;
+      const fv = P * Math.pow(1+r, t);
+      const loss = fv - P;
+      document.getElementById('futureVal').textContent = fmt(fv);
+      document.getElementById('r1').textContent = fmtFull(P);
+      document.getElementById('r2').textContent = fmtFull(fv);
+      document.getElementById('r3').textContent = fmtFull(loss);
+      document.getElementById('r4').textContent = document.getElementById('rateNum').value+'% p.a.';
+      document.getElementById('subToday').textContent = fmt(P);
+      document.getElementById('subLoss').textContent = fmt(loss);
+    }
+    
+    function setPreset(val) {
+      document.getElementById('amtNum').value = val;
+      document.getElementById('amount').value = val;
+      document.getElementById('amtLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      updateSlider(document.getElementById('amount'));
+      // Highlight active preset
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      calculate();
+    }
+    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+    calculate();
+  </script>
+</body>
+</html>

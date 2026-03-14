@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>Income Tax Calculator FY 2025-26 – New vs Old Regime | InvestSmartCalc</title>
+  <meta name="description" content="Income tax calculator FY 2025-26. Compare New vs Old Regime, slab-wise breakdown, surcharge & cess. Zero tax up to ₹12.75L. Free India tax calculator.">
+  <meta name="keywords" content="income tax calculator India, tax calculator FY 2025-26, new regime tax calculator, old regime tax calculator, income tax slab 2025">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.investsmartcalc.in/tax-calculator.html">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.investsmartcalc.in/tax-calculator.html">
+  <meta property="og:title" content="Income Tax Calculator FY 2025-26 – New vs Old Regime">
+  <meta property="og:description" content="Income tax calculator FY 2025-26. Compare New vs Old Regime, slab-wise breakdown, surcharge & cess. Zero tax up to ₹12.75L. Free India tax calculator.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Income Tax Calculator FY 2025-26 – New vs Old Regime">
+  <meta name="twitter:description" content="Income tax calculator FY 2025-26. Compare New vs Old Regime, slab-wise breakdown, surcharge & cess. Zero tax up to ₹12.75L. Free India tax calculator.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .regime-card { padding: 20px; cursor: pointer; transition: all 0.2s; }
+    .regime-card.selected { border-color: var(--green); box-shadow: 0 0 0 2px rgba(0,200,83,0.2); }
+    .regime-title { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+    .regime-badge { display:inline-block; background:var(--green-light); color:var(--green-dark); padding:2px 10px; border-radius:100px; font-size:11px; font-weight:600; }
+    .slab-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .slab-table th { background:var(--bg); padding:8px 12px; text-align:left; color:var(--text-muted); font-weight:500; }
+    .slab-table td { padding:8px 12px; border-bottom:1px solid var(--border); font-family:var(--font-mono); }
+    .slab-table tr.active-slab td { background:var(--green-light); color:var(--green-dark); font-weight:600; }
+    .deduction-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--border); }
+    .deduction-row label { font-size:14px; color:var(--text-secondary); }
+    .ded-input { width:130px; border:1.5px solid var(--border); border-radius:8px; padding:7px 10px; font-size:14px; font-family:var(--font-mono); text-align:right; outline:none; }
+    .ded-input:focus { border-color:var(--green); }
+    .fy-badge { display:inline-block; background:#e3f2fd; color:#1565c0; padding:3px 12px; border-radius:100px; font-size:12px; font-weight:600; margin-bottom:12px; }
+  
+    [data-theme="dark"] .fy-badge { background:#001a3d; color:#64b5f6; }
+    [data-theme="dark"] .regime-card { background:#232b3e; border-color:#3a4a66; }
+    [data-theme="dark"] .regime-card.selected { border-color:var(--green); background:#002a12; }
+    [data-theme="dark"] .regime-title { color:#d0e0f0; }
+    [data-theme="dark"] .regime-badge { background:#003d1a; color:#00e676; }
+    [data-theme="dark"] .slab-table th { background:#1a2236; color:#8aa8c8; border-color:#3a4a66; }
+    [data-theme="dark"] .slab-table td { border-color:#2e3a52; color:#9aaab8; background:#232b3e; }
+    [data-theme="dark"] .slab-table tr.active-slab td { background:#002a14; color:#00e676; }
+    [data-theme="dark"] .ded-input { background:#252a3a; color:#d0e0f0; border-color:#3a4a66; }
+    [data-theme="dark"] .deduction-row { border-color:#2e3a52; }
+    [data-theme="dark"] .deduction-row label { color:#9aaab8; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://www.investsmartcalc.in",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.investsmartcalc.in/logo.png",
+    "width": 200,
+    "height": 60
+  },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Income Tax Calculator FY 2025-26",
+  "url": "https://www.investsmartcalc.in/tax-calculator.html",
+  "description": "Calculate income tax for FY 2025-26. Compare New vs Old Regime, view slab-wise breakdown, surcharge and cess. Zero tax up to ₹12.75 lakh in New Regime.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "InvestSmartCalc",
+    "url": "https://www.investsmartcalc.in"
+  },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Free to use",
+    "No signup required",
+    "Mobile responsive",
+    "Instant calculations",
+    "Year-wise breakdown"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.investsmartcalc.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Income Tax Calculator FY 2025-26",
+      "item": "https://www.investsmartcalc.in/tax-calculator.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the income tax slab for FY 2025-26 under the New Regime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For FY 2025-26 under the New Regime: 0% up to ₹4 lakh; 5% from ₹4-8 lakh; 10% from ₹8-12 lakh; 15% from ₹12-16 lakh; 20% from ₹16-20 lakh; 25% from ₹20-24 lakh; and 30% above ₹24 lakh. With the standard deduction of ₹75,000 and Section 87A rebate, individuals with income up to ₹12.75 lakh pay zero tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the zero-tax income limit in FY 2025-26?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the New Tax Regime in FY 2025-26, individuals with income up to ₹12,75,000 pay zero tax. The standard deduction of ₹75,000 reduces taxable income to ₹12,00,000, on which the tax is ₹60,000 — exactly equal to the Section 87A rebate limit of ₹60,000, resulting in zero tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I choose the new tax regime or old tax regime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most taxpayers with income under ₹15 lakh and fewer deductions, the new regime is beneficial due to lower tax rates. The old regime is better only if your total deductions (80C + 80D + HRA + Home Loan interest) are very large — typically above ₹4-5 lakh. Use our calculator to compare both regimes with your actual income and deductions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Section 87A tax rebate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Section 87A provides a rebate to individuals with taxable income within a specified limit. For FY 2025-26 New Regime: rebate up to ₹60,000 if taxable income does not exceed ₹12,00,000. For Old Regime: rebate up to ₹12,500 if taxable income does not exceed ₹5,00,000. The rebate directly reduces the tax payable to zero if within the limit."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="sip-calculator.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="fd-calculator.html">FD</a>
+        <a href="ppf-calculator.html">PPF</a><a href="swp-calculator.html">SWP</a>
+        <a href="tax-calculator.html" style="background:var(--green-light);color:var(--green-dark)">Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="sip-calculator.html">SIP Calculator</a><a href="emi-calculator.html">EMI Calculator</a>
+      <a href="fd-calculator.html">FD Calculator</a><a href="ppf-calculator.html">PPF Calculator</a>
+      <a href="swp-calculator.html">SWP Calculator</a><a href="tax-calculator.html">Tax Calculator</a>
+      <a href="lumpsum-calculator.html">Lumpsum</a><a href="rd-calculator.html">RD Calculator</a>
+    </div>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="index.html">Home</a> › Income Tax Calculator</div>
+      <div class="fy-badge">📅 FY 2025–26 (AY 2026–27) · Budget 2025</div>
+      <h1>Income Tax Calculator</h1>
+      <p>Compare New vs Old Tax Regime · Zero tax up to ₹12.75L (New Regime, salaried)</p>
+    </div>
+
+    <!-- REGIME CARDS -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px">
+      <div class="result-card regime-card selected" id="newCard" onclick="selectRegime('new')">
+        <div class="regime-title">New Regime <span class="regime-badge">Default FY 2025-26</span></div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Std. Ded ₹75K · Zero tax ≤ ₹12.75L · 7 slabs</div>
+        <div style="font-size:22px;font-weight:700;color:var(--green-dark);margin-top:8px;font-family:var(--font-mono)" id="newTax">₹0</div>
+      </div>
+      <div class="result-card regime-card" id="oldCard" onclick="selectRegime('old')">
+        <div class="regime-title">Old Regime</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Std. Ded ₹50K · Deductions allowed · 3 slabs</div>
+        <div style="font-size:22px;font-weight:700;color:var(--text-secondary);margin-top:8px;font-family:var(--font-mono)" id="oldTax">₹0</div>
+      </div>
+    </div>
+
+    <div class="calc-layout">
+      <!-- INPUT -->
+      <div class="input-panel">
+        <h3 style="font-size:15px;font-weight:600;margin-bottom:20px">Income Details</h3>
+
+        <div class="input-group">
+          <div class="input-label"><span>Annual Gross Income</span><span class="input-value" id="incomeLabel">₹10,00,000</span></div>
+          <input type="range" id="incomeSlider" min="250000" max="10000000" step="50000" value="1000000"
+            oninput="syncInput(this,'incomeNum','incomeLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="incomeNum" value="1000000"
+            oninput="syncSlider(this,'incomeSlider','incomeLabel','₹',true);calculate()">
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(500000)">₹5L</button><button class="preset-btn" onclick="setPreset(750000)">₹7.5L</button><button class="preset-btn" onclick="setPreset(1000000)">₹10L</button><button class="preset-btn" onclick="setPreset(1500000)">₹15L</button></div>
+        </div>
+
+        <div style="margin-top:16px">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--text-secondary)">
+            Deductions <span style="font-size:12px;font-weight:400;color:var(--text-muted)">(Old Regime only)</span>
+          </h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Not applicable in New Regime</div>
+
+          <div class="deduction-row">
+            <label>80C (PF, ELSS, LIC, PPF…)</label>
+            <input type="number" class="ded-input" id="d80c" value="150000" max="150000" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>80D (Health Insurance)</label>
+            <input type="number" class="ded-input" id="d80d" value="25000" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>HRA Exemption</label>
+            <input type="number" class="ded-input" id="dHra" value="0" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>Home Loan Interest (24b)</label>
+            <input type="number" class="ded-input" id="dHl" value="0" oninput="calculate()">
+          </div>
+          <div class="deduction-row" style="border-bottom:none">
+            <label>Other Deductions</label>
+            <input type="number" class="ded-input" id="dOther" value="0" oninput="calculate()">
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="result-panel">
+        <div class="result-card result-highlight">
+          <div class="result-label">Tax Payable (<span id="regimeLabel">New Regime</span>)</div>
+          <div class="result-amount" id="taxResult">₹0</div>
+          <div class="result-sub">
+          <div class="result-sub-item">
+            <span class="result-sub-label">Annual tax</span>
+            <span class="result-sub-value" id="subAnnualTax">—</span>
+          </div>
+          <div class="result-sub-item">
+            <span class="result-sub-label">Monthly TDS</span>
+            <span class="result-sub-value" id="subMonthlyTds">—</span>
+          </div>
+        </div>
+          <div style="margin-top:8px;font-size:13px;opacity:0.85">Effective Rate: <strong id="effRate">0%</strong> &nbsp;|&nbsp; Monthly: <strong id="monthly">₹0</strong></div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-row"><span>Gross Income</span><span id="grossInc">₹10,00,000</span></div>
+          <div class="result-row"><span>Standard Deduction</span><span id="stdDed">₹75,000</span></div>
+          <div class="result-row"><span>Other Deductions</span><span id="totalDed">₹0</span></div>
+          <div class="result-row"><span>Taxable Income</span><span id="taxableInc" style="font-weight:600">₹9,25,000</span></div>
+          <div class="result-row"><span>Income Tax (Slabs)</span><span id="incomeTax">₹0</span></div>
+          <div class="result-row"><span>Sec 87A Rebate</span><span id="rebate87a" style="color:var(--green-dark)">₹0</span></div>
+          <div class="result-row"><span>Marginal Relief</span><span id="marginalRelief" style="color:var(--green-dark)">₹0</span></div>
+          <div class="result-row"><span>Surcharge</span><span id="surcharge">₹0</span></div>
+          <div class="result-row"><span>Health & Edu Cess (4%)</span><span id="cess">₹0</span></div>
+          <div class="result-row"><span><strong>Total Tax Payable</strong></span><span id="totalTax" style="color:var(--green-dark)"><strong>₹0</strong></span></div>
+        </div>
+
+        <div id="savingsBox" class="info-box" style="display:none">
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`📋 My Income Tax Calculation (FY 2025-26)\n💰 Annual Income: ${document.getElementById('incomeLabel').textContent}\n🏛️ Regime: ${document.getElementById('regimeLabel').textContent}\n💸 Tax Payable: ${document.getElementById('taxResult').textContent}\n📊 Effective Rate: ${document.getElementById('effRate').textContent}\n\nCalculate your tax 👇`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg> WhatsApp</button>
+            <button class="share-btn twitter" onclick="shareTwitter(`Income tax check FY 2025-26: On ${document.getElementById('incomeLabel').textContent} income, tax = ${document.getElementById('taxResult').textContent} (${document.getElementById('effRate').textContent} effective rate) under ${document.getElementById('regimeLabel').textContent} 📋 #IncomeTax #TaxPlanning`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter / X</button>
+            <button class="share-btn copylink" onclick="copyLink(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link</button>
+            <button class="share-btn download" onclick="downloadPDF('Income Tax Calculator FY 2025-26')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Save PDF</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- SLAB TABLE -->
+    <div class="year-table-wrap" style="margin-top:32px">
+      <div class="year-table-head" style="display:flex;justify-content:space-between;align-items:center">
+        <span>🧮 Tax Slab Breakdown — <span id="slabTitle">New Regime FY 2025-26</span></span>
+        <span style="font-size:12px;color:var(--text-muted)" id="stdDedNote">Std. Deduction: ₹75,000 applied</span>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="slab-table">
+          <thead><tr><th>Income Slab</th><th>Rate</th><th>Tax on Slab</th><th>Status</th></tr></thead>
+          <tbody id="slabBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- KEY RULES BOX -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px">
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">✅ New Regime FY 2025-26</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          Standard Deduction: <strong>₹75,000</strong><br>
+          Zero tax up to: <strong>₹12,75,000</strong> (salaried)<br>
+          87A Rebate: <strong>₹60,000</strong> (if taxable ≤ ₹12L)<br>
+          Basic Exemption: <strong>₹4,00,000</strong><br>
+          30% slab starts at: <strong>₹24,00,000</strong>
+        </div>
+      </div>
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">📋 Old Regime FY 2025-26</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          Standard Deduction: <strong>₹50,000</strong><br>
+          Zero tax up to: <strong>₹5,50,000</strong> (after std ded)<br>
+          87A Rebate: <strong>₹12,500</strong> (if taxable ≤ ₹5L)<br>
+          Basic Exemption: <strong>₹2,50,000</strong><br>
+          All deductions (80C, 80D, HRA, etc.) allowed
+        </div>
+      </div>
+    </div>
+  
+
+<div class="related-section">
+  <div class="related-header">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Related Calculators
+  </div>
+  <div class="related-grid">
+    <a href="salary.html" class="related-card">
+      <div class="related-icon" style="background:#e8eaf6;color:#283593">💼</div>
+      <div>
+        <div class="related-name">Salary Calculator</div>
+        <div class="related-desc">CTC to in-hand</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="hra-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#e0f2f1;color:#00695c">🏡</div>
+      <div>
+        <div class="related-name">HRA Calculator</div>
+        <div class="related-desc">Rent allowance tax</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="gratuity-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#fbe9e7;color:#bf360c">🎖️</div>
+      <div>
+        <div class="related-name">Gratuity Calculator</div>
+        <div class="related-desc">Social Security Code</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="sip-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div>
+        <div class="related-name">SIP Calculator</div>
+        <div class="related-desc">Monthly SIP returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="ppf-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#f3e5f5;color:#7b1fa2">🛡️</div>
+      <div>
+        <div class="related-name">PPF Calculator</div>
+        <div class="related-desc">Tax-free PF returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+  </div>
+</div>
+<div class="seo-section">
+  <hr class="seo-divider">
+
+  <h2>Income Tax in India — FY 2025-26</h2>
+  <p>Income tax in India is levied by the Central Government on the annual income of individuals, HUFs, firms, and companies. For salaried individuals, the most relevant tax is on "Income from Salaries." Under the Finance Act 2025, the New Tax Regime has been made significantly more attractive with higher slabs, a larger standard deduction, and a higher rebate limit — making it the default and preferred regime for most taxpayers.</p>
+
+  <h2>New Regime Tax Slabs — FY 2025-26 (Budget 2025)</h2>
+  <table class="seo-table">
+    <thead><tr><th>Taxable Income</th><th>Tax Rate</th><th>Tax on Slab</th></tr></thead>
+    <tbody>
+      <tr><td>Up to ₹4,00,000</td><td>0%</td><td>Nil</td></tr>
+      <tr><td>₹4,00,001 – ₹8,00,000</td><td>5%</td><td>Up to ₹20,000</td></tr>
+      <tr><td>₹8,00,001 – ₹12,00,000</td><td>10%</td><td>Up to ₹40,000</td></tr>
+      <tr><td>₹12,00,001 – ₹16,00,000</td><td>15%</td><td>Up to ₹60,000</td></tr>
+      <tr><td>₹16,00,001 – ₹20,00,000</td><td>20%</td><td>Up to ₹80,000</td></tr>
+      <tr><td>₹20,00,001 – ₹24,00,000</td><td>25%</td><td>Up to ₹1,00,000</td></tr>
+      <tr class="highlight"><td>Above ₹24,00,000</td><td>30%</td><td>30% on excess</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Key FY2025-26 highlights:</strong> Standard deduction ₹75,000 · Section 87A rebate ₹60,000 (zero tax up to ₹12.75L income) · No tax on income up to ₹12,75,000 after standard deduction and rebate.</p>
+
+  <h2>Old Regime vs New Regime — Which is Better?</h2>
+  <table class="seo-table">
+    <thead><tr><th>Feature</th><th>New Regime</th><th>Old Regime</th></tr></thead>
+    <tbody>
+      <tr><td>Standard Deduction</td><td>₹75,000</td><td>₹50,000</td></tr>
+      <tr><td>80C Deduction</td><td>Not available</td><td>Up to ₹1,50,000</td></tr>
+      <tr><td>HRA Exemption</td><td>Not available</td><td>Available</td></tr>
+      <tr><td>Home Loan Interest (24b)</td><td>Not available</td><td>Up to ₹2,00,000</td></tr>
+      <tr><td>87A Rebate limit</td><td>₹12,00,000 taxable</td><td>₹5,00,000 taxable</td></tr>
+      <tr class="highlight"><td>Best For</td><td>Income below ₹15L or fewer deductions</td><td>High deductions (80C+HRA+Home loan)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Surcharge on Income Tax</h2>
+  <p>If your total income exceeds ₹50 lakh, a surcharge is levied on the income tax (not on income). The surcharge rates are: 10% for income ₹50L–₹1Cr; 15% for ₹1Cr–₹2Cr; 25% for ₹2Cr–₹5Cr; 25% (new regime) or 37% (old regime) above ₹5Cr. Additionally, a 4% Health & Education Cess is applied on (tax + surcharge).</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the zero-tax income limit in FY 2025-26?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Under the New Regime in FY 2025-26, individuals with income up to ₹12,75,000 pay zero tax. This is because: Standard Deduction of ₹75,000 reduces taxable income to ₹12,00,000, and the Section 87A rebate of ₹60,000 fully offsets the tax on ₹12,00,000 (which is exactly ₹60,000). Under the Old Regime, zero-tax income is ₹5,00,000 (after ₹50,000 std. ded. and 87A rebate of ₹12,500).</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Should I choose new regime or old regime?<span class="faq-icon">+</span></button>
+      <div class="faq-a">For most taxpayers with income under ₹15 lakh, the new regime is beneficial due to lower rates. The old regime is better only if your total deductions (80C + 80D + HRA + Home Loan interest) exceed the "break-even deduction" — typically around ₹4–5 lakh for higher income brackets. Use our tax calculator to compare both and choose the regime that minimizes your tax outgo.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is Section 87A rebate?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Section 87A provides a tax rebate to individuals whose net taxable income does not exceed a specified limit. For FY 2025-26: New Regime — rebate up to ₹60,000 if taxable income ≤ ₹12,00,000; Old Regime — rebate up to ₹12,500 if taxable income ≤ ₹5,00,000. The rebate reduces your tax liability to zero if the tax is within the rebate limit.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is TDS and how does it relate to income tax?<span class="faq-icon">+</span></button>
+      <div class="faq-a">TDS (Tax Deducted at Source) is advance tax collected by the payer (employer, bank) before paying you. Your employer deducts TDS from your salary monthly based on projected annual tax. At year-end, file your ITR and if TDS deducted is more than actual tax, you get a refund; if less, you pay the difference (advance tax). TDS is just advance payment of income tax — not an additional tax.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the last date to file ITR for FY 2025-26?<span class="faq-icon">+</span></button>
+      <div class="faq-a">For salaried individuals and those not requiring a tax audit, the due date to file the ITR (Income Tax Return) for FY 2025-26 (AY 2026-27) is typically <strong>July 31, 2026</strong>. Filing before the due date avoids late filing fees (₹1,000 if income ≤ ₹5L; ₹5,000 otherwise) under Section 234F. Belated returns can be filed until December 31, 2026.</div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="sip-calculator.html">SIP Calculator</a></li>
+        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+        <li><a href="fd-calculator.html">FD Calculator</a></li>
+        <li><a href="ppf-calculator.html">PPF Calculator</a></li>
+        <li><a href="tax-calculator.html">Income Tax</a></li>
+        <li><a href="salary.html">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="swp-calculator.html">SWP Calculator</a></li>
+        <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
+        <li><a href="rd-calculator.html">RD Calculator</a></li>
+        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
+        <li><a href="hra-calculator.html">HRA Calculator</a></li>
+        <li><a href="gratuity-calculator.html">Gratuity</a></li>
+        <li><a href="inflation-calculator.html">Inflation</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    let activeRegime = 'new';
+
+    // FY 2025-26 New Regime slabs (Budget 2025)
+    const NEW_SLABS = [
+      {min:0,       max:400000,   rate:0,  label:'₹0 – ₹4L'},
+      {min:400000,  max:800000,   rate:5,  label:'₹4L – ₹8L'},
+      {min:800000,  max:1200000,  rate:10, label:'₹8L – ₹12L'},
+      {min:1200000, max:1600000,  rate:15, label:'₹12L – ₹16L'},
+      {min:1600000, max:2000000,  rate:20, label:'₹16L – ₹20L'},
+      {min:2000000, max:2400000,  rate:25, label:'₹20L – ₹24L'},
+      {min:2400000, max:Infinity, rate:30, label:'Above ₹24L'},
+    ];
+
+    // FY 2025-26 Old Regime slabs (unchanged)
+    const OLD_SLABS = [
+      {min:0,       max:250000,   rate:0,  label:'₹0 – ₹2.5L'},
+      {min:250000,  max:500000,   rate:5,  label:'₹2.5L – ₹5L'},
+      {min:500000,  max:1000000,  rate:20, label:'₹5L – ₹10L'},
+      {min:1000000, max:Infinity, rate:30, label:'Above ₹10L'},
+    ];
+
+    function selectRegime(r) {
+      activeRegime = r;
+      document.getElementById('newCard').classList.toggle('selected', r === 'new');
+      document.getElementById('oldCard').classList.toggle('selected', r === 'old');
+      document.getElementById('regimeLabel').textContent = r === 'new' ? 'New Regime' : 'Old Regime';
+      document.getElementById('slabTitle').textContent = r === 'new' ? 'New Regime FY 2025-26' : 'Old Regime FY 2025-26';
+      document.getElementById('stdDedNote').textContent = r === 'new' ? 'Std. Deduction ₹75,000 applied' : 'Std. Deduction ₹50,000 applied';
+      calculate();
+    }
+
+    function computeSlabTax(taxable, slabs) {
+      let tax = 0;
+      const breakdown = [];
+      for (const s of slabs) {
+        if (taxable <= s.min) { breakdown.push({...s, amount:0, taxable:0}); continue; }
+        const t = (Math.min(taxable, s.max) - s.min) * s.rate / 100;
+        const tb = Math.min(taxable, s.max) - s.min;
+        tax += t;
+        breakdown.push({...s, amount: t, taxable: tb});
+      }
+      return { tax, breakdown };
+    }
+
+    function getTax(gross, regime) {
+      // Standard deduction
+      const stdDed = regime === 'new' ? 75000 : 50000;
+      let otherDed = 0;
+      if (regime === 'old') {
+        otherDed += Math.min(parseInt(document.getElementById('d80c').value) || 0, 150000);
+        otherDed += parseInt(document.getElementById('d80d').value) || 0;
+        otherDed += parseInt(document.getElementById('dHra').value) || 0;
+        otherDed += Math.min(parseInt(document.getElementById('dHl').value) || 0, 200000);
+        otherDed += parseInt(document.getElementById('dOther').value) || 0;
+      }
+      const taxable = Math.max(0, gross - stdDed - otherDed);
+      const slabs = regime === 'new' ? NEW_SLABS : OLD_SLABS;
+      const { tax: slabTax, breakdown } = computeSlabTax(taxable, slabs);
+
+      // 87A Rebate
+      let rebate = 0;
+      if (regime === 'new' && taxable <= 1200000) rebate = Math.min(slabTax, 60000);
+      if (regime === 'old' && taxable <= 500000)  rebate = Math.min(slabTax, 12500);
+
+      // Marginal relief on 87A (new regime: near ₹12L boundary)
+      let marginalRelief = 0;
+      if (regime === 'new' && taxable > 1200000) {
+        const excess = taxable - 1200000;
+        const taxAfterRebate = slabTax; // rebate=0 here since taxable>12L
+        if (taxAfterRebate > excess) marginalRelief = taxAfterRebate - excess;
+      }
+
+      const afterRebate = Math.max(0, slabTax - rebate - marginalRelief);
+
+      // Surcharge (on income tax, before cess)
+      let surchargeRate = 0;
+      if (gross > 50000000)      surchargeRate = regime === 'new' ? 0.25 : 0.37;
+      else if (gross > 20000000) surchargeRate = 0.25;
+      else if (gross > 10000000) surchargeRate = 0.15;
+      else if (gross > 5000000)  surchargeRate = 0.10;
+      const surcharge = afterRebate * surchargeRate;
+
+      // 4% Health & Education Cess
+      const cess = (afterRebate + surcharge) * 0.04;
+      const total = afterRebate + surcharge + cess;
+
+      return { total, slabTax, afterRebate, rebate, marginalRelief, surcharge, cess, taxable, stdDed, otherDed, breakdown };
+    }
+
+    function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(slider.value);
+      document.getElementById(numId).value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function syncSlider(input, sliderId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(input.value);
+      const slider = document.getElementById(sliderId);
+      slider.value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+
+    function calculate() {
+      const gross = parseFloat(document.getElementById('incomeNum').value) || 1000000;
+      const n = getTax(gross, 'new');
+      const o = getTax(gross, 'old');
+
+      document.getElementById('newTax').textContent = fmtFull(n.total);
+      document.getElementById('oldTax').textContent = fmtFull(o.total);
+
+      const active = activeRegime === 'new' ? n : o;
+      document.getElementById('taxResult').textContent = fmtFull(active.total);
+      document.getElementById('subAnnualTax').textContent = fmt(active.total);
+      document.getElementById('subMonthlyTds').textContent = fmt(active.total/12);
+      document.getElementById('effRate').textContent = gross > 0 ? ((active.total / gross) * 100).toFixed(2) + '%' : '0%';
+      document.getElementById('monthly').textContent = fmtFull(active.total / 12);
+      document.getElementById('grossInc').textContent = fmtFull(gross);
+      document.getElementById('stdDed').textContent = fmtFull(active.stdDed);
+      document.getElementById('totalDed').textContent = fmtFull(active.otherDed);
+      document.getElementById('taxableInc').textContent = fmtFull(active.taxable);
+      document.getElementById('incomeTax').textContent = fmtFull(active.slabTax);
+      document.getElementById('rebate87a').textContent = active.rebate > 0 ? '- ' + fmtFull(active.rebate) : '₹0';
+      document.getElementById('marginalRelief').textContent = active.marginalRelief > 0 ? '- ' + fmtFull(active.marginalRelief) : '₹0';
+      document.getElementById('surcharge').textContent = fmtFull(active.surcharge);
+      document.getElementById('cess').textContent = fmtFull(active.cess);
+      document.getElementById('totalTax').innerHTML = `<strong>${fmtFull(active.total)}</strong>`;
+
+      // Savings comparison
+      const sb = document.getElementById('savingsBox');
+      const diff = o.total - n.total;
+      if (Math.abs(diff) > 100) {
+        sb.style.display = 'block';
+        sb.textContent = diff > 0
+          ? `💰 New Regime saves you ${fmtFull(Math.abs(diff))} per year vs Old Regime`
+          : `💰 Old Regime saves you ${fmtFull(Math.abs(diff))} per year vs New Regime`;
+      } else {
+        sb.style.display = 'block';
+        sb.textContent = '⚖️ Both regimes result in approximately the same tax liability for your income.';
+      }
+
+      // Slab table
+      const tbody = document.getElementById('slabBody');
+      tbody.innerHTML = '';
+      active.breakdown.forEach(s => {
+        const isActive = s.taxable > 0;
+        tbody.innerHTML += `<tr class="${isActive ? 'active-slab' : ''}">
+          <td>${s.label}</td>
+          <td>${s.rate}%</td>
+          <td>${fmtFull(s.amount)}</td>
+          <td>${isActive ? '✅ Applicable' : '—'}</td>
+        </tr>`;
+      });
+    }
+
+    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+    calculate();
+  </script>
+</body>
+</html>
