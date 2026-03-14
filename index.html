@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>InvestSmartCalc</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+font-family: Arial;
+text-align:center;
+margin-top:50px;
+}
+button{
+padding:10px 20px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>InvestSmartCalc</h1>
+<p>Smart Financial Calculators</p>
+
+<h2>SIP Calculator (Demo)</h2>
+
+<input id="amount" placeholder="Monthly Investment"><br><br>
+<input id="rate" placeholder="Interest Rate %"><br><br>
+<input id="years" placeholder="Years"><br><br>
+
+<button onclick="calc()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+function calc(){
+
+let P = document.getElementById("amount").value;
+let r = document.getElementById("rate").value/100/12;
+let n = document.getElementById("years").value*12;
+
+let result = P*((Math.pow(1+r,n)-1)/r)*(1+r);
+
+document.getElementById("result").innerHTML =
+"Future Value: ₹"+Math.round(result);
+
+}
+</script>
+
+</body>
+</html>
