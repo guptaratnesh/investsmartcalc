@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – InvestSmartCalc</title>
+  <meta name="description" content="Contact InvestSmartCalc. Report a calculation error, suggest a new calculator, or send general feedback.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.investsmartcalc.in/contact.html">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="app.js" defer></script>
+  <style>
+    .contact-page { max-width: 600px; margin: 0 auto; padding: 48px 24px 80px; }
+    .contact-page h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .contact-page .sub { font-size: 16px; color: var(--text-secondary); margin-bottom: 36px; }
+    .contact-form { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 7px; color: var(--text-primary); }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+      padding: 10px 14px; font-size: 14px; font-family: var(--font);
+      background: var(--bg); color: var(--text-primary); outline: none;
+      transition: border-color 0.18s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); background: var(--bg-white); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-note { font-size: 13px; color: var(--text-muted); margin-top: 16px; line-height: 1.6; }
+    .submit-btn { width: 100%; background: var(--green); color: white; border: none; border-radius: var(--radius-sm); padding: 13px; font-size: 15px; font-weight: 600; font-family: var(--font); cursor: pointer; transition: all 0.2s; margin-top: 4px; }
+    .submit-btn:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,200,83,0.3); }
+    .success-msg { display:none; background: var(--green-light); border: 1.5px solid #a5d6a7; border-radius: var(--radius-sm); padding: 16px 20px; color: var(--green-dark); font-size: 14px; font-weight: 600; text-align: center; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="sip.html">SIP</a><a href="emi.html">EMI</a><a href="fd.html">FD</a>
+        <a href="ppf.html">PPF</a><a href="tax.html">Tax</a><a href="salary.html">Salary</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;margin-left:auto">
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button></div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="sip.html">SIP Calculator</a><a href="emi.html">EMI Calculator</a>
+      <a href="tax.html">Tax Calculator</a><a href="salary.html">Salary Calculator</a>
+      <a href="about.html">About</a><a href="privacy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </nav>
+
+  <main class="contact-page">
+    <div class="breadcrumb" style="margin-bottom:16px"><a href="index.html">Home</a> › Contact</div>
+    <h1>Contact Us</h1>
+    <p class="sub">Found a calculation error? Have a suggestion? We'd love to hear from you.</p>
+
+    <div class="contact-form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="fname" placeholder="e.g. Rahul Sharma">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="femail" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select id="fsubject">
+          <option value="">Select a topic…</option>
+          <option value="error">🔢 Calculation Error / Incorrect Result</option>
+          <option value="suggest">💡 Suggest a New Calculator</option>
+          <option value="legal">⚖️ Legal / Outdated Rule</option>
+          <option value="feedback">💬 General Feedback</option>
+          <option value="other">📩 Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea id="fmessage" placeholder="Describe the issue or suggestion in detail. For calculation errors, please include the inputs you used and the result you expected."></textarea>
+      </div>
+      <button class="submit-btn" onclick="submitForm()">Send Message →</button>
+      <div class="success-msg" id="successMsg">✅ Thank you! We'll review your message and get back to you if needed.</div>
+      <p class="form-note">⚠️ Note: This form is for feedback and corrections only. We are not financial advisors and cannot provide personalized financial advice.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="sip.html">SIP Calculator</a></li><li><a href="emi.html">EMI Calculator</a></li>
+        <li><a href="fd.html">FD Calculator</a></li><li><a href="ppf.html">PPF Calculator</a></li>
+        <li><a href="tax.html">Income Tax</a></li><li><a href="salary.html">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="swp.html">SWP Calculator</a></li><li><a href="lumpsum.html">Lumpsum</a></li>
+        <li><a href="rd.html">RD Calculator</a></li><li><a href="cagr.html">CAGR</a></li>
+        <li><a href="hra.html">HRA Calculator</a></li><li><a href="gratuity.html">Gratuity</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li><li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a><a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function submitForm() {
+      const name = document.getElementById('fname').value.trim();
+      const email = document.getElementById('femail').value.trim();
+      const subject = document.getElementById('fsubject').value;
+      const msg = document.getElementById('fmessage').value.trim();
+      if (!name || !email || !subject || !msg) {
+        alert('Please fill in all fields before submitting.');
+        return;
+      }
+      // In production, replace this with a real form backend (Formspree, EmailJS, etc.)
+      document.getElementById('successMsg').style.display = 'block';
+      document.querySelector('.submit-btn').disabled = true;
+      document.querySelector('.submit-btn').textContent = '✅ Sent!';
+    }
+  </script>
+</body>
+</html>

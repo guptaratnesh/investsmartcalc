@@ -1,50 +1,280 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="">
 <head>
-<title>InvestSmartCalc</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{
-font-family: Arial;
-text-align:center;
-margin-top:50px;
-}
-button{
-padding:10px 20px;
-font-size:18px;
-}
-</style>
-</head>
-
-<body>
-
-<h1>InvestSmartCalc</h1>
-<p>Smart Financial Calculators</p>
-
-<h2>SIP Calculator (Demo)</h2>
-
-<input id="amount" placeholder="Monthly Investment"><br><br>
-<input id="rate" placeholder="Interest Rate %"><br><br>
-<input id="years" placeholder="Years"><br><br>
-
-<button onclick="calc()">Calculate</button>
-
-<h3 id="result"></h3>
-
-<script>
-function calc(){
-
-let P = document.getElementById("amount").value;
-let r = document.getElementById("rate").value/100/12;
-let n = document.getElementById("years").value*12;
-
-let result = P*((Math.pow(1+r,n)-1)/r)*(1+r);
-
-document.getElementById("result").innerHTML =
-"Future Value: ₹"+Math.round(result);
-
+  <meta charset="UTF-8">
+  <title>Free Financial Calculators India – SIP, EMI, PPF, Tax 2025 | InvestSmartCalc</title>
+  <meta name="description" content="Free online financial calculators for India – SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity & more. Fast, accurate, mobile-friendly. Updated for FY 2025-26.">
+  <meta name="keywords" content="financial calculators India, SIP calculator, EMI calculator, income tax calculator, PPF calculator, FD calculator, HRA calculator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.investsmartcalc.in/index.html">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.investsmartcalc.in/index.html">
+  <meta property="og:title" content="Free Financial Calculators India – SIP, EMI, PPF, Tax 2025">
+  <meta property="og:description" content="Free online financial calculators for India – SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity & more. Fast, accurate, mobile-friendly. Updated for FY 2025-26.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Free Financial Calculators India – SIP, EMI, PPF, Tax 2025">
+  <meta name="twitter:description" content="Free online financial calculators for India – SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity & more. Fast, accurate, mobile-friendly. Updated for FY 2025-26.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://www.investsmartcalc.in",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.investsmartcalc.in/logo.png",
+    "width": 200,
+    "height": 60
+  },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "sameAs": []
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "InvestSmartCalc",
+  "url": "https://www.investsmartcalc.in",
+  "description": "Free online financial calculators for India – SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity & more. Fast, accurate, mobile-friendly.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.investsmartcalc.in/{search_term_string}.html"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📊</span>
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="sip.html">SIP</a>
+        <a href="emi.html">EMI</a>
+        <a href="fd.html">FD</a>
+        <a href="ppf.html">PPF</a>
+        <a href="swp.html">SWP</a>
+        <a href="tax.html">Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="sip.html">SIP Calculator</a>
+      <a href="emi.html">EMI Calculator</a>
+      <a href="fd.html">FD Calculator</a>
+      <a href="ppf.html">PPF Calculator</a>
+      <a href="swp.html">SWP Calculator</a>
+      <a href="tax.html">Tax Calculator</a>
+      <a href="lumpsum.html">Lumpsum</a>
+      <a href="rd.html">RD Calculator</a>
+    </div>
+  </nav>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">Free · Fast · Accurate</span>
+      <h1 class="hero-title">Smart Financial<br><span class="accent">Calculators</span></h1>
+      <p class="hero-sub">Plan your investments, loans, and taxes with precision. All tools in one place.</p>
+    </div>
+    <div class="hero-art">
+      <div class="art-ring r1"></div>
+      <div class="art-ring r2"></div>
+      <div class="art-ring r3"></div>
+      <div class="art-center">₹</div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR GRID -->
+  <section class="calc-section">
+    <div class="section-label">All Calculators</div>
+    <div class="calc-grid">
+
+      <a href="sip.html" class="calc-card">
+        <div class="card-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+        <div class="card-info">
+          <h3>SIP Calculator</h3>
+          <p>Calculate returns on your monthly SIP investments</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="lumpsum.html" class="calc-card">
+        <div class="card-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+        <div class="card-info">
+          <h3>Lumpsum Calculator</h3>
+          <p>Estimate returns on one-time mutual fund investments</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="emi.html" class="calc-card">
+        <div class="card-icon" style="background:#fce4ec;color:#c2185b">🏠</div>
+        <div class="card-info">
+          <h3>EMI Calculator</h3>
+          <p>Calculate monthly EMI for home, car or personal loans</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="fd.html" class="calc-card">
+        <div class="card-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+        <div class="card-info">
+          <h3>FD Calculator</h3>
+          <p>Know maturity amount on Fixed Deposits</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="ppf.html" class="calc-card">
+        <div class="card-icon" style="background:#f3e5f5;color:#7b1fa2">🛡️</div>
+        <div class="card-info">
+          <h3>PPF Calculator</h3>
+          <p>Project your Public Provident Fund growth</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="rd.html" class="calc-card">
+        <div class="card-icon" style="background:#e0f7fa;color:#00838f">💳</div>
+        <div class="card-info">
+          <h3>RD Calculator</h3>
+          <p>Calculate Recurring Deposit maturity value</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="swp.html" class="calc-card">
+        <div class="card-icon" style="background:#f1f8e9;color:#558b2f">🔄</div>
+        <div class="card-info">
+          <h3>SWP Calculator</h3>
+          <p>Plan systematic withdrawals from your portfolio</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="tax.html" class="calc-card">
+        <div class="card-icon" style="background:#fafafa;color:#424242">📋</div>
+        <div class="card-info">
+          <h3>Income Tax Calculator</h3>
+          <p>Estimate your tax liability under new & old regime</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="cagr.html" class="calc-card">
+        <div class="card-icon" style="background:#e8eaf6;color:#3949ab">📉</div>
+        <div class="card-info">
+          <h3>CAGR Calculator</h3>
+          <p>Compute compound annual growth rate of investments</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="inflation.html" class="calc-card">
+        <div class="card-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+        <div class="card-info">
+          <h3>Inflation Calculator</h3>
+          <p>Find the real value of money adjusted for inflation</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="gratuity.html" class="calc-card">
+        <div class="card-icon" style="background:#fbe9e7;color:#bf360c">🎖️</div>
+        <div class="card-info">
+          <h3>Gratuity Calculator</h3>
+          <p>Know your gratuity entitlement as per the Act</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="hra.html" class="calc-card">
+        <div class="card-icon" style="background:#e0f2f1;color:#00695c">🏡</div>
+        <div class="card-info">
+          <h3>HRA Calculator</h3>
+          <p>Calculate House Rent Allowance tax exemption</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="salary.html" class="calc-card">
+        <div class="card-icon" style="background:#e8eaf6;color:#283593">💼</div>
+        <div class="card-info">
+          <h3>Salary Breakup Calculator</h3>
+          <p>CTC to in-hand · Code of Wages 2019 · PF · TDS · Gratuity</p>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="sip.html">SIP Calculator</a></li>
+        <li><a href="emi.html">EMI Calculator</a></li>
+        <li><a href="fd.html">FD Calculator</a></li>
+        <li><a href="ppf.html">PPF Calculator</a></li>
+        <li><a href="tax.html">Income Tax</a></li>
+        <li><a href="salary.html">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="swp.html">SWP Calculator</a></li>
+        <li><a href="lumpsum.html">Lumpsum</a></li>
+        <li><a href="rd.html">RD Calculator</a></li>
+        <li><a href="cagr.html">CAGR Calculator</a></li>
+        <li><a href="hra.html">HRA Calculator</a></li>
+        <li><a href="gratuity.html">Gratuity</a></li>
+        <li><a href="inflation.html">Inflation</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>SIP Calculator – Calculate Mutual Fund Returns Online | InvestSmartCalc</title>
+  <meta name="description" content="Calculate SIP returns online. Enter monthly investment, rate & duration to get maturity value & year-wise growth. Free SIP calculator India.">
+  <meta name="keywords" content="SIP calculator, mutual fund SIP returns, SIP calculator India, systematic investment plan calculator, monthly SIP calculator online">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.investsmartcalc.in/sip.html">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.investsmartcalc.in/sip.html">
+  <meta property="og:title" content="SIP Calculator – Calculate Mutual Fund Returns Online">
+  <meta property="og:description" content="Calculate SIP returns online. Enter monthly investment, rate & duration to get maturity value & year-wise growth. Free SIP calculator India.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SIP Calculator – Calculate Mutual Fund Returns Online">
+  <meta name="twitter:description" content="Calculate SIP returns online. Enter monthly investment, rate & duration to get maturity value & year-wise growth. Free SIP calculator India.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://www.investsmartcalc.in",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.investsmartcalc.in/logo.png",
+    "width": 200,
+    "height": 60
+  },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SIP Calculator",
+  "url": "https://www.investsmartcalc.in/sip.html",
+  "description": "Calculate SIP returns online. Enter monthly investment, rate & duration to get maturity value & year-wise growth. Free SIP calculator India.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "InvestSmartCalc",
+    "url": "https://www.investsmartcalc.in"
+  },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Free to use",
+    "No signup required",
+    "Mobile responsive",
+    "Instant calculations",
+    "Year-wise breakdown"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.investsmartcalc.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "SIP Calculator",
+      "item": "https://www.investsmartcalc.in/sip.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I stop my SIP anytime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most SIPs (except ELSS tax-saving funds which have a 3-year lock-in) have no lock-in period. You can pause or stop your SIP anytime by submitting a cancellation request to your fund house or through your investment platform. Units already purchased remain invested."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is SIP return guaranteed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SIP returns depend on the performance of the underlying mutual fund, which is market-linked. The returns shown in calculators are based on an assumed constant rate. Actual returns may be higher or lower depending on market conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum SIP amount in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most mutual funds in India allow SIP with as little as ₹500 per month. Some funds and platforms offer SIPs starting from ₹100. There is no maximum limit on SIP amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is SIP taxed in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For equity mutual funds: gains on units held over 1 year are Long-Term Capital Gains (LTCG), tax-free up to ₹1.25 lakh/year, taxed at 12.5% beyond. Gains on units held under 1 year are Short-Term Capital Gains (STCG) taxed at 20%. For debt funds, all gains are added to income and taxed at your slab rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best SIP duration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The longer the better, due to compounding. Financial advisors recommend a minimum of 5 years for equity SIPs to ride out market cycles. A 10–15 year SIP in a diversified equity fund has historically delivered 12–15% annualised returns in India."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="sip.html" style="background:var(--green-light);color:var(--green-dark)">SIP</a>
+        <a href="emi.html">EMI</a><a href="fd.html">FD</a><a href="ppf.html">PPF</a>
+        <a href="swp.html">SWP</a><a href="tax.html">Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="sip.html">SIP Calculator</a><a href="emi.html">EMI Calculator</a>
+      <a href="fd.html">FD Calculator</a><a href="ppf.html">PPF Calculator</a>
+      <a href="swp.html">SWP Calculator</a><a href="tax.html">Tax Calculator</a>
+      <a href="lumpsum.html">Lumpsum</a><a href="rd.html">RD Calculator</a>
+    </div>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="index.html">Home</a> › SIP Calculator</div>
+      <h1>SIP Calculator</h1>
+      <p>Calculate the future value of your Systematic Investment Plan</p>
+    </div>
+
+    <div class="calc-layout">
+      <!-- INPUT -->
+      <div class="input-panel">
+        <div class="input-group">
+          <div class="input-label">
+            <span>Monthly Investment</span>
+            <span class="input-value" id="amtLabel">₹5,000</span>
+          </div>
+          <input type="range" id="amount" min="500" max="100000" step="500" value="5000"
+            oninput="syncInput(this,'amtNum','amtLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="amtNum" value="5000" min="500" max="100000"
+            oninput="syncSlider(this,'amount','amtLabel','₹',true);calculate()">
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(1000)">₹1,000</button><button class="preset-btn" onclick="setPreset(5000)">₹5,000</button><button class="preset-btn" onclick="setPreset(10000)">₹10,000</button><button class="preset-btn" onclick="setPreset(25000)">₹25,000</button></div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-label">
+            <span>Expected Return Rate (p.a.)</span>
+            <span class="input-value" id="rateLabel">12%</span>
+          </div>
+          <input type="range" id="rate" min="1" max="30" step="0.5" value="12"
+            oninput="syncInput(this,'rateNum','rateLabel','',false,'%');calculate()">
+          <input type="number" class="number-input" id="rateNum" value="12" min="1" max="30" step="0.5"
+            oninput="syncSlider(this,'rate','rateLabel','',false,'%');calculate()">
+        </div>
+
+        <div class="input-group">
+          <div class="input-label">
+            <span>Time Period</span>
+            <span class="input-value" id="yearLabel">10 yr</span>
+          </div>
+          <input type="range" id="years" min="1" max="40" step="1" value="10"
+            oninput="syncInput(this,'yearNum','yearLabel','',false,' yr');calculate()">
+          <input type="number" class="number-input" id="yearNum" value="10" min="1" max="40"
+            oninput="syncSlider(this,'years','yearLabel','',false,' yr');calculate()">
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="result-panel">
+        <div class="result-card result-highlight">
+          <div class="result-label">Maturity Value</div>
+          <div class="result-amount" id="maturity">₹11.61 L</div><div class="result-sub">
+          <div class="result-sub-item">
+            <span class="result-sub-label">You invested</span>
+            <span class="result-sub-value" id="subInvested">—</span>
+          </div>
+          <div class="result-sub-item">
+            <span class="result-sub-label">You earned</span>
+            <span class="result-sub-value" id="subReturns">—</span>
+          </div>
+        </div>
+        </div>
+
+        <div class="result-card">
+          <div class="chart-wrap">
+            <canvas id="donut" width="160" height="160" class="donut-svg"></canvas>
+            <div class="legend">
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#00c853"></div>
+                <div>
+                  <span class="lval-label">Est. Returns</span>
+                  <div class="lval" id="returnsLeg">—</div>
+                </div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#e8f5e9;border:1px solid #c8e6c9" class="legend-dot-light"></div>
+                <div>
+                  <span class="lval-label">Total Invested</span>
+                  <div class="lval" id="investedLeg">—</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:20px">
+            <div class="result-row"><span>Total Invested</span><span id="totalInvested">₹6,00,000</span></div>
+            <div class="result-row"><span>Est. Returns</span><span id="totalReturns" style="color:var(--green-dark)">₹5,61,695</span></div>
+            <div class="result-row"><span>Maturity Value</span><span id="maturityFull">₹11,61,695</span></div>
+          </div>
+        </div>
+
+        <div class="info-box">💡 SIP returns shown are estimated based on assumed constant return rate. Actual returns may vary based on market conditions.
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`🌱 My SIP Calculation Result\n💰 Monthly SIP: ${document.getElementById('amtLabel').textContent}\n📈 Expected Return: ${document.getElementById('rateLabel').textContent}\n⏳ Duration: ${document.getElementById('yearLabel').textContent}\n🎯 Maturity Value: ${document.getElementById('maturity').textContent}\n\nCalculate yours 👇`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg> WhatsApp</button>
+            <button class="share-btn twitter" onclick="shareTwitter(`Just calculated my SIP returns! Investing ${document.getElementById('amtLabel').textContent}/month for ${document.getElementById('yearLabel').textContent} at ${document.getElementById('rateLabel').textContent} could grow to ${document.getElementById('maturity').textContent}! 📈 #MutualFunds #SIP #Investing`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter / X</button>
+            <button class="share-btn copylink" onclick="copyLink(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link</button>
+            <button class="share-btn download" onclick="downloadPDF('SIP Calculator')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Save PDF</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- YEAR TABLE -->
+    <div class="year-table-wrap" style="margin-top:32px">
+      <div class="year-table-head">📅 Year-wise Breakdown</div>
+      <div style="overflow-x:auto">
+        <table class="year-table" id="yearTable">
+          <thead>
+            <tr>
+              <th>Year</th><th>Invested (Cumulative)</th><th>Returns</th><th>Total Value</th>
+            </tr>
+          </thead>
+          <tbody id="yearBody"></tbody>
+        </table>
+      </div>
+    </div>
+  
+
+<div class="related-section">
+  <div class="related-header">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Related Calculators
+  </div>
+  <div class="related-grid">
+    <a href="lumpsum.html" class="related-card">
+      <div class="related-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+      <div>
+        <div class="related-name">Lumpsum Calculator</div>
+        <div class="related-desc">One-time investment</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="swp.html" class="related-card">
+      <div class="related-icon" style="background:#f1f8e9;color:#558b2f">🔄</div>
+      <div>
+        <div class="related-name">SWP Calculator</div>
+        <div class="related-desc">Systematic withdrawal</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="cagr.html" class="related-card">
+      <div class="related-icon" style="background:#e8eaf6;color:#3949ab">📉</div>
+      <div>
+        <div class="related-name">CAGR Calculator</div>
+        <div class="related-desc">Annual growth rate</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="ppf.html" class="related-card">
+      <div class="related-icon" style="background:#f3e5f5;color:#7b1fa2">🛡️</div>
+      <div>
+        <div class="related-name">PPF Calculator</div>
+        <div class="related-desc">Tax-free PF returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="rd.html" class="related-card">
+      <div class="related-icon" style="background:#e0f7fa;color:#00838f">💳</div>
+      <div>
+        <div class="related-name">RD Calculator</div>
+        <div class="related-desc">Recurring Deposit</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+  </div>
+</div>
+<div class="seo-section">
+  <hr class="seo-divider">
+
+  <h2>What is SIP (Systematic Investment Plan)?</h2>
+  <p>A Systematic Investment Plan (SIP) is a method of investing a fixed amount regularly — typically every month — into a mutual fund scheme. Rather than investing a large lump sum at once, SIP allows you to invest small, disciplined amounts at regular intervals. It is one of the most popular investment strategies in India, offered by AMFI-registered mutual funds and regulated by SEBI.</p>
+  <p>SIP enables investors across income levels to participate in equity, debt, or hybrid markets without needing to time the market. As of 2024, India's monthly SIP inflows have crossed ₹20,000 crore, reflecting the mass adoption of this investment style.</p>
+
+  <h2>How Does SIP Work?</h2>
+  <p>When you start a SIP, a fixed amount is automatically debited from your bank account on a chosen date each month and invested into your selected mutual fund at the prevailing NAV (Net Asset Value). You receive units proportional to the NAV on that date.</p>
+  <p>Over time, because the NAV fluctuates, you buy more units when the market is low and fewer when it is high — a built-in benefit called <strong>Rupee Cost Averaging</strong>. This reduces the average cost of your holdings over time and lowers the risk of investing at a market peak.</p>
+
+  <h2>SIP Formula</h2>
+  <p>The future value of a SIP investment is calculated using the Future Value of Annuity Due formula, since each SIP instalment is invested at the beginning of the period:</p>
+  <div class="formula-box">
+    <span class="f-label">SIP Maturity Value Formula</span>
+    <span class="f-main">M = P × [ (1 + r)ⁿ − 1 ] / r × (1 + r)</span>
+    <div class="f-vars">
+      M = Maturity value &nbsp;|&nbsp; P = Monthly SIP amount<br>
+      r = Monthly interest rate (Annual rate ÷ 12)<br>
+      n = Total number of months (Years × 12)
+    </div>
+  </div>
+
+  <h2>SIP Calculation Example</h2>
+  <div class="example-box">
+    <div class="ex-title">📘 Example: ₹5,000/month SIP for 10 years at 12% p.a.</div>
+    <table>
+      <tr><td>Monthly SIP Amount (P)</td><td>₹5,000</td></tr>
+      <tr><td>Annual Return Rate</td><td>12%</td></tr>
+      <tr><td>Monthly Rate (r)</td><td>12% ÷ 12 = 1% = 0.01</td></tr>
+      <tr><td>Duration (n)</td><td>10 years × 12 = 120 months</td></tr>
+      <tr><td>Total Amount Invested</td><td>₹5,000 × 120 = ₹6,00,000</td></tr>
+      <tr class="ex-result"><td>Estimated Maturity Value</td><td>₹11,61,695</td></tr>
+      <tr class="ex-result"><td>Estimated Returns</td><td>₹5,61,695 (93.6% gain)</td></tr>
+    </table>
+  </div>
+
+  <h2>Benefits of SIP Investing</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card"><div class="b-icon">📉</div><div class="b-title">Rupee Cost Averaging</div><div class="b-desc">Buy more units when markets are low, fewer when high — averaging out your cost automatically.</div></div>
+    <div class="benefit-card"><div class="b-icon">🔁</div><div class="b-title">Power of Compounding</div><div class="b-desc">Returns earned get reinvested, generating returns on returns. The longer you invest, the bigger the effect.</div></div>
+    <div class="benefit-card"><div class="b-icon">💳</div><div class="b-title">Start with ₹500</div><div class="b-desc">Most mutual funds allow SIP with as little as ₹500/month, making it accessible to all income groups.</div></div>
+    <div class="benefit-card"><div class="b-icon">🧘</div><div class="b-title">Removes Emotion</div><div class="b-desc">Automated investing removes the temptation to time the market, a trap that hurts most investors.</div></div>
+    <div class="benefit-card"><div class="b-icon">🛡️</div><div class="b-title">Flexible & Liquid</div><div class="b-desc">Pause, increase, decrease or stop your SIP anytime. No lock-in (except ELSS tax-saving funds).</div></div>
+    <div class="benefit-card"><div class="b-icon">📊</div><div class="b-title">Tax Benefits</div><div class="b-desc">ELSS SIPs qualify for ₹1.5L deduction under Sec 80C. Equity SIP gains under ₹1.25L/year are tax-free.</div></div>
+  </div>
+
+  <h2>SIP vs Lumpsum Investment</h2>
+  <table class="seo-table">
+    <thead><tr><th>Feature</th><th>SIP</th><th>Lumpsum</th></tr></thead>
+    <tbody>
+      <tr><td>Investment Style</td><td>Fixed monthly amount</td><td>One-time large amount</td></tr>
+      <tr><td>Market Timing Risk</td><td>Low (Rupee Cost Averaging)</td><td>High (invest at one price)</td></tr>
+      <tr><td>Ideal For</td><td>Salaried, regular income</td><td>Windfall, bonus, inheritance</td></tr>
+      <tr><td>Minimum Amount</td><td>₹500/month</td><td>₹1,000 typically</td></tr>
+      <tr class="highlight"><td>Best Market Condition</td><td>Volatile / falling markets</td><td>Near market bottoms</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I stop my SIP anytime?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes. Most SIPs (except ELSS) have no lock-in period. You can pause or stop your SIP anytime by submitting a cancellation request to your fund house or through your investment platform. Units already purchased remain invested.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is SIP return guaranteed?<span class="faq-icon">+</span></button>
+      <div class="faq-a">No. SIP returns depend on the performance of the underlying mutual fund, which is market-linked. The returns shown in this calculator are based on an assumed constant rate. Actual returns may be higher or lower. Past performance does not guarantee future results.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the best SIP duration?<span class="faq-icon">+</span></button>
+      <div class="faq-a">The longer, the better — due to compounding. Financial advisors generally recommend a minimum of 5 years for equity SIPs to ride out market cycles. A 10–15 year SIP in a diversified equity fund has historically delivered 12–15% annualised returns in India.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How is SIP different from a recurring deposit (RD)?<span class="faq-icon">+</span></button>
+      <div class="faq-a">An RD is a bank product with a fixed guaranteed return (typically 5–7%) and no market risk. A SIP invests in mutual funds, carries market risk, but has the potential for significantly higher returns (10–15%+ for equity funds). RD returns are fully taxable; equity SIP gains under ₹1.25L/year are tax-free.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is Step-up SIP?<span class="faq-icon">+</span></button>
+      <div class="faq-a">A Step-up (or Top-up) SIP automatically increases your SIP amount by a fixed percentage or amount each year — typically 10% annually. This aligns your investments with your rising income and significantly boosts the final corpus. For example, stepping up a ₹5,000 SIP by 10% each year over 20 years can more than double the final maturity value compared to a flat SIP.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How is SIP taxed in India?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Each SIP instalment is treated as a separate investment for tax purposes. For equity funds: gains on units held ≥1 year are Long-Term Capital Gains (LTCG), tax-free up to ₹1.25 lakh/year, and 12.5% beyond. Gains on units held &lt;1 year are Short-Term Capital Gains (STCG) taxed at 20%. For debt funds: all gains are taxed as per your income tax slab (from April 2023).</div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="sip.html">SIP Calculator</a></li>
+        <li><a href="emi.html">EMI Calculator</a></li>
+        <li><a href="fd.html">FD Calculator</a></li>
+        <li><a href="ppf.html">PPF Calculator</a></li>
+        <li><a href="tax.html">Income Tax</a></li>
+        <li><a href="salary.html">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="swp.html">SWP Calculator</a></li>
+        <li><a href="lumpsum.html">Lumpsum</a></li>
+        <li><a href="rd.html">RD Calculator</a></li>
+        <li><a href="cagr.html">CAGR Calculator</a></li>
+        <li><a href="hra.html">HRA Calculator</a></li>
+        <li><a href="gratuity.html">Gratuity</a></li>
+        <li><a href="inflation.html">Inflation</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(slider.value);
+      document.getElementById(numId).value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function syncSlider(input, sliderId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(input.value);
+      const slider = document.getElementById(sliderId);
+      slider.value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+
+    function calculate() {
+      const P = parseFloat(document.getElementById('amtNum').value) || 5000;
+      const r = (parseFloat(document.getElementById('rateNum').value) || 12) / 100 / 12;
+      const n = (parseFloat(document.getElementById('yearNum').value) || 10) * 12;
+      const maturity = P * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+      const invested = P * n;
+      const returns = maturity - invested;
+
+      document.getElementById('maturity').textContent = fmt(maturity);
+      document.getElementById('maturityFull').textContent = fmtFull(maturity);
+      document.getElementById('totalInvested').textContent = fmtFull(invested);
+      document.getElementById('totalReturns').textContent = fmtFull(returns);
+      document.getElementById('returnsLeg').textContent = fmt(returns);
+      document.getElementById('investedLeg').textContent = fmt(invested);
+      document.getElementById('subInvested').textContent = fmt(invested);
+      document.getElementById('subReturns').textContent = fmt(returns);
+
+      drawDonut('donut', invested, returns, ['#00c853','#e8f5e9'], 'Maturity Value');
+
+      // Year table
+      const tbody = document.getElementById('yearBody');
+      tbody.innerHTML = '';
+      const yrs = parseInt(document.getElementById('yearNum').value) || 10;
+      for (let y = 1; y <= yrs; y++) {
+        const months = y * 12;
+        const val = P * ((Math.pow(1 + r, months) - 1) / r) * (1 + r);
+        const inv = P * months;
+        const ret = val - inv;
+        const isLast = y === yrs;
+        tbody.innerHTML += `<tr class="${isLast?'total-row':''}">
+          <td>Year ${y}</td>
+          <td>${fmtFull(inv)}</td>
+          <td style="color:var(--green-dark)">${fmtFull(ret)}</td>
+          <td><strong>${fmtFull(val)}</strong></td>
+        </tr>`;
+      }
+    }
+
+    
+    function setPreset(val) {
+      document.getElementById('amtNum').value = val;
+      document.getElementById('amount').value = val;
+      document.getElementById('amtLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      updateSlider(document.getElementById('amount'));
+      // Highlight active preset
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      calculate();
+    }
+    document.querySelectorAll('input[type=range]').forEach(r => { updateSlider(r); });
+    calculate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>CAGR Calculator – Calculate Compound Annual Growth Rate | InvestSmartCalc</title>
+  <meta name="description" content="Calculate CAGR of any investment. Enter initial value, final value & years to get compound annual growth rate. Free CAGR calculator India.">
+  <meta name="keywords" content="CAGR calculator, compound annual growth rate calculator India, investment return calculator, CAGR formula India">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.investsmartcalc.in/cagr.html">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.investsmartcalc.in/cagr.html">
+  <meta property="og:title" content="CAGR Calculator – Calculate Compound Annual Growth Rate">
+  <meta property="og:description" content="Calculate CAGR of any investment. Enter initial value, final value & years to get compound annual growth rate. Free CAGR calculator India.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CAGR Calculator – Calculate Compound Annual Growth Rate">
+  <meta name="twitter:description" content="Calculate CAGR of any investment. Enter initial value, final value & years to get compound annual growth rate. Free CAGR calculator India."><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .big-result { font-size: 48px; font-weight: 700; font-family: var(--font-mono); color: var(--green-dark); text-align: center; padding: 20px 0; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://www.investsmartcalc.in",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.investsmartcalc.in/logo.png",
+    "width": 200,
+    "height": 60
+  },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CAGR Calculator",
+  "url": "https://www.investsmartcalc.in/cagr.html",
+  "description": "Calculate CAGR (Compound Annual Growth Rate) of any investment. Enter initial value, final value and number of years to get the annualised growth rate. Free CAGR calculator India.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "InvestSmartCalc",
+    "url": "https://www.investsmartcalc.in"
+  },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Free to use",
+    "No signup required",
+    "Mobile responsive",
+    "Instant calculations",
+    "Year-wise breakdown"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.investsmartcalc.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CAGR Calculator",
+      "item": "https://www.investsmartcalc.in/cagr.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the CAGR formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CAGR = (Final Value / Initial Value)^(1/n) − 1, where n is the number of years. The result is expressed as a percentage. For example, if ₹1 lakh grew to ₹3 lakh in 5 years, CAGR = (3/1)^(1/5) − 1 = 24.57% per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good CAGR for a mutual fund in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For equity funds over a 10-year period, CAGR above 12% is considered good and above 15% is excellent. Large-cap index funds (Nifty 50) have historically delivered approximately 12-13% CAGR over 15-20 year periods. Mid and small-cap funds have delivered 15-18% CAGR but with higher volatility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between CAGR and XIRR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CAGR calculates the annualised return for a single lumpsum investment with one start and one end date. XIRR (Extended Internal Rate of Return) calculates the annualised return for multiple cash flows at irregular dates — like SIP investments made on different dates or partial withdrawals. For SIP performance evaluation, always use XIRR, not CAGR."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="sip.html">SIP</a><a href="emi.html">EMI</a><a href="fd.html">FD</a>
+        <a href="ppf.html">PPF</a><a href="swp.html">SWP</a><a href="tax.html">Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">All Calculators</a></div>
+  </nav>
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="index.html">Home</a> › CAGR Calculator</div>
+      <h1>CAGR Calculator</h1>
+      <p>Compute the Compound Annual Growth Rate of any investment</p>
+    </div>
+    <div class="calc-layout">
+      <div class="input-panel">
+        <div class="input-group">
+          <div class="input-label"><span>Initial Value</span><span class="input-value" id="ivLabel">₹1,00,000</span></div>
+          <input type="range" id="iv" min="1000" max="10000000" step="1000" value="100000"
+            oninput="syncInput(this,'ivNum','ivLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="ivNum" value="100000"
+            oninput="syncSlider(this,'iv','ivLabel','₹',true);calculate()">
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(10000)">₹10,000</button><button class="preset-btn" onclick="setPreset(50000)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000)">₹1L</button><button class="preset-btn" onclick="setPreset(500000)">₹5L</button></div>
+        </div>
+        <div class="input-group">
+          <div class="input-label"><span>Final Value</span><span class="input-value" id="fvLabel">₹3,00,000</span></div>
+          <input type="range" id="fv" min="1000" max="50000000" step="1000" value="300000"
+            oninput="syncInput(this,'fvNum','fvLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="fvNum" value="300000"
+            oninput="syncSlider(this,'fv','fvLabel','₹',true);calculate()">
+        </div>
+        <div class="input-group">
+          <div class="input-label"><span>Time Period</span><span class="input-value" id="yrLabel">5 yr</span></div>
+          <input type="range" id="yr" min="1" max="30" step="1" value="5"
+            oninput="syncInput(this,'yrNum','yrLabel','',false,' yr');calculate()">
+          <input type="number" class="number-input" id="yrNum" value="5"
+            oninput="syncSlider(this,'yr','yrLabel','',false,' yr');calculate()">
+        </div>
+      </div>
+      <div class="result-panel">
+        <div class="result-card result-highlight" style="text-align:center">
+          <div class="result-label">CAGR</div>
+          <div class="big-result" id="cagr" style="color:white">24.57%</div>
+          <div style="font-size:13px;opacity:0.8">Absolute Return: <strong id="absRet">200%</strong></div><div class="result-sub">
+          <div class="result-sub-item">
+            <span class="result-sub-label">You invested</span>
+            <span class="result-sub-value" id="subInvested">—</span>
+          </div>
+          <div class="result-sub-item">
+            <span class="result-sub-label">Total gain</span>
+            <span class="result-sub-value" id="subGain">—</span>
+          </div>
+        </div>
+        </div>
+        <div class="result-card">
+          <div class="result-row"><span>Initial Investment</span><span id="r1">₹1,00,000</span></div>
+          <div class="result-row"><span>Final Value</span><span id="r2">₹3,00,000</span></div>
+          <div class="result-row"><span>Gain</span><span id="r3" style="color:var(--green-dark)">₹2,00,000</span></div>
+          <div class="result-row"><span>Time Period</span><span id="r4">5 years</span></div>
+        </div>
+        <div class="info-box">💡 CAGR smooths out volatility to show the steady growth rate needed to go from the initial to final value.
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`📉 My CAGR Calculation\n📥 Initial Value: ${document.getElementById('ivLabel').textContent}\n📤 Final Value: ${document.getElementById('fvLabel').textContent}\n⏳ Duration: ${document.getElementById('yrLabel').textContent}\n🎯 CAGR: ${document.getElementById('cagr').textContent}\n\nCalculate your CAGR 👇`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg> WhatsApp</button>
+            <button class="share-btn twitter" onclick="shareTwitter(`My investment CAGR: ${document.getElementById('ivLabel').textContent} → ${document.getElementById('fvLabel').textContent} in ${document.getElementById('yrLabel').textContent} = ${document.getElementById('cagr').textContent} annual return 📈 #CAGR #Investing #Returns`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter / X</button>
+            <button class="share-btn copylink" onclick="copyLink(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link</button>
+            <button class="share-btn download" onclick="downloadPDF('CAGR Calculator')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Save PDF</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  
+
+<div class="related-section">
+  <div class="related-header">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Related Calculators
+  </div>
+  <div class="related-grid">
+    <a href="sip.html" class="related-card">
+      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div>
+        <div class="related-name">SIP Calculator</div>
+        <div class="related-desc">Monthly SIP returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="lumpsum.html" class="related-card">
+      <div class="related-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+      <div>
+        <div class="related-name">Lumpsum Calculator</div>
+        <div class="related-desc">One-time investment</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="swp.html" class="related-card">
+      <div class="related-icon" style="background:#f1f8e9;color:#558b2f">🔄</div>
+      <div>
+        <div class="related-name">SWP Calculator</div>
+        <div class="related-desc">Systematic withdrawal</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="inflation.html" class="related-card">
+      <div class="related-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+      <div>
+        <div class="related-name">Inflation Calculator</div>
+        <div class="related-desc">Future value of money</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="fd.html" class="related-card">
+      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div>
+        <div class="related-name">FD Calculator</div>
+        <div class="related-desc">Fixed Deposit returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+  </div>
+</div>
+<div class="seo-section">
+  <hr class="seo-divider">
+
+  <h2>What is CAGR (Compound Annual Growth Rate)?</h2>
+  <p>CAGR (Compound Annual Growth Rate) is the rate at which an investment would have grown if it grew at a steady annual rate. It smooths out the volatility of year-to-year returns to give a single, meaningful number representing the investment's growth trajectory. CAGR is the most widely used metric to evaluate and compare investment performance over time.</p>
+  <p>Mutual funds, stocks, business revenues, and economic indicators are all commonly measured using CAGR. When a mutual fund advertises "18% CAGR over 10 years," it means a ₹1 lakh investment would have grown to approximately ₹5.23 lakh over that period.</p>
+
+  <h2>CAGR Formula</h2>
+  <div class="formula-box">
+    <span class="f-label">CAGR Formula</span>
+    <span class="f-main">CAGR = (Final Value / Initial Value)^(1/n) − 1</span>
+    <div class="f-vars">
+      n = Number of years &nbsp;|&nbsp; Result expressed as a percentage<br>
+      Absolute Return = (Final − Initial) / Initial × 100%
+    </div>
+  </div>
+
+  <h2>CAGR vs Absolute Return vs XIRR</h2>
+  <table class="seo-table">
+    <thead><tr><th>Metric</th><th>What it Shows</th><th>When to Use</th></tr></thead>
+    <tbody>
+      <tr><td>Absolute Return</td><td>Total % gain/loss from start to end</td><td>Short period comparisons</td></tr>
+      <tr><td>CAGR</td><td>Annualised growth assuming constant rate</td><td>Lumpsum investments, fund comparison</td></tr>
+      <tr><td>XIRR</td><td>Annualised return for irregular cash flows</td><td>SIP investments with multiple buy/sell dates</td></tr>
+      <tr class="highlight"><td>Rolling Returns</td><td>CAGR calculated over multiple overlapping periods</td><td>Assessing consistency of fund performance</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Why is CAGR better than simple average return?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Simple average return can be misleading. If a fund gains 100% in year 1 and loses 50% in year 2, the simple average is 25% — but you're back to where you started (₹1L → ₹2L → ₹1L). CAGR correctly shows 0% for this scenario. CAGR accounts for the compounding effect and gives the true annualised rate of return.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is a good CAGR for a mutual fund in India?<span class="faq-icon">+</span></button>
+      <div class="faq-a">For equity funds over a 10-year period: CAGR above 12% is considered good; above 15% is excellent. Large-cap index funds (Nifty 50) have delivered approximately 12–13% CAGR over 15-20 year periods. Mid-cap and small-cap funds have historically delivered 15–18% CAGR but with much higher volatility. For debt funds, 6–8% CAGR is typical.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is XIRR and when should I use it instead of CAGR?<span class="faq-icon">+</span></button>
+      <div class="faq-a">XIRR (Extended Internal Rate of Return) is used when you have multiple cash flows at irregular intervals — like SIP investments made on different dates, or partial withdrawals. CAGR works only for a single investment at one time and one redemption at another. For evaluating your SIP portfolio returns, always use XIRR, not CAGR. Most investment platforms and mutual fund statements show XIRR returns for SIPs.</div>
+    </div>
+  </div>
+</div>
+
+</main>
+    <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="sip.html">SIP Calculator</a></li>
+        <li><a href="emi.html">EMI Calculator</a></li>
+        <li><a href="fd.html">FD Calculator</a></li>
+        <li><a href="ppf.html">PPF Calculator</a></li>
+        <li><a href="tax.html">Income Tax</a></li>
+        <li><a href="salary.html">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="swp.html">SWP Calculator</a></li>
+        <li><a href="lumpsum.html">Lumpsum</a></li>
+        <li><a href="rd.html">RD Calculator</a></li>
+        <li><a href="cagr.html">CAGR Calculator</a></li>
+        <li><a href="hra.html">HRA Calculator</a></li>
+        <li><a href="gratuity.html">Gratuity</a></li>
+        <li><a href="inflation.html">Inflation</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(slider.value); document.getElementById(numId).value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function syncSlider(input, sliderId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(input.value); const slider = document.getElementById(sliderId); slider.value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function calculate() {
+      const iv = parseFloat(document.getElementById('ivNum').value)||100000;
+      const fv = parseFloat(document.getElementById('fvNum').value)||300000;
+      const n = parseFloat(document.getElementById('yrNum').value)||5;
+      const cagr = (Math.pow(fv/iv, 1/n) - 1)*100;
+      const absRet = ((fv-iv)/iv)*100;
+      document.getElementById('cagr').textContent = cagr.toFixed(2)+'%';
+      document.getElementById('absRet').textContent = absRet.toFixed(2)+'%';
+      document.getElementById('r1').textContent = fmtFull(iv);
+      document.getElementById('r2').textContent = fmtFull(fv);
+      document.getElementById('r3').textContent = fmtFull(fv-iv);
+      document.getElementById('r4').textContent = n+' years';
+      document.getElementById('subInvested').textContent = fmt(iv);
+      document.getElementById('subGain').textContent = fmt(fv-iv);
+    }
+    
+    function setPreset(val) {
+      document.getElementById('ivNum').value = val;
+      document.getElementById('iv').value = val;
+      document.getElementById('ivLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      updateSlider(document.getElementById('iv'));
+      // Highlight active preset
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      calculate();
+    }
+    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+    calculate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>Lumpsum Calculator – Mutual Fund One-Time Investment | InvestSmartCalc</title>
+  <meta name="description" content="Calculate returns on one-time mutual fund investment. Enter amount, rate & years to see maturity value with compounding. Free lumpsum calculator India.">
+  <meta name="keywords" content="lumpsum calculator, mutual fund lumpsum calculator, one time investment calculator, lumpsum return calculator India">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.investsmartcalc.in/lumpsum.html">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.investsmartcalc.in/lumpsum.html">
+  <meta property="og:title" content="Lumpsum Calculator – Mutual Fund One-Time Investment">
+  <meta property="og:description" content="Calculate returns on one-time mutual fund investment. Enter amount, rate & years to see maturity value with compounding. Free lumpsum calculator India.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lumpsum Calculator – Mutual Fund One-Time Investment">
+  <meta name="twitter:description" content="Calculate returns on one-time mutual fund investment. Enter amount, rate & years to see maturity value with compounding. Free lumpsum calculator India.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://www.investsmartcalc.in",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.investsmartcalc.in/logo.png",
+    "width": 200,
+    "height": 60
+  },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Lumpsum Calculator",
+  "url": "https://www.investsmartcalc.in/lumpsum.html",
+  "description": "Calculate returns on a one-time mutual fund investment. Enter amount, expected rate and years to see maturity value. Compare lumpsum vs SIP. Free calculator India.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "InvestSmartCalc",
+    "url": "https://www.investsmartcalc.in"
+  },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Free to use",
+    "No signup required",
+    "Mobile responsive",
+    "Instant calculations",
+    "Year-wise breakdown"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.investsmartcalc.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lumpsum Calculator",
+      "item": "https://www.investsmartcalc.in/lumpsum.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is lumpsum investment better than SIP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Over long periods (10+ years), research shows that lumpsum investments in equity markets outperform SIPs approximately 65-70% of the time, because markets trend upward. However, in volatile or falling markets, SIP's rupee cost averaging gives better results. If you have a large amount and a long horizon, lumpsum is generally optimal; for regular monthly income, SIP is better."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum lumpsum investment in mutual funds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most mutual funds in India accept lumpsum investments starting from ₹1,000. Some liquid and debt funds accept ₹500 or even ₹100. There is no maximum limit. Investments above ₹2 lakh require a valid PAN and KYC verification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is lumpsum mutual fund investment taxed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For equity mutual funds held over 1 year: Long-Term Capital Gains (LTCG) taxed at 12.5% on gains exceeding ₹1.25 lakh/year. If held under 1 year: Short-Term Capital Gains (STCG) taxed at 20%. For debt mutual funds from April 2023: all gains are added to income and taxed at your slab rate regardless of holding period."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="sip.html">SIP</a><a href="emi.html">EMI</a><a href="fd.html">FD</a>
+        <a href="ppf.html">PPF</a><a href="swp.html">SWP</a><a href="tax.html">Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="sip.html">SIP</a><a href="emi.html">EMI</a><a href="fd.html">FD</a>
+      <a href="ppf.html">PPF</a><a href="swp.html">SWP</a><a href="tax.html">Tax</a>
+      <a href="lumpsum.html">Lumpsum</a><a href="rd.html">RD</a>
+    </div>
+  </nav>
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="index.html">Home</a> › Lumpsum Calculator</div>
+      <h1>Lumpsum Calculator</h1>
+      <p>Estimate future value of a one-time mutual fund or equity investment</p>
+    </div>
+    <div class="calc-layout">
+      <div class="input-panel">
+        <div class="input-group">
+          <div class="input-label"><span>Investment Amount</span><span class="input-value" id="amtLabel">₹1,00,000</span></div>
+          <input type="range" id="amount" min="1000" max="10000000" step="1000" value="100000"
+            oninput="syncInput(this,'amtNum','amtLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="amtNum" value="100000"
+            oninput="syncSlider(this,'amount','amtLabel','₹',true);calculate()">
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(10000)">₹10,000</button><button class="preset-btn" onclick="setPreset(50000)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000)">₹1L</button><button class="preset-btn" onclick="setPreset(500000)">₹5L</button></div>
+        </div>
+        <div class="input-group">
+          <div class="input-label"><span>Expected Return Rate (p.a.)</span><span class="input-value" id="rateLabel">12%</span></div>
+          <input type="range" id="rate" min="1" max="30" step="0.5" value="12"
+            oninput="syncInput(this,'rateNum','rateLabel','',false,'%');calculate()">
+          <input type="number" class="number-input" id="rateNum" value="12" step="0.5"
+            oninput="syncSlider(this,'rate','rateLabel','',false,'%');calculate()">
+        </div>
+        <div class="input-group">
+          <div class="input-label"><span>Time Period</span><span class="input-value" id="yearLabel">10 yr</span></div>
+          <input type="range" id="years" min="1" max="40" step="1" value="10"
+            oninput="syncInput(this,'yearNum','yearLabel','',false,' yr');calculate()">
+          <input type="number" class="number-input" id="yearNum" value="10"
+            oninput="syncSlider(this,'years','yearLabel','',false,' yr');calculate()">
+        </div>
+      </div>
+      <div class="result-panel">
+        <div class="result-card result-highlight">
+          <div class="result-label">Maturity Value</div>
+          <div class="result-amount" id="maturity">₹3.11 L</div><div class="result-sub">
+          <div class="result-sub-item">
+            <span class="result-sub-label">You invested</span>
+            <span class="result-sub-value" id="subInvested">—</span>
+          </div>
+          <div class="result-sub-item">
+            <span class="result-sub-label">You earned</span>
+            <span class="result-sub-value" id="subReturns">—</span>
+          </div>
+        </div>
+        </div>
+        <div class="result-card">
+          <div class="chart-wrap">
+            <canvas id="donut" width="160" height="160" class="donut-svg"></canvas>
+            <div class="legend">
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#00c853"></div>
+                <div>
+                  <span class="lval-label">Est. Returns</span>
+                  <div class="lval" id="retLeg">—</div>
+                </div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#e8f5e9;border:1px solid #c8e6c9" class="legend-dot-light"></div>
+                <div>
+                  <span class="lval-label">Invested</span>
+                  <div class="lval" id="invLeg">—</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:20px">
+            <div class="result-row"><span>Amount Invested</span><span id="invRes">₹1,00,000</span></div>
+            <div class="result-row"><span>Est. Returns</span><span id="retRes" style="color:var(--green-dark)">₹2,11,000</span></div>
+            <div class="result-row"><span>Maturity Value</span><span id="matRes">₹3,11,000</span></div>
+          </div>
+        </div>
+        <div class="info-box">💡 Lumpsum investments benefit from compounding. The longer you stay invested, the greater the wealth creation.
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`💰 My Lumpsum Investment Calculation\n📥 Investment: ${document.getElementById('amtLabel').textContent}\n📈 Expected Return: ${document.getElementById('rateLabel').textContent}\n⏳ Duration: ${document.getElementById('yearLabel').textContent}\n🎯 Maturity Value: ${document.getElementById('maturity').textContent}\n\nCalculate yours 👇`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg> WhatsApp</button>
+            <button class="share-btn twitter" onclick="shareTwitter(`One-time investment of ${document.getElementById('amtLabel').textContent} at ${document.getElementById('rateLabel').textContent} for ${document.getElementById('yearLabel').textContent} = ${document.getElementById('maturity').textContent}! 💰 #MutualFunds #Lumpsum #Investing`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter / X</button>
+            <button class="share-btn copylink" onclick="copyLink(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link</button>
+            <button class="share-btn download" onclick="downloadPDF('Lumpsum Calculator')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Save PDF</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  
+
+<div class="related-section">
+  <div class="related-header">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Related Calculators
+  </div>
+  <div class="related-grid">
+    <a href="sip.html" class="related-card">
+      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div>
+        <div class="related-name">SIP Calculator</div>
+        <div class="related-desc">Monthly SIP returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="cagr.html" class="related-card">
+      <div class="related-icon" style="background:#e8eaf6;color:#3949ab">📉</div>
+      <div>
+        <div class="related-name">CAGR Calculator</div>
+        <div class="related-desc">Annual growth rate</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="swp.html" class="related-card">
+      <div class="related-icon" style="background:#f1f8e9;color:#558b2f">🔄</div>
+      <div>
+        <div class="related-name">SWP Calculator</div>
+        <div class="related-desc">Systematic withdrawal</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="fd.html" class="related-card">
+      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div>
+        <div class="related-name">FD Calculator</div>
+        <div class="related-desc">Fixed Deposit returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="inflation.html" class="related-card">
+      <div class="related-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+      <div>
+        <div class="related-name">Inflation Calculator</div>
+        <div class="related-desc">Future value of money</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+  </div>
+</div>
+<div class="seo-section">
+  <hr class="seo-divider">
+
+  <h2>What is Lumpsum Investment?</h2>
+  <p>A lumpsum investment is a one-time, large investment made in a mutual fund or other financial instrument, as opposed to spreading investments over time (SIP). When you receive a windfall — a bonus, inheritance, property sale proceeds, or a maturity payout — investing it as a lumpsum can generate significant wealth over time through the power of compounding.</p>
+
+  <h2>Lumpsum Return Formula</h2>
+  <div class="formula-box">
+    <span class="f-label">Compound Annual Growth Formula</span>
+    <span class="f-main">M = P × (1 + r)ᵗ</span>
+    <div class="f-vars">
+      M = Maturity value &nbsp;|&nbsp; P = Principal invested<br>
+      r = Expected annual return rate &nbsp;|&nbsp; t = Tenure in years
+    </div>
+  </div>
+
+  <h2>Lumpsum vs SIP: When to Choose Which?</h2>
+  <table class="seo-table">
+    <thead><tr><th>Scenario</th><th>Better Choice</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>Market at all-time high</td><td>SIP</td><td>Rupee cost averaging reduces timing risk</td></tr>
+      <tr><td>Market correction of 20%+</td><td>Lumpsum</td><td>Buying at discount maximises future returns</td></tr>
+      <tr><td>Received a large bonus</td><td>Lumpsum or STP</td><td>Put money to work immediately</td></tr>
+      <tr><td>Regular monthly income</td><td>SIP</td><td>Disciplined investing from salary</td></tr>
+      <tr class="highlight"><td>Long investment horizon (&gt;10yr)</td><td>Either works</td><td>Compounding neutralises timing differences</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What is STP (Systematic Transfer Plan)?</h2>
+  <p>If you have a large sum but are nervous about market timing, a <strong>Systematic Transfer Plan (STP)</strong> offers the best of both worlds. You park the entire corpus in a liquid or debt fund (which is safe and earns ~6–7%), and set up an automatic monthly transfer to an equity fund. This way, your money is always invested while you gradually shift to equity — reducing timing risk just like a SIP.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is lumpsum riskier than SIP?<span class="faq-icon">+</span></button>
+      <div class="faq-a">In the short term, yes. A lumpsum invests your entire amount at one price point, so if the market falls immediately after, your entire investment is underwater. SIP spreads this risk. However, over long periods (10+ years), academic research shows that lumpsum investments in equity markets have historically outperformed SIPs approximately 65–75% of the time, because markets trend upward over time.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the minimum lumpsum investment in a mutual fund?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Most mutual funds accept lumpsum investments starting from ₹1,000. Some liquid and debt funds accept ₹500 or even ₹100. There is no maximum limit. Large investments above ₹2 lakh require a valid PAN card and may trigger additional KYC verification. Some institutional funds may have higher minimum requirements.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How is lumpsum mutual fund investment taxed?<span class="faq-icon">+</span></button>
+      <div class="faq-a">For equity mutual funds: if held for more than 1 year, gains are Long-Term Capital Gains (LTCG) — taxed at 12.5% on gains exceeding ₹1.25 lakh/year. If held for less than 1 year, Short-Term Capital Gains (STCG) are taxed at 20%. For debt mutual funds (from April 2023): all gains are added to income and taxed at your applicable slab rate, regardless of holding period.</div>
+    </div>
+  </div>
+</div>
+
+</main>
+    <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="sip.html">SIP Calculator</a></li>
+        <li><a href="emi.html">EMI Calculator</a></li>
+        <li><a href="fd.html">FD Calculator</a></li>
+        <li><a href="ppf.html">PPF Calculator</a></li>
+        <li><a href="tax.html">Income Tax</a></li>
+        <li><a href="salary.html">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="swp.html">SWP Calculator</a></li>
+        <li><a href="lumpsum.html">Lumpsum</a></li>
+        <li><a href="rd.html">RD Calculator</a></li>
+        <li><a href="cagr.html">CAGR Calculator</a></li>
+        <li><a href="hra.html">HRA Calculator</a></li>
+        <li><a href="gratuity.html">Gratuity</a></li>
+        <li><a href="inflation.html">Inflation</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(slider.value); document.getElementById(numId).value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function syncSlider(input, sliderId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(input.value); const slider = document.getElementById(sliderId); slider.value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function calculate() {
+      const P = parseFloat(document.getElementById('amtNum').value)||100000;
+      const r = (parseFloat(document.getElementById('rateNum').value)||12)/100;
+      const t = parseFloat(document.getElementById('yearNum').value)||10;
+      const mat = P * Math.pow(1+r, t);
+      const ret = mat - P;
+      document.getElementById('maturity').textContent = fmt(mat);
+      document.getElementById('matRes').textContent = fmtFull(mat);
+      document.getElementById('invRes').textContent = fmtFull(P);
+      document.getElementById('retRes').textContent = fmtFull(ret);
+      document.getElementById('retLeg').textContent = fmt(ret);
+      document.getElementById('invLeg').textContent = fmt(P);
+      document.getElementById('subInvested').textContent = fmt(P);
+      document.getElementById('subReturns').textContent = fmt(ret);
+      drawDonut('donut', P, ret, ['#00c853','#e8f5e9'], 'Maturity Value');
+    }
+    
+    function setPreset(val) {
+      document.getElementById('amtNum').value = val;
+      document.getElementById('amount').value = val;
+      document.getElementById('amtLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      updateSlider(document.getElementById('amount'));
+      // Highlight active preset
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      calculate();
+    }
+    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+    calculate();
+  </script>
+</body>
+</html>
