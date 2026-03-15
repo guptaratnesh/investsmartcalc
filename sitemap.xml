@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://www.investsmartcalc.com/</loc>
+    <loc>https://investsmartcalc.com/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -14,56 +14,56 @@
 
   <!-- Core Investment Calculators — highest traffic priority -->
   <url>
-    <loc>https://www.investsmartcalc.com/sip-calculator.html</loc>
+    <loc>https://investsmartcalc.com/sip-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/emi-calculator.html</loc>
+    <loc>https://investsmartcalc.com/emi-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/fd-calculator.html</loc>
+    <loc>https://investsmartcalc.com/fd-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/tax-calculator.html</loc>
+    <loc>https://investsmartcalc.com/tax-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/ppf-calculator.html</loc>
+    <loc>https://investsmartcalc.com/ppf-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/salary.html</loc>
+    <loc>https://investsmartcalc.com/salary.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/gratuity-calculator.html</loc>
+    <loc>https://investsmartcalc.com/gratuity-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/hra-calculator.html</loc>
+    <loc>https://investsmartcalc.com/hra-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -71,35 +71,35 @@
 
   <!-- Secondary Calculators -->
   <url>
-    <loc>https://www.investsmartcalc.com/lumpsum-calculator.html</loc>
+    <loc>https://investsmartcalc.com/lumpsum-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/swp-calculator.html</loc>
+    <loc>https://investsmartcalc.com/swp-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/rd-calculator.html</loc>
+    <loc>https://investsmartcalc.com/rd-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/cagr-calculator.html</loc>
+    <loc>https://investsmartcalc.com/cagr-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/inflation-calculator.html</loc>
+    <loc>https://investsmartcalc.com/inflation-calculator.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -107,28 +107,28 @@
 
   <!-- Company Pages -->
   <url>
-    <loc>https://www.investsmartcalc.com/about.html</loc>
+    <loc>https://investsmartcalc.com/about.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/disclaimer.html</loc>
+    <loc>https://investsmartcalc.com/disclaimer.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/privacy.html</loc>
+    <loc>https://investsmartcalc.com/privacy.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://www.investsmartcalc.com/contact.html</loc>
+    <loc>https://investsmartcalc.com/contact.html</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
