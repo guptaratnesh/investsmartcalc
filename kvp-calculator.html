@@ -361,7 +361,7 @@
       document.getElementById('doublingPeriod').textContent = doublingStr + ' (' + doublingMonths + ' months)';
       document.getElementById('subInvested').textContent   = fmt(P);
       document.getElementById('subInterest').textContent   = fmt(interest);
-      drawDonut('donut', P, interest, null, 'Maturity Value');
+      drawDonut('donut', P, interest, ['#00c853','#e8f5e9'], 'Maturity Value');
     }
     document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
     calculate();

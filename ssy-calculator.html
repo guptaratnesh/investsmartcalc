@@ -375,7 +375,7 @@
       document.getElementById('depositPeriod').textContent = depositYears + ' years (age ' + girlAge + ' to ' + (girlAge + depositYears) + ')';
       document.getElementById('subInvested').textContent   = fmt(totalInvested);
       document.getElementById('subReturns').textContent    = fmt(interest);
-      drawDonut('donut', totalInvested, interest, null, 'Maturity Value');
+      drawDonut('donut', totalInvested, interest, ['#00c853','#e8f5e9'], 'Maturity Value');
     }
     document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
     calculate();
