@@ -6,10 +6,10 @@
   <meta name="description" content="Plan systematic withdrawals from your mutual fund corpus. See monthly withdrawal sustainability & final balance. Free SWP calculator India.">
   <meta name="keywords" content="SWP calculator, systematic withdrawal plan calculator, mutual fund withdrawal calculator, SWP India">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.investsmartcalc.in/swp-calculator.html">
+  <link rel="canonical" href="https://investsmartcalc.com/swp-calculator.html">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.investsmartcalc.in/swp-calculator.html">
+  <meta property="og:url" content="https://investsmartcalc.com/swp-calculator.html">
   <meta property="og:title" content="SWP Calculator – Systematic Withdrawal Plan Returns">
   <meta property="og:description" content="Plan systematic withdrawals from your mutual fund corpus. See monthly withdrawal sustainability & final balance. Free SWP calculator India.">
   <meta property="og:site_name" content="InvestSmartCalc">
@@ -19,16 +19,19 @@
   <meta name="twitter:description" content="Plan systematic withdrawals from your mutual fund corpus. See monthly withdrawal sustainability & final balance. Free SWP calculator India.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "InvestSmartCalc",
-  "url": "https://www.investsmartcalc.in",
+  "url": "https://investsmartcalc.com",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.investsmartcalc.in/logo.png",
+    "url": "https://investsmartcalc.com/logo.png",
     "width": 200,
     "height": 60
   },
@@ -41,7 +44,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "SWP Calculator",
-  "url": "https://www.investsmartcalc.in/swp-calculator.html",
+  "url": "https://investsmartcalc.com/swp-calculator.html",
   "description": "Plan systematic withdrawals from your mutual fund corpus. Calculate monthly withdrawal sustainability, final balance and corpus depletion risk. Free SWP calculator India.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -54,7 +57,7 @@
   "provider": {
     "@type": "Organization",
     "name": "InvestSmartCalc",
-    "url": "https://www.investsmartcalc.in"
+    "url": "https://investsmartcalc.com"
   },
   "inLanguage": "en-IN",
   "isAccessibleForFree": true,
@@ -76,13 +79,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.investsmartcalc.in/"
+      "item": "https://investsmartcalc.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "SWP Calculator",
-      "item": "https://www.investsmartcalc.in/swp-calculator.html"
+      "item": "https://investsmartcalc.com/swp-calculator.html"
     }
   ]
 }
@@ -141,7 +144,10 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="sip-calculator.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="fd-calculator.html">FD</a>
       <a href="ppf-calculator.html">PPF</a><a href="swp-calculator.html">SWP</a><a href="tax-calculator.html">Tax</a>
-    </div>
+    
+      <a href="ssy-calculator.html">SSY Calculator</a>
+      <a href="kvp-calculator.html">KVP Calculator</a>
+      <a href="pomis-calculator.html">POMIS Calculator</a></div>
   </nav>
 
   <main class="calc-page">
@@ -267,16 +273,34 @@
       </div>
       <span class="related-arrow">→</span>
     </a>
+    <a href="pomis-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#e3f2fd;color:#1565c0">📬</div>
+      <div><div class="related-name">POMIS Calculator</div><div class="related-desc">Monthly income scheme</div></div>
+      <span class="related-arrow">→</span>
+    </a>
   </div>
 </div>
 <div class="seo-section">
   <hr class="seo-divider">
 
-  <h2>What is SWP (Systematic Withdrawal Plan)?</h2>
+<div class="toc-box">
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+    <li><a href="#what-is-swp-systematic-withdrawal-plan">What is SWP</a></li>
+    <li><a href="#how-swp-works">How SWP Works</a></li>
+    <li><a href="#swp-calculation-example">Worked Example</a></li>
+    <li><a href="#swp-for-retirement-income-in-india">SWP for Retirement</a></li>
+    <li><a href="#swp-vs-fixed-deposit-for-retirement">SWP vs FD</a></li>
+    <li><a href="#frequently-asked-questions">FAQ</a></li>
+  </ul>
+</div>
+
+
+  <h2 id="what-is-swp-systematic-withdrawal-plan">What is SWP (Systematic Withdrawal Plan)?</h2>
   <p>A Systematic Withdrawal Plan (SWP) is a facility offered by mutual funds that allows you to withdraw a fixed amount from your investment at regular intervals — monthly, quarterly, or annually. It is essentially the reverse of a SIP. Instead of putting money in regularly, you take money out regularly, while the remaining corpus continues to grow.</p>
   <p>SWP is particularly popular among retirees who need a regular income stream without depleting their entire corpus at once. Unlike an FD, an SWP can be structured so that withdrawals come primarily from capital gains, minimising tax.</p>
 
-  <h2>How SWP Works</h2>
+  <h2 id="how-swp-works">How SWP Works</h2>
   <p>When you set up an SWP, the mutual fund redeems units equal to the withdrawal amount at the prevailing NAV each period. If the fund grows faster than your withdrawal rate, your corpus actually grows over time. If your withdrawal rate exceeds the fund's returns, the corpus shrinks gradually.</p>
   <div class="formula-box">
     <span class="f-label">SWP Corpus at End of Each Month</span>
@@ -286,7 +310,7 @@
     </div>
   </div>
 
-  <h2>SWP Calculation Example</h2>
+  <h2 id="swp-calculation-example">SWP Calculation Example</h2>
   <div class="example-box">
     <div class="ex-title">📘 Example: ₹25L corpus, ₹20,000/month withdrawal at 12% return</div>
     <table>
@@ -300,7 +324,7 @@
     <p style="font-size:13px;color:var(--text-secondary);margin-top:8px">The corpus grows because the 12% annual return exceeds the withdrawal rate of ~9.6%.</p>
   </div>
 
-  <h2>SWP vs Fixed Deposit for Retirement</h2>
+  <h2 id="swp-vs-fixed-deposit-for-retirement">SWP vs Fixed Deposit for Retirement</h2>
   <table class="seo-table">
     <thead><tr><th>Feature</th><th>SWP (Equity Fund)</th><th>FD</th></tr></thead>
     <tbody>
@@ -312,7 +336,15 @@
     </tbody>
   </table>
 
-  <h2>Frequently Asked Questions</h2>
+  <h2 id="swp-for-retirement-income-in-india">How to Use SWP for Retirement Income in India</h2>
+  <ul>
+    <li><strong>The bucket strategy:</strong> Keep 1–2 years of expenses in a liquid fund, 3–5 years in a short-duration debt fund, and the rest in equity/balanced funds. Set SWP from the liquid bucket and refill periodically.</li>
+    <li><strong>Sustainable withdrawal rate:</strong> Withdraw no more than 6–7% of corpus annually from balanced funds. Higher than the fund's expected return will eventually deplete the corpus.</li>
+    <li><strong>Tax efficiency:</strong> Each SWP redemption consists of original cost (untaxed) and gains (LTCG 12.5% with ₹1.25L annual exemption). Far more efficient than FD interest, which is 100% taxable at your slab rate.</li>
+    <li><strong>Inflation protection:</strong> Equity funds growing at 12%+ allow your corpus to grow even while withdrawing — preserving purchasing power over 20–30 years of retirement.</li>
+  </ul>
+
+  <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What is a safe withdrawal rate in India?<span class="faq-icon">+</span></button>
@@ -354,10 +386,9 @@
         <li><a href="swp-calculator.html">SWP Calculator</a></li>
         <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
         <li><a href="rd-calculator.html">RD Calculator</a></li>
-        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
-        <li><a href="hra-calculator.html">HRA Calculator</a></li>
-        <li><a href="gratuity-calculator.html">Gratuity</a></li>
-        <li><a href="inflation-calculator.html">Inflation</a></li>
+        <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+        <li><a href="kvp-calculator.html">KVP Calculator</a></li>
+        <li><a href="pomis-calculator.html">POMIS Calculator</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="about.html">About Us</a></li>
@@ -378,7 +409,7 @@
       </div>
     </div>
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
   <script>
     function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
       const val = parseFloat(slider.value);

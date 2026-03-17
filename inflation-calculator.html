@@ -6,10 +6,10 @@
   <meta name="description" content="Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement planning in India.">
   <meta name="keywords" content="inflation calculator India, purchasing power calculator, future value of money calculator, inflation rate calculator">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.investsmartcalc.in/inflation-calculator.html">
+  <link rel="canonical" href="https://investsmartcalc.com/inflation-calculator.html">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.investsmartcalc.in/inflation-calculator.html">
+  <meta property="og:url" content="https://investsmartcalc.com/inflation-calculator.html">
   <meta property="og:title" content="Inflation Calculator – Future Value of Money in India">
   <meta property="og:description" content="Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement planning in India.">
   <meta property="og:site_name" content="InvestSmartCalc">
@@ -18,16 +18,19 @@
   <meta name="twitter:title" content="Inflation Calculator – Future Value of Money in India">
   <meta name="twitter:description" content="Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement planning in India."><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "InvestSmartCalc",
-  "url": "https://www.investsmartcalc.in",
+  "url": "https://investsmartcalc.com",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.investsmartcalc.in/logo.png",
+    "url": "https://investsmartcalc.com/logo.png",
     "width": 200,
     "height": 60
   },
@@ -40,7 +43,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Inflation Calculator",
-  "url": "https://www.investsmartcalc.in/inflation-calculator.html",
+  "url": "https://investsmartcalc.com/inflation-calculator.html",
   "description": "Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement and financial goal planning in India.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -53,7 +56,7 @@
   "provider": {
     "@type": "Organization",
     "name": "InvestSmartCalc",
-    "url": "https://www.investsmartcalc.in"
+    "url": "https://investsmartcalc.com"
   },
   "inLanguage": "en-IN",
   "isAccessibleForFree": true,
@@ -75,13 +78,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.investsmartcalc.in/"
+      "item": "https://investsmartcalc.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Inflation Calculator",
-      "item": "https://www.investsmartcalc.in/inflation-calculator.html"
+      "item": "https://investsmartcalc.com/inflation-calculator.html"
     }
   ]
 }
@@ -135,7 +138,10 @@
         <button class="nav-toggle" onclick="toggleMenu()">☰</button>
       </div>
     </div>
-    <div class="mobile-menu" id="mobileMenu"><a href="index.html">All Calculators</a></div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">All Calculators</a>
+      <a href="ssy-calculator.html">SSY Calculator</a>
+      <a href="kvp-calculator.html">KVP Calculator</a>
+      <a href="pomis-calculator.html">POMIS Calculator</a></div>
   </nav>
   <main class="calc-page">
     <div class="calc-page-header">
@@ -252,16 +258,34 @@
       </div>
       <span class="related-arrow">→</span>
     </a>
+    <a href="ssy-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#fce4ec;color:#c2185b">👧</div>
+      <div><div class="related-name">SSY Calculator</div><div class="related-desc">Sukanya Samriddhi 8.2%</div></div>
+      <span class="related-arrow">→</span>
+    </a>
   </div>
 </div>
 <div class="seo-section">
   <hr class="seo-divider">
 
-  <h2>What is Inflation?</h2>
+<div class="toc-box">
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+    <li><a href="#what-is-inflation">What is Inflation</a></li>
+    <li><a href="#inflation-formula">Formula</a></li>
+    <li><a href="#impact-of-inflation-on-goals">Impact on Financial Goals</a></li>
+    <li><a href="#how-inflation-affects-retirement-planning-in-india">Inflation & Retirement</a></li>
+    <li><a href="#best-investments-to-beat-inflation-in-india">Beat Inflation</a></li>
+    <li><a href="#frequently-asked-questions">FAQ</a></li>
+  </ul>
+</div>
+
+
+  <h2 id="what-is-inflation">What is Inflation?</h2>
   <p>Inflation is the rate at which the general price level of goods and services rises over time, eroding the purchasing power of money. In simple terms: ₹1,00,000 today will not buy the same amount of goods 10 years from now. In India, the RBI targets a CPI (Consumer Price Index) inflation rate of 4% (with a tolerance band of 2–6%). Historically, India's average inflation has been around 5–6% per year.</p>
   <p>Understanding inflation is crucial for financial planning. Any investment that earns less than the inflation rate is actually <em>losing you money in real terms</em> — even if the nominal value appears to grow.</p>
 
-  <h2>Inflation Formula</h2>
+  <h2 id="inflation-formula">Inflation Formula</h2>
   <div class="formula-box">
     <span class="f-label">Future Cost due to Inflation</span>
     <span class="f-main">Future Cost = Present Cost × (1 + Inflation Rate)ᵗ</span>
@@ -271,7 +295,7 @@
     </div>
   </div>
 
-  <h2>Impact of Inflation on Goals</h2>
+  <h2 id="impact-of-inflation-on-goals">Impact of Inflation on Goals</h2>
   <table class="seo-table">
     <thead><tr><th>Goal (Today's Cost)</th><th>In 10 years @ 6%</th><th>In 20 years @ 6%</th></tr></thead>
     <tbody>
@@ -282,7 +306,26 @@
     </tbody>
   </table>
 
-  <h2>Frequently Asked Questions</h2>
+  <h2 id="how-inflation-affects-retirement-planning-in-india">How Inflation Affects Retirement Planning in India</h2>
+  <ul>
+    <li><strong>Expenses double every 12 years at 6% inflation:</strong> ₹50,000/month today becomes ₹89,500/month in 10 years and ₹1,60,000/month in 20 years to maintain the same lifestyle.</li>
+    <li><strong>Healthcare inflation is 10–12% in India</strong> — nearly double general CPI. A ₹5L medical emergency today costs ~₹13L in 10 years.</li>
+    <li><strong>The FD trap:</strong> At 7% FD rate and 6% inflation, real return is ~1% pre-tax. After 30% tax, real return is negative. FDs cannot protect retirement purchasing power over 20+ years.</li>
+    <li><strong>The solution:</strong> At least 50–60% of retirement corpus in equity mutual funds, which historically deliver 12–15% in India — beating inflation by 6–9% annually over long periods.</li>
+  </ul>
+  <h2 id="best-investments-to-beat-inflation-in-india">Best Investments to Beat Inflation in India (2025)</h2>
+  <table class="seo-table">
+    <thead><tr><th>Investment</th><th>Avg. Long-Term Return</th><th>Beats 6% Inflation?</th></tr></thead>
+    <tbody>
+      <tr><td>Savings Account</td><td>3–4%</td><td>❌ No — loses purchasing power</td></tr>
+      <tr><td>Fixed Deposit</td><td>6.5–7.5%</td><td>⚠️ Barely — after-tax real return often negative</td></tr>
+      <tr><td>PPF</td><td>7.1%</td><td>✅ Yes — and fully tax-free</td></tr>
+      <tr><td>Gold (long-term)</td><td>8–10%</td><td>✅ Yes</td></tr>
+      <tr class="highlight"><td>Equity Mutual Funds</td><td>12–15% (long-term)</td><td>✅ Strongly — 6–9% real return</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What is the current inflation rate in India?<span class="faq-icon">+</span></button>
@@ -319,10 +362,9 @@
         <li><a href="swp-calculator.html">SWP Calculator</a></li>
         <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
         <li><a href="rd-calculator.html">RD Calculator</a></li>
-        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
-        <li><a href="hra-calculator.html">HRA Calculator</a></li>
-        <li><a href="gratuity-calculator.html">Gratuity</a></li>
-        <li><a href="inflation-calculator.html">Inflation</a></li>
+        <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+        <li><a href="kvp-calculator.html">KVP Calculator</a></li>
+        <li><a href="pomis-calculator.html">POMIS Calculator</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="about.html">About Us</a></li>
@@ -343,7 +385,7 @@
       </div>
     </div>
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
   <script>
     function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
       const val = parseFloat(slider.value); document.getElementById(numId).value = val;

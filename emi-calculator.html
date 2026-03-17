@@ -6,10 +6,10 @@
   <meta name="description" content="Calculate monthly EMI for Home, Car or Personal Loan. Get amortization schedule, total interest & principal split. Free EMI calculator – instant results.">
   <meta name="keywords" content="EMI calculator, home loan EMI calculator, car loan EMI calculator, personal loan EMI, loan EMI calculator India">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.investsmartcalc.in/emi-calculator.html">
+  <link rel="canonical" href="https://investsmartcalc.com/emi-calculator.html">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.investsmartcalc.in/emi-calculator.html">
+  <meta property="og:url" content="https://investsmartcalc.com/emi-calculator.html">
   <meta property="og:title" content="EMI Calculator – Home, Car & Personal Loan EMI">
   <meta property="og:description" content="Calculate monthly EMI for Home, Car or Personal Loan. Get amortization schedule, total interest & principal split. Free EMI calculator – instant results.">
   <meta property="og:site_name" content="InvestSmartCalc">
@@ -19,16 +19,19 @@
   <meta name="twitter:description" content="Calculate monthly EMI for Home, Car or Personal Loan. Get amortization schedule, total interest & principal split. Free EMI calculator – instant results.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "InvestSmartCalc",
-  "url": "https://www.investsmartcalc.in",
+  "url": "https://investsmartcalc.com",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.investsmartcalc.in/logo.png",
+    "url": "https://investsmartcalc.com/logo.png",
     "width": 200,
     "height": 60
   },
@@ -41,7 +44,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "EMI Calculator",
-  "url": "https://www.investsmartcalc.in/emi-calculator.html",
+  "url": "https://investsmartcalc.com/emi-calculator.html",
   "description": "Calculate monthly EMI for Home, Car or Personal Loan. Get full amortization schedule, total interest and principal split. Free online EMI calculator India.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -54,7 +57,7 @@
   "provider": {
     "@type": "Organization",
     "name": "InvestSmartCalc",
-    "url": "https://www.investsmartcalc.in"
+    "url": "https://investsmartcalc.com"
   },
   "inLanguage": "en-IN",
   "isAccessibleForFree": true,
@@ -76,13 +79,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.investsmartcalc.in/"
+      "item": "https://investsmartcalc.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "EMI Calculator",
-      "item": "https://www.investsmartcalc.in/emi-calculator.html"
+      "item": "https://investsmartcalc.com/emi-calculator.html"
     }
   ]
 }
@@ -149,7 +152,10 @@
       <a href="sip-calculator.html">SIP Calculator</a><a href="emi-calculator.html">EMI Calculator</a>
       <a href="fd-calculator.html">FD Calculator</a><a href="ppf-calculator.html">PPF Calculator</a>
       <a href="swp-calculator.html">SWP Calculator</a><a href="tax-calculator.html">Tax Calculator</a>
-    </div>
+    
+      <a href="ssy-calculator.html">SSY Calculator</a>
+      <a href="kvp-calculator.html">KVP Calculator</a>
+      <a href="pomis-calculator.html">POMIS Calculator</a></div>
   </nav>
 
   <main class="calc-page">
@@ -312,14 +318,29 @@
 <div class="seo-section">
   <hr class="seo-divider">
 
-  <h2>What is EMI (Equated Monthly Instalment)?</h2>
+<div class="toc-box">
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+    <li><a href="#what-is-emi-equated-monthly-instalment">What is EMI</a></li>
+    <li><a href="#how-is-emi-calculated">How EMI is Calculated</a></li>
+    <li><a href="#emi-formula">EMI Formula</a></li>
+    <li><a href="#emi-calculation-example">Worked Example</a></li>
+    <li><a href="#how-to-reduce-home-loan-emi">How to Reduce Your EMI</a></li>
+    <li><a href="#home-loan-vs-car-loan-vs-personal-loan">Loan Types Compared</a></li>
+    <li><a href="#benefits-of-using-an-emi-calculator">Benefits</a></li>
+    <li><a href="#frequently-asked-questions">FAQ</a></li>
+  </ul>
+</div>
+
+
+  <h2 id="what-is-emi-equated-monthly-instalment">What is EMI (Equated Monthly Instalment)?</h2>
   <p>An EMI (Equated Monthly Instalment) is a fixed monthly payment made to a lender to repay a loan over a specified tenure. Each EMI has two components: the <strong>principal</strong> (the actual loan amount) and the <strong>interest</strong> (the cost of borrowing). In the early months, most of the EMI goes towards interest; over time, a larger share repays the principal — this is the nature of a reducing balance loan.</p>
   <p>EMIs are used for Home Loans, Car Loans, Personal Loans, and Education Loans in India. All scheduled banks and NBFCs regulated by RBI offer EMI-based lending.</p>
 
-  <h2>How is EMI Calculated?</h2>
+  <h2 id="how-is-emi-calculated">How is EMI Calculated?</h2>
   <p>EMI is calculated using the reducing balance method, where interest is charged only on the outstanding principal each month. This is more borrower-friendly than flat-rate interest, where interest is calculated on the original principal throughout.</p>
 
-  <h2>EMI Formula</h2>
+  <h2 id="emi-formula">EMI Formula</h2>
   <div class="formula-box">
     <span class="f-label">EMI Calculation Formula (Reducing Balance)</span>
     <span class="f-main">EMI = P × r × (1 + r)ⁿ / [ (1 + r)ⁿ − 1 ]</span>
@@ -329,7 +350,7 @@
     </div>
   </div>
 
-  <h2>EMI Calculation Example</h2>
+  <h2 id="emi-calculation-example">EMI Calculation Example</h2>
   <div class="example-box">
     <div class="ex-title">📘 Example: ₹30 lakh Home Loan at 8.5% for 20 years</div>
     <table>
@@ -343,7 +364,7 @@
     </table>
   </div>
 
-  <h2>Home Loan vs Car Loan vs Personal Loan</h2>
+  <h2 id="home-loan-vs-car-loan-vs-personal-loan">Home Loan vs Car Loan vs Personal Loan</h2>
   <table class="seo-table">
     <thead><tr><th>Feature</th><th>Home Loan</th><th>Car Loan</th><th>Personal Loan</th></tr></thead>
     <tbody>
@@ -355,7 +376,7 @@
     </tbody>
   </table>
 
-  <h2>Benefits of Using an EMI Calculator</h2>
+  <h2 id="benefits-of-using-an-emi-calculator">Benefits of Using an EMI Calculator</h2>
   <div class="benefits-grid">
     <div class="benefit-card"><div class="b-icon">🔍</div><div class="b-title">Plan Your Budget</div><div class="b-desc">Know your exact monthly outflow before applying for a loan.</div></div>
     <div class="benefit-card"><div class="b-icon">⚖️</div><div class="b-title">Compare Loans</div><div class="b-desc">Compare EMIs across different rates, tenures and loan amounts instantly.</div></div>
@@ -363,7 +384,27 @@
     <div class="benefit-card"><div class="b-icon">💡</div><div class="b-title">Prepayment Planning</div><div class="b-desc">Understand how part-prepayments can reduce your interest burden significantly.</div></div>
   </div>
 
-  <h2>Frequently Asked Questions</h2>
+  <h2 id="how-to-reduce-home-loan-emi">How to Reduce Your Home Loan EMI</h2>
+  <ul>
+    <li><strong>Larger down payment:</strong> Paying 30–40% upfront reduces principal. On a ₹1 crore home loan at 8.5%, every extra ₹10L down payment saves ~₹8,700/month in EMI.</li>
+    <li><strong>Extend tenure:</strong> Moving from 15 to 20 years lowers EMI but increases total interest. Use the calculator to see the exact trade-off.</li>
+    <li><strong>Negotiate a lower rate:</strong> A 0.5% rate cut on ₹50L over 20 years saves over ₹3.5 lakh total. Compare SBI, HDFC, ICICI, Kotak, and small finance banks.</li>
+    <li><strong>Part-prepayment:</strong> A ₹1–2L prepayment in the first 3 years can save ₹4–6L in total interest. RBI prohibits prepayment penalties on floating-rate loans.</li>
+    <li><strong>Balance transfer:</strong> If market rates have dropped below your existing rate, transfer to another lender. Factor in processing fees (0.5–1% of outstanding) first.</li>
+  </ul>
+  <h2 id="emi-vs-rent">Home Loan EMI vs Rent — Should You Buy or Rent?</h2>
+  <table class="seo-table">
+    <thead><tr><th>Factor</th><th>Buy (EMI)</th><th>Rent</th></tr></thead>
+    <tbody>
+      <tr><td>Monthly outflow</td><td>Higher (EMI + maintenance)</td><td>Lower initially</td></tr>
+      <tr><td>Asset creation</td><td>Builds equity over time</td><td>No asset; capital stays liquid</td></tr>
+      <tr><td>Flexibility</td><td>Low — hard to relocate quickly</td><td>High — move anytime</td></tr>
+      <tr><td>Tax benefit (Old Regime)</td><td>Section 24(b) up to ₹2L interest</td><td>HRA exemption Sec 10(13A)</td></tr>
+      <tr class="highlight"><td>Best for</td><td>Stable city, 7+ year horizon</td><td>Career-growth phase</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">Does prepaying a loan save money?<span class="faq-icon">+</span></button>
@@ -409,10 +450,9 @@
         <li><a href="swp-calculator.html">SWP Calculator</a></li>
         <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
         <li><a href="rd-calculator.html">RD Calculator</a></li>
-        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
-        <li><a href="hra-calculator.html">HRA Calculator</a></li>
-        <li><a href="gratuity-calculator.html">Gratuity</a></li>
-        <li><a href="inflation-calculator.html">Inflation</a></li>
+        <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+        <li><a href="kvp-calculator.html">KVP Calculator</a></li>
+        <li><a href="pomis-calculator.html">POMIS Calculator</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="about.html">About Us</a></li>
@@ -434,7 +474,7 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
   <script>
     const loanDefaults = { home: [3000000,8.5,20,10000000], car: [800000,9.5,7,2000000], personal: [500000,14,5,1500000] };
 

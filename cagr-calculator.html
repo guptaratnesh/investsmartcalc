@@ -6,10 +6,10 @@
   <meta name="description" content="Calculate CAGR of any investment. Enter initial value, final value & years to get compound annual growth rate. Free CAGR calculator India.">
   <meta name="keywords" content="CAGR calculator, compound annual growth rate calculator India, investment return calculator, CAGR formula India">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.investsmartcalc.in/cagr-calculator.html">
+  <link rel="canonical" href="https://investsmartcalc.com/cagr-calculator.html">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.investsmartcalc.in/cagr-calculator.html">
+  <meta property="og:url" content="https://investsmartcalc.com/cagr-calculator.html">
   <meta property="og:title" content="CAGR Calculator – Calculate Compound Annual Growth Rate">
   <meta property="og:description" content="Calculate CAGR of any investment. Enter initial value, final value & years to get compound annual growth rate. Free CAGR calculator India.">
   <meta property="og:site_name" content="InvestSmartCalc">
@@ -18,7 +18,10 @@
   <meta name="twitter:title" content="CAGR Calculator – Calculate Compound Annual Growth Rate">
   <meta name="twitter:description" content="Calculate CAGR of any investment. Enter initial value, final value & years to get compound annual growth rate. Free CAGR calculator India."><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
   <style>
     .big-result { font-size: 48px; font-weight: 700; font-family: var(--font-mono); color: var(--green-dark); text-align: center; padding: 20px 0; }
   </style>
@@ -27,10 +30,10 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "InvestSmartCalc",
-  "url": "https://www.investsmartcalc.in",
+  "url": "https://investsmartcalc.com",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.investsmartcalc.in/logo.png",
+    "url": "https://investsmartcalc.com/logo.png",
     "width": 200,
     "height": 60
   },
@@ -43,7 +46,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "CAGR Calculator",
-  "url": "https://www.investsmartcalc.in/cagr-calculator.html",
+  "url": "https://investsmartcalc.com/cagr-calculator.html",
   "description": "Calculate CAGR (Compound Annual Growth Rate) of any investment. Enter initial value, final value and number of years to get the annualised growth rate. Free CAGR calculator India.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -56,7 +59,7 @@
   "provider": {
     "@type": "Organization",
     "name": "InvestSmartCalc",
-    "url": "https://www.investsmartcalc.in"
+    "url": "https://investsmartcalc.com"
   },
   "inLanguage": "en-IN",
   "isAccessibleForFree": true,
@@ -78,13 +81,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.investsmartcalc.in/"
+      "item": "https://investsmartcalc.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "CAGR Calculator",
-      "item": "https://www.investsmartcalc.in/cagr-calculator.html"
+      "item": "https://investsmartcalc.com/cagr-calculator.html"
     }
   ]
 }
@@ -138,7 +141,10 @@
         <button class="nav-toggle" onclick="toggleMenu()">☰</button>
       </div>
     </div>
-    <div class="mobile-menu" id="mobileMenu"><a href="index.html">All Calculators</a></div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">All Calculators</a>
+      <a href="ssy-calculator.html">SSY Calculator</a>
+      <a href="kvp-calculator.html">KVP Calculator</a>
+      <a href="pomis-calculator.html">POMIS Calculator</a></div>
   </nav>
   <main class="calc-page">
     <div class="calc-page-header">
@@ -261,11 +267,24 @@
 <div class="seo-section">
   <hr class="seo-divider">
 
-  <h2>What is CAGR (Compound Annual Growth Rate)?</h2>
+<div class="toc-box">
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+    <li><a href="#what-is-cagr-compound-annual-growth-rate">What is CAGR</a></li>
+    <li><a href="#cagr-formula">Formula</a></li>
+    <li><a href="#cagr-calculation-example">Worked Example</a></li>
+    <li><a href="#how-to-calculate-cagr-in-excel">CAGR in Excel</a></li>
+    <li><a href="#cagr-vs-absolute-return-vs-xirr">CAGR vs XIRR vs Absolute</a></li>
+    <li><a href="#frequently-asked-questions">FAQ</a></li>
+  </ul>
+</div>
+
+
+  <h2 id="what-is-cagr-compound-annual-growth-rate">What is CAGR (Compound Annual Growth Rate)?</h2>
   <p>CAGR (Compound Annual Growth Rate) is the rate at which an investment would have grown if it grew at a steady annual rate. It smooths out the volatility of year-to-year returns to give a single, meaningful number representing the investment's growth trajectory. CAGR is the most widely used metric to evaluate and compare investment performance over time.</p>
   <p>Mutual funds, stocks, business revenues, and economic indicators are all commonly measured using CAGR. When a mutual fund advertises "18% CAGR over 10 years," it means a ₹1 lakh investment would have grown to approximately ₹5.23 lakh over that period.</p>
 
-  <h2>CAGR Formula</h2>
+  <h2 id="cagr-formula">CAGR Formula</h2>
   <div class="formula-box">
     <span class="f-label">CAGR Formula</span>
     <span class="f-main">CAGR = (Final Value / Initial Value)^(1/n) − 1</span>
@@ -275,7 +294,7 @@
     </div>
   </div>
 
-  <h2>CAGR vs Absolute Return vs XIRR</h2>
+  <h2 id="cagr-vs-absolute-return-vs-xirr">CAGR vs Absolute Return vs XIRR</h2>
   <table class="seo-table">
     <thead><tr><th>Metric</th><th>What it Shows</th><th>When to Use</th></tr></thead>
     <tbody>
@@ -286,7 +305,28 @@
     </tbody>
   </table>
 
-  <h2>Frequently Asked Questions</h2>
+  <h2 id="cagr-calculation-example">CAGR Calculation — Worked Example</h2>
+  <div class="example-box">
+    <div class="ex-title">📘 Investment grew from ₹1,00,000 to ₹3,00,000 over 5 years</div>
+    <table>
+      <tr><td>Initial Value</td><td>₹1,00,000</td></tr>
+      <tr><td>Final Value</td><td>₹3,00,000</td></tr>
+      <tr><td>Period</td><td>5 years</td></tr>
+      <tr><td>Formula applied</td><td>(3,00,000 ÷ 1,00,000)^(1/5) − 1</td></tr>
+      <tr class="ex-result"><td>CAGR</td><td>24.57% per year</td></tr>
+      <tr class="ex-result"><td>Absolute Return</td><td>200% over 5 years</td></tr>
+    </table>
+  </div>
+  <h2 id="how-to-calculate-cagr-in-excel">How to Calculate CAGR in Excel</h2>
+  <p>Excel has no dedicated CAGR function. Use the power formula:</p>
+  <div class="formula-box">
+    <span class="f-label">Excel Formula</span>
+    <span class="f-main">= (End_Value / Start_Value) ^ (1 / Years) - 1</span>
+    <div class="f-vars">Example: =(B2/B1)^(1/5)-1 where B1=₹1,00,000, B2=₹3,00,000, period=5 years. Format cell as Percentage.</div>
+  </div>
+  <p>For mutual funds with multiple SIP transactions, use <strong>XIRR</strong> instead — it accounts for the timing of each cash flow and gives a more accurate annualised return figure than simple CAGR.</p>
+
+  <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">Why is CAGR better than simple average return?<span class="faq-icon">+</span></button>
@@ -323,10 +363,9 @@
         <li><a href="swp-calculator.html">SWP Calculator</a></li>
         <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
         <li><a href="rd-calculator.html">RD Calculator</a></li>
-        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
-        <li><a href="hra-calculator.html">HRA Calculator</a></li>
-        <li><a href="gratuity-calculator.html">Gratuity</a></li>
-        <li><a href="inflation-calculator.html">Inflation</a></li>
+        <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+        <li><a href="kvp-calculator.html">KVP Calculator</a></li>
+        <li><a href="pomis-calculator.html">POMIS Calculator</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="about.html">About Us</a></li>
@@ -347,7 +386,7 @@
       </div>
     </div>
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
   <script>
     function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
       const val = parseFloat(slider.value); document.getElementById(numId).value = val;

@@ -6,10 +6,10 @@
   <meta name="description" content="Calculate HRA tax exemption under Sec 10(13A). Enter salary, HRA & rent to find exempt vs taxable HRA. Free HRA calculator for metro & non-metro.">
   <meta name="keywords" content="HRA calculator, house rent allowance calculator India, HRA exemption calculator, HRA tax calculator section 10(13A)">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.investsmartcalc.in/hra-calculator.html">
+  <link rel="canonical" href="https://investsmartcalc.com/hra-calculator.html">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.investsmartcalc.in/hra-calculator.html">
+  <meta property="og:url" content="https://investsmartcalc.com/hra-calculator.html">
   <meta property="og:title" content="HRA Calculator – House Rent Allowance Tax Exemption">
   <meta property="og:description" content="Calculate HRA tax exemption under Sec 10(13A). Enter salary, HRA & rent to find exempt vs taxable HRA. Free HRA calculator for metro & non-metro.">
   <meta property="og:site_name" content="InvestSmartCalc">
@@ -18,7 +18,10 @@
   <meta name="twitter:title" content="HRA Calculator – House Rent Allowance Tax Exemption">
   <meta name="twitter:description" content="Calculate HRA tax exemption under Sec 10(13A). Enter salary, HRA & rent to find exempt vs taxable HRA. Free HRA calculator for metro & non-metro."><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
   <style>
     .city-toggle { display:flex; gap:10px; margin-bottom:20px; }
     .city-btn { flex:1; padding:10px; border:1.5px solid var(--border); border-radius:10px; font-size:13px; font-weight:500; cursor:pointer; background:white; font-family:var(--font); transition:all 0.18s; text-align:center; }
@@ -30,10 +33,10 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "InvestSmartCalc",
-  "url": "https://www.investsmartcalc.in",
+  "url": "https://investsmartcalc.com",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.investsmartcalc.in/logo.png",
+    "url": "https://investsmartcalc.com/logo.png",
     "width": 200,
     "height": 60
   },
@@ -46,7 +49,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "HRA Calculator",
-  "url": "https://www.investsmartcalc.in/hra-calculator.html",
+  "url": "https://investsmartcalc.com/hra-calculator.html",
   "description": "Calculate HRA tax exemption under Section 10(13A). Enter basic salary, HRA received and rent paid to find exempt and taxable HRA. Metro and non-metro rates applied.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -59,7 +62,7 @@
   "provider": {
     "@type": "Organization",
     "name": "InvestSmartCalc",
-    "url": "https://www.investsmartcalc.in"
+    "url": "https://investsmartcalc.com"
   },
   "inLanguage": "en-IN",
   "isAccessibleForFree": true,
@@ -81,13 +84,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.investsmartcalc.in/"
+      "item": "https://investsmartcalc.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "HRA Calculator",
-      "item": "https://www.investsmartcalc.in/hra-calculator.html"
+      "item": "https://investsmartcalc.com/hra-calculator.html"
     }
   ]
 }
@@ -149,7 +152,10 @@
         <button class="nav-toggle" onclick="toggleMenu()">☰</button>
       </div>
     </div>
-    <div class="mobile-menu" id="mobileMenu"><a href="index.html">All Calculators</a></div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">All Calculators</a>
+      <a href="ssy-calculator.html">SSY Calculator</a>
+      <a href="kvp-calculator.html">KVP Calculator</a>
+      <a href="pomis-calculator.html">POMIS Calculator</a></div>
   </nav>
   <main class="calc-page">
     <div class="calc-page-header">
@@ -317,10 +323,24 @@
 <div class="seo-section">
   <hr class="seo-divider">
 
-  <h2>What is HRA (House Rent Allowance)?</h2>
+<div class="toc-box">
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+    <li><a href="#what-is-hra-house-rent-allowance">What is HRA</a></li>
+    <li><a href="#hra-exemption-the-3-condition-rule">The 3-Condition Rule</a></li>
+    <li><a href="#hra-exemption-example">Worked Example</a></li>
+    <li><a href="#how-to-claim-hra-exemption-in-itr">How to Claim HRA</a></li>
+    <li><a href="#hra-exemption-while-working-from-home">HRA While WFH</a></li>
+    <li><a href="#important-hra-rules">Important Rules</a></li>
+    <li><a href="#frequently-asked-questions">FAQ</a></li>
+  </ul>
+</div>
+
+
+  <h2 id="what-is-hra-house-rent-allowance">What is HRA (House Rent Allowance)?</h2>
   <p>House Rent Allowance (HRA) is a component of salary paid by employers to employees to cover the cost of rented accommodation. Under <strong>Section 10(13A) of the Income Tax Act</strong>, salaried employees living in rented housing can claim HRA exemption — meaning a portion of the HRA received is deducted from taxable income, reducing their tax liability. HRA exemption is available only under the <strong>Old Tax Regime</strong>; it is not available if you opt for the New Tax Regime.</p>
 
-  <h2>HRA Exemption: The 3-Condition Rule</h2>
+  <h2 id="hra-exemption-the-3-condition-rule">HRA Exemption: The 3-Condition Rule</h2>
   <p>The HRA exemption is the <strong>minimum</strong> of these three amounts (computed annually):</p>
   <div class="formula-box">
     <span class="f-label">HRA Exemption = Minimum of:</span>
@@ -334,7 +354,7 @@
     </div>
   </div>
 
-  <h2>HRA Exemption Example</h2>
+  <h2 id="hra-exemption-example">HRA Exemption Example</h2>
   <div class="example-box">
     <div class="ex-title">📘 Example: Delhi employee, Basic ₹50,000, HRA ₹20,000, Rent ₹18,000/month</div>
     <table>
@@ -346,7 +366,7 @@
     </table>
   </div>
 
-  <h2>Important HRA Rules</h2>
+  <h2 id="important-hra-rules">Important HRA Rules</h2>
   <ul>
     <li>You must be <strong>actually paying rent</strong> to claim HRA exemption — staying rent-free negates the claim.</li>
     <li>If annual rent exceeds <strong>₹1 lakh</strong>, the landlord's PAN is mandatory to be provided to the employer.</li>
@@ -356,7 +376,22 @@
     <li>Under <strong>Code of Wages 2019</strong>, Basic+DA must be ≥ 50% of CTC, which directly affects HRA calculation since HRA is typically 40–50% of Basic.</li>
   </ul>
 
-  <h2>Frequently Asked Questions</h2>
+  <h2 id="how-to-claim-hra-exemption-in-itr">How to Claim HRA Exemption in ITR</h2>
+  <ol>
+    <li><strong>Submit to employer for TDS:</strong> Provide rent receipts monthly or quarterly to HR/payroll. This reduces TDS deduction immediately.</li>
+    <li><strong>Landlord PAN mandatory:</strong> If annual rent exceeds ₹1,00,000 (₹8,333/month), you must provide the landlord's PAN. Without it, the employer cannot give the full HRA benefit in TDS calculation.</li>
+    <li><strong>In your ITR:</strong> Report in Schedule S under "Allowances exempt u/s 10". The exempt amount is deducted from gross salary before computing tax.</li>
+    <li><strong>Missed employer submission?</strong> Claim directly in ITR filing — you'll receive a refund for excess TDS. No penalty for late claim through ITR.</li>
+  </ol>
+  <h2 id="hra-exemption-while-working-from-home">HRA Exemption While Working From Home</h2>
+  <ul>
+    <li><strong>Renting and WFH:</strong> Full HRA exemption is available. The Income Tax Act does not require your workplace to be separate from your home.</li>
+    <li><strong>Paying rent to parents:</strong> Valid — even while WFH. Payment must be by bank transfer, and parents must declare rental income in their ITR. Can save ₹50,000–₹1,20,000/year in tax.</li>
+    <li><strong>Living in own house:</strong> Cannot claim HRA exemption on any self-occupied property.</li>
+    <li><strong>No HRA in salary:</strong> Claim under Section 80GG instead — up to ₹60,000/year for rent paid, subject to conditions.</li>
+  </ul>
+
+  <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">Can I claim HRA if I pay rent to my parents?<span class="faq-icon">+</span></button>
@@ -397,10 +432,9 @@
         <li><a href="swp-calculator.html">SWP Calculator</a></li>
         <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
         <li><a href="rd-calculator.html">RD Calculator</a></li>
-        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
-        <li><a href="hra-calculator.html">HRA Calculator</a></li>
-        <li><a href="gratuity-calculator.html">Gratuity</a></li>
-        <li><a href="inflation-calculator.html">Inflation</a></li>
+        <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+        <li><a href="kvp-calculator.html">KVP Calculator</a></li>
+        <li><a href="pomis-calculator.html">POMIS Calculator</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="about.html">About Us</a></li>
@@ -421,7 +455,7 @@
       </div>
     </div>
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
   <script>
     let cityMultiplier = 0.5;
     function setCity(btn, type) {

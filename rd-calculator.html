@@ -6,10 +6,10 @@
   <meta name="description" content="Calculate Recurring Deposit maturity with quarterly compounding. Enter monthly deposit, rate & tenure. Free RD calculator for all Indian banks.">
   <meta name="keywords" content="RD calculator, recurring deposit calculator India, RD maturity calculator, recurring deposit interest calculator">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.investsmartcalc.in/rd-calculator.html">
+  <link rel="canonical" href="https://investsmartcalc.com/rd-calculator.html">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.investsmartcalc.in/rd-calculator.html">
+  <meta property="og:url" content="https://investsmartcalc.com/rd-calculator.html">
   <meta property="og:title" content="RD Calculator – Recurring Deposit Maturity & Interest">
   <meta property="og:description" content="Calculate Recurring Deposit maturity with quarterly compounding. Enter monthly deposit, rate & tenure. Free RD calculator for all Indian banks.">
   <meta property="og:site_name" content="InvestSmartCalc">
@@ -18,16 +18,19 @@
   <meta name="twitter:title" content="RD Calculator – Recurring Deposit Maturity & Interest">
   <meta name="twitter:description" content="Calculate Recurring Deposit maturity with quarterly compounding. Enter monthly deposit, rate & tenure. Free RD calculator for all Indian banks."><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "InvestSmartCalc",
-  "url": "https://www.investsmartcalc.in",
+  "url": "https://investsmartcalc.com",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.investsmartcalc.in/logo.png",
+    "url": "https://investsmartcalc.com/logo.png",
     "width": 200,
     "height": 60
   },
@@ -40,7 +43,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "RD Calculator",
-  "url": "https://www.investsmartcalc.in/rd-calculator.html",
+  "url": "https://investsmartcalc.com/rd-calculator.html",
   "description": "Calculate Recurring Deposit maturity amount with quarterly compounding. Enter monthly deposit, interest rate and tenure. Free RD calculator for all Indian banks.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -53,7 +56,7 @@
   "provider": {
     "@type": "Organization",
     "name": "InvestSmartCalc",
-    "url": "https://www.investsmartcalc.in"
+    "url": "https://investsmartcalc.com"
   },
   "inLanguage": "en-IN",
   "isAccessibleForFree": true,
@@ -75,13 +78,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.investsmartcalc.in/"
+      "item": "https://investsmartcalc.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "RD Calculator",
-      "item": "https://www.investsmartcalc.in/rd-calculator.html"
+      "item": "https://investsmartcalc.com/rd-calculator.html"
     }
   ]
 }
@@ -137,7 +140,10 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="sip-calculator.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="rd-calculator.html">RD</a>
-    </div>
+    
+      <a href="ssy-calculator.html">SSY Calculator</a>
+      <a href="kvp-calculator.html">KVP Calculator</a>
+      <a href="pomis-calculator.html">POMIS Calculator</a></div>
   </nav>
   <main class="calc-page">
     <div class="calc-page-header">
@@ -253,16 +259,33 @@
       </div>
       <span class="related-arrow">→</span>
     </a>
+    <a href="kvp-calculator.html" class="related-card">
+      <div class="related-icon" style="background:#e8f5e9;color:#1b5e20">📮</div>
+      <div><div class="related-name">KVP Calculator</div><div class="related-desc">Kisan Vikas Patra</div></div>
+      <span class="related-arrow">→</span>
+    </a>
   </div>
 </div>
 <div class="seo-section">
   <hr class="seo-divider">
 
-  <h2>What is a Recurring Deposit (RD)?</h2>
+<div class="toc-box">
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+    <li><a href="#what-is-a-recurring-deposit-rd">What is RD</a></li>
+    <li><a href="#rd-interest-formula">Formula</a></li>
+    <li><a href="#rd-vs-sip-key-differences">RD vs SIP</a></li>
+    <li><a href="#post-office-rd-vs-bank-rd">Post Office vs Bank RD</a></li>
+    <li><a href="#frequently-asked-questions">FAQ</a></li>
+  </ul>
+</div>
+
+
+  <h2 id="what-is-a-recurring-deposit-rd">What is a Recurring Deposit (RD)?</h2>
   <p>A Recurring Deposit (RD) is a savings scheme offered by banks and post offices in India where you deposit a fixed amount every month for a predetermined tenure. At maturity, you receive the total deposited amount along with the interest earned. RDs are regulated by RBI and combine the regularity of monthly savings with the higher returns of fixed deposits.</p>
   <p>Post Office RDs offer a government-backed option with attractive rates (currently 6.7% p.a., compounded quarterly), accessible at any India Post office without the need for a savings account.</p>
 
-  <h2>RD Interest Formula</h2>
+  <h2 id="rd-interest-formula">RD Interest Formula</h2>
   <p>RD interest is compounded quarterly. Each monthly instalment earns interest from the month it is deposited until maturity. The calculation treats each deposit as a mini-FD for the remaining tenure:</p>
   <div class="formula-box">
     <span class="f-label">RD Maturity Value (each instalment compounded quarterly)</span>
@@ -274,7 +297,7 @@
     </div>
   </div>
 
-  <h2>RD vs SIP: Key Differences</h2>
+  <h2 id="rd-vs-sip-key-differences">RD vs SIP: Key Differences</h2>
   <table class="seo-table">
     <thead><tr><th>Feature</th><th>RD</th><th>SIP (Mutual Fund)</th></tr></thead>
     <tbody>
@@ -286,7 +309,21 @@
     </tbody>
   </table>
 
-  <h2>Frequently Asked Questions</h2>
+  <h2 id="post-office-rd-vs-bank-rd">Post Office RD vs Bank RD in India</h2>
+  <table class="seo-table">
+    <thead><tr><th>Feature</th><th>Post Office RD</th><th>Bank RD</th></tr></thead>
+    <tbody>
+      <tr><td>Interest Rate (2025)</td><td>6.7% p.a.</td><td>5.5–8.5% (varies by bank)</td></tr>
+      <tr><td>Tenure</td><td>5 years (fixed)</td><td>6 months to 10 years</td></tr>
+      <tr><td>Minimum Deposit</td><td>₹100/month</td><td>₹100–₹500/month</td></tr>
+      <tr><td>Safety</td><td>Sovereign government guarantee</td><td>DICGC insured up to ₹5L</td></tr>
+      <tr><td>TDS</td><td>No TDS deducted</td><td>TDS if annual interest &gt; ₹40,000</td></tr>
+      <tr class="highlight"><td>Best for</td><td>Safety, no TDS paperwork</td><td>Flexibility, higher rates at SFBs</td></tr>
+    </tbody>
+  </table>
+  <p>Post Office RD's no-TDS advantage matters for investors in high tax brackets — no Form 15G/15H required, no TDS certificate tracking, and no deposit insurance cap given the sovereign guarantee.</p>
+
+  <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What is the TDS on RD interest?<span class="faq-icon">+</span></button>
@@ -323,10 +360,9 @@
         <li><a href="swp-calculator.html">SWP Calculator</a></li>
         <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
         <li><a href="rd-calculator.html">RD Calculator</a></li>
-        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
-        <li><a href="hra-calculator.html">HRA Calculator</a></li>
-        <li><a href="gratuity-calculator.html">Gratuity</a></li>
-        <li><a href="inflation-calculator.html">Inflation</a></li>
+        <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+        <li><a href="kvp-calculator.html">KVP Calculator</a></li>
+        <li><a href="pomis-calculator.html">POMIS Calculator</a></li>
       </ul></div>
       <div class="footer-col"><h4>Company</h4><ul>
         <li><a href="about.html">About Us</a></li>
@@ -347,7 +383,7 @@
       </div>
     </div>
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
   <script>
     function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
       const val = parseFloat(slider.value); document.getElementById(numId).value = val;

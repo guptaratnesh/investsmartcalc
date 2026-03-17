@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POMIS Calculator – Post Office Monthly Income Scheme 2025 | InvestSmartCalc</title>
+  <meta name="description" content="Calculate Post Office Monthly Income Scheme (POMIS) monthly payout. POMIS interest rate 7.4% (2025). Free POMIS calculator with monthly income breakdown.">
+  <meta name="keywords" content="POMIS calculator, Post Office Monthly Income Scheme calculator, POMIS interest rate 2025, post office MIS calculator India, monthly income scheme">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://investsmartcalc.com/pomis-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://investsmartcalc.com/pomis-calculator.html">
+  <meta property="og:title" content="POMIS Calculator – Post Office Monthly Income Scheme | InvestSmartCalc">
+  <meta property="og:description" content="Calculate POMIS monthly payout at 7.4% interest. Free Post Office Monthly Income Scheme calculator India 2025.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="POMIS Calculator – Post Office Monthly Income Scheme">
+  <meta name="twitter:description" content="Calculate your monthly income from POMIS at 7.4% interest rate. Free calculator India 2025.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"InvestSmartCalc","url":"https://investsmartcalc.com","logo":{"@type":"ImageObject","url":"https://investsmartcalc.com/logo.png"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"POMIS Calculator","url":"https://investsmartcalc.com/pomis-calculator.html","description":"Free Post Office Monthly Income Scheme calculator. Calculate POMIS monthly payout at 7.4% interest rate.","applicationCategory":"FinanceApplication","operatingSystem":"Any","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"POMIS Calculator","item":"https://investsmartcalc.com/pomis-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the current POMIS interest rate in 2025?","acceptedAnswer":{"@type":"Answer","text":"The POMIS interest rate for Q1 FY2025-26 is 7.4% per annum, paid monthly. The monthly payout rate is 0.617% per month. The rate is reviewed quarterly by the Government of India."}},{"@type":"Question","name":"What is the maximum investment in POMIS?","acceptedAnswer":{"@type":"Answer","text":"The maximum investment in POMIS is ₹9,00,000 for a single account and ₹15,00,000 for a joint account. For a joint account, the maximum monthly income at 7.4% is ₹9,250 per month."}},{"@type":"Question","name":"Is POMIS interest taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes — POMIS monthly interest income is fully taxable as 'Income from Other Sources' at your applicable slab rate. TDS is not deducted by the Post Office, but you must declare the interest in your ITR each year."}}]}</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="sip-calculator.html">SIP</a><a href="emi-calculator.html">EMI</a><a href="fd-calculator.html">FD</a>
+        <a href="ppf-calculator.html">PPF</a><a href="tax-calculator.html">Tax</a>
+        <a href="pomis-calculator.html" style="background:var(--green-light);color:var(--green-dark)">POMIS</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="sip-calculator.html">SIP Calculator</a><a href="emi-calculator.html">EMI Calculator</a>
+      <a href="fd-calculator.html">FD Calculator</a><a href="ppf-calculator.html">PPF Calculator</a>
+      <a href="tax-calculator.html">Tax Calculator</a><a href="ssy-calculator.html">SSY Calculator</a>
+      <a href="kvp-calculator.html">KVP Calculator</a><a href="pomis-calculator.html">POMIS Calculator</a>
+      <a href="about.html">About</a><a href="disclaimer.html">Disclaimer</a><a href="privacy.html">Privacy Policy</a>
+    </div>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="index.html">Home</a> › POMIS Calculator</div>
+      <h1>POMIS Calculator</h1>
+      <p>Calculate monthly income from Post Office Monthly Income Scheme</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="input-panel">
+
+        <div class="input-group">
+          <div class="input-label"><span>Investment Amount</span><span class="input-value" id="amtLabel">₹9,00,000</span></div>
+          <input type="range" id="amount" min="1000" max="1500000" step="1000" value="900000"
+            oninput="syncInput(this,'amtNum','amtLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="amtNum" value="900000"
+            oninput="syncSlider(this,'amount','amtLabel','₹',true);calculate()">
+          <div class="preset-row">
+            <button class="preset-btn" onclick="setPreset(100000)">₹1L</button>
+            <button class="preset-btn" onclick="setPreset(500000)">₹5L</button>
+            <button class="preset-btn" onclick="setPreset(900000)">₹9L (Max Single)</button>
+            <button class="preset-btn" onclick="setPreset(1500000)">₹15L (Max Joint)</button>
+          </div>
+          <div class="calc-note" id="limitNote"></div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-label"><span>POMIS Interest Rate (p.a.)</span><span class="input-value" id="rateLabel">7.4%</span></div>
+          <input type="range" id="rate" min="5" max="10" step="0.1" value="7.4"
+            oninput="syncInput(this,'rateNum','rateLabel','',false,'%');calculate()">
+          <input type="number" class="number-input" id="rateNum" value="7.4" step="0.1"
+            oninput="syncSlider(this,'rate','rateLabel','',false,'%');calculate()">
+          <div class="calc-note">Current rate: 7.4% p.a. (Q1 FY 2025-26) · Interest paid monthly</div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-label"><span>Tenure</span><span class="input-value" id="tenureLabel">5 yr</span></div>
+          <input type="range" id="tenure" min="1" max="5" step="1" value="5"
+            oninput="syncInput(this,'tenureNum','tenureLabel','',false,' yr');calculate()">
+          <input type="number" class="number-input" id="tenureNum" value="5"
+            oninput="syncSlider(this,'tenure','tenureLabel','',false,' yr');calculate()">
+          <div class="calc-note">POMIS has a fixed 5-year tenure · Extendable on maturity</div>
+        </div>
+
+      </div>
+
+      <div class="result-panel">
+        <div class="result-card result-highlight">
+          <div class="result-label">Monthly Income</div>
+          <div class="result-amount" id="monthlyIncome">—</div>
+          <div class="result-sub">
+            <div class="result-sub-item">
+              <span class="result-sub-label">Total interest (5 yr)</span>
+              <span class="result-sub-value" id="subTotal">—</span>
+            </div>
+            <div class="result-sub-item">
+              <span class="result-sub-label">Annual income</span>
+              <span class="result-sub-value" id="subAnnual">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-row"><span>Principal Invested</span><span id="invRes">—</span></div>
+          <div class="result-row"><span>Monthly Payout</span><span id="monthlyRes" style="color:var(--green-dark);font-weight:600">—</span></div>
+          <div class="result-row"><span>Annual Payout</span><span id="annualRes">—</span></div>
+          <div class="result-row"><span>Total Interest (5 yr)</span><span id="totalIntRes" style="color:var(--green-dark)">—</span></div>
+          <div class="result-row"><span>Principal at Maturity</span><span id="matRes">—</span></div>
+          <div class="result-row"><span>Tax Status</span><span style="color:#e65100;font-weight:600">Taxable at slab rate</span></div>
+        </div>
+
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`📬 POMIS Monthly Income\n💰 Investment: ${document.getElementById('amtLabel').textContent}\n📊 Rate: ${document.getElementById('rateLabel').textContent}\n💵 Monthly Income: ${document.getElementById('monthlyIncome').textContent}\n📅 Annual Income: ${document.getElementById('subAnnual').textContent}\n\nCalculate yours 👇`)">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg> WhatsApp</button>
+            <button class="share-btn twitter" onclick="shareTwitter(`POMIS gives ${document.getElementById('monthlyIncome').textContent}/month guaranteed income on ${document.getElementById('amtLabel').textContent} investment at ${document.getElementById('rateLabel').textContent}! 📬 #POMIS #PostOffice #RetirementIncome`)">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter / X</button>
+            <button class="share-btn copylink" onclick="copyLink(this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link</button>
+            <button class="share-btn download" onclick="downloadPDF('POMIS Calculator')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Save PDF</button>
+          </div>
+        </div>
+
+        <div class="info-box">💡 POMIS pays monthly interest directly to your Post Office Savings Account. The principal is returned in full at maturity after 5 years. It is one of the safest regular income options with a sovereign guarantee.</div>
+      </div>
+    </div>
+
+    <!-- MONTHLY INCOME TABLE -->
+    <div class="year-table-wrap" style="margin-top:32px">
+      <div class="year-table-head">📅 Year-wise POMIS Income Summary</div>
+      <div style="overflow-x:auto">
+        <table class="year-table">
+          <thead>
+            <tr><th>Year</th><th>Monthly Payout</th><th>Annual Income</th><th>Cumulative Income</th></tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Related Calculators
+      </div>
+      <div class="related-grid">
+        <a href="swp-calculator.html" class="related-card">
+          <div class="related-icon" style="background:#f1f8e9;color:#558b2f">🔄</div>
+          <div><div class="related-name">SWP Calculator</div><div class="related-desc">Systematic withdrawal</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="fd-calculator.html" class="related-card">
+          <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+          <div><div class="related-name">FD Calculator</div><div class="related-desc">Fixed Deposit returns</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="kvp-calculator.html" class="related-card">
+          <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📮</div>
+          <div><div class="related-name">KVP Calculator</div><div class="related-desc">Kisan Vikas Patra</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="ssy-calculator.html" class="related-card">
+          <div class="related-icon" style="background:#fce4ec;color:#c2185b">👧</div>
+          <div><div class="related-name">SSY Calculator</div><div class="related-desc">Sukanya Samriddhi</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="inflation-calculator.html" class="related-card">
+          <div class="related-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+          <div><div class="related-name">Inflation Calculator</div><div class="related-desc">Future value of money</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+<div class="seo-section">
+  <hr class="seo-divider">
+
+<div class="toc-box">
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+      <li><a href="#what-is-pomis">What is POMIS</a></li>
+      <li><a href="#pomis-rules-limits">Rules & Limits</a></li>
+      <li><a href="#pomis-formula">Formula</a></li>
+      <li><a href="#pomis-calculation-example">Worked Example</a></li>
+      <li><a href="#pomis-vs-fd-vs-swp">POMIS vs FD vs SWP</a></li>
+      <li><a href="#pomis-for-retirement">POMIS for Retirement</a></li>
+      <li><a href="#frequently-asked-questions">FAQ</a></li>
+  </ul>
+</div>
+
+  <h2 id="what-is-pomis">What is Post Office Monthly Income Scheme (POMIS)?</h2>
+  <p>The Post Office Monthly Income Scheme is a government-backed savings scheme that provides a <strong>guaranteed fixed monthly income</strong> for 5 years in exchange for a lump-sum deposit. It is one of the safest regular income instruments available in India — backed by the sovereign guarantee of the Government of India — making it ideal for retirees and conservative investors seeking predictable monthly cash flows.</p>
+  <p>The current POMIS interest rate is <strong>7.4% p.a.</strong> (Q1 FY2026), paid monthly. The principal is returned in full at the end of the 5-year tenure.</p>
+
+  <h2 id="pomis-rules-limits">POMIS Key Rules & Limits (2025)</h2>
+  <table class="seo-table">
+    <thead><tr><th>Feature</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>Current Interest Rate</td><td>7.4% p.a. (Q1 FY2026), paid monthly</td></tr>
+      <tr><td>Monthly Payout Rate</td><td>7.4% ÷ 12 = 0.617% per month</td></tr>
+      <tr><td>Minimum Investment</td><td>₹1,000</td></tr>
+      <tr><td>Maximum — Single Account</td><td>₹9,00,000</td></tr>
+      <tr><td>Maximum — Joint Account</td><td>₹15,00,000</td></tr>
+      <tr><td>Maximum Monthly Income</td><td>₹5,550/month (single) · ₹9,250/month (joint)</td></tr>
+      <tr><td>Tenure</td><td>5 years (extendable in 5-year blocks)</td></tr>
+      <tr><td>Where to open</td><td>Any Post Office in India</td></tr>
+      <tr><td>Tax status</td><td>Monthly interest fully taxable at slab rate · No TDS</td></tr>
+      <tr><td>Premature closure</td><td>After 1 year with penalty (1% deducted before 3 years, 0.5% after 3 years)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="pomis-formula">POMIS Monthly Income Formula</h2>
+  <div class="formula-box">
+    <span class="f-label">Monthly Payout</span>
+    <span class="f-main">Monthly Income = Principal × (Annual Rate ÷ 12)</span>
+    <div class="f-vars">Example: ₹9,00,000 × (7.4% ÷ 12) = ₹9,00,000 × 0.617% = ₹5,550/month</div>
+  </div>
+  <p>POMIS uses <strong>simple interest</strong> — the monthly payout is a fixed amount throughout the 5-year tenure. There is no compounding of payouts. The principal is returned at maturity.</p>
+
+  <h2 id="pomis-calculation-example">POMIS Calculation — Worked Example</h2>
+  <div class="example-box">
+    <div class="ex-title">📘 Single account — maximum investment of ₹9,00,000 at 7.4%</div>
+    <table>
+      <tr><td>Investment</td><td>₹9,00,000</td></tr>
+      <tr><td>Interest Rate</td><td>7.4% p.a.</td></tr>
+      <tr><td>Tenure</td><td>5 years</td></tr>
+      <tr><td>Monthly Income</td><td>₹5,550/month</td></tr>
+      <tr><td>Annual Income</td><td>₹66,600/year</td></tr>
+      <tr class="ex-result"><td>Total Interest (5 yr)</td><td>₹3,33,000</td></tr>
+      <tr class="ex-result"><td>Principal Returned</td><td>₹9,00,000 (at maturity)</td></tr>
+    </table>
+  </div>
+
+  <h2 id="pomis-vs-fd-vs-swp">POMIS vs FD Monthly Payout vs SWP</h2>
+  <table class="seo-table">
+    <thead><tr><th>Feature</th><th>POMIS</th><th>Monthly Payout FD</th><th>SWP (Mutual Fund)</th></tr></thead>
+    <tbody>
+      <tr><td>Returns</td><td>7.4% (guaranteed)</td><td>6.5–8.5% (guaranteed)</td><td>10–14% (market-linked)</td></tr>
+      <tr><td>Safety</td><td>Sovereign guarantee</td><td>DICGC up to ₹5L</td><td>Market risk</td></tr>
+      <tr><td>Maximum investment</td><td>₹9L (single) / ₹15L (joint)</td><td>No limit</td><td>No limit</td></tr>
+      <tr><td>Principal at end</td><td>Full principal returned</td><td>Full principal returned</td><td>Depends on returns vs withdrawal</td></tr>
+      <tr><td>Tax</td><td>Fully taxable (no TDS)</td><td>Fully taxable (TDS if >₹40K)</td><td>LTCG 12.5% on gains only</td></tr>
+      <tr class="highlight"><td>Best for</td><td>Retirees, capped amounts, sovereign safety</td><td>Larger corpus, bank preference</td><td>Long retirement, inflation hedge</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="pomis-for-retirement">POMIS for Retirement Income in India</h2>
+  <p>POMIS is one of the most commonly used retirement income tools for risk-averse Indians. Here is how to use it effectively:</p>
+  <ul>
+    <li><strong>Maximise the account:</strong> A retired couple can jointly invest ₹15,00,000 (joint account) + ₹9,00,000 each in individual accounts = ₹33,00,000 total in POMIS, generating ₹20,350/month guaranteed income.</li>
+    <li><strong>Combine with SWP:</strong> Use POMIS for the guaranteed income floor (covers essential expenses) and an SWP from a balanced mutual fund for additional inflation-beating income.</li>
+    <li><strong>Reinvest income in RD:</strong> If you don't need the monthly income immediately, open a recurring deposit with the monthly POMIS payout. This effectively compounds your returns — converting POMIS from a simple interest scheme to a compounded one.</li>
+    <li><strong>Tax planning:</strong> POMIS income is taxable. If both spouses are in lower tax brackets post-retirement, splitting investments between joint and individual accounts can reduce the overall tax burden.</li>
+    <li><strong>Ladder with KVP:</strong> Invest some corpus in POMIS (for monthly income) and some in KVP (for capital growth and doubling). This gives you both current income and future lump-sum growth.</li>
+  </ul>
+
+  <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I open POMIS online? <span class="faq-icon">+</span></div><div class="faq-a">Currently POMIS can only be opened by visiting a Post Office branch. However, once the account is opened, the monthly interest is credited automatically to your Post Office Savings Account (POSA) or linked bank account, and you can track it online through the India Post portal or IPPB app.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What happens to POMIS monthly income if I don't withdraw it? <span class="faq-icon">+</span></div><div class="faq-a">If the monthly interest is not withdrawn, it is credited to your Post Office Savings Account and earns 4% savings account interest — it does not compound at the POMIS rate. To maximise returns, consider manually transferring the monthly income into an RD or liquid fund each month.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I have both a single and a joint POMIS account? <span class="faq-icon">+</span></div><div class="faq-a">Yes — an individual can hold one single POMIS account (up to ₹9L) and be a joint holder in a joint account (up to ₹15L). Each joint holder's share in the joint account is counted against their individual ₹9L limit. So a couple can effectively invest ₹9L (individual) + ₹9L (individual) + up to ₹15L (joint) = maximum ₹33L between them.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can POMIS be extended after 5 years? <span class="faq-icon">+</span></div><div class="faq-a">Yes — POMIS can be extended for another 5 years on maturity by submitting an extension application at the Post Office within one month of maturity. The extension continues at the prevailing interest rate at the time of extension, not the original rate.</div></div>
+  </div>
+</div>
+
+</main>
+
+<script src="app.js" defer></script>
+  <script>
+    function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(slider.value);
+      document.getElementById(numId).value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function syncSlider(input, sliderId, labelId, prefix, isCurrency, suffix='') {
+      const val = parseFloat(input.value);
+      const slider = document.getElementById(sliderId);
+      slider.value = val;
+      document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
+      updateSlider(slider);
+    }
+    function setPreset(val) {
+      document.getElementById('amtNum').value = val;
+      document.getElementById('amount').value = val;
+      document.getElementById('amtLabel').textContent = '₹' + val.toLocaleString('en-IN');
+      updateSlider(document.getElementById('amount'));
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      calculate();
+    }
+    function checkLimit() {
+      const val = parseFloat(document.getElementById('amtNum').value) || 0;
+      const note = document.getElementById('limitNote');
+      if (val > 1500000) {
+        note.textContent = '⚠️ Exceeds joint account limit of ₹15,00,000';
+        note.style.color = '#e65100';
+      } else if (val > 900000) {
+        note.textContent = 'ℹ️ Above single account limit (₹9L) — joint account required';
+        note.style.color = 'var(--text-muted)';
+      } else {
+        note.textContent = '';
+      }
+    }
+    function calculate() {
+      const P      = parseFloat(document.getElementById('amtNum').value) || 900000;
+      const annual = (parseFloat(document.getElementById('rateNum').value) || 7.4) / 100;
+      const yrs    = parseInt(document.getElementById('tenureNum').value) || 5;
+      const monthly = P * annual / 12;
+      const annualIncome = monthly * 12;
+      const totalInterest = annualIncome * yrs;
+
+      checkLimit();
+
+      const tbody = document.getElementById('tbody');
+      tbody.innerHTML = '';
+      let cumulative = 0;
+      for (let y = 1; y <= yrs; y++) {
+        cumulative += annualIncome;
+        const isLast = y === yrs;
+        tbody.innerHTML += `<tr class="${isLast ? 'total-row' : ''}">
+          <td>Year ${y}</td>
+          <td style="color:var(--green-dark)">${fmtFull(monthly)}/mo</td>
+          <td>${fmtFull(annualIncome)}</td>
+          <td><strong>${fmtFull(cumulative)}</strong></td>
+        </tr>`;
+      }
+
+      document.getElementById('monthlyIncome').textContent   = fmtFull(monthly);
+      document.getElementById('monthlyRes').textContent      = fmtFull(monthly);
+      document.getElementById('annualRes').textContent       = fmtFull(annualIncome);
+      document.getElementById('totalIntRes').textContent     = fmtFull(totalInterest);
+      document.getElementById('invRes').textContent          = fmtFull(P);
+      document.getElementById('matRes').textContent          = fmtFull(P) + ' (principal returned)';
+      document.getElementById('subTotal').textContent        = fmt(totalInterest);
+      document.getElementById('subAnnual').textContent       = fmt(annualIncome);
+    }
+    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+    calculate();
+  </script>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="sip-calculator.html">SIP Calculator</a></li>
+        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+        <li><a href="fd-calculator.html">FD Calculator</a></li>
+        <li><a href="ppf-calculator.html">PPF Calculator</a></li>
+        <li><a href="tax-calculator.html">Income Tax</a></li>
+        <li><a href="salary.html">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="swp-calculator.html">SWP Calculator</a></li>
+        <li><a href="lumpsum-calculator.html">Lumpsum</a></li>
+        <li><a href="rd-calculator.html">RD Calculator</a></li>
+        <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+        <li><a href="kvp-calculator.html">KVP Calculator</a></li>
+        <li><a href="pomis-calculator.html">POMIS Calculator</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
