@@ -68,7 +68,28 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <url>
+    <loc>https://investsmartcalc.com/ssy-calculator.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+ </url>
 
+ <url>
+    <loc>https://investsmartcalc.com/kvp-calculator.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://investsmartcalc.com/pomis-calculator.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Secondary Calculators -->
   <url>
     <loc>https://investsmartcalc.com/lumpsum-calculator.html</loc>
@@ -104,7 +125,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
+  
   <!-- Company Pages -->
   <url>
     <loc>https://investsmartcalc.com/about.html</loc>
