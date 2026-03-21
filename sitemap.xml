@@ -7,150 +7,167 @@
   <!-- Homepage -->
   <url>
     <loc>https://investsmartcalc.com/</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Core Investment Calculators — highest traffic priority -->
+  <!-- Core Calculators -->
   <url>
     <loc>https://investsmartcalc.com/sip-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/emi-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/fd-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/tax-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/ppf-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/salary.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/gratuity-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/hra-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- Post Office Scheme Calculators -->
   <url>
     <loc>https://investsmartcalc.com/ssy-calculator.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
- </url>
-
- <url>
-    <loc>https://investsmartcalc.com/kvp-calculator.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <url>
+    <loc>https://investsmartcalc.com/kvp-calculator.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://investsmartcalc.com/pomis-calculator.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- SWP — High Priority -->
+  <url>
+    <loc>https://investsmartcalc.com/swp-calculator.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Secondary Calculators -->
   <url>
     <loc>https://investsmartcalc.com/lumpsum-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://investsmartcalc.com/swp-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/rd-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/cagr-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/inflation-calculator.html</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
+  <!-- Blog / Content Pages — High Priority -->
+  <url>
+    <loc>https://investsmartcalc.com/what-is-swp.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://investsmartcalc.com/swp-vs-fd-vs-pomis.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Company Pages -->
   <url>
     <loc>https://investsmartcalc.com/about.html</loc>
-    <lastmod>2025-03-15</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/disclaimer.html</loc>
-    <lastmod>2025-03-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/privacy.html</loc>
-    <lastmod>2025-03-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://investsmartcalc.com/contact.html</loc>
-    <lastmod>2025-03-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
