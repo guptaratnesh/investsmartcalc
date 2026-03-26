@@ -588,7 +588,8 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
    ========================================= */
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .nav-toggle { display: block; }
+  .nav-toggle { display: block; flex-shrink: 0; }
+  .nav-inner { gap: 12px; overflow: hidden; padding: 0 12px; }
 
   .hero {
     flex-direction: column;
@@ -838,6 +839,19 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
   .seo-section h2 { font-size: 19px; }
   .benefits-grid { grid-template-columns: 1fr 1fr; }
   .formula-box { font-size: 13px; padding: 16px; }
+
+  /* Only the 3-column PPF vs ELSS table needs horizontal scroll.
+     Target it by checking for a 3rd th using :has() */
+  .seo-table:has(thead tr th:nth-child(3)) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .seo-table:has(thead tr th:nth-child(3)) td,
+  .seo-table:has(thead tr th:nth-child(3)) th {
+    min-width: 110px;
+    white-space: normal;
+  }
 }
 @media (max-width: 480px) {
   .benefits-grid { grid-template-columns: 1fr; }
