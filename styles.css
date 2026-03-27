@@ -24,7 +24,11 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden; /* prevent any enhanced component from causing page-level scroll */
+}
 
 body {
   font-family: var(--font);
@@ -32,6 +36,9 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  /* NOTE: overflow-x intentionally NOT set on body.
+     Setting it here would create a new scroll container and break
+     position:sticky on the navbar in Safari and Firefox. */
 }
 
 a { text-decoration: none; color: inherit; }
@@ -863,8 +870,11 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
 .preset-row {
   display: flex;
   gap: 6px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  /* already set, kept explicit */
   margin-top: 10px;
+  /* Prevent the row itself from stretching wider than its parent */
+  max-width: 100%;
+  overflow: hidden;
 }
 .preset-btn {
   padding: 5px 12px;
@@ -939,6 +949,9 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  /* Prevent row from exceeding parent width on any screen */
+  max-width: 100%;
+  overflow: hidden;
 }
 .share-btn {
   display: flex;
@@ -1018,7 +1031,25 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
 
 @media (max-width: 480px) {
   .share-buttons { gap: 6px; }
-  .share-btn { padding: 7px 11px; font-size: 12px; }
+  .share-btn {
+    padding: 6px 10px;
+    font-size: 11.5px;
+    /* Allow label text to wrap so buttons never overflow parent */
+    white-space: normal;
+    word-break: break-word;
+    /* Shrink evenly so all four buttons share the row */
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Very narrow phones (≤360px) — stack share buttons 2-per-row */
+@media (max-width: 360px) {
+  .share-btn {
+    flex: 1 1 calc(50% - 6px);
+  }
 }
 
 /* =========================================
@@ -1362,8 +1393,69 @@ input[type="range"], canvas, .dark-toggle::after,
 }
 
 /* =========================================
-   DARK MODE TOGGLE BUTTON
+   ENHANCED-LAYER OVERFLOW GUARDS
+   Defensive rules for components added by enhancement
+   layers (hero-hook, insight engine, corpus chart, share
+   insight text, mini result bar, sticky CTA). These ensure
+   any page that loads styles.css + an enhancement layer
+   never gets horizontal scroll on mobile.
    ========================================= */
+
+/* Fixed bars (mini result bar, sticky CTA) painted by JS:
+   Clamp to viewport width so iOS Safari doesn't count them
+   as overflow and enable page-level horizontal scroll. */
+.mini-result-bar,
+.sticky-mobile-cta {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+/* Flex children inside mini-result-bar must not push width */
+.mini-result-bar > * {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Hero hook, insight engine, chart container, share insight:
+   must never exceed their parent card width */
+.hero-hook,
+.trust-badge,
+.insight-engine,
+.chart-container,
+.share-insight-text,
+.use-case-grid,
+.use-case-card {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Preset buttons on very small screens:
+   allow shrinking so 4 buttons always fit */
+@media (max-width: 400px) {
+  .preset-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+    flex: 1 1 auto;
+  }
+}
+
+/* Chart canvas must never overflow its wrapper.
+   max-width:100% is sufficient — do NOT set height:auto here because
+   Chart.js controls canvas height via JS and CSS height override breaks rendering. */
+.chart-wrap canvas {
+  max-width: 100%;
+}
+
+/* Insight recommendation text: break long ₹ values gracefully */
+.insight-recommendation,
+.insight-text,
+.share-insight-text {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
 .dark-toggle {
   width: 42px;
   height: 24px;

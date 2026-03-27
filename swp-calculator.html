@@ -2,27 +2,548 @@
 <html lang="en" data-theme="">
 <head>
   <meta charset="UTF-8">
-  <title>SWP Calculator – Systematic Withdrawal Plan Returns | InvestSmartCalc</title>
-  <meta name="description" content="Plan systematic withdrawals from your mutual fund corpus. See monthly withdrawal sustainability & final balance. Free SWP calculator India.">
+  <title>SWP Calculator 2026 – Systematic Withdrawal Plan | Free, Instant Results</title>
+  <meta name="description" content="Calculate how long your mutual fund corpus lasts with monthly SWP. Instant results, year-wise breakdown, corpus depletion alert. Free — no login needed.">
   <meta name="keywords" content="SWP calculator, systematic withdrawal plan calculator, mutual fund withdrawal calculator, SWP India">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://investsmartcalc.com/swp-calculator.html">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://investsmartcalc.com/swp-calculator.html">
-  <meta property="og:title" content="SWP Calculator – Systematic Withdrawal Plan Returns">
-  <meta property="og:description" content="Plan systematic withdrawals from your mutual fund corpus. See monthly withdrawal sustainability & final balance. Free SWP calculator India.">
+  <meta property="og:title" content="SWP Calculator 2026 – Will Your Corpus Last?">
+  <meta property="og:description" content="Calculate how long your mutual fund corpus lasts with monthly SWP. Instant results, year-wise breakdown, corpus depletion alert. Free — no login needed.">
   <meta property="og:site_name" content="InvestSmartCalc">
+  <meta property="og:image" content="https://investsmartcalc.com/og-image.png">
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="SWP Calculator – Systematic Withdrawal Plan Returns">
-  <meta name="twitter:description" content="Plan systematic withdrawals from your mutual fund corpus. See monthly withdrawal sustainability & final balance. Free SWP calculator India.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SWP Calculator 2026 – Will Your Corpus Last?">
+  <meta name="twitter:description" content="Calculate how long your mutual fund corpus lasts with monthly SWP. Instant results, year-wise breakdown, corpus depletion alert. Free — no login needed.">
+  <meta name="twitter:image" content="https://investsmartcalc.com/og-image.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+  <style>
+    /* ══════════════════════════════════════════════════════════════════
+       ENHANCEMENT LAYER — CSS variable definitions for light + dark mode
+       All new components use these tokens exclusively. No hardcoded hex.
+       ══════════════════════════════════════════════════════════════════ */
+
+    /* ── Light mode token overrides (additive — extends styles.css) ── */
+    :root {
+      --enh-hero-bg-start:      #f0faf5;
+      --enh-hero-bg-end:        #e8f8f1;
+      --enh-hero-border:        #b2dfcf;
+      --enh-hero-question:      #1a4d32;
+      --enh-hero-body:          #2d5c42;
+      --enh-hero-divider:       #c5e8d8;
+      --enh-hero-cta:           #3d7a5a;
+
+      --enh-trust-bg-start:     #e8f8f1;
+      --enh-trust-bg-end:       #f0faf5;
+      --enh-trust-border:       #b2dfcf;
+      --enh-trust-text:         #1a5c38;
+
+      --enh-card-bg:            #ffffff;
+      --enh-card-border:        #e0ebe5;
+      --enh-card-shadow:        rgba(26,158,92,0.08);
+
+      --enh-result-highlight-start: #edf9f3;
+      --enh-result-highlight-end:   #e0f6ea;
+      --enh-result-highlight-border:#8fd5b2;
+      --enh-result-label:       #4a6a58;
+      --enh-result-amount:      #0d3d22;
+      --enh-result-sub-label:   #6a8a78;
+      --enh-result-sub-value:   #1a3d28;
+
+      --enh-badge-safe-bg:      #e8f8f1;
+      --enh-badge-safe-text:    #0a6632;
+      --enh-badge-safe-border:  #6dc99a;
+      --enh-badge-mod-bg:       #fff8e6;
+      --enh-badge-mod-text:     #8a4f00;
+      --enh-badge-mod-border:   #e8b84a;
+      --enh-badge-risk-bg:      #fff0f0;
+      --enh-badge-risk-text:    #9b2020;
+      --enh-badge-risk-border:  #f0a0a0;
+
+      --enh-insight-bg:         #ffffff;
+      --enh-insight-border:     #e0ebe5;
+      --enh-insight-title:      #7a9a8a;
+      --enh-insight-body:       #1a2e22;
+      --enh-insight-warn-strong:#9b2020;
+      --enh-insight-safe-strong:#0a6632;
+      --enh-insight-mod-strong: #8a4f00;
+      --enh-insight-rec-bg-s:   #edf9f3;
+      --enh-insight-rec-bg-e:   #e0f6ea;
+      --enh-insight-rec-border: #1a9e5c;
+      --enh-insight-rec-text:   #1a3d28;
+
+      --enh-chart-bg:           #ffffff;
+      --enh-chart-border:       #e0ebe5;
+      --enh-chart-title:        #7a9a8a;
+      --enh-chart-grid:         rgba(0,0,0,0.05);
+      --enh-chart-tick:         #7a9a8a;
+      --enh-chart-tooltip-bg:   #1a2e22;
+      --enh-chart-tooltip-title:#a8d5be;
+      --enh-chart-tooltip-body: #ffffff;
+
+      --enh-share-bg-s:         #edf9f3;
+      --enh-share-bg-e:         #f5fffe;
+      --enh-share-border:       #7dcca4;
+      --enh-share-text:         #1a4030;
+      --enh-share-subtext:      #3a8a60;
+      --enh-share-hover:        #e0f6ea;
+
+      --enh-use-case-bg:        #ffffff;
+      --enh-use-case-border:    #e0ebe5;
+      --enh-use-case-title:     #1a2e22;
+      --enh-use-case-body:      #4a6a58;
+      --enh-use-case-link:      #1a9e5c;
+      --enh-use-case-hover-border:#7dcca4;
+
+      --enh-credibility:        #7a9a8a;
+      --enh-green-main:         #1a9e5c;
+      --enh-green-dark:         #0d7a43;
+      --enh-slider-track-empty: #d0e8dc;
+      --enh-slider-thumb-border:#ffffff;
+      --enh-number-pop:         #1a9e5c;
+    }
+
+    /* ── Dark mode token overrides ── */
+    [data-theme="dark"] {
+      --enh-hero-bg-start:      #0d2318;
+      --enh-hero-bg-end:        #0a1e14;
+      --enh-hero-border:        #1e4a30;
+      --enh-hero-question:      #a8e0c0;
+      --enh-hero-body:          #7ab898;
+      --enh-hero-divider:       #1e4a30;
+      --enh-hero-cta:           #5a9e78;
+
+      --enh-trust-bg-start:     #0a1e14;
+      --enh-trust-bg-end:       #0d2318;
+      --enh-trust-border:       #1e4a30;
+      --enh-trust-text:         #6ac890;
+
+      --enh-card-bg:            #111e17;
+      --enh-card-border:        #1c3828;
+      --enh-card-shadow:        rgba(0,0,0,0.3);
+
+      --enh-result-highlight-start: #0a2018;
+      --enh-result-highlight-end:   #0d2a1e;
+      --enh-result-highlight-border:#1e5c3a;
+      --enh-result-label:       #6a9a7a;
+      --enh-result-amount:      #c0e8d0;
+      --enh-result-sub-label:   #507060;
+      --enh-result-sub-value:   #90c8a8;
+
+      --enh-badge-safe-bg:      #0a2818;
+      --enh-badge-safe-text:    #5ad890;
+      --enh-badge-safe-border:  #1e5c38;
+      --enh-badge-mod-bg:       #281a00;
+      --enh-badge-mod-text:     #e8a840;
+      --enh-badge-mod-border:   #503800;
+      --enh-badge-risk-bg:      #280808;
+      --enh-badge-risk-text:    #f08080;
+      --enh-badge-risk-border:  #501818;
+
+      --enh-insight-bg:         #111e17;
+      --enh-insight-border:     #1c3828;
+      --enh-insight-title:      #507060;
+      --enh-insight-body:       #b0d0be;
+      --enh-insight-warn-strong:#f08080;
+      --enh-insight-safe-strong:#5ad890;
+      --enh-insight-mod-strong: #e8a840;
+      --enh-insight-rec-bg-s:   #0a2018;
+      --enh-insight-rec-bg-e:   #0d2a1e;
+      --enh-insight-rec-border: #1a9e5c;
+      --enh-insight-rec-text:   #90d8b0;
+
+      --enh-chart-bg:           #111e17;
+      --enh-chart-border:       #1c3828;
+      --enh-chart-title:        #507060;
+      --enh-chart-grid:         rgba(255,255,255,0.04);
+      --enh-chart-tick:         #507060;
+      --enh-chart-tooltip-bg:   #0a1e14;
+      --enh-chart-tooltip-title:#6ac890;
+      --enh-chart-tooltip-body: #d0f0e0;
+
+      --enh-share-bg-s:         #0a2018;
+      --enh-share-bg-e:         #0d2820;
+      --enh-share-border:       #1e5c38;
+      --enh-share-text:         #80c8a0;
+      --enh-share-subtext:      #4a8a62;
+      --enh-share-hover:        #0d2a1e;
+
+      --enh-use-case-bg:        #111e17;
+      --enh-use-case-border:    #1c3828;
+      --enh-use-case-title:     #b0d0be;
+      --enh-use-case-body:      #6a9a7a;
+      --enh-use-case-link:      #4ad880;
+      --enh-use-case-hover-border:#2a6040;
+
+      --enh-credibility:        #507060;
+      --enh-slider-track-empty: #1c3828;
+      --enh-slider-thumb-border:#111e17;
+      --enh-number-pop:         #4ad880;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════
+       COMPONENT STYLES — use tokens only, zero hardcoded hex below
+       ══════════════════════════════════════════════════════════════════ */
+
+    /* ── Card elevation & radius uplift ── */
+    .input-panel, .result-panel {
+      border-radius: 16px !important;
+      box-shadow: 0 4px 24px var(--enh-card-shadow), 0 1px 4px rgba(0,0,0,0.06) !important;
+    }
+    .result-card {
+      border-radius: 14px !important;
+      box-shadow: 0 2px 12px var(--enh-card-shadow) !important;
+    }
+
+    /* ── Hero hook ── */
+    .hero-hook {
+      background: linear-gradient(135deg, var(--enh-hero-bg-start) 0%, var(--enh-hero-bg-end) 60%, var(--enh-hero-bg-start) 100%);
+      border: 1px solid var(--enh-hero-border);
+      border-radius: 16px;
+      padding: 22px 26px 18px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-hook::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, rgba(26,158,92,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-hook-question {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--enh-hero-question);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .hero-hook-question span { color: var(--enh-green-main); }
+    .hero-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+    .hero-benefit {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      color: var(--enh-hero-body);
+      font-weight: 500;
+    }
+    .hero-benefit-tick {
+      width: 18px; height: 18px;
+      background: linear-gradient(135deg, var(--enh-green-main), var(--enh-green-dark));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 10px;
+      color: #fff;
+    }
+    .hero-cta-line {
+      font-size: 12.5px;
+      color: var(--enh-hero-cta);
+      font-style: italic;
+      border-top: 1px solid var(--enh-hero-divider);
+      padding-top: 10px;
+      margin-top: 4px;
+    }
+
+    /* ── Trust badge ── */
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(90deg, var(--enh-trust-bg-start), var(--enh-trust-bg-end));
+      border: 1px solid var(--enh-trust-border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: var(--enh-trust-text);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .trust-badge-dot {
+      width: 7px; height: 7px;
+      background: var(--enh-green-main);
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.6; transform: scale(0.85); }
+    }
+
+    /* ── Risk badge ── */
+    .risk-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      margin-bottom: 10px;
+      transition: all 0.4s ease;
+    }
+    .risk-badge.safe     { background: var(--enh-badge-safe-bg); color: var(--enh-badge-safe-text); border: 1.5px solid var(--enh-badge-safe-border); }
+    .risk-badge.moderate { background: var(--enh-badge-mod-bg);  color: var(--enh-badge-mod-text);  border: 1.5px solid var(--enh-badge-mod-border); }
+    .risk-badge.risky    { background: var(--enh-badge-risk-bg); color: var(--enh-badge-risk-text); border: 1.5px solid var(--enh-badge-risk-border); }
+
+    /* ── Result highlight card ── */
+    .result-highlight {
+      background: linear-gradient(135deg, var(--enh-result-highlight-start) 0%, var(--enh-result-highlight-end) 100%) !important;
+      border: 1.5px solid var(--enh-result-highlight-border) !important;
+    }
+    .result-highlight .result-label { color: var(--enh-result-label) !important; }
+    .result-highlight .result-amount { color: var(--enh-result-amount) !important; }
+    .result-highlight .result-sub-label { color: var(--enh-result-sub-label) !important; }
+    .result-highlight .result-sub-value { color: var(--enh-result-sub-value) !important; }
+
+    /* ── Smart insight engine ── */
+    .insight-engine {
+      background: var(--enh-insight-bg);
+      border-radius: 14px;
+      border: 1px solid var(--enh-insight-border);
+      padding: 16px 18px;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .insight-engine-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--enh-insight-title);
+      margin-bottom: 2px;
+    }
+    .insight-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--enh-insight-body);
+      line-height: 1.5;
+    }
+    .insight-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .insight-text { flex: 1; }
+    .insight-text strong { font-weight: 700; }
+    .insight-text.warning  strong { color: var(--enh-insight-warn-strong); }
+    .insight-text.safe     strong { color: var(--enh-insight-safe-strong); }
+    .insight-text.moderate strong { color: var(--enh-insight-mod-strong); }
+    .insight-recommendation {
+      background: linear-gradient(90deg, var(--enh-insight-rec-bg-s), var(--enh-insight-rec-bg-e));
+      border-left: 3px solid var(--enh-insight-rec-border);
+      border-radius: 0 8px 8px 0;
+      padding: 8px 12px;
+      font-size: 13px;
+      color: var(--enh-insight-rec-text);
+      font-weight: 500;
+    }
+
+    /* ── Corpus chart ── */
+    .chart-container {
+      background: var(--enh-chart-bg);
+      border: 1px solid var(--enh-chart-border);
+      border-radius: 14px;
+      padding: 16px 18px 12px;
+      margin-top: 12px;
+    }
+    .chart-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--enh-chart-title);
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 10px;
+    }
+    .chart-wrap { position: relative; height: 180px; }
+
+    /* ── Shareable insight text ── */
+    .share-insight-text {
+      background: linear-gradient(90deg, var(--enh-share-bg-s), var(--enh-share-bg-e));
+      border: 1px dashed var(--enh-share-border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--enh-share-text);
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+      position: relative;
+    }
+    .share-insight-text:hover { background: var(--enh-share-hover); }
+    .share-insight-text::after {
+      content: '📋 tap to copy';
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--enh-share-subtext);
+      margin-top: 2px;
+    }
+    .share-insight-copied::after { content: '✅ copied!' !important; }
+
+    /* ── Credibility line ── */
+    .credibility-line {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--enh-credibility);
+      margin-top: 6px;
+    }
+
+    /* ── Use case cards ── */
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0;
+    }
+    @media (max-width: 600px) { .use-case-grid { grid-template-columns: 1fr; } }
+    .use-case-card {
+      background: var(--enh-use-case-bg);
+      border: 1px solid var(--enh-use-case-border);
+      border-radius: 14px;
+      padding: 18px 18px 16px;
+      transition: all 0.2s ease;
+    }
+    .use-case-card:hover {
+      border-color: var(--enh-use-case-hover-border);
+      box-shadow: 0 4px 16px var(--enh-card-shadow);
+      transform: translateY(-2px);
+    }
+    .use-case-icon { font-size: 24px; margin-bottom: 8px; }
+    .use-case-title { font-size: 14px; font-weight: 700; color: var(--enh-use-case-title); margin-bottom: 6px; }
+    .use-case-desc  { font-size: 13px; color: var(--enh-use-case-body); line-height: 1.5; }
+    .use-case-link  {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 12px; font-weight: 600; color: var(--enh-use-case-link);
+      margin-top: 8px; text-decoration: none;
+    }
+    .use-case-link:hover { text-decoration: underline; }
+
+    /* ── Slider ── */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--enh-green-main), var(--enh-green-dark));
+      border: 2.5px solid var(--enh-slider-thumb-border);
+      box-shadow: 0 2px 6px rgba(26,158,92,0.35);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      box-shadow: 0 3px 10px rgba(26,158,92,0.45);
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--enh-green-main), var(--enh-green-dark));
+      border: 2.5px solid var(--enh-slider-thumb-border);
+      box-shadow: 0 2px 6px rgba(26,158,92,0.35);
+      cursor: pointer;
+    }
+
+    /* ── Preset buttons ── */
+    .preset-btn {
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+      transition: all 0.18s ease !important;
+    }
+    .preset-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(26,158,92,0.2) !important;
+    }
+
+    /* ── Sticky mobile CTA ── */
+    .sticky-mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(135deg, var(--enh-green-main), var(--enh-green-dark));
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      z-index: 100;
+      box-shadow: 0 -4px 20px rgba(26,158,92,0.25);
+      cursor: pointer;
+      letter-spacing: 0.2px;
+      border-top: 2px solid rgba(255,255,255,0.15);
+    }
+    @media (max-width: 768px) {
+      .sticky-mobile-cta { display: block; }
+      body { padding-bottom: 60px; }
+    }
+
+    /* ── Sticky mini result bar (mobile scroll) ── */
+    .mini-result-bar {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: linear-gradient(90deg, var(--enh-green-main), var(--enh-green-dark));
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 200;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mini-result-bar.visible { transform: translateY(0); }
+    @media (max-width: 768px) { .mini-result-bar { display: flex; } }
+
+    /* ── Animated number pop ── */
+    @keyframes numberPop {
+      0%   { transform: scale(1.06); color: var(--enh-number-pop); }
+      100% { transform: scale(1); }
+    }
+    .number-updated { animation: numberPop 0.45s ease-out forwards; }
+
+    /* ── Input flash ── */
+    @keyframes inputFlash {
+      0%   { box-shadow: 0 0 0 3px rgba(26,158,92,0.25); }
+      100% { box-shadow: none; }
+    }
+    .input-flash { animation: inputFlash 0.5s ease-out forwards; }
+
+    /* ── Smooth transitions ── */
+    .info-box { transition: background 0.3s, border-color 0.3s, color 0.3s; }
+    .result-amount, #r1, #r2, #r3 { transition: color 0.3s; }
+  </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,10 +566,11 @@
   "@type": "WebApplication",
   "name": "SWP Calculator",
   "url": "https://investsmartcalc.com/swp-calculator.html",
-  "description": "Plan systematic withdrawals from your mutual fund corpus. Calculate monthly withdrawal sustainability, final balance and corpus depletion risk. Free SWP calculator India.",
+  "description": "Calculate how long your mutual fund corpus lasts with monthly SWP withdrawals. Get instant results, year-wise breakdown, and corpus depletion alerts. Free SWP calculator India.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
   "browserRequirements": "Requires JavaScript",
+  "dateModified": "2026-03-01",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -62,11 +584,13 @@
   "inLanguage": "en-IN",
   "isAccessibleForFree": true,
   "featureList": [
-    "Free to use",
-    "No signup required",
+    "Free to use — no login required",
+    "Instant SWP calculation",
+    "Corpus depletion warning",
+    "Year-wise withdrawal breakdown",
+    "SWP vs FD comparison",
     "Mobile responsive",
-    "Instant calculations",
-    "Year-wise breakdown"
+    "Dark mode support"
   ]
 }
 </script>
@@ -97,26 +621,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is a safe SWP withdrawal rate in India?",
+      "name": "What is a safe withdrawal rate in India?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A sustainable SWP withdrawal rate depends on your fund's expected return minus inflation. If your equity fund earns 12% annually, a monthly withdrawal up to 8-9% of corpus annually is generally sustainable. Withdrawing more than the fund's returns will deplete the corpus over time. Our calculator lets you test different scenarios."
+        "text": "The commonly cited safe withdrawal rate from retirement research (originally the 4% Rule from the US) suggests withdrawing 4% of your corpus annually. For India, given higher equity returns and inflation, some advisors suggest 5–6% as sustainable. However, your safe rate depends on your corpus size, fund returns, life expectancy, and other income sources. Our SWP calculator lets you test different scenarios."
       }
     },
     {
       "@type": "Question",
-      "name": "Is SWP more tax-efficient than FD interest?",
+      "name": "Is SWP tax-efficient?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, significantly. With SWP from an equity mutual fund, only the gains portion of each redemption is taxable — as LTCG at 12.5% (if held over 1 year) with ₹1.25 lakh annual exemption. FD interest is fully taxable at your slab rate (up to 30%). For most retirees, SWP has a much lower effective tax rate than FD income."
+        "text": "Yes, highly. With SWP from an equity mutual fund, each redemption consists partly of your original investment (cost basis) and partly of gains. Only the gains portion is taxable — as LTCG at 12.5% (if held over 1 year) or STCG at 20%. LTCG up to ₹1.25 lakh per year is tax-free. Compare this to FD interest which is fully taxable at your slab rate (up to 30%). For most retirees, SWP has a significantly lower effective tax rate."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I set up SWP from any mutual fund?",
+      "name": "Can I increase my SWP amount over time?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SWP can be set up from most mutual funds in India — equity, debt, hybrid, and liquid funds. You need a minimum corpus in the fund and most fund houses require the SWP amount to be at least ₹500 per month. Some funds may have a minimum balance requirement after SWP. Check with your fund house for specific terms."
+        "text": "Yes. You can modify your SWP amount at any time by submitting a request to the fund house or through your investment platform. Many advisors recommend increasing the withdrawal by 5–7% annually to account for inflation — this is sometimes called a Step-up SWP. Our calculator currently shows a fixed withdrawal; consult a financial advisor for dynamic withdrawal planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my corpus runs out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your withdrawal rate consistently exceeds your fund's return rate, the corpus will deplete — eventually reaching zero. Our SWP calculator shows a warning when this happens. To avoid corpus depletion: choose a lower withdrawal amount, invest in a higher-return fund, start with a larger corpus, or consider a hybrid approach combining SWP with guaranteed income products like Senior Citizen Savings Scheme (SCSS) or NPS annuity."
       }
     }
   ]
@@ -153,11 +685,25 @@
   <main class="calc-page">
     <div class="calc-page-header">
       <div class="breadcrumb"><a href="index.html">Home</a> › SWP Calculator</div>
-      <h1>SWP Calculator</h1>
-      <p>Systematic Withdrawal Plan — plan regular withdrawals from your corpus</p>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px">
+        <div class="trust-badge"><span class="trust-badge-dot"></span> Used by thousands of investors in India</div>
+      </div>
+      <h1>SWP Calculator — Will Your Corpus Last?</h1>
+      <p>Find out if your corpus will last — and how much you can safely withdraw each month.</p>
+
+      <div class="hero-hook">
+        <div class="hero-hook-question">Can your <span>₹25L generate ₹20,000/month</span> for 20 years without running out? 🤔</div>
+        <div class="hero-benefits">
+          <div class="hero-benefit"><span class="hero-benefit-tick">✓</span> Know exactly how long your money lasts</div>
+          <div class="hero-benefit"><span class="hero-benefit-tick">✓</span> Find the safest monthly withdrawal amount</div>
+          <div class="hero-benefit"><span class="hero-benefit-tick">✓</span> Avoid running out of money in retirement</div>
+          <div class="hero-benefit"><span class="hero-benefit-tick">✓</span> Compare scenarios in seconds — free, no login</div>
+        </div>
+        <div class="hero-cta-line">👇 Adjust the values below to plan your monthly income</div>
+      </div>
     </div>
 
-    <div class="calc-layout">
+    <div class="calc-layout" id="calculatorSection">
       <div class="input-panel">
         <div class="input-group">
           <div class="input-label"><span>Initial Investment</span><span class="input-value" id="corpusLabel">₹25,00,000</span></div>
@@ -191,6 +737,12 @@
       </div>
 
       <div class="result-panel">
+        <!-- Risk Badge -->
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px">
+          <span class="risk-badge safe" id="riskBadge">🟢 Safe Withdrawal</span>
+          <span class="credibility-line">🔒 Based on realistic return assumptions</span>
+        </div>
+
         <div class="result-card result-highlight">
           <div class="result-label">Final Value of Investment</div>
           <div class="result-amount" id="finalVal">₹0</div><div class="result-sub">
@@ -204,12 +756,37 @@
           </div>
         </div>
         </div>
+
+        <!-- Smart Insight Engine -->
+        <div class="insight-engine" id="insightEngine">
+          <div class="insight-engine-title">🧠 Smart Insight</div>
+          <div class="insight-row" id="insightDepletion">
+            <span class="insight-icon">📅</span>
+            <span class="insight-text" id="insightDepletionText">Calculating...</span>
+          </div>
+          <div class="insight-recommendation" id="insightRecommendation"></div>
+        </div>
+
+        <!-- Corpus Chart -->
+        <div class="chart-container">
+          <div class="chart-title">📈 Corpus value over time</div>
+          <div class="chart-wrap">
+            <canvas id="corpusChart"></canvas>
+          </div>
+        </div>
+
         <div class="result-card">
           <div class="result-row"><span>Initial Investment</span><span id="r1">₹25,00,000</span></div>
           <div class="result-row"><span>Total Withdrawn</span><span id="r2" class="text-debit">₹0</span></div>
           <div class="result-row"><span>Final Balance</span><span id="r3" style="color:var(--green-dark)">₹0</span></div>
         </div>
         <div class="info-box" id="swpInfo">💡 Your corpus lasts throughout the period at this withdrawal rate.</div>
+
+        <!-- Shareable Insight Text -->
+        <div class="share-insight-text" id="shareInsightText" onclick="copyInsightText(this)">
+          My ₹25L gives ₹20,000/month for 10 years with ₹36.5L remaining 💰
+        </div>
+
         <div class="share-bar">
           <div class="share-bar-title">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
@@ -296,6 +873,22 @@
 
 
   <h2 id="what-is-swp-systematic-withdrawal-plan">What is SWP (Systematic Withdrawal Plan)?</h2>
+
+  <!-- Use Case Cards -->
+  <div class="use-case-grid" style="margin-top:0;margin-bottom:28px">
+    <div class="use-case-card">
+      <div class="use-case-icon">🏖️</div>
+      <div class="use-case-title">SWP for Retirement Income</div>
+      <div class="use-case-desc">Retire with ₹50L–₹1Cr and withdraw a fixed monthly amount. Your equity corpus keeps growing, giving you <a href="#swp-for-retirement-income-in-india" style="color:#1a9e5c;font-weight:600">inflation-beating income</a> for 25–30 years.</div>
+      <a href="#swp-for-retirement-income-in-india" class="use-case-link">Learn retirement strategy →</a>
+    </div>
+    <div class="use-case-card">
+      <div class="use-case-icon">💼</div>
+      <div class="use-case-title">SWP for Passive Income</div>
+      <div class="use-case-desc">Already have a lump sum from a bonus, inheritance, or property sale? Use <a href="what-is-swp.html" style="color:#1a9e5c;font-weight:600">SWP as a salary replacement</a> — generate ₹15,000–₹50,000/month while your investment grows.</div>
+      <a href="what-is-swp.html" class="use-case-link">See passive income guide →</a>
+    </div>
+  </div>
   <p>A Systematic Withdrawal Plan (SWP) is a facility offered by mutual funds that allows you to withdraw a fixed amount from your investment at regular intervals — monthly, quarterly, or annually. It is essentially the reverse of a SIP. Instead of putting money in regularly, you take money out regularly, while the remaining corpus continues to grow.</p>
   <p>SWP is particularly popular among retirees who need a regular income stream without depleting their entire corpus at once. Unlike an FD, an SWP can be structured so that withdrawals come primarily from capital gains, minimising tax.</p>
 
@@ -420,7 +1013,7 @@
     </div>
     <div style="max-width:1200px;margin:0 auto">
       <div class="footer-bottom">
-        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <span>© 2026 InvestSmartCalc · For informational purposes only · Not financial advice</span>
         <div class="footer-bottom-links">
           <a href="about.html">About</a>
           <a href="privacy.html">Privacy</a>
@@ -430,54 +1023,368 @@
       </div>
     </div>
   </footer>
+  <!-- Sticky mobile mini result bar -->
+  <div class="mini-result-bar" id="miniResultBar">
+    <span>Final Value: <strong id="miniCorpus">—</strong></span>
+    <span id="miniStatus">💡 Calculating...</span>
+  </div>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-mobile-cta" onclick="
+  const el = document.getElementById('calculatorSection');
+  const y = el.getBoundingClientRect().top + window.pageYOffset - 70;
+  window.scrollTo({ top: y, behavior: 'smooth' });">
+    🔄 Try Another Scenario — Scroll to Calculator
+  </div>
+
   <script src="app.js" defer></script>
   <script>
+    // ── Formatting helpers ──
+    function fmt(v) {
+      if (v >= 10000000) return '₹' + (v/10000000).toFixed(2) + 'Cr';
+      if (v >= 100000) return '₹' + (v/100000).toFixed(2) + 'L';
+      return '₹' + Math.round(v).toLocaleString('en-IN');
+    }
+    function fmtFull(v) {
+      return '₹' + Math.round(v).toLocaleString('en-IN');
+    }
+
+    // ── Slider gradient fill ──
+    function updateSlider(slider) {
+      const min = parseFloat(slider.min), max = parseFloat(slider.max), val = parseFloat(slider.value);
+      const pct = ((val - min) / (max - min)) * 100;
+      // Read track-empty color from CSS variable so dark mode works automatically
+      const emptyColor = getComputedStyle(document.documentElement).getPropertyValue('--enh-slider-track-empty').trim() || '#d0e8dc';
+      slider.style.background = `linear-gradient(to right, #1a9e5c ${pct}%, ${emptyColor} ${pct}%)`;
+    }
+
     function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
       const val = parseFloat(slider.value);
       document.getElementById(numId).value = val;
       document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
       updateSlider(slider);
+      flashInput(numId);
     }
     function syncSlider(input, sliderId, labelId, prefix, isCurrency, suffix='') {
-      const val = parseFloat(input.value); const slider = document.getElementById(sliderId); slider.value = val;
+      const val = parseFloat(input.value);
+      const slider = document.getElementById(sliderId);
+      slider.value = val;
       document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
       updateSlider(slider);
     }
+
+    function flashInput(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove('input-flash');
+      void el.offsetWidth;
+      el.classList.add('input-flash');
+      setTimeout(() => el.classList.remove('input-flash'), 500);
+    }
+
+    // ── Animated number update ──
+    function animateValue(id, newText) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = newText;
+      el.classList.remove('number-updated');
+      void el.offsetWidth;
+      el.classList.add('number-updated');
+      setTimeout(() => el.classList.remove('number-updated'), 450);
+    }
+
+    // ── Chart ──
+    let corpusChartInstance = null;
+
+    function buildChartData(initCorpus, wd, r, totalMonths) {
+      const labels = [], dataPoints = [], depleted = [];
+      let corpus = initCorpus;
+      let depletionYear = null;
+      labels.push(0);
+      dataPoints.push(corpus);
+      depleted.push(false);
+
+      for (let m = 1; m <= totalMonths; m++) {
+        corpus = corpus * (1 + r) - wd;
+        if (corpus < 0) {
+          corpus = 0;
+          if (!depletionYear) depletionYear = Math.ceil(m / 12);
+        }
+        if (m % 12 === 0) {
+          labels.push(m / 12);
+          dataPoints.push(Math.round(corpus));
+          depleted.push(corpus <= 0);
+        }
+      }
+      return { labels, dataPoints, depleted, depletionYear };
+    }
+
+    function renderChart(initCorpus, wd, r, totalMonths) {
+      const canvas = document.getElementById('corpusChart');
+      if (!canvas) return;
+
+      const { labels, dataPoints, depleted } = buildChartData(initCorpus, wd, r, totalMonths);
+
+      // Read CSS variables at render time — picks up light/dark mode automatically
+      const cs = getComputedStyle(document.documentElement);
+      const gridColor    = cs.getPropertyValue('--enh-chart-grid').trim()          || 'rgba(0,0,0,0.05)';
+      const tickColor    = cs.getPropertyValue('--enh-chart-tick').trim()          || '#7a9a8a';
+      const tooltipBg    = cs.getPropertyValue('--enh-chart-tooltip-bg').trim()    || '#1a2e22';
+      const tooltipTitle = cs.getPropertyValue('--enh-chart-tooltip-title').trim() || '#a8d5be';
+      const tooltipBody  = cs.getPropertyValue('--enh-chart-tooltip-body').trim()  || '#ffffff';
+
+      const lineColor = depleted.some(d => d) ? '#f6a623' : '#1a9e5c';
+
+      if (corpusChartInstance) {
+        corpusChartInstance.destroy();
+        corpusChartInstance = null;
+      }
+
+      const ctx = canvas.getContext('2d');
+      const gradient = ctx.createLinearGradient(0, 0, 0, 180);
+      gradient.addColorStop(0, 'rgba(26,158,92,0.18)');
+      gradient.addColorStop(1, 'rgba(26,158,92,0.01)');
+
+      corpusChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [{
+            label: 'Corpus Value',
+            data: dataPoints,
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: lineColor,
+            borderWidth: 2.5,
+            pointRadius: dataPoints.map((v, i) => {
+              if (i === 0 || i === dataPoints.length - 1) return 4;
+              if (i > 0 && depleted[i] && !depleted[i-1]) return 7;
+              return 0;
+            }),
+            pointBackgroundColor: dataPoints.map((v, i) => {
+              if (depleted[i]) return '#e53e3e';
+              if (v < initCorpus * 0.4) return '#f6a623';
+              return '#1a9e5c';
+            }),
+            pointBorderColor: '#fff',
+            pointBorderWidth: 2,
+            tension: 0.4,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                title: (items) => `Year ${items[0].label}`,
+                label: (item) => item.raw <= 0 ? '  Corpus depleted' : '  Corpus: ' + fmtFull(item.raw)
+              },
+              backgroundColor: tooltipBg,
+              titleColor: tooltipTitle,
+              bodyColor: tooltipBody,
+              padding: 10,
+              borderColor: tooltipTitle,
+              borderWidth: 1,
+            }
+          },
+          scales: {
+            x: {
+              title: { display: true, text: 'Years', color: tickColor, font: { size: 11 } },
+              grid: { color: gridColor },
+              ticks: { color: tickColor, font: { size: 11 } }
+            },
+            y: {
+              grid: { color: gridColor },
+              ticks: {
+                color: tickColor,
+                font: { size: 10 },
+                callback: v => {
+                  if (v >= 10000000) return (v/10000000).toFixed(1) + 'Cr';
+                  if (v >= 100000) return (v/100000).toFixed(0) + 'L';
+                  return (v/1000).toFixed(0) + 'K';
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // ── Smart Insight Engine ──
+    function updateInsights(initCorpus, wd, monthlyRate, totalMonths, finalCorpus) {
+      const years = totalMonths / 12;
+      const annualWithdrawal = wd * 12;
+      const withdrawalRatePct = (annualWithdrawal / initCorpus) * 100;
+
+      // Find actual depletion year
+      let corpus = initCorpus;
+      let depletionMonth = null;
+      for (let m = 1; m <= totalMonths; m++) {
+        corpus = corpus * (1 + monthlyRate) - wd;
+        if (corpus <= 0) { depletionMonth = m; break; }
+      }
+      const depletionYear = depletionMonth ? Math.ceil(depletionMonth / 12) : null;
+
+      // Risk assessment
+      const riskBadge = document.getElementById('riskBadge');
+      let riskClass, riskLabel;
+      if (depletionYear) {
+        riskClass = 'risky'; riskLabel = '🔴 Risky — Corpus Depletes';
+      } else if (withdrawalRatePct > 7) {
+        riskClass = 'moderate'; riskLabel = '🟡 Moderate Risk';
+      } else {
+        riskClass = 'safe'; riskLabel = '🟢 Safe Withdrawal';
+      }
+      riskBadge.className = 'risk-badge ' + riskClass;
+      riskBadge.textContent = riskLabel;
+
+      // Depletion insight text
+      const depletionEl = document.getElementById('insightDepletionText');
+      const recEl = document.getElementById('insightRecommendation');
+
+      if (depletionYear) {
+        depletionEl.className = 'insight-text warning';
+        depletionEl.innerHTML = `⚠️ <strong>Your corpus runs out in Year ${depletionYear}</strong> — that's ${years - depletionYear} year${years-depletionYear !== 1 ? 's' : ''} short of your target.`;
+
+        // Find max sustainable withdrawal
+        let lo = 1000, hi = wd, safeWd = lo;
+        for (let i = 0; i < 30; i++) {
+          const mid = Math.round((lo + hi) / 2 / 1000) * 1000;
+          let c = initCorpus, ok = true;
+          for (let m = 0; m < totalMonths; m++) {
+            c = c * (1 + monthlyRate) - mid;
+            if (c <= 0) { ok = false; break; }
+          }
+          if (ok) { safeWd = mid; lo = mid + 1000; }
+          else hi = mid - 1000;
+        }
+        recEl.innerHTML = `💡 <strong>To sustain for ${years} years,</strong> reduce withdrawal to <strong>${fmt(safeWd)}/month</strong> — saving ₹${fmt(wd - safeWd)}/month vs current plan.`;
+        recEl.style.display = 'block';
+      } else {
+        const growth = finalCorpus - initCorpus;
+        if (growth > 0) {
+          depletionEl.className = 'insight-text safe';
+          depletionEl.innerHTML = `✅ <strong>Excellent!</strong> Your corpus grows by <strong>${fmt(growth)}</strong> even after withdrawing ₹${fmt(wd)}/month for ${years} years. The return rate (${(monthlyRate*12*100).toFixed(1)}% p.a.) comfortably exceeds your withdrawal rate (${withdrawalRatePct.toFixed(1)}% p.a.).`;
+          recEl.innerHTML = `📌 You could even <strong>increase monthly withdrawal to ${fmt(Math.round(wd * 1.15 / 1000) * 1000)}</strong> and still sustain comfortably.`;
+        } else {
+          depletionEl.className = 'insight-text moderate';
+          depletionEl.innerHTML = `🟡 <strong>Balanced.</strong> Your corpus reduces gradually from ${fmt(initCorpus)} to ${fmt(finalCorpus)} over ${years} years — still positive, but worth monitoring.`;
+          recEl.innerHTML = `💡 Consider <strong>reducing withdrawal by 10–15%</strong> or targeting a slightly higher-return fund to ensure long-term sustainability.`;
+        }
+        recEl.style.display = 'block';
+      }
+    }
+
+    // ── Shareable insight text ──
+    function updateShareInsight(corpusLabel, wdLabel, finalVal, yearLabel, status) {
+      const el = document.getElementById('shareInsightText');
+      if (!el) return;
+      if (status === 'depleted') {
+        el.textContent = `My SWP plan: ${wdLabel}/month from ${corpusLabel} — corpus lasts ${yearLabel} 📊 #SWP #Retirement`;
+      } else {
+        el.textContent = `My ${corpusLabel} gives ${wdLabel}/month for ${yearLabel} with ${finalVal} remaining 💰 #SWP`;
+      }
+    }
+
+    function copyInsightText(el) {
+      const text = el.textContent.replace('📋 tap to copy','').replace('✅ copied!','').trim();
+      navigator.clipboard.writeText(text).then(() => {
+        el.classList.add('share-insight-copied');
+        setTimeout(() => el.classList.remove('share-insight-copied'), 2000);
+      }).catch(() => {});
+    }
+
+    // ── Mini result bar (mobile scroll) ──
+    let miniBarShowing = false;
+    window.addEventListener('scroll', () => {
+      const bar = document.getElementById('miniResultBar');
+      if (!bar) return;
+      const calcTop = document.querySelector('.calc-layout')?.getBoundingClientRect().bottom || 999;
+      if (calcTop < 0 && !miniBarShowing) {
+        bar.classList.add('visible'); miniBarShowing = true;
+      } else if (calcTop >= 0 && miniBarShowing) {
+        bar.classList.remove('visible'); miniBarShowing = false;
+      }
+    }, { passive: true });
+
+    // ── Main calculate ──
     function calculate() {
-      let corpus = parseFloat(document.getElementById('corpusNum').value)||2500000;
-      const wd = parseFloat(document.getElementById('wdNum').value)||20000;
-      const r = (parseFloat(document.getElementById('rateNum').value)||12)/100/12;
-      const months = (parseInt(document.getElementById('yearNum').value)||10)*12;
-      const init = corpus;
+      let initCorpus = parseFloat(document.getElementById('corpusNum').value) || 2500000;
+      const wd = parseFloat(document.getElementById('wdNum').value) || 20000;
+      const annualRate = (parseFloat(document.getElementById('rateNum').value) || 12);
+      const r = annualRate / 100 / 12;
+      const yrs = parseInt(document.getElementById('yearNum').value) || 10;
+      const months = yrs * 12;
+
+      let corpus = initCorpus;
       let totalWd = 0;
       for (let m = 0; m < months; m++) {
         corpus = corpus * (1 + r) - wd;
         totalWd += wd;
         if (corpus <= 0) { corpus = 0; break; }
       }
-      document.getElementById('finalVal').textContent = fmt(Math.max(0, corpus));
-      document.getElementById('r1').textContent = fmtFull(init);
-      document.getElementById('r2').textContent = fmtFull(totalWd);
-      document.getElementById('r3').textContent = fmtFull(Math.max(0, corpus));
-      document.getElementById('subWithdrawn').textContent = fmt(totalWd);
-      document.getElementById('subCorpus').textContent = fmt(Math.max(0,corpus));
+      const finalCorpus = Math.max(0, corpus);
+
+      // Animate result values
+      animateValue('finalVal', fmt(finalCorpus));
+      animateValue('r1', fmtFull(initCorpus));
+      animateValue('r2', fmtFull(totalWd));
+      animateValue('r3', fmtFull(finalCorpus));
+      animateValue('subWithdrawn', fmt(totalWd));
+      animateValue('subCorpus', fmt(finalCorpus));
+
+      // Info box
       const info = document.getElementById('swpInfo');
-      info.textContent = corpus <= 0
-        ? '⚠️ Your corpus gets depleted before the end of the period. Consider reducing withdrawal or extending returns.'
-        : `✅ Your corpus lasts the full ${document.getElementById('yearNum').value} years with ₹${fmt(corpus)} remaining.`;
+      if (finalCorpus <= 0) {
+        info.textContent = '⚠️ Your corpus gets depleted before the end of the period. Consider reducing withdrawal or extending returns.';
+        info.style.background = '';
+        info.style.borderColor = 'var(--enh-badge-risk-border)';
+        info.style.color = 'var(--enh-badge-risk-text)';
+      } else {
+        info.textContent = `✅ Your corpus lasts the full ${yrs} years with ${fmt(finalCorpus)} remaining.`;
+        info.style.background = '';
+        info.style.borderColor = '';
+        info.style.color = '';
+      }
+
+      // Smart insights
+      updateInsights(initCorpus, wd, r, months, finalCorpus);
+
+      // Chart (only if Chart.js loaded)
+      if (typeof Chart !== 'undefined') {
+        renderChart(initCorpus, wd, r, months);
+      }
+
+      // Shareable text
+      updateShareInsight(
+        document.getElementById('corpusLabel').textContent,
+        document.getElementById('wdLabel').textContent,
+        fmt(finalCorpus),
+        document.getElementById('yearLabel').textContent,
+        finalCorpus <= 0 ? 'depleted' : 'ok'
+      );
+
+      // Mini bar
+      const miniC = document.getElementById('miniCorpus');
+      const miniS = document.getElementById('miniStatus');
+      if (miniC) miniC.textContent = fmt(finalCorpus);
+      if (miniS) miniS.textContent = finalCorpus <= 0 ? '⚠️ Corpus depletes!' : '✅ Corpus sustained';
     }
     
     function setPreset(val) {
       document.getElementById('wdNum').value = val;
       document.getElementById('withdrawal').value = val;
-      document.getElementById('wdLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      document.getElementById('wdLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('withdrawal'));
-      // Highlight active preset
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
       event.target.classList.add('active');
       calculate();
     }
-    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+
+    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
     calculate();
   </script>
 </body>
