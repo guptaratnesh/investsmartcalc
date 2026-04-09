@@ -4,6 +4,152 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    },
+
+    {
+      "source": "/swp-calculator.html",
+      "destination": "/investment/swp/",
+      "permanent": true
+    },
+    {
+      "source": "/swp-calculator",
+      "destination": "/investment/swp/",
+      "permanent": true
+    },
+    {
+      "source": "/swp-calculator/",
+      "destination": "/investment/swp/",
+      "permanent": true
+    },
+
+    {
+      "source": "/sip-calculator.html",
+      "destination": "/investment/sip/",
+      "permanent": true
+    },
+    {
+      "source": "/sip-calculator",
+      "destination": "/investment/sip/",
+      "permanent": true
+    },
+    {
+      "source": "/sip-calculator/",
+      "destination": "/investment/sip/",
+      "permanent": true
+    },
+
+    {
+      "source": "/emi-calculator.html",
+      "destination": "/emi/",
+      "permanent": true
+    },
+    {
+      "source": "/emi-calculator",
+      "destination": "/emi/",
+      "permanent": true
+    },
+    {
+      "source": "/emi-calculator/",
+      "destination": "/emi/",
+      "permanent": true
+    },
+
+    {
+      "source": "/fd-calculator.html",
+      "destination": "/fd/",
+      "permanent": true
+    },
+    {
+      "source": "/fd-calculator",
+      "destination": "/fd/",
+      "permanent": true
+    },
+    {
+      "source": "/fd-calculator/",
+      "destination": "/fd/",
+      "permanent": true
+    },
+
+    {
+      "source": "/hra-calculator.html",
+      "destination": "/tax/salary/hra-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/hra-calculator",
+      "destination": "/tax/salary/hra-calculator.html",
+      "permanent": true
+    },
+
+    {
+      "source": "/salary.html",
+      "destination": "/tax/salary/",
+      "permanent": true
+    },
+
+    {
+      "source": "/tax-calculator.html",
+      "destination": "/tax/",
+      "permanent": true
+    },
+
+    {
+      "source": "/ppf-calculator.html",
+      "destination": "/schemes/ppf/",
+      "permanent": true
+    },
+    {
+      "source": "/gratuity-calculator.html",
+      "destination": "/schemes/gratuity/",
+      "permanent": true
+    },
+    {
+      "source": "/kvp-calculator.html",
+      "destination": "/schemes/kvp/",
+      "permanent": true
+    },
+    {
+      "source": "/ssy-calculator.html",
+      "destination": "/schemes/ssy/",
+      "permanent": true
+    },
+    {
+      "source": "/pomis-calculator.html",
+      "destination": "/schemes/pomis/",
+      "permanent": true
+    },
+    {
+      "source": "/rd-calculator.html",
+      "destination": "/schemes/rd/",
+      "permanent": true
+    },
+
+    {
+      "source": "/lumpsum-calculator.html",
+      "destination": "/investment/lumpsum/",
+      "permanent": true
+    },
+    {
+      "source": "/cagr-calculator.html",
+      "destination": "/investment/cagr/",
+      "permanent": true
+    },
+
+    {
+      "source": "/inflation-calculator.html",
+      "destination": "/tools/inflation/",
+      "permanent": true
+    },
+
+    {
+      "source": "/what-is-swp.html",
+      "destination": "/investment/swp/basics/what-is-swp.html",
+      "permanent": true
+    },
+    {
+      "source": "/swp-vs-fd-vs-pomis.html",
+      "destination": "/investment/comparison/swp-vs-fd-vs-pomis.html",
+      "permanent": true
     }
   ]
 }
