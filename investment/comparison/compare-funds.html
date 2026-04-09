@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Best Mutual Funds India 2025 | InvestSmartCalc</title>
+  <meta name="description" content="Compare best mutual funds in India 2025 — Nifty 50 Index, Large Cap, Flexi Cap, Mid Cap, ELSS and Debt funds. Returns, risk, expense ratio and who should invest.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://investsmartcalc.com/investment/comparison/compare-funds.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="/index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+    <div class="nav-links">
+      <a href="/investment/sip/">SIP</a>
+      <a href="/emi/">EMI</a>
+      <a href="/fd/">FD</a>
+      <a href="/schemes/ppf/">PPF</a>
+      <a href="/investment/swp/">SWP</a>
+      <a href="/tax/">Tax</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+      <div class="dark-toggle-wrap">
+        <span class="toggle-icon">☀️</span>
+        <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+      </div>
+      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/investment/sip/">SIP Calculator</a>
+    <a href="/emi/">EMI Calculator</a>
+    <a href="/fd/">FD Calculator</a>
+    <a href="/schemes/ppf/">PPF Calculator</a>
+    <a href="/investment/swp/">SWP Calculator</a>
+    <a href="/tax/">Tax Calculator</a>
+    <a href="/schemes/ssy/">SSY Calculator</a>
+    <a href="/schemes/kvp/">KVP Calculator</a>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<main class="calc-page">
+
+  <!-- HEADER -->
+  <div class="calc-page-header">
+    <div class="breadcrumb"><a href="/index.html">Home</a> › <a href="/investment/sip/">SIP Calculator</a> › Compare Funds</div>
+    <h1>Compare Best Mutual Funds in India 2025</h1>
+    <p>Side-by-side comparison of fund categories — returns, risk, tax treatment and who each is best for.</p>
+  </div>
+
+  <!-- DISCLAIMER INFO BOX -->
+  <div class="info-box" style="margin-bottom:32px">
+    ⚠️ <strong>Not financial advice.</strong> Returns shown are historical category averages. Past performance does not guarantee future results. Consult a SEBI-registered advisor before investing.
+  </div>
+
+  <!-- FILTER TABS -->
+  <div class="tabs" style="margin-bottom:32px">
+    <button class="tab active" onclick="filterCards('all', this)">All Funds</button>
+    <button class="tab" onclick="filterCards('low', this)">Low Risk</button>
+    <button class="tab" onclick="filterCards('medium', this)">Medium Risk</button>
+    <button class="tab" onclick="filterCards('high', this)">High Risk</button>
+  </div>
+
+  <!-- FUND CARDS GRID -->
+  <div class="calc-grid" id="fundGrid">
+
+    <!-- Nifty 50 Index -->
+    <div class="calc-card fund-card" data-risk="low" style="flex-direction:column;align-items:flex-start;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px;width:100%">
+        <div class="card-icon" style="background:#e3f2fd;color:#1565c0">📈</div>
+        <div class="card-info">
+          <h3>Nifty 50 Index Fund</h3>
+          <p>Tracks India's top 50 companies passively</p>
+        </div>
+      </div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:6px">
+        <div class="result-row"><span>10-yr Avg CAGR</span><span style="color:var(--green-dark);font-family:var(--font-mono);font-weight:700">12–14%</span></div>
+        <div class="result-row"><span>Expense Ratio</span><span style="font-family:var(--font-mono);font-weight:600">0.1–0.2%</span></div>
+        <div class="result-row"><span>Risk Level</span><span><span class="hero-badge" style="background:#e3f2fd;color:#1565c0">Moderate</span></span></div>
+        <div class="result-row"><span>Min SIP</span><span style="font-family:var(--font-mono);font-weight:600">₹500/mo</span></div>
+        <div class="result-row" style="border:none"><span>Tax</span><span style="font-size:12px;color:var(--text-muted)">LTCG 12.5% above ₹1.25L</span></div>
+      </div>
+      <div class="info-box" style="margin-top:0;padding:10px 14px;font-size:12px">
+        ✅ <strong>Best for:</strong> Beginners, passive investors, long-term wealth building with low cost.
+      </div>
+      <a href="/investment/sip/" class="btn-calc" style="margin-top:0">Calculate Returns →</a>
+    </div>
+
+    <!-- Large Cap -->
+    <div class="calc-card fund-card" data-risk="low" style="flex-direction:column;align-items:flex-start;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px;width:100%">
+        <div class="card-icon" style="background:#f3e5f5;color:#6a1b9a">🏛️</div>
+        <div class="card-info">
+          <h3>Large Cap Fund</h3>
+          <p>Actively managed, top 100 companies by market cap</p>
+        </div>
+      </div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:6px">
+        <div class="result-row"><span>10-yr Avg CAGR</span><span style="color:var(--green-dark);font-family:var(--font-mono);font-weight:700">11–13%</span></div>
+        <div class="result-row"><span>Expense Ratio</span><span style="font-family:var(--font-mono);font-weight:600">0.8–1.5%</span></div>
+        <div class="result-row"><span>Risk Level</span><span><span class="hero-badge" style="background:#e3f2fd;color:#1565c0">Moderate</span></span></div>
+        <div class="result-row"><span>Min SIP</span><span style="font-family:var(--font-mono);font-weight:600">₹500/mo</span></div>
+        <div class="result-row" style="border:none"><span>Tax</span><span style="font-size:12px;color:var(--text-muted)">LTCG 12.5% above ₹1.25L</span></div>
+      </div>
+      <div class="info-box" style="margin-top:0;padding:10px 14px;font-size:12px">
+        ✅ <strong>Best for:</strong> Conservative equity investors wanting stable, managed large-cap exposure.
+      </div>
+      <a href="/investment/sip/" class="btn-calc" style="margin-top:0">Calculate Returns →</a>
+    </div>
+
+    <!-- Flexi Cap -->
+    <div class="calc-card fund-card" data-risk="medium" style="flex-direction:column;align-items:flex-start;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px;width:100%">
+        <div class="card-icon" style="background:#e8f5e9;color:#2e7d32">🔀</div>
+        <div class="card-info">
+          <h3>Flexi Cap Fund</h3>
+          <p>Invests across large, mid and small caps freely</p>
+        </div>
+      </div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:6px">
+        <div class="result-row"><span>10-yr Avg CAGR</span><span style="color:var(--green-dark);font-family:var(--font-mono);font-weight:700">12–15%</span></div>
+        <div class="result-row"><span>Expense Ratio</span><span style="font-family:var(--font-mono);font-weight:600">0.8–1.8%</span></div>
+        <div class="result-row"><span>Risk Level</span><span><span class="hero-badge" style="background:#fff3e0;color:#e65100">Moderate-High</span></span></div>
+        <div class="result-row"><span>Min SIP</span><span style="font-family:var(--font-mono);font-weight:600">₹500/mo</span></div>
+        <div class="result-row" style="border:none"><span>Tax</span><span style="font-size:12px;color:var(--text-muted)">LTCG 12.5% above ₹1.25L</span></div>
+      </div>
+      <div class="info-box" style="margin-top:0;padding:10px 14px;font-size:12px">
+        ✅ <strong>Best for:</strong> Investors wanting diversification across market caps with one fund.
+      </div>
+      <a href="/investment/sip/" class="btn-calc" style="margin-top:0">Calculate Returns →</a>
+    </div>
+
+    <!-- Mid Cap -->
+    <div class="calc-card fund-card" data-risk="high" style="flex-direction:column;align-items:flex-start;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px;width:100%">
+        <div class="card-icon" style="background:#fff8e1;color:#f57f17">🚀</div>
+        <div class="card-info">
+          <h3>Mid Cap Fund</h3>
+          <p>Companies ranked 101–250 by market cap</p>
+        </div>
+      </div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:6px">
+        <div class="result-row"><span>10-yr Avg CAGR</span><span style="color:var(--green-dark);font-family:var(--font-mono);font-weight:700">14–18%</span></div>
+        <div class="result-row"><span>Expense Ratio</span><span style="font-family:var(--font-mono);font-weight:600">0.9–1.8%</span></div>
+        <div class="result-row"><span>Risk Level</span><span><span class="hero-badge" style="background:#fce4ec;color:#c62828">High</span></span></div>
+        <div class="result-row"><span>Min SIP</span><span style="font-family:var(--font-mono);font-weight:600">₹500/mo</span></div>
+        <div class="result-row" style="border:none"><span>Tax</span><span style="font-size:12px;color:var(--text-muted)">LTCG 12.5% above ₹1.25L</span></div>
+      </div>
+      <div class="info-box" style="margin-top:0;padding:10px 14px;font-size:12px">
+        ✅ <strong>Best for:</strong> Aggressive investors with 7+ year horizon seeking higher growth potential.
+      </div>
+      <a href="/investment/sip/" class="btn-calc" style="margin-top:0">Calculate Returns →</a>
+    </div>
+
+    <!-- ELSS -->
+    <div class="calc-card fund-card" data-risk="high" style="flex-direction:column;align-items:flex-start;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px;width:100%">
+        <div class="card-icon" style="background:#e8f5e9;color:#1b5e20">🛡️</div>
+        <div class="card-info">
+          <h3>ELSS — Tax Saving Fund</h3>
+          <p>Equity fund with ₹1.5L/yr 80C tax deduction</p>
+        </div>
+      </div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:6px">
+        <div class="result-row"><span>10-yr Avg CAGR</span><span style="color:var(--green-dark);font-family:var(--font-mono);font-weight:700">12–15%</span></div>
+        <div class="result-row"><span>Expense Ratio</span><span style="font-family:var(--font-mono);font-weight:600">0.8–1.8%</span></div>
+        <div class="result-row"><span>Risk Level</span><span><span class="hero-badge" style="background:#fce4ec;color:#c62828">High</span></span></div>
+        <div class="result-row"><span>Lock-in</span><span style="font-family:var(--font-mono);font-weight:600;color:var(--green-dark)">3 years</span></div>
+        <div class="result-row" style="border:none"><span>Tax</span><span style="font-size:12px;color:var(--green-dark);font-weight:600">80C deduction + LTCG 12.5%</span></div>
+      </div>
+      <div class="info-box" style="margin-top:0;padding:10px 14px;font-size:12px">
+        ✅ <strong>Best for:</strong> Tax-saving under old regime + long-term wealth. Shortest lock-in among 80C options.
+      </div>
+      <a href="/investment/sip/" class="btn-calc" style="margin-top:0">Calculate Returns →</a>
+    </div>
+
+    <!-- Debt / Hybrid -->
+    <div class="calc-card fund-card" data-risk="low" style="flex-direction:column;align-items:flex-start;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px;width:100%">
+        <div class="card-icon" style="background:#e0f7fa;color:#006064">🏦</div>
+        <div class="card-info">
+          <h3>Debt / Hybrid Fund</h3>
+          <p>Bonds, G-Secs, or equity-debt mix for stability</p>
+        </div>
+      </div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:6px">
+        <div class="result-row"><span>10-yr Avg CAGR</span><span style="color:var(--green-dark);font-family:var(--font-mono);font-weight:700">7–10%</span></div>
+        <div class="result-row"><span>Expense Ratio</span><span style="font-family:var(--font-mono);font-weight:600">0.3–1.2%</span></div>
+        <div class="result-row"><span>Risk Level</span><span><span class="hero-badge" style="background:#e3f2fd;color:#1565c0">Low–Moderate</span></span></div>
+        <div class="result-row"><span>Min SIP</span><span style="font-family:var(--font-mono);font-weight:600">₹500/mo</span></div>
+        <div class="result-row" style="border:none"><span>Tax</span><span style="font-size:12px;color:var(--text-muted)">Gains taxed at income slab</span></div>
+      </div>
+      <div class="info-box" style="margin-top:0;padding:10px 14px;font-size:12px">
+        ✅ <strong>Best for:</strong> Capital preservation, short-term goals (1–3 yrs), or retirees needing stability.
+      </div>
+      <a href="/investment/sip/" class="btn-calc" style="margin-top:0">Calculate Returns →</a>
+    </div>
+
+  </div><!-- /fund grid -->
+
+  <!-- FULL COMPARISON TABLE -->
+  <div class="year-table-wrap" style="margin-top:48px">
+    <div class="year-table-head">📊 Full Side-by-Side Comparison</div>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+      <table class="year-table">
+        <thead>
+          <tr>
+            <th>Fund Type</th>
+            <th>10-yr CAGR</th>
+            <th>Risk</th>
+            <th>Expense Ratio</th>
+            <th>Lock-in</th>
+            <th>Tax on Gains</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Nifty 50 Index</strong></td>
+            <td style="color:var(--green-dark);font-weight:700">12–14%</td>
+            <td>Moderate</td>
+            <td>0.1–0.2%</td>
+            <td>None</td>
+            <td>LTCG 12.5% &gt;₹1.25L</td>
+            <td>Beginners, passive</td>
+          </tr>
+          <tr>
+            <td><strong>Large Cap</strong></td>
+            <td style="color:var(--green-dark);font-weight:700">11–13%</td>
+            <td>Moderate</td>
+            <td>0.8–1.5%</td>
+            <td>None</td>
+            <td>LTCG 12.5% &gt;₹1.25L</td>
+            <td>Conservative equity</td>
+          </tr>
+          <tr>
+            <td><strong>Flexi Cap</strong></td>
+            <td style="color:var(--green-dark);font-weight:700">12–15%</td>
+            <td>Moderate-High</td>
+            <td>0.8–1.8%</td>
+            <td>None</td>
+            <td>LTCG 12.5% &gt;₹1.25L</td>
+            <td>Diversified growth</td>
+          </tr>
+          <tr>
+            <td><strong>Mid Cap</strong></td>
+            <td style="color:var(--green-dark);font-weight:700">14–18%</td>
+            <td>High</td>
+            <td>0.9–1.8%</td>
+            <td>None</td>
+            <td>LTCG 12.5% &gt;₹1.25L</td>
+            <td>Aggressive, 7+ yrs</td>
+          </tr>
+          <tr class="total-row">
+            <td><strong>ELSS (Tax Saving)</strong></td>
+            <td style="color:var(--green-dark);font-weight:700">12–15%</td>
+            <td>High</td>
+            <td>0.8–1.8%</td>
+            <td>3 years</td>
+            <td>80C + LTCG 12.5%</td>
+            <td>Tax saving + wealth</td>
+          </tr>
+          <tr>
+            <td><strong>Debt / Hybrid</strong></td>
+            <td style="color:var(--green-dark);font-weight:700">7–10%</td>
+            <td>Low–Moderate</td>
+            <td>0.3–1.2%</td>
+            <td>None</td>
+            <td>Income slab rate</td>
+            <td>Stability, short-term</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- HOW TO CHOOSE -->
+  <div class="seo-section" style="padding-left:0;padding-right:0;max-width:none;margin-left:0;margin-right:0">
+    <hr class="seo-divider">
+
+    <h2>How to Choose the Right Fund for Your SIP</h2>
+    <p>The best fund depends on three things: your <strong>goal</strong>, your <strong>time horizon</strong>, and how much <strong>volatility</strong> you can stomach without panic-selling.</p>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="b-icon">🎯</div>
+        <div class="b-title">Define Your Goal First</div>
+        <div class="b-desc">Retirement in 20 yrs → Mid/Flexi Cap. Child's education in 10 yrs → Large Cap/Index. Tax saving this year → ELSS. Emergency buffer → Debt fund.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon">⏳</div>
+        <div class="b-title">Match Horizon to Risk</div>
+        <div class="b-desc">Equity funds need 5+ years to smooth out volatility. For anything under 3 years, stick to debt or hybrid funds.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon">💸</div>
+        <div class="b-title">Minimise Expense Ratio</div>
+        <div class="b-desc">A 1% vs 0.1% expense ratio difference costs you ₹3–5L on a ₹50L corpus over 20 years. Index funds win on cost every time.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon">📊</div>
+        <div class="b-title">Don't Over-Diversify</div>
+        <div class="b-desc">2–3 funds across categories is enough. 5 large-cap funds don't reduce risk — they just create duplication and confusion.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon">🔁</div>
+        <div class="b-title">Review Once a Year</div>
+        <div class="b-desc">Check performance vs benchmark annually. Switch only if consistently underperforming for 3+ years — not on short-term dips.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon">🧾</div>
+        <div class="b-title">Factor in Tax</div>
+        <div class="b-desc">ELSS saves tax upfront under old regime. For new regime investors, a plain index fund is often more efficient after tax.</div>
+      </div>
+    </div>
+
+    <h2>SIP vs Lumpsum — Which is Better for Mutual Funds?</h2>
+    <table class="seo-table">
+      <thead><tr><th>Factor</th><th>SIP</th><th>Lumpsum</th></tr></thead>
+      <tbody>
+        <tr><td>Best market timing needed?</td><td>No — averages cost automatically</td><td>Yes — risky if market at peak</td></tr>
+        <tr><td>Suits salaried investors?</td><td>✅ Yes — auto-debit monthly</td><td>❌ Needs a lump of savings</td></tr>
+        <tr><td>Volatility impact</td><td>Lower — rupee cost averaging</td><td>Higher — full exposure from day 1</td></tr>
+        <tr><td>Returns in bull market</td><td>Slightly lower</td><td>Higher if timed well</td></tr>
+        <tr class="highlight"><td>Recommended for beginners</td><td>✅ SIP wins</td><td>Only for experienced investors</td></tr>
+      </tbody>
+    </table>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Which mutual fund gives the highest return in India?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Mid cap and small cap funds have historically delivered the highest returns (14–20% CAGR over 10 years) but also carry the highest risk. For most investors, a Nifty 50 index fund or flexi cap fund offers the best risk-adjusted return over the long term.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is SIP better in index fund or active fund?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Studies show that over 10+ years, most active large-cap funds fail to beat the Nifty 50 index after expenses. Index funds win on cost, consistency and simplicity. For mid and small cap, active funds have a better track record of outperformance.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How many mutual funds should I have in my portfolio?<span class="faq-icon">+</span></button>
+        <div class="faq-a">2–3 funds is ideal for most investors. A typical portfolio: 1 Nifty 50 index fund (core), 1 mid/flexi cap fund (growth), and optionally 1 ELSS (if using old tax regime). More funds create duplication without reducing risk.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the minimum SIP amount for mutual funds?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Most mutual funds allow SIP from ₹500/month. Some funds like Axis Nifty 50 Index allow ₹100/month. There is no maximum limit — you can invest any amount.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Are mutual fund returns taxable in India?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. For equity funds: gains held over 1 year (LTCG) are tax-free up to ₹1.25 lakh/year, then taxed at 12.5%. Gains held under 1 year (STCG) are taxed at 20%. For debt funds: all gains are taxed at your income slab rate. ELSS gives ₹1.5L/year deduction under Section 80C (old regime only).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED CALCULATORS -->
+  <div class="related-section">
+    <div class="related-header">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Related Calculators
+    </div>
+    <div class="related-grid">
+      <a href="/investment/sip/" class="related-card">
+        <div class="related-icon" style="background:#e8f5e9;color:#1b5e20">📈</div>
+        <div><div class="related-name">SIP Calculator</div><div class="related-desc">Monthly investment returns</div></div>
+        <span class="related-arrow">→</span>
+      </a>
+      <a href="/investment/lumpsum/" class="related-card">
+        <div class="related-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+        <div><div class="related-name">Lumpsum Calculator</div><div class="related-desc">One-time investment growth</div></div>
+        <span class="related-arrow">→</span>
+      </a>
+      <a href="/investment/swp/" class="related-card">
+        <div class="related-icon" style="background:#f1f8e9;color:#558b2f">🔄</div>
+        <div><div class="related-name">SWP Calculator</div><div class="related-desc">Systematic withdrawal plan</div></div>
+        <span class="related-arrow">→</span>
+      </a>
+      <a href="/schemes/ppf/" class="related-card">
+        <div class="related-icon" style="background:#f3e5f5;color:#7b1fa2">🛡️</div>
+        <div><div class="related-name">PPF Calculator</div><div class="related-desc">Tax-free PF returns</div></div>
+        <span class="related-arrow">→</span>
+      </a>
+      <a href="/tax/" class="related-card">
+        <div class="related-icon" style="background:#fafafa;color:#424242">📋</div>
+        <div><div class="related-name">Tax Calculator</div><div class="related-desc">New vs Old Regime</div></div>
+        <span class="related-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+      <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+      <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+    </div>
+    <div class="footer-col"><h4>Calculators</h4><ul>
+      <li><a href="/investment/sip/">SIP Calculator</a></li>
+      <li><a href="/emi/">EMI Calculator</a></li>
+      <li><a href="/fd/">FD Calculator</a></li>
+      <li><a href="/schemes/ppf/">PPF Calculator</a></li>
+      <li><a href="/tax/">Income Tax</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>More Tools</h4><ul>
+      <li><a href="/investment/swp/">SWP Calculator</a></li>
+      <li><a href="/investment/lumpsum/">Lumpsum</a></li>
+      <li><a href="/schemes/ssy/">SSY Calculator</a></li>
+      <li><a href="/schemes/kvp/">KVP Calculator</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="/about.html">About Us</a></li>
+      <li><a href="/disclaimer.html">Disclaimer</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul></div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="footer-bottom">
+      <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+      <div class="footer-bottom-links">
+        <a href="/about.html">About</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Dark mode
+(function(){
+  const saved = localStorage.getItem('isc-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (saved === 'dark' || (!saved && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+
+function toggleDarkMode() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('isc-theme', next);
+  document.querySelectorAll('.toggle-icon').forEach(el => {
+    el.textContent = next === 'dark' ? '🌙' : '☀️';
+  });
+}
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// FAQ accordion
+function toggleFaq(btn) {
+  btn.closest('.faq-item').classList.toggle('open');
+}
+
+// Filter tabs
+function filterCards(risk, btn) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.fund-card').forEach(card => {
+    if (risk === 'all' || card.dataset.risk === risk) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

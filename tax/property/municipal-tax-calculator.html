@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>Municipal Tax Calculator India 2025-26 – Water, Sewerage, Conservancy & All Components | InvestSmartCalc</title>
+  <meta name="description" content="Municipal tax calculator India FY 2025-26. Calculate all municipal tax components — property tax, water tax, sewerage tax, conservancy charges, lighting tax, education cess and trade licence fee. City-wise rates for Mumbai, Delhi, Bengaluru, Chennai, Hyderabad, Pune and more.">
+  <meta name="keywords" content="municipal tax calculator India, water tax calculator, sewerage tax calculator, municipal corporation tax 2025-26, house tax components, conservancy charges India">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://investsmartcalc.com/tax/property/municipal-tax-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://investsmartcalc.com/tax/property/municipal-tax-calculator.html">
+  <meta property="og:title" content="Municipal Tax Calculator India 2025-26 – All Components">
+  <meta property="og:description" content="Calculate all municipal tax components for major Indian cities. Water tax, sewerage, conservancy, lighting, education cess. Free & accurate for FY 2025-26.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Municipal Tax Calculator India 2025-26">
+  <meta name="twitter:description" content="Calculate all municipal tax components for major Indian cities FY 2025-26. Free & accurate.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <style>
+    .muni-badge { display:inline-block; background:#e0f7fa; color:#006064; padding:3px 12px; border-radius:100px; font-size:12px; font-weight:600; margin-bottom:12px; }
+    [data-theme="dark"] .muni-badge { background:#001a1c; color:#4dd0e1; }
+
+    .select-input { width:100%; border:1.5px solid var(--border); border-radius:8px; padding:9px 12px; font-size:14px; font-family:var(--font); background:var(--bg-white); color:var(--text-primary); outline:none; cursor:pointer; }
+    .select-input:focus { border-color:var(--green); }
+    [data-theme="dark"] .select-input { background:#252a3a; color:#d0e0f0; border-color:#3a4a66; }
+
+    .deduction-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--border); }
+    .deduction-row:last-child { border-bottom:none; }
+    .deduction-row label { font-size:14px; color:var(--text-secondary); line-height:1.4; }
+    .ded-input { width:110px; border:1.5px solid var(--border); border-radius:8px; padding:7px 10px; font-size:14px; font-family:var(--font-mono); text-align:right; outline:none; background:var(--bg-white); color:var(--text-primary); }
+    .ded-input:focus { border-color:var(--green); }
+    [data-theme="dark"] .ded-input { background:#252a3a; color:#d0e0f0; border-color:#3a4a66; }
+    [data-theme="dark"] .deduction-row { border-color:#2e3a52; }
+    [data-theme="dark"] .deduction-row label { color:#9aaab8; }
+
+    .check-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--border); }
+    .check-row:last-child { border-bottom:none; }
+    .check-row input[type=checkbox] { width:18px; height:18px; accent-color:var(--green); cursor:pointer; flex-shrink:0; }
+    .check-row label { font-size:14px; color:var(--text-secondary); cursor:pointer; }
+    [data-theme="dark"] .check-row { border-color:#2e3a52; }
+    [data-theme="dark"] .check-row label { color:#9aaab8; }
+
+    /* Component breakdown bar */
+    .component-bar { display:flex; border-radius:var(--radius-sm); overflow:hidden; height:24px; margin:12px 0 8px; }
+    .component-seg { display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#fff; transition:width 0.4s; overflow:hidden; white-space:nowrap; }
+
+    /* Component rows */
+    .comp-row { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid var(--border); font-size:13px; }
+    .comp-row:last-child { border-bottom:none; }
+    .comp-row .comp-name { color:var(--text-secondary); display:flex; align-items:center; gap:8px; }
+    .comp-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+    .comp-row .comp-val { font-family:var(--font-mono); font-weight:600; }
+    [data-theme="dark"] .comp-row { border-color:#2e3a52; }
+    [data-theme="dark"] .comp-row .comp-name { color:#8aa8c8; }
+
+    /* Info box */
+    .city-info-box { background:var(--bg); border-radius:var(--radius-sm); padding:12px 16px; margin-bottom:16px; border:1px solid var(--border); font-size:12px; color:var(--text-secondary); line-height:1.7; }
+    [data-theme="dark"] .city-info-box { background:#1a2236; border-color:#3a4a66; color:#8aa8c8; }
+    .city-info-box strong { color:var(--text-primary); }
+    [data-theme="dark"] .city-info-box strong { color:#d0e0f0; }
+
+    /* Disclaimer */
+    .disclaimer-note { background:#fff8e1; border:1px solid #ffe082; border-radius:var(--radius-sm); padding:10px 14px; font-size:12px; color:#6d4c00; margin-bottom:20px; }
+    [data-theme="dark"] .disclaimer-note { background:#2a1500; border-color:#bf6600; color:#ffb74d; }
+
+    /* Rate adjustment note */
+    .rate-note { background:#e8eaf6; border-radius:var(--radius-sm); padding:8px 12px; font-size:11px; color:#283593; margin-top:8px; }
+    [data-theme="dark"] .rate-note { background:#1a1e3d; color:#7986cb; }
+
+    /* Component table */
+    .comp-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .comp-table th { background:var(--bg); padding:8px 12px; text-align:left; color:var(--text-muted); font-weight:500; }
+    .comp-table td { padding:8px 12px; border-bottom:1px solid var(--border); }
+    .comp-table tr.total-row td { background:var(--green-light); color:var(--green-dark); font-weight:700; border-bottom:none; }
+    [data-theme="dark"] .comp-table th { background:#1a2236; color:#8aa8c8; }
+    [data-theme="dark"] .comp-table td { border-color:#2e3a52; color:#9aaab8; }
+    [data-theme="dark"] .comp-table tr.total-row td { background:#002a14; color:#00e676; }
+
+    /* City comparison table */
+    .city-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .city-table th { background:var(--bg); padding:8px 12px; text-align:left; color:var(--text-muted); font-weight:500; }
+    .city-table td { padding:8px 12px; border-bottom:1px solid var(--border); }
+    .city-table tr.highlight td { background:var(--green-light); color:var(--green-dark); font-weight:600; }
+    [data-theme="dark"] .city-table th { background:#1a2236; color:#8aa8c8; }
+    [data-theme="dark"] .city-table td { border-color:#2e3a52; color:#9aaab8; }
+    [data-theme="dark"] .city-table tr.highlight td { background:#002a14; color:#00e676; }
+
+    .info-tag { display:inline-block; background:#e3f2fd; color:#1565c0; font-size:11px; font-weight:600; padding:1px 7px; border-radius:100px; margin-left:4px; vertical-align:middle; }
+    [data-theme="dark"] .info-tag { background:#001a3d; color:#64b5f6; }
+
+    .tag-included { background:#e8f5e9; color:#00a152; font-size:10px; font-weight:700; padding:2px 7px; border-radius:100px; }
+    .tag-optional { background:#fff3e0; color:#e65100; font-size:10px; font-weight:700; padding:2px 7px; border-radius:100px; }
+    [data-theme="dark"] .tag-included { background:#003d1a; color:#00e676; }
+    [data-theme="dark"] .tag-optional { background:#2a1500; color:#ff9a5c; }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://investsmartcalc.com",
+  "logo": { "@type": "ImageObject", "url": "https://investsmartcalc.com/logo.png", "width": 200, "height": 60 },
+  "description": "Free financial calculators for India. Tax, EPF, NPS, Property Tax, Professional Tax, Municipal Tax. Updated for FY 2025-26."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Municipal Tax Calculator India FY 2025-26",
+  "url": "https://investsmartcalc.com/municipal-tax-calculator.html",
+  "description": "Calculate all municipal tax components for major Indian cities — property/general tax, water tax, sewerage tax, conservancy charges, lighting/street tax, education cess, and trade/advertisement fees. City-specific rates for Mumbai, Delhi, Bengaluru, Chennai, Hyderabad, Pune and more.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "provider": { "@type": "Organization", "name": "InvestSmartCalc", "url": "https://investsmartcalc.com" },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Municipal Tax Calculator", "item": "https://investsmartcalc.com/municipal-tax-calculator.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is municipal tax and what does it include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Municipal tax is the collective term for all taxes and charges levied by a local municipal corporation on properties within its jurisdiction. It typically comprises several components: (1) General/Property Tax — base tax on property value or annual rateable value; (2) Water Tax — for water supply infrastructure; (3) Sewerage/Drainage Tax — for drainage and wastewater treatment; (4) Conservancy/Sanitation Charges — for solid waste collection and disposal; (5) Lighting/Street Tax — for street lighting maintenance; (6) Education Cess — for local school funding; and (7) Fire Brigade Tax in some cities. These are usually charged as a percentage of the Annual Rateable Value (ARV) or property/capital value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is water tax calculated in Indian cities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Water tax is typically calculated as a percentage of the Annual Rateable Value (ARV) of the property, not based on actual consumption. In Mumbai (BMC), water tax is about 4% of ARV for residential properties. In Delhi, it is approximately 3–5% of ARV. In Chennai (GCC), it is levied at 7% of the property tax base. Some cities like Bengaluru (BBMP) also charge flat rates for specific connection sizes. This is separate from metered water consumption charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is municipal tax the same as property tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Property tax (also called general tax or house tax) is one component of municipal tax. Municipal tax is the umbrella that includes property tax plus several additional levies: water tax, sewerage tax, conservancy charges, lighting/street tax, education cess, and sometimes trade licence fees and fire brigade charges. In many cities, all components are bundled into a single 'property tax bill' but the underlying components are distinct levies under different sections of the Municipal Corporation Act."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is conservancy charge in municipal tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conservancy charges (also called sanitation charges or solid waste management charges) are levied by municipal corporations for collecting and disposing of household garbage and maintaining public sanitation. They are typically 5–15% of the Annual Rateable Value or property tax base. Under the Solid Waste Management Rules 2016, municipalities are required to recover at least a portion of their solid waste management costs from residents through user charges or conservancy levies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I deduct municipal tax in income tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All municipal taxes paid to a local authority during the financial year are deductible from the Gross Annual Value under Section 23 of the Income Tax Act when computing Income from House Property. This includes property tax, water tax, sewerage charges, conservancy charges — all components of the municipal tax bill that are paid to the municipal corporation. This deduction is available for let-out and deemed let-out properties under both Old and New Tax Regimes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is education cess in municipal tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Municipal education cess is a surcharge levied by municipal corporations as a percentage of the property tax or annual rateable value, specifically earmarked for funding local primary and secondary schools, school buildings, and educational infrastructure. It is separate from the 4% Health and Education Cess on income tax. The municipal education cess ranges from 5–15% of the property tax base, varying by city and municipal act."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between water tax and water charges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Water tax is a property-based levy charged as a percentage of the Annual Rateable Value, regardless of actual water consumption. It is part of the property tax bill and goes towards water infrastructure maintenance. Water charges (or water tariff) are consumption-based bills from the water utility board based on actual metered usage in kilolitres per month. A property owner pays both: water tax annually (part of property tax bill) and water charges monthly (based on meter reading)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the penalty for not paying municipal tax on time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Late payment of municipal tax typically attracts 1–2% interest per month on the outstanding amount. In Mumbai, a 2% annual penalty applies beyond the due date. In Delhi, 1% per month. In Chennai, 1% per month on overdue amounts. Prolonged non-payment can result in legal notice, sealing of property, or attachment by the municipal corporation. Many cities periodically announce amnesty schemes to waive penalties on old dues."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="/index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="/investment/sip/">SIP</a>
+        <a href="/tax/">Tax</a>
+        <a href="/schemes/epf/">EPF</a>
+        <a href="property-tax-calculator.html">Property Tax</a>
+        <a href="professional-tax-calculator.html">Prof. Tax</a>
+        <a href="municipal-tax-calculator.html" style="background:var(--green-light);color:var(--green-dark)">Municipal Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/investment/sip/">SIP Calculator</a>
+      <a href="/tax/">Income Tax</a>
+      <a href="/schemes/epf/">EPF Calculator</a>
+      <a href="/schemes/nps/">NPS Calculator</a>
+      <a href="property-tax-calculator.html">Property Tax</a>
+      <a href="professional-tax-calculator.html">Professional Tax</a>
+      <a href="municipal-tax-calculator.html">Municipal Tax</a>
+    </div>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="/index.html">Home</a> › Municipal Tax Calculator</div>
+      <div class="muni-badge">🏛️ Municipal Tax FY 2025-26 · All Components · 8 Major Cities</div>
+      <h1>Municipal Tax Calculator</h1>
+      <p>Calculate all components — Property Tax, Water Tax, Sewerage, Conservancy, Lighting Cess &amp; more · Section 23 IT deduction</p>
+    </div>
+
+    <div class="disclaimer-note">
+      ⚠️ <strong>Disclaimer:</strong> Rates are based on publicly available municipal schedules for FY 2025-26 and are indicative. Actual bills may vary by ward, zone, connection size, and property specifics. Always verify with your official municipal corporation portal before payment.
+    </div>
+
+    <div class="calc-layout">
+      <!-- INPUT PANEL -->
+      <div class="input-panel">
+        <h3 style="font-size:15px;font-weight:600;margin-bottom:20px">Property &amp; Location</h3>
+
+        <!-- City -->
+        <div class="input-group">
+          <div class="input-label"><span>City / Municipal Corporation</span></div>
+          <select class="select-input" id="citySelect" onchange="switchCity()">
+            <option value="mumbai">Mumbai — BMC (Brihanmumbai Municipal Corporation)</option>
+            <option value="delhi" selected>Delhi — MCD (Municipal Corporation of Delhi)</option>
+            <option value="bengaluru">Bengaluru — BBMP</option>
+            <option value="chennai">Chennai — GCC (Greater Chennai Corporation)</option>
+            <option value="hyderabad">Hyderabad — GHMC</option>
+            <option value="pune">Pune — PMC</option>
+            <option value="kolkata">Kolkata — KMC</option>
+            <option value="ahmedabad">Ahmedabad — AMC</option>
+            <option value="custom">Other City — Custom Rates</option>
+          </select>
+        </div>
+
+        <!-- City info -->
+        <div class="city-info-box" id="cityInfoBox"></div>
+
+        <!-- Property type -->
+        <div class="input-group">
+          <div class="input-label"><span>Property Type</span></div>
+          <select class="select-input" id="propertyType" onchange="calculate()">
+            <option value="residential">Residential (Self-occupied)</option>
+            <option value="residential_rented">Residential (Rented / Let-out)</option>
+            <option value="commercial">Commercial</option>
+            <option value="industrial">Industrial</option>
+          </select>
+        </div>
+
+        <!-- Annual Rateable Value -->
+        <div class="input-group">
+          <div class="input-label"><span>Annual Rateable Value (ARV) / Property Value <span class="info-tag" id="arvNote">ARV</span></span><span class="input-value" id="arvLabel">₹1,00,000</span></div>
+          <input type="range" id="arvSlider" min="10000" max="5000000" step="10000" value="100000"
+            oninput="syncInput(this,'arvNum','arvLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="arvNum" value="100000"
+            oninput="syncSlider(this,'arvSlider','arvLabel','₹',true);calculate()">
+          <div class="preset-row">
+            <button class="preset-btn" onclick="setPreset(50000)">₹50K</button>
+            <button class="preset-btn" onclick="setPreset(100000)">₹1L</button>
+            <button class="preset-btn" onclick="setPreset(250000)">₹2.5L</button>
+            <button class="preset-btn" onclick="setPreset(500000)">₹5L</button>
+          </div>
+          <div class="rate-note" id="arvNote2">💡 Annual Rateable Value ≈ 4–8% of market value. For a ₹50L property, ARV is typically ₹2L–₹4L.</div>
+        </div>
+
+        <!-- Tax rates — auto-filled from city, editable -->
+        <div style="margin-top:4px">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--text-secondary)">
+            Tax Component Rates <span class="info-tag">Auto-filled · Editable</span>
+          </h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Rates auto-load for selected city. Adjust if your ward has different rates.</div>
+
+          <div class="deduction-row">
+            <label>General / Property Tax Rate (%)</label>
+            <input type="number" class="ded-input" id="rPropTax" value="11" step="0.1" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>Water Tax (% of ARV)</label>
+            <input type="number" class="ded-input" id="rWaterTax" value="4" step="0.1" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>Sewerage / Drainage Tax (% of ARV)</label>
+            <input type="number" class="ded-input" id="rSewerageTax" value="3" step="0.1" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>Conservancy / Sanitation Charges (% of ARV)</label>
+            <input type="number" class="ded-input" id="rConservancy" value="7" step="0.1" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>Lighting / Street Tax (% of ARV)</label>
+            <input type="number" class="ded-input" id="rLighting" value="4" step="0.1" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>Education Cess (% of ARV)</label>
+            <input type="number" class="ded-input" id="rEduCess" value="5" step="0.1" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>Fire Brigade / Other Charges (% of ARV)</label>
+            <input type="number" class="ded-input" id="rFire" value="1" step="0.1" oninput="calculate()">
+          </div>
+        </div>
+
+        <!-- Rebates -->
+        <div style="margin-top:12px">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text-secondary)">Rebates &amp; Discounts</h3>
+          <div class="check-row">
+            <input type="checkbox" id="rebateEarly" onchange="calculate()">
+            <label for="rebateEarly">Early payment rebate <span class="info-tag" id="earlyRebateAmt">10%</span></label>
+          </div>
+          <div class="check-row">
+            <input type="checkbox" id="rebateSenior" onchange="calculate()">
+            <label for="rebateSenior">Senior citizen / Women / Disabled <span class="info-tag" id="seniorRebateAmt">25%</span></label>
+          </div>
+          <div class="check-row" style="border-bottom:none">
+            <input type="checkbox" id="rebateOnline" checked onchange="calculate()">
+            <label for="rebateOnline">Online payment rebate <span class="info-tag">2%</span></label>
+          </div>
+        </div>
+
+        <!-- Income tax -->
+        <div style="margin-top:12px">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--text-secondary)">Income Tax Impact</h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">All municipal taxes deductible under Section 23 (let-out properties)</div>
+          <div class="deduction-row" style="border-bottom:none">
+            <label>Your Income Tax Slab</label>
+            <select class="ded-input" id="itSlab" onchange="calculate()" style="cursor:pointer">
+              <option value="5">5%</option>
+              <option value="20">20%</option>
+              <option value="30" selected>30%</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS PANEL -->
+      <div class="result-panel">
+
+        <!-- Main result -->
+        <div class="result-card result-highlight">
+          <div class="result-label" id="mainLabel">Total Annual Municipal Tax</div>
+          <div class="result-amount" id="totalTax">₹0</div>
+          <div class="result-sub">
+            <div class="result-sub-item">
+              <span class="result-sub-label">Before rebates</span>
+              <span class="result-sub-value" id="subBeforeRebate">—</span>
+            </div>
+            <div class="result-sub-item">
+              <span class="result-sub-label">Rebate saved</span>
+              <span class="result-sub-value" id="subRebateSaved">—</span>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;opacity:0.85">Half-yearly: <strong id="halfYearly">₹0</strong> &nbsp;|&nbsp; Monthly equivalent: <strong id="monthly">₹0</strong></div>
+        </div>
+
+        <!-- Component breakdown bar -->
+        <div class="result-card">
+          <div style="font-weight:600;font-size:14px;margin-bottom:4px">📊 Tax Component Breakdown</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px">Each colour = one tax component</div>
+          <div class="component-bar" id="componentBar"></div>
+          <div id="componentRows"></div>
+        </div>
+
+        <!-- Detailed table -->
+        <div class="result-card">
+          <div style="font-weight:600;font-size:14px;margin-bottom:10px">🧮 Detailed Calculation</div>
+          <table class="comp-table">
+            <thead><tr><th>Component</th><th>Rate</th><th>On ARV</th><th>Annual Amount</th></tr></thead>
+            <tbody id="detailTable"></tbody>
+          </table>
+        </div>
+
+        <!-- Income tax benefit -->
+        <div class="result-card" style="background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border:1.5px solid var(--green)">
+          <div style="font-size:13px;font-weight:700;color:var(--green-dark);margin-bottom:10px">💸 Income Tax Benefit (Section 23 — Let-out Properties)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <div style="font-size:11px;color:var(--text-muted)">Total municipal tax (deductible)</div>
+              <div id="itDeductible" style="font-size:20px;font-weight:700;color:var(--green-dark);font-family:var(--font-mono)">₹0</div>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text-muted)">Income tax saved @ <span id="itSlabDisplay">30%</span></div>
+              <div id="itSaved" style="font-size:20px;font-weight:700;color:var(--green-dark);font-family:var(--font-mono)">₹0</div>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:11px;color:var(--text-secondary)">Deductible under Sec. 23 of IT Act from Gross Annual Value · Both Old &amp; New Regime ✅</div>
+        </div>
+
+        <!-- Share bar -->
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`🏛️ My Municipal Tax (FY 2025-26)\n🏙️ City: ${document.getElementById('citySelect').options[document.getElementById('citySelect').selectedIndex].text.split('—')[0].trim()}\n📐 ARV: ${document.getElementById('arvLabel').textContent}\n💰 Total Annual Tax: ${document.getElementById('totalTax').textContent}\n\nCalculate yours 👇`)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg>
+              WhatsApp
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter(`Municipal Tax FY 2025-26: ARV ${document.getElementById('arvLabel').textContent} → Annual tax: ${document.getElementById('totalTax').textContent} 🏛️ #MunicipalTax #PropertyTax`)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </button>
+            <button class="share-btn copylink" onclick="copyLink(this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Copy Link
+            </button>
+            <button class="share-btn download" onclick="downloadPDF('Municipal Tax Calculator FY 2025-26')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Save PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CITY COMPARISON TABLE -->
+    <div class="year-table-wrap" style="margin-top:32px">
+      <div class="year-table-head" style="display:flex;justify-content:space-between;align-items:center">
+        <span>🏙️ City-wise Municipal Tax Comparison — ARV: <span id="compareARV">₹1,00,000</span></span>
+        <span style="font-size:12px;color:var(--text-muted)">Residential · Indicative rates FY 2025-26</span>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="city-table">
+          <thead><tr><th>City</th><th>Property Tax</th><th>Water Tax</th><th>Sewerage</th><th>Conservancy</th><th>Total (Est.)</th><th>Due Date</th></tr></thead>
+          <tbody id="cityCompareBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- KEY RULES CARDS -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px">
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">🏛️ Municipal Tax Components</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          <strong>General/Property Tax:</strong> Base tax on property value<br>
+          <strong>Water Tax:</strong> For water supply infrastructure (3–6% of ARV)<br>
+          <strong>Sewerage Tax:</strong> Drainage &amp; wastewater treatment (2–5%)<br>
+          <strong>Conservancy Charges:</strong> Solid waste collection (5–15%)<br>
+          <strong>Lighting/Street Tax:</strong> Street lighting (3–6%)<br>
+          <strong>Education Cess:</strong> Local schools funding (5–10%)<br>
+          <strong>Fire Brigade Tax:</strong> Fire services (1–2%, selected cities)
+        </div>
+      </div>
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">💡 Key Facts</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          All components deductible: <strong>Section 23 of IT Act</strong><br>
+          Applies to: <strong>Let-out &amp; deemed let-out properties</strong><br>
+          Regime: <strong>Both Old and New Regime ✅</strong><br>
+          Water tax ≠ water bill: <strong>Tax is ARV-based, not usage-based</strong><br>
+          Late penalty: <strong>1–2% per month</strong><br>
+          Online payment bonus: <strong>2% additional rebate</strong><br>
+          Senior/Women/Disabled: <strong>15–30% rebate</strong><br>
+          Amnesty schemes: <strong>Periodic — check city portal</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED CALCULATORS -->
+    <div class="related-section">
+      <div class="related-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Related Calculators
+      </div>
+      <div class="related-grid">
+        <a href="property-tax-calculator.html" class="related-card">
+          <div class="related-icon" style="background:#fce4ec;color:#880e4f">🏠</div>
+          <div><div class="related-name">Property Tax Calculator</div><div class="related-desc">Delhi, Mumbai, Bengaluru</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="professional-tax-calculator.html" class="related-card">
+          <div class="related-icon" style="background:#e8eaf6;color:#283593">📋</div>
+          <div><div class="related-name">Professional Tax</div><div class="related-desc">All 21 states</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/tax/" class="related-card">
+          <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📊</div>
+          <div><div class="related-name">Income Tax Calculator</div><div class="related-desc">New vs Old Regime</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/emi/" class="related-card">
+          <div class="related-icon" style="background:#e3f2fd;color:#1565c0">🏦</div>
+          <div><div class="related-name">Home Loan EMI</div><div class="related-desc">Calculate EMI</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="seo-section">
+      <hr class="seo-divider">
+      <div class="toc-box">
+        <div class="toc-title">On this page</div>
+        <ul class="toc-list">
+          <li><a href="#what-is-municipal-tax">What is Municipal Tax?</a></li>
+          <li><a href="#components-of-municipal-tax">All Components Explained</a></li>
+          <li><a href="#city-wise-rates">City-wise Rates</a></li>
+          <li><a href="#water-tax-vs-water-bill">Water Tax vs Water Bill</a></li>
+          <li><a href="#income-tax-deduction">IT Deduction Section 23</a></li>
+          <li><a href="#how-to-pay">How to Pay Online</a></li>
+          <li><a href="#frequently-asked-questions">FAQ</a></li>
+        </ul>
+      </div>
+
+      <h2 id="what-is-municipal-tax">What is Municipal Tax in India?</h2>
+      <p>Municipal tax is the umbrella term for all taxes and charges levied by a local urban body — municipal corporation, municipality, or town panchayat — on properties and citizens within its jurisdiction. In India, municipal corporations derive their taxing powers from the respective State Municipal Acts (e.g., Mumbai Municipal Corporation Act 1888, Delhi Municipal Corporation Act 1957, Karnataka Municipal Corporations Act 1976). Municipal taxes are the primary source of own revenue for urban local bodies and fund roads, water supply, drainage, sanitation, street lighting, parks, and public health services.</p>
+      <p>Unlike income tax or GST which are centralised, municipal tax is entirely local — each corporation has its own rate schedule, assessment method, and payment portal. The total annual bill typically includes 5–7 distinct components levied as percentages of the property's Annual Rateable Value (ARV) or Capital Value.</p>
+
+      <h2 id="components-of-municipal-tax">All Components of Municipal Tax — Explained</h2>
+      <table class="seo-table">
+        <thead><tr><th>Component</th><th>Purpose</th><th>Typical Rate (% of ARV)</th><th>Applicable Cities</th></tr></thead>
+        <tbody>
+          <tr><td>General / Property Tax</td><td>Base municipal tax on property ownership</td><td>10–20% of ARV</td><td>All cities</td></tr>
+          <tr><td>Water Tax</td><td>Water supply infrastructure maintenance</td><td>3–6% of ARV</td><td>Mumbai, Delhi, Chennai, Kolkata</td></tr>
+          <tr><td>Water Benefit Tax</td><td>Development of new water infrastructure</td><td>1–3% of ARV</td><td>Mumbai (separate line item)</td></tr>
+          <tr><td>Sewerage / Drainage Tax</td><td>Drainage network and wastewater treatment</td><td>2–5% of ARV</td><td>All major cities</td></tr>
+          <tr><td>Conservancy / Sanitation Charges</td><td>Solid waste collection and disposal</td><td>5–15% of ARV</td><td>All cities</td></tr>
+          <tr><td>Lighting / Street Tax</td><td>Street lighting and public lighting maintenance</td><td>3–6% of ARV</td><td>Mumbai, Chennai, Kolkata</td></tr>
+          <tr><td>Education Cess</td><td>Local primary and secondary school funding</td><td>5–10% of ARV</td><td>Mumbai, Kolkata, Tamil Nadu</td></tr>
+          <tr class="highlight"><td>Fire Brigade Tax</td><td>Fire department infrastructure and services</td><td>1–2% of ARV</td><td>Mumbai, select cities</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="city-wise-rates">City-wise Municipal Tax Rates FY 2025-26</h2>
+      <table class="seo-table">
+        <thead><tr><th>City</th><th>Governing Body</th><th>Property Tax</th><th>Water Tax</th><th>Sewerage</th><th>Conservancy</th><th>Total (Approx.)</th></tr></thead>
+        <tbody>
+          <tr><td>Mumbai</td><td>BMC</td><td>~0.316% of CV</td><td>4% of ARV</td><td>3% of ARV</td><td>7% of ARV</td><td>~30–35% of ARV</td></tr>
+          <tr><td>Delhi</td><td>MCD (Unified)</td><td>11–20% of AV</td><td>3% of ARV</td><td>3% of ARV</td><td>7% of ARV</td><td>~28–35% of AV</td></tr>
+          <tr><td>Bengaluru</td><td>BBMP</td><td>20% of taxable AV</td><td>3% of ARV</td><td>2% of ARV</td><td>6% of ARV</td><td>~30–35% of AV</td></tr>
+          <tr><td>Chennai</td><td>GCC</td><td>~18% of ARV</td><td>7% of PT base</td><td>5% of PT base</td><td>8% of PT base</td><td>~38% of ARV</td></tr>
+          <tr><td>Hyderabad</td><td>GHMC</td><td>~17% of ARV</td><td>4% of ARV</td><td>3% of ARV</td><td>6% of ARV</td><td>~30% of ARV</td></tr>
+          <tr class="highlight"><td>Pune</td><td>PMC</td><td>~0.316% of CV</td><td>3.5% of ARV</td><td>2.5% of ARV</td><td>6% of ARV</td><td>~28% of ARV</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="water-tax-vs-water-bill">Water Tax vs Water Bill — Important Distinction</h2>
+      <p>Many property owners confuse water tax (part of the municipal tax bill) with the water consumption bill from the water utility board. They are completely different charges. <strong>Water tax</strong> is levied as a fixed percentage of the Annual Rateable Value, regardless of how much water you actually use. It is part of the annual property tax bill and goes towards water supply infrastructure maintenance. <strong>Water charges / water bill</strong> is the monthly consumption-based bill from the city's water supply board (like BWSSB in Bengaluru, NMMC in Navi Mumbai), charged per kilolitre of actual metered consumption. A property owner pays both.</p>
+
+      <h2 id="income-tax-deduction">Municipal Tax and Income Tax — Section 23</h2>
+      <p>All municipal taxes paid to a local authority — including property tax, water tax, sewerage charges, conservancy charges, and all other components of the municipal bill — are deductible from the Gross Annual Value under <strong>Section 23 of the Income Tax Act</strong> when computing Income from House Property. This deduction is available for let-out and deemed let-out properties and applies under <strong>both the Old and New Tax Regimes</strong>. The deduction equals the full amount actually paid during the year (not accrued). At a 30% tax slab, ₹10,000 of municipal tax paid saves ₹3,000 in income tax.</p>
+
+      <h2 id="how-to-pay">How to Pay Municipal Tax Online — City Portals</h2>
+      <table class="seo-table">
+        <thead><tr><th>City</th><th>Portal</th><th>Due Date</th><th>Late Penalty</th></tr></thead>
+        <tbody>
+          <tr><td>Delhi (MCD)</td><td>mcdonline.nic.in</td><td>June 30 (early rebate)</td><td>1%/month</td></tr>
+          <tr><td>Mumbai (BMC)</td><td>mcgm.gov.in</td><td>June 30</td><td>2%/year</td></tr>
+          <tr><td>Bengaluru (BBMP)</td><td>bbmptax.karnataka.gov.in</td><td>April 30</td><td>2%/month</td></tr>
+          <tr><td>Chennai (GCC)</td><td>chennaicorporation.gov.in</td><td>Half-yearly (Sep 30, Mar 31)</td><td>1%/month</td></tr>
+          <tr><td>Hyderabad (GHMC)</td><td>ghmc.gov.in</td><td>March 31</td><td>2%/month</td></tr>
+          <tr class="highlight"><td>Pune (PMC)</td><td>pmc.gov.in</td><td>June 30</td><td>2%/month</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is municipal tax and what does it include?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Municipal tax is the collective term for all taxes levied by a local municipal corporation on properties. It typically includes: General/Property Tax (base tax on property value), Water Tax (water supply infrastructure), Sewerage Tax (drainage and wastewater), Conservancy Charges (solid waste collection), Lighting/Street Tax (street lighting), Education Cess (local schools), and Fire Brigade Tax in some cities. All are usually bundled in one annual bill charged as a percentage of the Annual Rateable Value (ARV).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is water tax calculated in Indian cities?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Water tax is calculated as a percentage of the Annual Rateable Value (ARV), not based on actual consumption. In Mumbai (BMC), it is ~4% of ARV. In Delhi, ~3% of ARV. In Chennai (GCC), it is 7% of the property tax base. This is a property-based tax for water infrastructure, separate from your monthly metered water consumption bill from the water utility board.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is municipal tax the same as property tax?<span class="faq-icon">+</span></button>
+          <div class="faq-a">No. Property tax is one component of municipal tax. Municipal tax is the umbrella that also includes water tax, sewerage tax, conservancy charges, lighting tax, education cess, and sometimes fire brigade charges. In many cities, all components appear as line items on the same annual bill, but they are distinct levies under different sections of the Municipal Corporation Act.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is conservancy charge in municipal tax?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Conservancy charges (also called sanitation or solid waste management charges) are levied for collecting and disposing of household garbage and maintaining public sanitation. They are typically 5–15% of the Annual Rateable Value. Under the Solid Waste Management Rules 2016, municipalities must recover a portion of their waste management costs from residents through these charges.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I deduct municipal tax in income tax?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes. All municipal taxes paid to local authorities are fully deductible from the Gross Annual Value under Section 23 of the Income Tax Act when computing Income from House Property. This applies to let-out and deemed let-out properties under both Old and New Tax Regimes. At 30% slab, every ₹1 lakh of municipal tax paid saves ₹30,000 in income tax.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the difference between water tax and water charges?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Water tax is property-based, charged as a % of ARV regardless of consumption — part of annual municipal tax bill. Water charges are consumption-based monthly bills from the water utility based on actual metered usage in kilolitres. Property owners pay both: water tax once a year (in the property tax bill) and water charges monthly (based on meter reading).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is education cess in municipal tax?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Municipal education cess is a surcharge levied as a percentage of the property tax or ARV to fund local primary schools, school buildings, and educational infrastructure. It ranges from 5–10% of the property tax base, varying by city. This is separate from the 4% Health and Education Cess on income tax levied by the central government.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the penalty for not paying municipal tax on time?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Penalties vary by city: Delhi (MCD) — 1%/month; Mumbai (BMC) — 2%/year; Bengaluru (BBMP) — 2%/month; Chennai (GCC) — 1%/month; Hyderabad (GHMC) — 2%/month. Prolonged non-payment can result in sealing or legal action. Many cities run periodic amnesty schemes to clear old dues without penalties.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Tax Calculators</h4><ul>
+        <li><a href="/tax/">Income Tax</a></li>
+        <li><a href="professional-tax-calculator.html">Professional Tax</a></li>
+        <li><a href="property-tax-calculator.html">Property Tax</a></li>
+        <li><a href="municipal-tax-calculator.html">Municipal Tax</a></li>
+        <li><a href="/schemes/epf/">EPF Calculator</a></li>
+        <li><a href="/schemes/nps/">NPS Calculator</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Other Tools</h4><ul>
+        <li><a href="/investment/sip/">SIP Calculator</a></li>
+        <li><a href="/emi/">EMI Calculator</a></li>
+        <li><a href="/fd/">FD Calculator</a></li>
+        <li><a href="/schemes/ppf/">PPF Calculator</a></li>
+        <li><a href="/schemes/ssy/">SSY Calculator</a></li>
+        <li><a href="/tax/salary/">Salary Calculator</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2026 InvestSmartCalc · Estimates only · Verify with official municipal portals</span>
+        <div class="footer-bottom-links">
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+  <script>
+    // ── CITY RATE DATA ────────────────────────────────────────────────────────
+    // Each city: rates as % of ARV, early rebate %, senior rebate %, info text
+    const CITY_DATA = {
+      mumbai: {
+        name: 'Mumbai (BMC)',
+        arvNote: 'Capital Value',
+        info: 'BMC levies property tax as ~0.316% of Capital Value. Additional components (water, sewerage, conservancy, lighting, education cess) are charged as % of ARV. Total effective rate ~30–35% of ARV for residential.',
+        earlyRebate: 5, seniorRebate: 30,
+        propTax: 11, waterTax: 4, sewerageTax: 3, conservancy: 7, lighting: 4, eduCess: 8, fire: 2,
+        dueDate: 'June 30', penalty: '2%/year',
+      },
+      delhi: {
+        name: 'Delhi (MCD)',
+        arvNote: 'Annual Value (UAS)',
+        info: 'MCD uses Unit Area System. Annual Value = UAV × Area × Age Factor × Occupancy Factor. Property tax rate 11% (residential) to 20% (commercial). Additional cess for water, sewerage, conservancy etc. Early payment rebate 15% before June 30.',
+        earlyRebate: 15, seniorRebate: 30,
+        propTax: 11, waterTax: 3, sewerageTax: 3, conservancy: 7, lighting: 3, eduCess: 5, fire: 1,
+        dueDate: 'June 30 (15% rebate)', penalty: '1%/month',
+      },
+      bengaluru: {
+        name: 'Bengaluru (BBMP)',
+        arvNote: 'Annual Value (UAV)',
+        info: 'BBMP levies 20% of taxable Annual Value as property tax. Additional components charged as % of ARV. Early payment discount 5% by April 30. Senior citizens get up to 30% rebate.',
+        earlyRebate: 5, seniorRebate: 30,
+        propTax: 20, waterTax: 3, sewerageTax: 2, conservancy: 6, lighting: 3, eduCess: 5, fire: 1,
+        dueDate: 'April 30', penalty: '2%/month',
+      },
+      chennai: {
+        name: 'Chennai (GCC)',
+        arvNote: 'Annual Rental Value',
+        info: 'GCC uses Annual Rental Value (ARV) system. Property tax ~18% of ARV. Water and sewerage charges levied separately at 7% and 5% of property tax base. Half-yearly payment (Sept 30 and March 31). Early payment rebate 5%.',
+        earlyRebate: 5, seniorRebate: 25,
+        propTax: 18, waterTax: 5, sewerageTax: 4, conservancy: 8, lighting: 5, eduCess: 7, fire: 1,
+        dueDate: 'Half-yearly (Sep 30, Mar 31)', penalty: '1%/month',
+      },
+      hyderabad: {
+        name: 'Hyderabad (GHMC)',
+        arvNote: 'Annual Rental Value',
+        info: 'GHMC uses Annual Rental Value method. Property tax ~17% of ARV. Additional components include water tax, sewerage, and conservancy charges. Annual payment by March 31. 5% early payment discount.',
+        earlyRebate: 5, seniorRebate: 25,
+        propTax: 17, waterTax: 4, sewerageTax: 3, conservancy: 6, lighting: 4, eduCess: 5, fire: 1,
+        dueDate: 'March 31', penalty: '2%/month',
+      },
+      pune: {
+        name: 'Pune (PMC)',
+        arvNote: 'Capital Value',
+        info: 'PMC follows Capital Value System similar to Mumbai. Property tax ~0.316% of CV. Additional components charged as % of ARV. Early payment rebate 10% before June 30.',
+        earlyRebate: 10, seniorRebate: 25,
+        propTax: 10, waterTax: 3.5, sewerageTax: 2.5, conservancy: 6, lighting: 3, eduCess: 5, fire: 1,
+        dueDate: 'June 30', penalty: '2%/month',
+      },
+      kolkata: {
+        name: 'Kolkata (KMC)',
+        arvNote: 'Annual Valuation',
+        info: 'KMC uses Annual Valuation basis. Property tax ~20% of annual valuation. Multiple components including water tax, sewerage, conservancy, lighting and education cess. Half-yearly or annual payment options.',
+        earlyRebate: 5, seniorRebate: 20,
+        propTax: 20, waterTax: 5, sewerageTax: 4, conservancy: 8, lighting: 5, eduCess: 8, fire: 1,
+        dueDate: 'Half-yearly', penalty: '1%/month',
+      },
+      ahmedabad: {
+        name: 'Ahmedabad (AMC)',
+        arvNote: 'Annual Rental Value',
+        info: 'AMC charges property tax based on Annual Rental Value. Additional cess for water, sewerage and conservancy. Early payment discount available. Simple flat-rate structure.',
+        earlyRebate: 5, seniorRebate: 20,
+        propTax: 15, waterTax: 3, sewerageTax: 2, conservancy: 5, lighting: 3, eduCess: 4, fire: 1,
+        dueDate: 'March 31', penalty: '1%/month',
+      },
+      custom: {
+        name: 'Custom City',
+        arvNote: 'ARV / Value',
+        info: 'Enter your own tax rates manually. Check your municipal corporation\'s official website for the exact component rates applicable to your ward and property type.',
+        earlyRebate: 10, seniorRebate: 25,
+        propTax: 10, waterTax: 3, sewerageTax: 2, conservancy: 5, lighting: 3, eduCess: 5, fire: 1,
+        dueDate: 'Check local portal', penalty: '1–2%/month',
+      },
+    };
+
+    // Component colors
+    const COMP_COLORS = ['#00c853','#2196f3','#ff9800','#9c27b0','#f44336','#009688','#795548'];
+    const COMP_NAMES  = ['Property Tax','Water Tax','Sewerage Tax','Conservancy','Lighting Tax','Education Cess','Fire Brigade'];
+    const COMP_IDS    = ['rPropTax','rWaterTax','rSewerageTax','rConservancy','rLighting','rEduCess','rFire'];
+
+    function switchCity() {
+      const city = document.getElementById('citySelect').value;
+      const d = CITY_DATA[city];
+      document.getElementById('cityInfoBox').innerHTML = `<strong>${d.name}:</strong> ${d.info}`;
+      document.getElementById('arvNote').textContent = d.arvNote;
+      document.getElementById('arvNote2').textContent = `💡 ${d.arvNote}: Typically 4–8% of market value. For a ₹50L property, ARV/AV is usually ₹2L–₹4L.`;
+      document.getElementById('earlyRebateAmt').textContent = d.earlyRebate + '%';
+      document.getElementById('seniorRebateAmt').textContent = d.seniorRebate + '%';
+      document.getElementById('mainLabel').textContent = `Total Annual Municipal Tax (${d.name})`;
+      // Auto-fill rates
+      document.getElementById('rPropTax').value     = d.propTax;
+      document.getElementById('rWaterTax').value    = d.waterTax;
+      document.getElementById('rSewerageTax').value = d.sewerageTax;
+      document.getElementById('rConservancy').value = d.conservancy;
+      document.getElementById('rLighting').value    = d.lighting;
+      document.getElementById('rEduCess').value     = d.eduCess;
+      document.getElementById('rFire').value        = d.fire;
+      calculate();
+    }
+
+    function setPreset(val) {
+      document.getElementById('arvNum').value = val;
+      document.getElementById('arvSlider').value = val;
+      document.getElementById('arvLabel').textContent = '₹' + val.toLocaleString('en-IN');
+      updateSlider(document.getElementById('arvSlider'));
+      calculate();
+    }
+
+    function calculate() {
+      const arv        = parseFloat(document.getElementById('arvNum').value) || 100000;
+      const itSlab     = parseFloat(document.getElementById('itSlab').value) / 100;
+      const cityKey    = document.getElementById('citySelect').value;
+      const cityData   = CITY_DATA[cityKey];
+
+      const rates = COMP_IDS.map(id => parseFloat(document.getElementById(id).value) || 0);
+      const grossAmts = rates.map(r => arv * r / 100);
+      const grossTotal = grossAmts.reduce((a, b) => a + b, 0);
+
+      // Rebates
+      const earlyPct  = cityData.earlyRebate / 100;
+      const seniorPct = cityData.seniorRebate / 100;
+      let totalRebatePct = 0;
+      if (document.getElementById('rebateEarly').checked)  totalRebatePct += earlyPct;
+      if (document.getElementById('rebateSenior').checked) totalRebatePct += seniorPct;
+      if (document.getElementById('rebateOnline').checked) totalRebatePct += 0.02;
+      totalRebatePct = Math.min(totalRebatePct, 0.50);
+
+      const rebateAmt = grossTotal * totalRebatePct;
+      const netTotal  = Math.max(0, grossTotal - rebateAmt);
+
+      // Display
+      document.getElementById('totalTax').textContent      = fmtFull(netTotal);
+      document.getElementById('subBeforeRebate').textContent = fmtFull(grossTotal);
+      document.getElementById('subRebateSaved').textContent  = fmtFull(rebateAmt);
+      document.getElementById('halfYearly').textContent    = fmtFull(netTotal / 2);
+      document.getElementById('monthly').textContent       = fmtFull(netTotal / 12);
+      document.getElementById('itDeductible').textContent  = fmtFull(netTotal);
+      document.getElementById('itSaved').textContent       = fmtFull(netTotal * itSlab);
+      document.getElementById('itSlabDisplay').textContent = (itSlab * 100).toFixed(0) + '%';
+
+      // Component bar
+      const bar = document.getElementById('componentBar');
+      bar.innerHTML = grossAmts.map((amt, i) => {
+        const pct = grossTotal > 0 ? (amt / grossTotal * 100) : 0;
+        return pct > 1 ? `<div class="component-seg" style="width:${pct}%;background:${COMP_COLORS[i]}">${pct > 8 ? COMP_NAMES[i].split(' ')[0] : ''}</div>` : '';
+      }).join('');
+
+      // Component rows
+      document.getElementById('componentRows').innerHTML = grossAmts.map((amt, i) =>
+        `<div class="comp-row">
+          <span class="comp-name"><span class="comp-dot" style="background:${COMP_COLORS[i]}"></span>${COMP_NAMES[i]}</span>
+          <span class="comp-val" style="color:${COMP_COLORS[i]}">${fmtFull(amt)}</span>
+        </div>`
+      ).join('');
+
+      // Detail table
+      document.getElementById('detailTable').innerHTML = COMP_IDS.map((id, i) => {
+        const rate = rates[i];
+        const amt  = grossAmts[i];
+        return `<tr>
+          <td>${COMP_NAMES[i]}</td>
+          <td style="font-family:var(--font-mono)">${rate}%</td>
+          <td>${fmtFull(arv)}</td>
+          <td style="font-family:var(--font-mono);font-weight:600">${fmtFull(amt)}</td>
+        </tr>`;
+      }).join('') +
+      `<tr class="total-row">
+        <td colspan="3"><strong>Total Annual Municipal Tax (before rebates)</strong></td>
+        <td>${fmtFull(grossTotal)}</td>
+      </tr>` +
+      (rebateAmt > 0 ? `<tr><td colspan="3" style="color:var(--green-dark)">Less: Rebates (${(totalRebatePct*100).toFixed(0)}%)</td><td style="color:var(--green-dark);font-family:var(--font-mono)">− ${fmtFull(rebateAmt)}</td></tr>` : '') +
+      `<tr class="total-row"><td colspan="3"><strong>Net Municipal Tax Payable</strong></td><td>${fmtFull(netTotal)}</td></tr>`;
+
+      // City comparison
+      updateCityComparison(arv);
+    }
+
+    function updateCityComparison(arv) {
+      document.getElementById('compareARV').textContent = '₹' + arv.toLocaleString('en-IN');
+      const selectedCity = document.getElementById('citySelect').value;
+
+      const rows = Object.entries(CITY_DATA).filter(([k]) => k !== 'custom').map(([key, d]) => {
+        const propTax   = arv * d.propTax / 100;
+        const waterTax  = arv * d.waterTax / 100;
+        const sewerage  = arv * d.sewerageTax / 100;
+        const conserv   = arv * d.conservancy / 100;
+        const total     = arv * (d.propTax + d.waterTax + d.sewerageTax + d.conservancy + d.lighting + d.eduCess + d.fire) / 100;
+        const isSelected = key === selectedCity;
+        return `<tr${isSelected ? ' class="highlight"' : ''}>
+          <td>${d.name}${isSelected ? ' ✅' : ''}</td>
+          <td style="font-family:var(--font-mono)">${fmtFull(propTax)}</td>
+          <td style="font-family:var(--font-mono)">${fmtFull(waterTax)}</td>
+          <td style="font-family:var(--font-mono)">${fmtFull(sewerage)}</td>
+          <td style="font-family:var(--font-mono)">${fmtFull(conserv)}</td>
+          <td style="font-family:var(--font-mono);font-weight:700">${fmtFull(total)}</td>
+          <td style="font-size:12px;color:var(--text-muted)">${d.dueDate}</td>
+        </tr>`;
+      }).join('');
+
+      document.getElementById('cityCompareBody').innerHTML = rows;
+    }
+
+    // Init
+    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+    switchCity();
+  </script>
+</body>
+</html>

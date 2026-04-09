@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>Property Tax Calculator India 2025-26 – Delhi, Mumbai, Bengaluru & More | InvestSmartCalc</title>
+  <meta name="description" content="Property tax calculator for India FY 2025-26. Calculate house tax for Delhi (MCD), Mumbai (BMC), Bengaluru (BBMP) and all cities. Includes rebates for senior citizens, women, early payment. Free property tax estimator.">
+  <meta name="keywords" content="property tax calculator India, MCD property tax calculator Delhi, BMC property tax Mumbai, BBMP property tax Bengaluru, house tax calculator 2025-26, municipal tax India">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://investsmartcalc.com/tax/property/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://investsmartcalc.com/tax/property/">
+  <meta property="og:title" content="Property Tax Calculator India 2025-26 – Delhi, Mumbai, Bengaluru & More">
+  <meta property="og:description" content="Calculate property tax for Delhi, Mumbai, Bengaluru and all Indian cities. Includes all rebates and income tax deduction impact. Free & accurate.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Property Tax Calculator India 2025-26">
+  <meta name="twitter:description" content="Calculate property tax for Delhi, Mumbai, Bengaluru and all Indian cities with rebates. Free & accurate for FY 2025-26.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <style>
+    .ptax-badge { display:inline-block; background:#fce4ec; color:#880e4f; padding:3px 12px; border-radius:100px; font-size:12px; font-weight:600; margin-bottom:12px; }
+    [data-theme="dark"] .ptax-badge { background:#2a0015; color:#f48fb1; }
+
+    /* City selector tabs */
+    .city-tabs { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
+    .city-tab { padding:7px 16px; border-radius:100px; border:1.5px solid var(--border); background:var(--bg-white); font-size:13px; font-weight:600; cursor:pointer; transition:all 0.18s; color:var(--text-secondary); }
+    .city-tab.active { background:var(--green); border-color:var(--green); color:#fff; }
+    .city-tab:hover:not(.active) { border-color:var(--green); color:var(--green-dark); }
+    [data-theme="dark"] .city-tab { background:#1e2435; border-color:#3a4a66; color:var(--text-secondary); }
+    [data-theme="dark"] .city-tab.active { background:var(--green); border-color:var(--green); color:#fff; }
+
+    /* Select input */
+    .select-input { width:100%; border:1.5px solid var(--border); border-radius:8px; padding:9px 12px; font-size:14px; font-family:var(--font); background:var(--bg-white); color:var(--text-primary); outline:none; cursor:pointer; }
+    .select-input:focus { border-color:var(--green); }
+    [data-theme="dark"] .select-input { background:#252a3a; color:#d0e0f0; border-color:#3a4a66; }
+
+    /* Checkbox row */
+    .check-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--border); }
+    .check-row:last-child { border-bottom:none; }
+    .check-row input[type=checkbox] { width:18px; height:18px; accent-color:var(--green); cursor:pointer; flex-shrink:0; }
+    .check-row label { font-size:14px; color:var(--text-secondary); cursor:pointer; }
+    [data-theme="dark"] .check-row { border-color:#2e3a52; }
+    [data-theme="dark"] .check-row label { color:#9aaab8; }
+
+    /* Deduction row */
+    .deduction-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--border); }
+    .deduction-row:last-child { border-bottom:none; }
+    .deduction-row label { font-size:14px; color:var(--text-secondary); }
+    .ded-input { width:130px; border:1.5px solid var(--border); border-radius:8px; padding:7px 10px; font-size:14px; font-family:var(--font-mono); text-align:right; outline:none; background:var(--bg-white); color:var(--text-primary); }
+    .ded-input:focus { border-color:var(--green); }
+    [data-theme="dark"] .ded-input { background:#252a3a; color:#d0e0f0; border-color:#3a4a66; }
+    [data-theme="dark"] .deduction-row { border-color:#2e3a52; }
+    [data-theme="dark"] .deduction-row label { color:#9aaab8; }
+
+    /* Method info box */
+    .method-box { background:var(--bg); border-radius:var(--radius-sm); padding:12px 14px; margin-bottom:16px; border:1px solid var(--border); font-size:12px; color:var(--text-secondary); line-height:1.6; }
+    [data-theme="dark"] .method-box { background:#1a2236; border-color:#3a4a66; color:#8aa8c8; }
+    .method-box strong { color:var(--text-primary); }
+    [data-theme="dark"] .method-box strong { color:#d0e0f0; }
+
+    /* Rebate breakdown */
+    .rebate-row { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px solid var(--border); font-size:13px; }
+    .rebate-row:last-child { border-bottom:none; }
+    [data-theme="dark"] .rebate-row { border-color:#2e3a52; }
+    .rebate-tag { display:inline-block; padding:2px 8px; border-radius:100px; font-size:11px; font-weight:600; }
+    .tag-applied { background:#e8f5e9; color:#00a152; }
+    .tag-na { background:var(--bg); color:var(--text-muted); }
+    [data-theme="dark"] .tag-applied { background:#003d1a; color:#00e676; }
+    [data-theme="dark"] .tag-na { background:#1a2236; color:#5a6a7a; }
+
+    /* IT deduction info */
+    .it-box { background:linear-gradient(135deg,#e8f5e9,#f1f8e9); border:1.5px solid var(--green); border-radius:var(--radius-sm); padding:14px 16px; margin-top:12px; }
+    [data-theme="dark"] .it-box { background:linear-gradient(135deg,#002a12,#001a08); border-color:#00a152; }
+
+    /* City rate table */
+    .city-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .city-table th { background:var(--bg); padding:8px 12px; text-align:left; color:var(--text-muted); font-weight:500; }
+    .city-table td { padding:8px 12px; border-bottom:1px solid var(--border); }
+    .city-table tr.highlight td { background:var(--green-light); color:var(--green-dark); font-weight:600; }
+    [data-theme="dark"] .city-table th { background:#1a2236; color:#8aa8c8; }
+    [data-theme="dark"] .city-table td { border-color:#2e3a52; color:#9aaab8; }
+    [data-theme="dark"] .city-table tr.highlight td { background:#002a14; color:#00e676; }
+
+    .info-tag { display:inline-block; background:#e3f2fd; color:#1565c0; font-size:11px; font-weight:600; padding:1px 7px; border-radius:100px; margin-left:4px; vertical-align:middle; }
+    [data-theme="dark"] .info-tag { background:#001a3d; color:#64b5f6; }
+
+    /* Warning banner */
+    .disclaimer-note { background:#fff3e0; border:1px solid #ffcc80; border-radius:var(--radius-sm); padding:10px 14px; font-size:12px; color:#bf6600; margin-bottom:20px; }
+    [data-theme="dark"] .disclaimer-note { background:#2a1500; border-color:#bf6600; color:#ffb74d; }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://investsmartcalc.com",
+  "logo": { "@type": "ImageObject", "url": "https://investsmartcalc.com/logo.png", "width": 200, "height": 60 },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, EPF, NPS, Income Tax, Property Tax calculators. Updated for FY 2025-26."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Property Tax Calculator India FY 2025-26",
+  "url": "https://investsmartcalc.com/property-tax-calculator.html",
+  "description": "Calculate property tax for Delhi (MCD), Mumbai (BMC), Bengaluru (BBMP) and other Indian cities. Includes city-specific calculation methods, all applicable rebates (senior citizen, women, early payment), and income tax deduction impact.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "provider": { "@type": "Organization", "name": "InvestSmartCalc", "url": "https://investsmartcalc.com" },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Property Tax Calculator", "item": "https://investsmartcalc.com/property-tax-calculator.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is property tax calculated in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Property tax in India is calculated by municipal corporations using one of three methods: (1) Annual Rental Value (ARV) — tax is based on the notional annual rent the property could fetch; (2) Capital Value System (CVS) — tax is a percentage of the market/Ready Reckoner value of the property, used in Mumbai and Pune; (3) Unit Area System (UAS) — tax is based on the per sq ft rate assigned to the zone, multiplied by built-up area and various factors for age, usage, and occupancy, used in Delhi (MCD) and Bengaluru (BBMP)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What rebates are available on property tax in Delhi (MCD)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MCD offers several rebates for FY 2025-26: (1) Early payment rebate — 15% discount for lump-sum payment in Q1 (on or before June 30); (2) Senior citizens, women owners, physically challenged, and ex-servicemen — 30% rebate on one self-occupied residential property up to 200 sq m; (3) DDA/CGHS flats — 10% rebate for properties up to 100 sq m; (4) Group housing flats — 20% rebate if paid by June 30; (5) Online payment — 2% additional rebate. Rebates cannot exceed the total tax payable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim property tax as an income tax deduction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Municipal taxes (property tax) paid to the local authority during the financial year are allowed as a full deduction from the Gross Annual Value under Section 23 of the Income Tax Act when computing 'Income from House Property'. This applies to both let-out and deemed let-out properties. For self-occupied properties, the Net Annual Value is nil, so the deduction doesn't apply separately but prevents additional tax on the notional rent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the due date for property tax payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Due dates vary by city. In Delhi (MCD), the standard due date is June 30 (March 31 for annual payment); early payment by June 30 qualifies for a 15% rebate. In Mumbai (BMC), the due date is June 30 with a 2-5% early bird discount. In Bengaluru (BBMP), it is April 30, with an early payment discount. Late payment typically attracts 1-2% interest per month on the outstanding amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What properties are exempt from property tax in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Properties typically exempt from property tax include: places of worship (temples, mosques, churches, gurudwaras), properties used for charitable or educational purposes, properties of foreign diplomatic missions, government properties used for public purposes, heritage properties notified by the government, properties of gallantry award winners and war widows (in Delhi), and agricultural land in rural areas. Senior citizens, women, and physically challenged individuals get rebates (not full exemption) in most cities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the penalty for not paying property tax on time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Late payment of property tax attracts interest at 1-2% per month on the outstanding amount, depending on the municipality. In Delhi, the penalty is 1% per month. In Mumbai, a 2% annual penalty applies. Long-term non-payment can result in sealing of the property, attachment of assets, or legal proceedings by the municipal corporation. Several cities run periodic amnesty schemes (like MCD's SUNIYO scheme) where penalties and interest on old dues are waived on payment of principal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the MCD SUNIYO scheme 2025-26?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Sampattikar Niptaan Yojana (SUNIYO) is MCD's property tax amnesty scheme for FY 2025-26, extended till January 31, 2026. Under this scheme, property owners who pay their current year tax (2025-26) and principal taxes for the previous 5 years (2020-21 to 2024-25) get a 100% waiver on all accumulated interest, penalties, and old arrears up to FY 2020-21. This is an opportunity for property owners with long-pending dues to regularise their records."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is age factor applied in property tax calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most municipal corporations apply an age depreciation factor that reduces the taxable value of older properties. Properties 0-5 years old typically carry a factor of 1.0 (no reduction). Properties 6-10 years get a factor around 0.9, 11-20 years around 0.8, 21-30 years around 0.7, and properties over 30 years old may have a factor as low as 0.5-0.6. The exact factors vary by city. This reflects the principle that older properties are worth less and should be taxed less."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="/index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="/investment/sip/">SIP</a>
+        <a href="/emi/">EMI</a>
+        <a href="/tax/">Tax</a>
+        <a href="/schemes/epf/">EPF</a>
+        <a href="/schemes/nps/">NPS</a>
+        <a href="property-tax-calculator.html" style="background:var(--green-light);color:var(--green-dark)">Property Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/investment/sip/">SIP Calculator</a>
+      <a href="/emi/">EMI Calculator</a>
+      <a href="/tax/">Tax Calculator</a>
+      <a href="/schemes/epf/">EPF Calculator</a>
+      <a href="/schemes/nps/">NPS Calculator</a>
+      <a href="property-tax-calculator.html">Property Tax</a>
+      <a href="/fd/">FD Calculator</a>
+      <a href="/schemes/ppf/">PPF Calculator</a>
+      <a href="/tax/salary/">Salary Calculator</a>
+    </div>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="/index.html">Home</a> › Property Tax Calculator</div>
+      <div class="ptax-badge">🏠 Property Tax FY 2025-26 · Delhi · Mumbai · Bengaluru · All Cities</div>
+      <h1>Property Tax Calculator</h1>
+      <p>Estimate municipal property tax for major Indian cities · Includes rebates &amp; income tax deduction impact</p>
+    </div>
+
+    <div class="disclaimer-note">
+      ⚠️ <strong>Disclaimer:</strong> This calculator provides estimates based on publicly available municipal rate schedules for FY 2025-26. Actual tax may vary by ward, zone, and property-specific factors. Always verify with your official municipal portal before payment.
+    </div>
+
+    <!-- CITY SELECTOR -->
+    <div style="margin-bottom:8px;font-size:13px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.8px">Select City</div>
+    <div class="city-tabs">
+      <button class="city-tab active" id="tab-delhi"     onclick="switchCity('delhi')">🏛️ Delhi (MCD)</button>
+      <button class="city-tab"        id="tab-mumbai"    onclick="switchCity('mumbai')">🌆 Mumbai (BMC)</button>
+      <button class="city-tab"        id="tab-bengaluru" onclick="switchCity('bengaluru')">🌿 Bengaluru (BBMP)</button>
+      <button class="city-tab"        id="tab-other"     onclick="switchCity('other')">🏙️ Other City</button>
+    </div>
+
+    <!-- Method info box -->
+    <div class="method-box" id="methodBox">
+      <strong>Delhi MCD — Unit Area System (UAS):</strong> Tax = Annual Value × Tax Rate. Annual Value = Unit Area Value × Covered Area × Age Factor × Occupancy Factor × Structure Factor. Delhi is divided into 8 zones (A–H) with different unit area values.
+    </div>
+
+    <div class="calc-layout">
+      <!-- INPUT PANEL -->
+      <div class="input-panel">
+        <h3 style="font-size:15px;font-weight:600;margin-bottom:20px">Property Details</h3>
+
+        <!-- Property Type -->
+        <div class="input-group">
+          <div class="input-label"><span>Property Type</span></div>
+          <select class="select-input" id="propertyType" onchange="calculate()">
+            <option value="residential">Residential (Self-occupied)</option>
+            <option value="residential_rented">Residential (Rented / Let-out)</option>
+            <option value="commercial">Commercial</option>
+            <option value="industrial">Industrial</option>
+          </select>
+        </div>
+
+        <!-- Built-up Area -->
+        <div class="input-group">
+          <div class="input-label"><span>Built-up / Covered Area (sq. m.)</span><span class="input-value" id="areaLabel">100 sq.m.</span></div>
+          <input type="range" id="areaSlider" min="10" max="1000" step="5" value="100"
+            oninput="syncInput(this,'areaNum','areaLabel','',false,' sq.m.');calculate()">
+          <input type="number" class="number-input" id="areaNum" value="100"
+            oninput="syncSlider(this,'areaSlider','areaLabel','',false,' sq.m.');calculate()">
+          <div class="preset-row">
+            <button class="preset-btn" onclick="setPreset('area',50)">50 sq.m.</button>
+            <button class="preset-btn" onclick="setPreset('area',100)">100 sq.m.</button>
+            <button class="preset-btn" onclick="setPreset('area',200)">200 sq.m.</button>
+            <button class="preset-btn" onclick="setPreset('area',500)">500 sq.m.</button>
+          </div>
+        </div>
+
+        <!-- City-specific inputs -->
+        <!-- Delhi: Zone -->
+        <div class="input-group" id="delhiZoneGroup">
+          <div class="input-label"><span>Colony Zone (A = Premium, H = Rural)</span></div>
+          <select class="select-input" id="delhiZone" onchange="calculate()">
+            <option value="A">Zone A — Lutyens, Golf Links, Sundar Nagar (₹630/sq.m.)</option>
+            <option value="B">Zone B — South Ex, Defence Colony, GK (₹500/sq.m.)</option>
+            <option value="C" selected>Zone C — Vasant Vihar, Rohini Phase 1 (₹400/sq.m.)</option>
+            <option value="D">Zone D — Dwarka, Janakpuri (₹320/sq.m.)</option>
+            <option value="E">Zone E — Rohini Phases 2-4, Paschim Vihar (₹270/sq.m.)</option>
+            <option value="F">Zone F — Najafgarh, Outer areas (₹230/sq.m.)</option>
+            <option value="G">Zone G — Peripheral colonies (₹200/sq.m.)</option>
+            <option value="H">Zone H — Rural/village areas (₹100/sq.m.)</option>
+          </select>
+        </div>
+
+        <!-- Mumbai: Market value -->
+        <div class="input-group" id="mumbaiValueGroup" style="display:none">
+          <div class="input-label"><span>Ready Reckoner / Market Value (₹)</span><span class="input-value" id="rrLabel">₹50,00,000</span></div>
+          <input type="range" id="rrSlider" min="1000000" max="100000000" step="100000" value="5000000"
+            oninput="syncInput(this,'rrNum','rrLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="rrNum" value="5000000"
+            oninput="syncSlider(this,'rrSlider','rrLabel','₹',true);calculate()">
+          <div class="preset-row">
+            <button class="preset-btn" onclick="setPreset('rr',3000000)">₹30L</button>
+            <button class="preset-btn" onclick="setPreset('rr',5000000)">₹50L</button>
+            <button class="preset-btn" onclick="setPreset('rr',10000000)">₹1Cr</button>
+            <button class="preset-btn" onclick="setPreset('rr',25000000)">₹2.5Cr</button>
+          </div>
+        </div>
+
+        <!-- Bengaluru: Zone -->
+        <div class="input-group" id="bengaluruZoneGroup" style="display:none">
+          <div class="input-label"><span>BBMP Zone</span></div>
+          <select class="select-input" id="bengaluruZone" onchange="calculate()">
+            <option value="A">Zone A — Indiranagar, Koramangala, Whitefield (₹5/sq.ft./month)</option>
+            <option value="B" selected>Zone B — JP Nagar, Rajajinagar, Yelahanka (₹4/sq.ft./month)</option>
+            <option value="C">Zone C — Peripheral areas, BTM Layout (₹3.60/sq.ft./month)</option>
+            <option value="D">Zone D — Outer ring areas (₹2.40/sq.ft./month)</option>
+            <option value="E">Zone E — Rural fringes (₹1.80/sq.ft./month)</option>
+            <option value="F">Zone F — Village areas (₹1.20/sq.ft./month)</option>
+          </select>
+        </div>
+
+        <!-- Other city: base rate -->
+        <div class="input-group" id="otherRateGroup" style="display:none">
+          <div class="input-label"><span>Annual Base Rate per Sq.m. (₹) <span class="info-tag">Check municipal website</span></span><span class="input-value" id="baseRateLabel">₹200</span></div>
+          <input type="range" id="baseRateSlider" min="50" max="2000" step="10" value="200"
+            oninput="syncInput(this,'baseRateNum','baseRateLabel','₹',false);calculate()">
+          <input type="number" class="number-input" id="baseRateNum" value="200"
+            oninput="syncSlider(this,'baseRateSlider','baseRateLabel','₹',false);calculate()">
+        </div>
+
+        <!-- Age of property -->
+        <div class="input-group">
+          <div class="input-label"><span>Age of Property (years)</span><span class="input-value" id="ageLabel">10 years</span></div>
+          <input type="range" id="agePropSlider" min="0" max="60" step="1" value="10"
+            oninput="syncInput(this,'agePropNum','ageLabel','',false,' years');calculate()">
+          <input type="number" class="number-input" id="agePropNum" value="10"
+            oninput="syncSlider(this,'agePropSlider','ageLabel','',false,' years');calculate()">
+        </div>
+
+        <!-- Floor (for Mumbai) -->
+        <div class="input-group" id="floorGroup" style="display:none">
+          <div class="input-label"><span>Floor Number</span></div>
+          <select class="select-input" id="floorLevel" onchange="calculate()">
+            <option value="1.0">Ground Floor (×1.0)</option>
+            <option value="1.1" selected>1st–4th Floor (×1.1)</option>
+            <option value="1.2">5th–10th Floor (×1.2)</option>
+            <option value="1.3">Above 10th Floor (×1.3)</option>
+          </select>
+        </div>
+
+        <!-- Rebates -->
+        <div style="margin-top:8px">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text-secondary)">Applicable Rebates</h3>
+          <div class="check-row">
+            <input type="checkbox" id="rebateEarly" onchange="calculate()">
+            <label for="rebateEarly">Early payment (Q1 / before due date) <span class="info-tag" id="earlyRebateTag">15%</span></label>
+          </div>
+          <div class="check-row">
+            <input type="checkbox" id="rebateSenior" onchange="calculate()">
+            <label for="rebateSenior">Senior citizen / Women owner / Ex-serviceman / Disabled <span class="info-tag" id="seniorRebateTag">30%</span></label>
+          </div>
+          <div class="check-row" id="ddaRebateRow">
+            <input type="checkbox" id="rebateDDA" onchange="calculate()">
+            <label for="rebateDDA">DDA / CGHS flat (up to 100 sq.m.) <span class="info-tag">10%</span></label>
+          </div>
+          <div class="check-row" id="groupHousingRow">
+            <input type="checkbox" id="rebateGroup" onchange="calculate()">
+            <label for="rebateGroup">Group housing flat (paid before June 30) <span class="info-tag">20%</span></label>
+          </div>
+          <div class="check-row" id="onlineRebateRow">
+            <input type="checkbox" id="rebateOnline" checked onchange="calculate()">
+            <label for="rebateOnline">Online payment <span class="info-tag" id="onlineRebateTag">2%</span></label>
+          </div>
+        </div>
+
+        <!-- Income tax section -->
+        <div style="margin-top:16px">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--text-secondary)">Income Tax Impact</h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">Property tax is deductible from house property income</div>
+          <div class="deduction-row">
+            <label>Your Income Tax Slab</label>
+            <select class="ded-input" id="itSlab" onchange="calculate()" style="cursor:pointer">
+              <option value="5">5%</option>
+              <option value="10">10%</option>
+              <option value="20">20%</option>
+              <option value="30" selected>30%</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS PANEL -->
+      <div class="result-panel">
+
+        <!-- Main result -->
+        <div class="result-card result-highlight">
+          <div class="result-label" id="taxLabel">Annual Property Tax (Delhi MCD)</div>
+          <div class="result-amount" id="taxResult">₹0</div>
+          <div class="result-sub">
+            <div class="result-sub-item">
+              <span class="result-sub-label">Before rebates</span>
+              <span class="result-sub-value" id="subBeforeRebate">—</span>
+            </div>
+            <div class="result-sub-item">
+              <span class="result-sub-label">Total rebate saved</span>
+              <span class="result-sub-value" id="subRebateSaved">—</span>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;opacity:0.85">Half-yearly: <strong id="halfYearly">₹0</strong> &nbsp;|&nbsp; Monthly equivalent: <strong id="monthly">₹0</strong></div>
+        </div>
+
+        <!-- Calculation breakdown -->
+        <div class="result-card">
+          <div style="font-weight:600;font-size:14px;margin-bottom:12px">🧮 Calculation Breakdown</div>
+          <div class="result-row"><span id="row1Label">Annual Value (Base)</span><span id="row1Val" style="font-family:var(--font-mono)">₹0</span></div>
+          <div class="result-row"><span id="row2Label">Age Factor</span><span id="row2Val" style="font-family:var(--font-mono)">1.0×</span></div>
+          <div class="result-row"><span id="row3Label">Usage/Occupancy Factor</span><span id="row3Val" style="font-family:var(--font-mono)">1.0×</span></div>
+          <div class="result-row"><span id="row4Label">Gross Tax (before rebates)</span><span id="row4Val" style="font-family:var(--font-mono);font-weight:600">₹0</span></div>
+          <hr style="border:none;border-top:1px solid var(--border);margin:8px 0">
+          <div id="rebateBreakdown"></div>
+          <div class="result-row" style="margin-top:4px"><span><strong>Net Property Tax Payable</strong></span><span id="netTax" style="font-family:var(--font-mono);font-weight:700;color:var(--green-dark)">₹0</span></div>
+        </div>
+
+        <!-- Rebate summary -->
+        <div class="result-card">
+          <div style="font-weight:600;font-size:14px;margin-bottom:10px">🎁 Rebate Summary</div>
+          <div id="rebateSummaryRows"></div>
+        </div>
+
+        <!-- Income tax benefit -->
+        <div class="it-box">
+          <div style="font-size:13px;font-weight:700;color:var(--green-dark);margin-bottom:8px">💸 Income Tax Deduction Benefit</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div>
+              <div style="font-size:11px;color:var(--text-muted)">Property tax paid (deductible)</div>
+              <div id="itDeductible" style="font-size:18px;font-weight:700;color:var(--green-dark);font-family:var(--font-mono)">₹0</div>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text-muted)">Income tax saved (<span id="itSlabDisplay">30%</span> slab)</div>
+              <div id="itSaved" style="font-size:18px;font-weight:700;color:var(--green-dark);font-family:var(--font-mono)">₹0</div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:8px">Deductible under Sec. 23 of IT Act from Gross Annual Value · Applicable for let-out / deemed let-out properties</div>
+        </div>
+
+        <!-- Share bar -->
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`🏠 My Property Tax Estimate (FY 2025-26)\n📍 City: ${document.getElementById('taxLabel').textContent}\n📐 Area: ${document.getElementById('areaLabel').textContent}\n💰 Annual Tax: ${document.getElementById('taxResult').textContent}\n💸 Monthly Equivalent: ${document.getElementById('monthly').textContent}\n\nCalculate yours 👇`)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg>
+              WhatsApp
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter(`Property tax check FY 2025-26: ${document.getElementById('areaLabel').textContent} property → Annual tax: ${document.getElementById('taxResult').textContent} 🏠 #PropertyTax #MunicipalTax #India`)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </button>
+            <button class="share-btn copylink" onclick="copyLink(this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Copy Link
+            </button>
+            <button class="share-btn download" onclick="downloadPDF('Property Tax Calculator FY 2025-26')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Save PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CITY COMPARISON TABLE -->
+    <div class="year-table-wrap" style="margin-top:32px">
+      <div class="year-table-head">🏙️ City-wise Property Tax Comparison (Estimated · <span id="compareArea">100 sq.m.</span> Residential · Self-occupied)</div>
+      <div style="overflow-x:auto">
+        <table class="city-table">
+          <thead><tr><th>City</th><th>Method</th><th>Approx. Annual Tax</th><th>Key Rebates</th><th>Due Date</th></tr></thead>
+          <tbody id="comparisonTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- KEY RULES CARDS -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px">
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">🏛️ Delhi MCD — FY 2025-26 Key Facts</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          Method: <strong>Unit Area System (UAS)</strong><br>
+          Zones: <strong>A (₹630/sq.m.) to H (₹100/sq.m.)</strong><br>
+          Early payment rebate: <strong>15% (before June 30)</strong><br>
+          Senior citizen / Women / Disabled: <strong>30% rebate</strong><br>
+          DDA/CGHS flats: <strong>10% rebate (up to 100 sq.m.)</strong><br>
+          Late payment penalty: <strong>1% per month</strong><br>
+          SUNIYO amnesty scheme: <strong>Extended to Jan 31, 2026</strong><br>
+          Online payment bonus: <strong>2% additional rebate</strong>
+        </div>
+      </div>
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">🌆 Mumbai BMC / 🌿 BBMP — Key Facts</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          Mumbai method: <strong>Capital Value System (CVS)</strong><br>
+          Tax rate: <strong>~0.316% of capital value (residential)</strong><br>
+          Early payment (Mumbai): <strong>2–5% discount (before June 30)</strong><br>
+          Bengaluru method: <strong>Unit Area Value (UAV)</strong><br>
+          Bengaluru: <strong>Zone A (₹5/sq.ft./month) to F (₹1.20)</strong><br>
+          BBMP early payment: <strong>5% discount (before April 30)</strong><br>
+          BBMP senior citizen: <strong>up to 30% rebate</strong><br>
+          Late payment penalty: <strong>2% per month (Mumbai)</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED CALCULATORS -->
+    <div class="related-section">
+      <div class="related-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Related Calculators
+      </div>
+      <div class="related-grid">
+        <a href="/tax/" class="related-card">
+          <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📋</div>
+          <div><div class="related-name">Income Tax Calculator</div><div class="related-desc">New vs Old Regime</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/emi/" class="related-card">
+          <div class="related-icon" style="background:#e3f2fd;color:#1565c0">🏦</div>
+          <div><div class="related-name">EMI Calculator</div><div class="related-desc">Home loan EMI</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/schemes/epf/" class="related-card">
+          <div class="related-icon" style="background:#fce4ec;color:#880e4f">💼</div>
+          <div><div class="related-name">EPF Calculator</div><div class="related-desc">PF corpus & interest</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/investment/sip/" class="related-card">
+          <div class="related-icon" style="background:#fff3e0;color:#e65100">📈</div>
+          <div><div class="related-name">SIP Calculator</div><div class="related-desc">Monthly SIP returns</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="seo-section">
+      <hr class="seo-divider">
+      <div class="toc-box">
+        <div class="toc-title">On this page</div>
+        <ul class="toc-list">
+          <li><a href="#what-is-property-tax">What is Property Tax?</a></li>
+          <li><a href="#calculation-methods">Calculation Methods</a></li>
+          <li><a href="#delhi-mcd">Delhi MCD Rates</a></li>
+          <li><a href="#mumbai-bmc">Mumbai BMC Rates</a></li>
+          <li><a href="#bengaluru-bbmp">Bengaluru BBMP Rates</a></li>
+          <li><a href="#rebates-exemptions">Rebates &amp; Exemptions</a></li>
+          <li><a href="#income-tax-deduction">Income Tax Deduction</a></li>
+          <li><a href="#frequently-asked-questions">FAQ</a></li>
+        </ul>
+      </div>
+
+      <h2 id="what-is-property-tax">What is Property Tax in India?</h2>
+      <p>Property tax (also called house tax or municipal tax) is an annual levy imposed by local municipal corporations on property owners. The funds are used to maintain and improve civic infrastructure — roads, drainage, parks, street lighting, sanitation, and public health services. Every owner of residential, commercial, or industrial property within a municipal corporation's jurisdiction is liable to pay property tax, including owners of vacant land. In India, property tax is governed by the respective State Municipal Acts, which means rates, methods, and due dates vary significantly from city to city.</p>
+
+      <h2 id="calculation-methods">Three Methods Used Across India</h2>
+      <table class="seo-table">
+        <thead><tr><th>Method</th><th>Used In</th><th>Basis</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td>Unit Area System (UAS)</td><td>Delhi (MCD), Bengaluru (BBMP), Hyderabad (GHMC)</td><td>Per sq.ft. unit value × zone</td><td>Annual Value = UAV × Area × Age Factor × Occupancy Factor</td></tr>
+          <tr><td>Capital Value System (CVS)</td><td>Mumbai (BMC), Pune (PMC)</td><td>% of market/Ready Reckoner value</td><td>Tax = Ready Reckoner Rate × Area × Building Type × Age Factor × Tax Rate</td></tr>
+          <tr class="highlight"><td>Annual Rental Value (ARV)</td><td>Chennai (GCC), Kolkata (KMC), older systems</td><td>Notional annual rent</td><td>Tax = Expected Annual Rent × Tax Rate</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="delhi-mcd">Delhi MCD Property Tax — FY 2025-26</h2>
+      <p>The Municipal Corporation of Delhi (MCD) uses the Unit Area System. Delhi is divided into 8 zones (A to H), each with a unit area value ranging from ₹630/sq.m. (Zone A — Lutyens' Delhi, Golf Links) to ₹100/sq.m. (Zone H — rural areas). The formula is: <strong>Annual Value = Unit Area Value × Covered Area × Age Factor × Occupancy Factor × Structure Factor</strong>. Property tax is then charged as a percentage of this annual value (around 11% for residential, 20% for commercial).</p>
+      <table class="seo-table">
+        <thead><tr><th>Zone</th><th>Areas</th><th>Unit Area Value (₹/sq.m.)</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Lutyens Delhi, Golf Links, Sundar Nagar</td><td>₹630</td></tr>
+          <tr><td>B</td><td>South Extension, Defence Colony, Greater Kailash</td><td>₹500</td></tr>
+          <tr><td>C</td><td>Vasant Vihar, Rohini Phase 1, Pitampura</td><td>₹400</td></tr>
+          <tr><td>D</td><td>Dwarka, Janakpuri, Pashchim Vihar</td><td>₹320</td></tr>
+          <tr><td>E</td><td>Rohini Phases 2–4, Uttam Nagar</td><td>₹270</td></tr>
+          <tr><td>F</td><td>Najafgarh, Outer areas</td><td>₹230</td></tr>
+          <tr><td>G</td><td>Peripheral unauthorised colonies</td><td>₹200</td></tr>
+          <tr class="highlight"><td>H</td><td>Rural/village areas</td><td>₹100</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="mumbai-bmc">Mumbai BMC Property Tax — FY 2025-26</h2>
+      <p>The Brihanmumbai Municipal Corporation (BMC) uses the Capital Value System. Tax is calculated as approximately 0.316% of the property's capital value per year for residential properties. Capital Value = Ready Reckoner Rate × Carpet Area × Building Type Factor × Age Factor × Usage Factor × Floor Factor. The Ready Reckoner (RR) rate is published annually by the Maharashtra government and varies significantly by location — from ₹5,000/sq.ft. in suburban areas to ₹1,00,000+/sq.ft. in prime South Mumbai localities.</p>
+
+      <h2 id="bengaluru-bbmp">Bengaluru BBMP Property Tax — FY 2025-26</h2>
+      <p>The Bruhat Bengaluru Mahanagara Palike (BBMP) uses a Unit Area Value (UAV) system similar to Delhi. Properties are classified into 6 zones (A–F) with monthly UAVs ranging from ₹5/sq.ft. (Zone A — premium areas) to ₹1.20/sq.ft. (Zone F — village panchayats). The annual tax is: Annual Tax = ((UAV × 12 × Area) – Depreciation) × Tax Rate (0.2 for residential). BBMP also allows a 15-30% rebate for self-occupied residential properties.</p>
+
+      <h2 id="rebates-exemptions">Rebates &amp; Exemptions — FY 2025-26</h2>
+      <table class="seo-table">
+        <thead><tr><th>Rebate Type</th><th>Delhi MCD</th><th>Mumbai BMC</th><th>Bengaluru BBMP</th></tr></thead>
+        <tbody>
+          <tr><td>Early payment</td><td>15% (by June 30)</td><td>2–5% (by June 30)</td><td>5% (by April 30)</td></tr>
+          <tr><td>Senior citizen / Women</td><td>30% (one property, up to 200 sq.m.)</td><td>Up to 50% (varies by ward)</td><td>30% (self-occupied)</td></tr>
+          <tr><td>Ex-servicemen</td><td>30%</td><td>Available</td><td>Available</td></tr>
+          <tr><td>Physically challenged</td><td>30%</td><td>Available</td><td>Available</td></tr>
+          <tr><td>Online payment</td><td>2%</td><td>—</td><td>—</td></tr>
+          <tr class="highlight"><td>Late penalty</td><td>1%/month</td><td>2%/year</td><td>2%/month</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="income-tax-deduction">Property Tax as Income Tax Deduction</h2>
+      <p>Municipal taxes (property tax) paid to local authorities during the financial year are allowed as a <strong>full deduction</strong> from the Gross Annual Value when computing "Income from House Property" under Section 23 of the Income Tax Act. This applies to let-out and deemed let-out properties. At a 30% tax slab, every ₹10,000 of property tax paid saves ₹3,000 in income tax. For self-occupied properties, the Net Annual Value is nil under law, so property tax paid does not provide an additional income tax benefit but helps maintain property records for potential future deductions.</p>
+
+      <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is property tax calculated in India?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Property tax is calculated using one of three methods: Annual Rental Value (ARV), Capital Value System (CVS, used in Mumbai/Pune), or Unit Area System (UAS, used in Delhi/Bengaluru). The general formula across all methods is: Tax = Base Value × Built-up Area × Age Factor × Usage Factor × Location Factor × Tax Rate. Each municipality publishes its own rate schedule annually.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What rebates are available on property tax in Delhi (MCD)?<span class="faq-icon">+</span></button>
+          <div class="faq-a">MCD offers: 15% early payment rebate (lump sum before June 30), 30% for senior citizens/women/disabled/ex-servicemen on one self-occupied property up to 200 sq.m., 10% for DDA/CGHS flats up to 100 sq.m., 20% for group housing flats (before June 30), and 2% additional for online payment. Under the SUNIYO amnesty scheme (extended to Jan 31, 2026), paying current-year tax clears all old dues, interest, and penalties.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I claim property tax as an income tax deduction?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes. Municipal taxes (property tax) paid to local authorities are fully deductible from the Gross Annual Value under Section 23 of the Income Tax Act when computing Income from House Property. This deduction is available for let-out and deemed let-out properties. At the 30% tax slab, every ₹1 lakh of property tax saves ₹30,000 in income tax.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the due date for property tax payment?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Due dates vary: Delhi (MCD) — June 30 for early payment rebate, March 31 for the financial year. Mumbai (BMC) — June 30 with early bird discount. Bengaluru (BBMP) — April 30 with 5% early payment discount. Late payment attracts interest of 1–2% per month depending on the city. Several cities offer amnesty schemes periodically to waive penalties on old dues.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What properties are exempt from property tax?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Typically exempt: places of worship, charitable/educational institutions, properties of foreign diplomatic missions, government properties for public use, heritage properties notified by the government, properties of gallantry award winners and war widows (Delhi), and agricultural land in rural areas. Senior citizens, women, and disabled individuals get rebates (typically 30%) rather than full exemption in most cities.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the penalty for not paying property tax on time?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Late payment penalties: Delhi (MCD) — 1% per month. Mumbai (BMC) — 2% per year. Bengaluru (BBMP) — 2% per month. Long-term non-payment can result in sealing, asset attachment, or legal proceedings. Several amnesty schemes are periodically announced to allow owners to clear dues without penalties.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the MCD SUNIYO scheme 2025-26?<span class="faq-icon">+</span></button>
+          <div class="faq-a">The Sampattikar Niptaan Yojana (SUNIYO) is MCD's property tax amnesty scheme for FY 2025-26, extended to January 31, 2026. Property owners who pay the current year's tax (2025-26) and principal for the last 5 years (2020-21 to 2024-25) get a 100% waiver on accumulated interest, penalties, and all arrears up to FY 2020-21. It's an opportunity to regularise old dues with a clean slate.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is age factor applied in property tax calculation?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Most municipal corporations apply a depreciation factor that reduces the taxable value of older properties. Properties 0–5 years old typically use a factor of 1.0, 6–10 years around 0.9, 11–20 years around 0.8, 21–30 years around 0.7, and properties over 30 years may use 0.5–0.6. The exact factors vary by city, reflecting that older properties have lower market value and should attract lower tax.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="/investment/sip/">SIP Calculator</a></li>
+        <li><a href="/emi/">EMI Calculator</a></li>
+        <li><a href="/tax/">Income Tax</a></li>
+        <li><a href="/schemes/epf/">EPF Calculator</a></li>
+        <li><a href="/schemes/nps/">NPS Calculator</a></li>
+        <li><a href="property-tax-calculator.html">Property Tax</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="/fd/">FD Calculator</a></li>
+        <li><a href="/schemes/ppf/">PPF Calculator</a></li>
+        <li><a href="/schemes/rd/">RD Calculator</a></li>
+        <li><a href="/investment/swp/">SWP Calculator</a></li>
+        <li><a href="/schemes/ssy/">SSY Calculator</a></li>
+        <li><a href="/tax/salary/">Salary Calculator</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2026 InvestSmartCalc · Estimates only · Verify with official municipal portals · Not financial/legal advice</span>
+        <div class="footer-bottom-links">
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+  <script>
+    let activeCity = 'delhi';
+
+    // Delhi MCD: Unit Area Values by zone (₹/sq.m./year)
+    const DELHI_UAV = { A:630, B:500, C:400, D:320, E:270, F:230, G:200, H:100 };
+    // Delhi tax rates by usage
+    const DELHI_RATE = { residential:0.11, residential_rented:0.11, commercial:0.20, industrial:0.15 };
+    // Occupancy factor: self-occupied = 1.0, rented = 1.5
+    const DELHI_OCC  = { residential:1.0, residential_rented:1.5, commercial:1.5, industrial:1.0 };
+
+    // Mumbai BMC: residential tax ≈ 0.316% of capital value per year
+    const MUMBAI_RATE = { residential:0.00316, residential_rented:0.00316, commercial:0.006, industrial:0.005 };
+    // Building type factor
+    const MUMBAI_BLDG = { residential:1.0, residential_rented:1.0, commercial:1.5, industrial:1.2 };
+
+    // BBMP zone monthly UAV (₹/sq.ft.)
+    const BBMP_UAV = { A:5, B:4, C:3.60, D:2.40, E:1.80, F:1.20 };
+    // BBMP: residential self-occupied gets 50% rebate built-in, commercial 0.2 rate multiplier
+    const BBMP_RATE = { residential:0.20, residential_rented:0.20, commercial:0.25, industrial:0.20 };
+
+    // Age factor (common across cities, approximate)
+    function getAgeFactor(age) {
+      if (age <= 5)  return 1.00;
+      if (age <= 10) return 0.90;
+      if (age <= 20) return 0.80;
+      if (age <= 30) return 0.70;
+      if (age <= 40) return 0.60;
+      return 0.50;
+    }
+
+    function switchCity(city) {
+      activeCity = city;
+      // Update tab active state
+      ['delhi','mumbai','bengaluru','other'].forEach(c => {
+        document.getElementById('tab-' + c).classList.toggle('active', c === city);
+      });
+
+      // Show/hide city-specific inputs
+      document.getElementById('delhiZoneGroup').style.display    = city === 'delhi'     ? '' : 'none';
+      document.getElementById('mumbaiValueGroup').style.display  = city === 'mumbai'    ? '' : 'none';
+      document.getElementById('bengaluruZoneGroup').style.display= city === 'bengaluru' ? '' : 'none';
+      document.getElementById('otherRateGroup').style.display    = city === 'other'     ? '' : 'none';
+      document.getElementById('floorGroup').style.display        = city === 'mumbai'    ? '' : 'none';
+
+      // Show/hide Delhi-specific rebates
+      const isDelhiLike = city === 'delhi';
+      document.getElementById('ddaRebateRow').style.display       = isDelhiLike ? '' : 'none';
+      document.getElementById('groupHousingRow').style.display    = isDelhiLike ? '' : 'none';
+
+      // Update rebate tags
+      const earlyPcts = { delhi:'15%', mumbai:'5%', bengaluru:'5%', other:'10%' };
+      const seniorPcts= { delhi:'30%', mumbai:'50%', bengaluru:'30%', other:'25%' };
+      document.getElementById('earlyRebateTag').textContent  = earlyPcts[city];
+      document.getElementById('seniorRebateTag').textContent = seniorPcts[city];
+
+      // Update method box
+      const methods = {
+        delhi:     '<strong>Delhi MCD — Unit Area System (UAS):</strong> Annual Value = Unit Area Value × Covered Area × Age Factor × Occupancy Factor. Tax Rate: 11% (residential) / 20% (commercial). 8 zones from A–H.',
+        mumbai:    '<strong>Mumbai BMC — Capital Value System (CVS):</strong> Tax = Ready Reckoner Value × Area × Building Factor × Age Factor × Tax Rate (~0.316% residential). RR rate varies by locality.',
+        bengaluru: '<strong>Bengaluru BBMP — Unit Area Value (UAV):</strong> Annual Tax = (UAV × 12 months × Area – Depreciation) × Tax Rate. 6 zones A–F. Self-occupied residential gets built-in 50% deduction.',
+        other:     '<strong>Generic Method:</strong> Tax = Base Rate × Built-up Area × Age Factor × Usage Factor. Enter your municipality\'s per sq.m. annual base rate from the official website.'
+      };
+      document.getElementById('methodBox').innerHTML = methods[city];
+
+      // Update result label
+      const labels = { delhi:'Annual Property Tax (Delhi MCD)', mumbai:'Annual Property Tax (Mumbai BMC)', bengaluru:'Annual Property Tax (Bengaluru BBMP)', other:'Annual Property Tax (Estimate)' };
+      document.getElementById('taxLabel').textContent = labels[city];
+
+      calculate();
+    }
+
+    function setPreset(type, val) {
+      if (type === 'area') {
+        document.getElementById('areaNum').value = val;
+        document.getElementById('areaSlider').value = val;
+        document.getElementById('areaLabel').textContent = val + ' sq.m.';
+        updateSlider(document.getElementById('areaSlider'));
+      } else if (type === 'rr') {
+        document.getElementById('rrNum').value = val;
+        document.getElementById('rrSlider').value = val;
+        document.getElementById('rrLabel').textContent = '₹' + val.toLocaleString('en-IN');
+        updateSlider(document.getElementById('rrSlider'));
+      }
+      calculate();
+    }
+
+    function calculate() {
+      const area        = parseFloat(document.getElementById('areaNum').value) || 100;
+      const propAge     = parseFloat(document.getElementById('agePropNum').value) || 10;
+      const propType    = document.getElementById('propertyType').value;
+      const ageFactor   = getAgeFactor(propAge);
+      const itSlab      = parseFloat(document.getElementById('itSlab').value) / 100 || 0.30;
+
+      const rebateEarly  = document.getElementById('rebateEarly').checked;
+      const rebateSenior = document.getElementById('rebateSenior').checked;
+      const rebateDDA    = document.getElementById('rebateDDA').checked;
+      const rebateGroup  = document.getElementById('rebateGroup').checked;
+      const rebateOnline = document.getElementById('rebateOnline').checked;
+
+      let baseAnnualValue = 0;
+      let grossTax = 0;
+      let row1Label='', row1Val='', row2Label='', row2Val='', row3Label='', row3Val='', row4Label='', row4Val='';
+
+      if (activeCity === 'delhi') {
+        const zone      = document.getElementById('delhiZone').value;
+        const uav       = DELHI_UAV[zone];
+        const rate      = DELHI_RATE[propType];
+        const occFactor = DELHI_OCC[propType];
+        baseAnnualValue = uav * area * ageFactor * occFactor;
+        grossTax        = baseAnnualValue * rate;
+        row1Label = `Annual Value (UAV ₹${uav} × ${area}sq.m.)`;
+        row1Val   = fmtFull(uav * area);
+        row2Label = `Age Factor (${propAge} yrs)`;
+        row2Val   = ageFactor.toFixed(2) + '×';
+        row3Label = `Occupancy Factor (${propType === 'residential' ? 'Self-occ' : 'Rented'})`;
+        row3Val   = occFactor.toFixed(2) + '×';
+        row4Label = `Gross Tax (${(rate*100).toFixed(0)}% of ₹${Math.round(baseAnnualValue).toLocaleString('en-IN')})`;
+        row4Val   = fmtFull(grossTax);
+      }
+
+      else if (activeCity === 'mumbai') {
+        const rrValue   = parseFloat(document.getElementById('rrNum').value) || 5000000;
+        const floor     = parseFloat(document.getElementById('floorLevel').value) || 1.1;
+        const bldgFactor= MUMBAI_BLDG[propType];
+        const rate      = MUMBAI_RATE[propType];
+        // Capital value = RR rate (already market value) × area × age × floor × building
+        const capitalValue = (rrValue / area) * area * ageFactor * floor * bldgFactor;
+        grossTax = capitalValue * rate;
+        row1Label = 'Property Market Value (RR)';
+        row1Val   = fmtFull(rrValue);
+        row2Label = `Age Factor × Floor Factor`;
+        row2Val   = (ageFactor * floor).toFixed(2) + '×';
+        row3Label = `Effective Capital Value`;
+        row3Val   = fmtFull(capitalValue);
+        row4Label = `Gross Tax (${(rate*100).toFixed(3)}% of capital value)`;
+        row4Val   = fmtFull(grossTax);
+      }
+
+      else if (activeCity === 'bengaluru') {
+        const zone    = document.getElementById('bengaluruZone').value;
+        const uavMonthly = BBMP_UAV[zone]; // ₹/sq.ft./month
+        const areaInSqFt = area * 10.764; // convert sq.m. to sq.ft.
+        const rate    = BBMP_RATE[propType];
+        // Annual value = UAV × 12 months × area (sq.ft.)
+        const annualGAV = uavMonthly * 12 * areaInSqFt;
+        // Self-occupied residential: deduct 50% for depreciation + self-occ
+        const selfOccDeduction = (propType === 'residential') ? annualGAV * 0.50 : annualGAV * 0.30;
+        const taxableValue     = Math.max(0, annualGAV - selfOccDeduction) * ageFactor;
+        grossTax = taxableValue * rate;
+        row1Label = `Annual GAV (₹${uavMonthly}/sq.ft./month × ${Math.round(areaInSqFt)}sq.ft.)`;
+        row1Val   = fmtFull(annualGAV);
+        row2Label = `Self-occ/Depreciation Deduction`;
+        row2Val   = '−' + fmtFull(selfOccDeduction);
+        row3Label = `Taxable Value × Age Factor`;
+        row3Val   = fmtFull(taxableValue);
+        row4Label = `Gross Tax (${(rate*100).toFixed(0)}% of taxable value)`;
+        row4Val   = fmtFull(grossTax);
+      }
+
+      else { // other
+        const baseRate  = parseFloat(document.getElementById('baseRateNum').value) || 200;
+        const usageMult = propType === 'residential' ? 1.0 : propType === 'commercial' ? 2.0 : 1.5;
+        baseAnnualValue = baseRate * area * ageFactor * usageMult;
+        grossTax        = baseAnnualValue; // base rate already includes tax
+        row1Label = `Base Value (₹${baseRate}/sq.m. × ${area}sq.m.)`;
+        row1Val   = fmtFull(baseRate * area);
+        row2Label = `Age Factor (${propAge} yrs)`;
+        row2Val   = ageFactor.toFixed(2) + '×';
+        row3Label = `Usage Multiplier`;
+        row3Val   = usageMult.toFixed(1) + '×';
+        row4Label = `Gross Tax Estimate`;
+        row4Val   = fmtFull(grossTax);
+      }
+
+      // ── Apply rebates ─────────────────────────────────────────────────────
+      const earlyPct  = { delhi:0.15, mumbai:0.05, bengaluru:0.05, other:0.10 }[activeCity];
+      const seniorPct = { delhi:0.30, mumbai:0.50, bengaluru:0.30, other:0.25 }[activeCity];
+      const ddaPct    = 0.10;
+      const groupPct  = 0.20;
+      const onlinePct = { delhi:0.02, mumbai:0, bengaluru:0, other:0 }[activeCity];
+
+      let totalRebatePct = 0;
+      const appliedRebates = [];
+
+      if (rebateEarly)  { totalRebatePct += earlyPct;  appliedRebates.push({ label:`Early Payment`, pct: earlyPct, applied:true }); }
+      else               { appliedRebates.push({ label:'Early Payment', pct: earlyPct, applied:false }); }
+
+      if (rebateSenior) { totalRebatePct += seniorPct; appliedRebates.push({ label:`Senior/Women/Disabled`, pct: seniorPct, applied:true }); }
+      else               { appliedRebates.push({ label:'Senior/Women/Disabled', pct: seniorPct, applied:false }); }
+
+      if (activeCity === 'delhi') {
+        if (rebateDDA)   { totalRebatePct += ddaPct;    appliedRebates.push({ label:'DDA/CGHS Flat', pct: ddaPct, applied:true }); }
+        else              { appliedRebates.push({ label:'DDA/CGHS Flat', pct: ddaPct, applied:false }); }
+        if (rebateGroup) { totalRebatePct += groupPct;  appliedRebates.push({ label:'Group Housing Flat', pct: groupPct, applied:true }); }
+        else              { appliedRebates.push({ label:'Group Housing Flat', pct: groupPct, applied:false }); }
+      }
+
+      if (onlinePct > 0) {
+        if (rebateOnline){ totalRebatePct += onlinePct; appliedRebates.push({ label:'Online Payment', pct: onlinePct, applied:true }); }
+        else              { appliedRebates.push({ label:'Online Payment', pct: onlinePct, applied:false }); }
+      }
+
+      // Cap total rebate at 50%
+      totalRebatePct = Math.min(totalRebatePct, 0.50);
+      const totalRebateAmt = grossTax * totalRebatePct;
+      const netTax = Math.max(0, grossTax - totalRebateAmt);
+
+      // ── Display ───────────────────────────────────────────────────────────
+      document.getElementById('taxResult').textContent   = fmtFull(netTax);
+      document.getElementById('subBeforeRebate').textContent = fmtFull(grossTax);
+      document.getElementById('subRebateSaved').textContent  = fmtFull(totalRebateAmt);
+      document.getElementById('halfYearly').textContent  = fmtFull(netTax / 2);
+      document.getElementById('monthly').textContent     = fmtFull(netTax / 12);
+
+      document.getElementById('row1Label').textContent = row1Label;
+      document.getElementById('row1Val').textContent   = row1Val;
+      document.getElementById('row2Label').textContent = row2Label;
+      document.getElementById('row2Val').textContent   = row2Val;
+      document.getElementById('row3Label').textContent = row3Label;
+      document.getElementById('row3Val').textContent   = row3Val;
+      document.getElementById('row4Label').textContent = row4Label;
+      document.getElementById('row4Val').textContent   = row4Val;
+      document.getElementById('netTax').textContent    = fmtFull(netTax);
+
+      // Rebate breakdown in result card
+      document.getElementById('rebateBreakdown').innerHTML = appliedRebates.map(r =>
+        `<div class="rebate-row">
+          <span>${r.label} (${(r.pct*100).toFixed(0)}%)</span>
+          <span class="${r.applied ? 'rebate-tag tag-applied' : 'rebate-tag tag-na'}">${r.applied ? '− ' + fmtFull(grossTax * r.pct) : 'Not applied'}</span>
+        </div>`).join('');
+
+      // Rebate summary card
+      document.getElementById('rebateSummaryRows').innerHTML = appliedRebates.length ? appliedRebates.map(r =>
+        `<div class="result-row"><span>${r.label}</span><span>${r.applied ? fmtFull(grossTax * r.pct) + ' saved ✅' : '<span style="color:var(--text-muted)">Not applied</span>'}</span></div>`
+      ).join('') + `<div class="result-row" style="font-weight:600"><span>Total Rebate Saved</span><span style="color:var(--green-dark)">${fmtFull(totalRebateAmt)}</span></div>` : '';
+
+      // IT benefit
+      document.getElementById('itDeductible').textContent = fmtFull(netTax);
+      document.getElementById('itSaved').textContent      = fmtFull(netTax * itSlab);
+      document.getElementById('itSlabDisplay').textContent= (itSlab*100).toFixed(0) + '%';
+
+      // Update comparison table
+      updateComparisonTable(area);
+    }
+
+    function updateComparisonTable(area) {
+      document.getElementById('compareArea').textContent = area + ' sq.m.';
+      const areaInSqFt = area * 10.764;
+
+      // Delhi Zone C residential self-occ, no rebates
+      const delhiTax = DELHI_UAV['C'] * area * 0.90 * 1.0 * DELHI_RATE['residential'];
+      // Mumbai 50L RR value residential
+      const mumRR = 5000000;
+      const mumTax = mumRR * 0.90 * 1.1 * MUMBAI_RATE['residential'] * MUMBAI_BLDG['residential'];
+      // BBMP Zone B
+      const bbmpGAV = BBMP_UAV['B'] * 12 * areaInSqFt;
+      const bbmpTax = (bbmpGAV - bbmpGAV * 0.50) * 0.90 * BBMP_RATE['residential'];
+      // Chennai ARV approx
+      const chennaiTax = area * 250 * 0.85 * 0.18;
+      // Pune CVS approx 
+      const puneTax = (mumRR * 0.7) * 0.90 * 0.003;
+      // Hyderabad GHMC approx
+      const hyderTax = area * 200 * 0.90 * 0.20;
+
+      const rows = [
+        { city:'Delhi (MCD)', method:'Unit Area System', tax: delhiTax, rebates:'15% early + 30% senior', due:'June 30' },
+        { city:'Mumbai (BMC)', method:'Capital Value System', tax: mumTax, rebates:'2–5% early + 50% senior', due:'June 30' },
+        { city:'Bengaluru (BBMP)', method:'Unit Area Value', tax: bbmpTax, rebates:'5% early + 30% senior', due:'April 30' },
+        { city:'Hyderabad (GHMC)', method:'Unit Area System', tax: hyderTax, rebates:'15% early + 25% senior', due:'March 31' },
+        { city:'Pune (PMC)', method:'Capital Value System', tax: puneTax, rebates:'10% early + 20% senior', due:'June 30' },
+        { city:'Chennai (GCC)', method:'Annual Rental Value', tax: chennaiTax, rebates:'5% early + 25% senior', due:'March 31' },
+      ];
+
+      document.getElementById('comparisonTable').innerHTML = rows.map(r =>
+        `<tr><td>${r.city}</td><td>${r.method}</td><td style="font-family:var(--font-mono);font-weight:600">${fmtFull(r.tax)}</td><td>${r.rebates}</td><td>${r.due}</td></tr>`
+      ).join('');
+    }
+
+    // Init
+    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+    calculate();
+  </script>
+</body>
+</html>

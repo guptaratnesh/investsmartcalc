@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>NPS Calculator – National Pension Scheme Returns & Corpus | InvestSmartCalc</title>
+  <meta name="description" content="NPS calculator India. Calculate National Pension Scheme corpus, monthly pension, tax benefits under 80CCD(1), 80CCD(1B) & 80CCD(2). Compare Tier 1 vs Tier 2. Free NPS calculator FY 2025-26.">
+  <meta name="keywords" content="NPS calculator, national pension scheme calculator, NPS returns calculator, NPS tax benefit, 80CCD calculator, NPS corpus calculator India">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://investsmartcalc.com/schemes/nps/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://investsmartcalc.com/schemes/nps/">
+  <meta property="og:title" content="NPS Calculator – National Pension Scheme Returns & Corpus">
+  <meta property="og:description" content="Calculate NPS corpus, monthly pension and tax savings. 80CCD(1B) extra ₹50,000 deduction. Free NPS calculator for India.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NPS Calculator – National Pension Scheme Returns & Corpus">
+  <meta name="twitter:description" content="Calculate NPS corpus, monthly pension and tax savings. 80CCD(1B) extra ₹50,000 deduction. Free NPS calculator for India.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <style>
+    .nps-badge { display:inline-block; background:#e8eaf6; color:#283593; padding:3px 12px; border-radius:100px; font-size:12px; font-weight:600; margin-bottom:12px; }
+    [data-theme="dark"] .nps-badge { background:#1a1e3d; color:#7986cb; }
+
+    .deduction-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--border); }
+    .deduction-row label { font-size:14px; color:var(--text-secondary); }
+    .ded-input { width:130px; border:1.5px solid var(--border); border-radius:8px; padding:7px 10px; font-size:14px; font-family:var(--font-mono); text-align:right; outline:none; background:var(--bg-white); color:var(--text-primary); }
+    .ded-input:focus { border-color:var(--green); }
+    [data-theme="dark"] .ded-input { background:#252a3a; color:#d0e0f0; border-color:#3a4a66; }
+    [data-theme="dark"] .deduction-row { border-color:#2e3a52; }
+    [data-theme="dark"] .deduction-row label { color:#9aaab8; }
+
+    /* Tier tab switcher */
+    .tier-switcher { display:flex; gap:8px; margin-bottom:20px; }
+    .tier-btn { flex:1; padding:10px; border-radius:var(--radius-sm); border:1.5px solid var(--border); background:var(--bg-white); font-size:13px; font-weight:600; cursor:pointer; transition:all 0.18s; color:var(--text-secondary); text-align:center; }
+    .tier-btn.active { background:var(--green); border-color:var(--green); color:#fff; }
+    .tier-btn:hover:not(.active) { border-color:var(--green); color:var(--green-dark); }
+    [data-theme="dark"] .tier-btn { background:#1e2435; border-color:#3a4a66; color:var(--text-secondary); }
+    [data-theme="dark"] .tier-btn.active { background:var(--green); border-color:var(--green); color:#fff; }
+
+    /* Corpus breakdown table */
+    .corpus-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:4px; }
+    .corpus-table th { background:var(--bg); padding:8px 12px; text-align:left; color:var(--text-muted); font-weight:500; }
+    .corpus-table td { padding:8px 12px; border-bottom:1px solid var(--border); font-family:var(--font-mono); }
+    .corpus-table tr:last-child td { background:var(--green-light); color:var(--green-dark); font-weight:700; border-bottom:none; }
+    [data-theme="dark"] .corpus-table th { background:#1a2236; color:#8aa8c8; border-color:#3a4a66; }
+    [data-theme="dark"] .corpus-table td { border-color:#2e3a52; color:#9aaab8; background:#232b3e; }
+    [data-theme="dark"] .corpus-table tr:last-child td { background:#002a14; color:#00e676; }
+
+    /* Progress bar for allocation */
+    .alloc-bar-wrap { height:8px; background:var(--border); border-radius:100px; overflow:hidden; margin-top:6px; }
+    .alloc-bar-fill { height:100%; border-radius:100px; transition:width 0.4s ease; }
+    [data-theme="dark"] .alloc-bar-wrap { background:#2e3a52; }
+
+    /* Tax saving highlight box */
+    .tax-save-box { background:linear-gradient(135deg,#e8f5e9,#f1f8e9); border:1.5px solid var(--green); border-radius:var(--radius-sm); padding:14px 16px; margin-top:16px; }
+    [data-theme="dark"] .tax-save-box { background:linear-gradient(135deg,#002a12,#001a08); border-color:#00a152; }
+    .tax-save-box .label { font-size:12px; color:var(--text-muted); margin-bottom:2px; }
+    .tax-save-box .value { font-size:20px; font-weight:700; color:var(--green-dark); font-family:var(--font-mono); }
+    [data-theme="dark"] .tax-save-box .value { color:#00e676; }
+    .tax-save-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+    @media(max-width:600px){ .tax-save-grid { grid-template-columns:1fr 1fr; } }
+
+    /* Pension split bar */
+    .pension-split { display:flex; border-radius:var(--radius-sm); overflow:hidden; height:32px; margin-top:10px; }
+    .pension-annuity { background:var(--green); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#fff; transition:width 0.4s; }
+    .pension-lumpsum { background:var(--green-light); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:var(--green-dark); transition:width 0.4s; }
+    [data-theme="dark"] .pension-lumpsum { background:#003d1a; color:#00e676; }
+
+    .info-tag { display:inline-block; background:#e3f2fd; color:#1565c0; font-size:11px; font-weight:600; padding:1px 7px; border-radius:100px; margin-left:6px; vertical-align:middle; }
+    [data-theme="dark"] .info-tag { background:#001a3d; color:#64b5f6; }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://investsmartcalc.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://investsmartcalc.com/logo.png",
+    "width": 200,
+    "height": 60
+  },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, NPS, HRA, Gratuity and Salary calculators. Updated for FY 2025-26."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "NPS Calculator – National Pension Scheme",
+  "url": "https://investsmartcalc.com/nps-calculator.html",
+  "description": "Calculate NPS corpus at retirement, monthly pension estimate, lump sum withdrawal, and total tax savings under Sections 80CCD(1), 80CCD(1B), and 80CCD(2). Free India NPS calculator.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "provider": { "@type": "Organization", "name": "InvestSmartCalc", "url": "https://investsmartcalc.com" },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "NPS Calculator", "item": "https://investsmartcalc.com/nps-calculator.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is NPS and who can invest in it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NPS (National Pension System) is a voluntary, long-term retirement savings scheme regulated by PFRDA. It is open to all Indian citizens aged 18–70, including salaried employees (government and private sector), self-employed professionals, and NRIs. Contributions grow market-linked and the corpus is used to buy an annuity at retirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the tax benefit on NPS contributions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NPS offers three layers of tax deduction under the Old Regime: (1) Section 80CCD(1) — up to 10% of salary (max ₹1.5L within 80C limit) for employee contribution; (2) Section 80CCD(1B) — additional ₹50,000 exclusively for NPS, over and above the 80C limit; (3) Section 80CCD(2) — employer NPS contribution up to 14% of salary for all employees (both govt and private, effective FY 2025-26) is fully deductible with no upper cap, and is also allowed under the New Tax Regime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to NPS corpus at retirement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under PFRDA's December 2025 rules, non-government subscribers with corpus above ₹12 lakh can withdraw up to 80% as a lump sum and must put at least 20% into an annuity for monthly pension. However, the Income Tax Act currently exempts only 60% of the total corpus as tax-free under Section 10(12A). The extra 20% lump sum is taxable at your slab rate until the IT Act is amended. If total corpus is ₹8 lakh or less, you can withdraw 100%. Deferral is allowed till age 85. Annuity income is always taxable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between NPS Tier 1 and Tier 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NPS Tier 1 is the mandatory pension account with a lock-in until age 60, with tax benefits under 80CCD. NPS Tier 2 is a voluntary savings account with no lock-in and full withdrawal flexibility, but offers no tax deduction (except for Central Government employees with a 3-year lock-in). Tier 1 must be opened first before Tier 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the asset allocation options in NPS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NPS offers two approaches: Active Choice (you decide the allocation across Equity/E, Corporate Bonds/C, Government Securities/G, and Alternative Assets/A — equity capped at 75% up to age 50, then reduces by 2.5% per year) and Auto Choice (Lifecycle Fund — aggressive, moderate, or conservative — automatically rebalances with age). The expected return depends on your allocation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is NPS better than PPF for retirement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NPS typically offers higher returns (10–12% for equity-heavy portfolios) vs PPF's fixed 7.1%, but NPS has market risk and mandatory annuity purchase at retirement (40% of corpus). PPF is fully tax-free on maturity (EEE), while only 60% of NPS corpus is tax-free. NPS is better for those seeking higher growth and can handle market volatility; PPF suits conservative investors wanting guaranteed, tax-free returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum contribution for NPS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For NPS Tier 1, the minimum contribution at account opening is ₹500, minimum per contribution is ₹500, and minimum per year is ₹1,000. For NPS Tier 2, the minimum at account opening is ₹1,000 and minimum per contribution is ₹250. There is no maximum contribution limit — you can invest as much as you want."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I partially withdraw from NPS before retirement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Partial withdrawals from NPS Tier 1 are allowed after 3 years of account opening for specific purposes: higher education or marriage of children, purchase or construction of a house, treatment of critical illness, disability, skill development, or settling a loan against your NPS account. You can withdraw up to 25% of your own contributions (not employer contributions). Under PFRDA's December 2025 rules, up to 4 partial withdrawals are allowed before age 60 (once every 4 years), and unlimited withdrawals after 60 (once every 3 years)."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="/index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="/investment/sip/">SIP</a>
+        <a href="/emi/">EMI</a>
+        <a href="/fd/">FD</a>
+        <a href="/schemes/ppf/">PPF</a>
+        <a href="/schemes/nps/" style="background:var(--green-light);color:var(--green-dark)">NPS</a>
+        <a href="/tax/">Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/investment/sip/">SIP Calculator</a>
+      <a href="/emi/">EMI Calculator</a>
+      <a href="/fd/">FD Calculator</a>
+      <a href="/schemes/ppf/">PPF Calculator</a>
+      <a href="/schemes/nps/">NPS Calculator</a>
+      <a href="/tax/">Tax Calculator</a>
+      <a href="/investment/swp/">SWP Calculator</a>
+      <a href="/investment/lumpsum/">Lumpsum</a>
+      <a href="/schemes/rd/">RD Calculator</a>
+      <a href="/schemes/ssy/">SSY Calculator</a>
+      <a href="/schemes/kvp/">KVP Calculator</a>
+      <a href="/schemes/pomis/">POMIS Calculator</a>
+    </div>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="/index.html">Home</a> › NPS Calculator</div>
+      <div class="nps-badge">🏛️ National Pension System · PFRDA Regulated · FY 2025-26</div>
+      <h1>NPS Calculator</h1>
+      <p>Calculate your retirement corpus, monthly pension &amp; tax savings under National Pension System</p>
+    </div>
+
+    <!-- TIER SWITCHER -->
+    <div style="margin-bottom:8px;font-size:13px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.8px">Account Type</div>
+    <div class="tier-switcher">
+      <button class="tier-btn active" id="tierBtn1" onclick="switchTier(1)">🔒 Tier 1 — Pension Account<br><span style="font-size:11px;font-weight:400">Lock-in till 60 · Tax benefits</span></button>
+      <button class="tier-btn" id="tierBtn2" onclick="switchTier(2)">💼 Tier 2 — Savings Account<br><span style="font-size:11px;font-weight:400">No lock-in · No tax benefit</span></button>
+    </div>
+
+    <div class="calc-layout">
+      <!-- INPUT PANEL -->
+      <div class="input-panel">
+        <h3 style="font-size:15px;font-weight:600;margin-bottom:20px">Investment Details</h3>
+
+        <!-- Monthly Contribution -->
+        <div class="input-group">
+          <div class="input-label"><span>Monthly Contribution</span><span class="input-value" id="contribLabel">₹5,000</span></div>
+          <input type="range" id="contribSlider" min="500" max="100000" step="500" value="5000"
+            oninput="syncInput(this,'contribNum','contribLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="contribNum" value="5000"
+            oninput="syncSlider(this,'contribSlider','contribLabel','₹',true);calculate()">
+          <div class="preset-row">
+            <button class="preset-btn" onclick="setPreset('contrib',2000)">₹2K</button>
+            <button class="preset-btn" onclick="setPreset('contrib',5000)">₹5K</button>
+            <button class="preset-btn" onclick="setPreset('contrib',10000)">₹10K</button>
+            <button class="preset-btn" onclick="setPreset('contrib',25000)">₹25K</button>
+          </div>
+        </div>
+
+        <!-- Current Age -->
+        <div class="input-group">
+          <div class="input-label"><span>Current Age</span><span class="input-value" id="ageLabel">30 years</span></div>
+          <input type="range" id="ageSlider" min="18" max="65" step="1" value="30"
+            oninput="syncInput(this,'ageNum','ageLabel','',false,' years');calculate()">
+          <input type="number" class="number-input" id="ageNum" value="30"
+            oninput="syncSlider(this,'ageSlider','ageLabel','',false,' years');calculate()">
+        </div>
+
+        <!-- Retirement Age -->
+        <div class="input-group">
+          <div class="input-label"><span>Retirement Age</span><span class="input-value" id="retireLabel">60 years</span></div>
+          <input type="range" id="retireSlider" min="40" max="70" step="1" value="60"
+            oninput="syncInput(this,'retireNum','retireLabel','',false,' years');calculate()">
+          <input type="number" class="number-input" id="retireNum" value="60"
+            oninput="syncSlider(this,'retireSlider','retireLabel','',false,' years');calculate()">
+        </div>
+
+        <!-- Expected Return -->
+        <div class="input-group">
+          <div class="input-label"><span>Expected Annual Return</span><span class="input-value" id="returnLabel">10%</span></div>
+          <input type="range" id="returnSlider" min="6" max="14" step="0.5" value="10"
+            oninput="syncInput(this,'returnNum','returnLabel','',false,'%');calculate()">
+          <input type="number" class="number-input" id="returnNum" value="10" step="0.5"
+            oninput="syncSlider(this,'returnSlider','returnLabel','',false,'%');calculate()">
+          <div class="preset-row">
+            <button class="preset-btn" onclick="setPreset('return',8)">8% Conservative</button>
+            <button class="preset-btn" onclick="setPreset('return',10)">10% Moderate</button>
+            <button class="preset-btn" onclick="setPreset('return',12)">12% Aggressive</button>
+          </div>
+        </div>
+
+        <!-- Annuity Rate -->
+        <div class="input-group">
+          <div class="input-label"><span>Annuity Rate <span class="info-tag">Pension %</span></span><span class="input-value" id="annuityLabel">6%</span></div>
+          <input type="range" id="annuitySlider" min="4" max="9" step="0.5" value="6"
+            oninput="syncInput(this,'annuityNum','annuityLabel','',false,'%');calculate()">
+          <input type="number" class="number-input" id="annuityNum" value="6" step="0.5"
+            oninput="syncSlider(this,'annuitySlider','annuityLabel','',false,'%');calculate()">
+        </div>
+
+        <!-- Tax section — Tier 1 only -->
+        <div id="taxSection">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--text-secondary);margin-top:8px">
+            Tax Savings <span style="font-size:12px;font-weight:400;color:var(--text-muted)">(Old Regime · Tier 1 only)</span>
+          </h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Enter annual amounts for tax calculation</div>
+          <div class="deduction-row">
+            <label>Annual Salary (Basic + DA)</label>
+            <input type="number" class="ded-input" id="dSalary" value="1000000" oninput="calculate()">
+          </div>
+          <div class="deduction-row">
+            <label>Income Tax Slab Rate</label>
+            <select class="ded-input" id="dSlab" onchange="calculate()" style="width:130px;cursor:pointer">
+              <option value="5">5%</option>
+              <option value="10">10%</option>
+              <option value="15">15%</option>
+              <option value="20">20%</option>
+              <option value="25">25%</option>
+              <option value="30" selected>30%</option>
+            </select>
+          </div>
+          <div class="deduction-row">
+            <label>Employer NPS Contribution % <span class="info-tag">Max 14%</span></label>
+            <input type="number" class="ded-input" id="dEmployer" value="14" min="0" max="14" oninput="calculate()">
+          </div>
+          <div class="deduction-row" style="border-bottom:none">
+            <label>Already used 80C limit?</label>
+            <select class="ded-input" id="d80cFull" onchange="calculate()" style="width:130px;cursor:pointer">
+              <option value="yes" selected>Yes (Full)</option>
+              <option value="no">No (Available)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="tier2Note" style="display:none;margin-top:12px;padding:12px 14px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border);font-size:13px;color:var(--text-secondary)">
+          ℹ️ Tier 2 is a voluntary savings account. No tax deduction available (except Central Govt employees with 3-year lock-in). Withdrawals are fully flexible.
+        </div>
+      </div>
+
+      <!-- RESULTS PANEL -->
+      <div class="result-panel">
+        <!-- Main result -->
+        <div class="result-card result-highlight">
+          <div class="result-label">Total Corpus at Retirement</div>
+          <div class="result-amount" id="corpusResult">₹0</div>
+          <div class="result-sub">
+            <div class="result-sub-item">
+              <span class="result-sub-label">Investment period</span>
+              <span class="result-sub-value" id="subYears">— yrs</span>
+            </div>
+            <div class="result-sub-item">
+              <span class="result-sub-label">Total invested</span>
+              <span class="result-sub-value" id="subInvested">—</span>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;opacity:0.85">Wealth Gained: <strong id="wealthGained">₹0</strong> &nbsp;|&nbsp; Returns: <strong id="returnsMultiple">0×</strong></div>
+        </div>
+
+        <!-- Corpus breakdown -->
+        <div class="result-card">
+          <div class="result-row"><span>Total Invested (Principal)</span><span id="totalInvested" style="font-family:var(--font-mono)">₹0</span></div>
+          <div class="result-row"><span>Returns Earned</span><span id="returnsEarned" style="font-family:var(--font-mono);color:var(--green-dark)">₹0</span></div>
+          <div class="result-row"><span style="font-weight:600">Total Corpus</span><span id="totalCorpus" style="font-family:var(--font-mono);font-weight:600">₹0</span></div>
+          <hr style="border:none;border-top:1px solid var(--border);margin:8px 0">
+          <div class="result-row"><span>🏦 Lump Sum (80% · PFRDA 2025)</span><span id="lumpSum" style="font-family:var(--font-mono);color:var(--green-dark)">₹0</span></div>
+          <div class="result-row" style="padding-left:12px;font-size:12px"><span style="color:var(--text-muted)">↳ Tax-free portion (60% of corpus)</span><span id="taxFreeLumpSum" style="font-family:var(--font-mono);color:var(--green-dark)">₹0</span></div>
+          <div class="result-row" style="padding-left:12px;font-size:12px"><span style="color:var(--text-muted)">↳ Taxable portion (20% · IT Act pending)</span><span id="taxableLumpSum" style="font-family:var(--font-mono);color:#e65100">₹0</span></div>
+          <div class="result-row"><span>📋 Annuity Purchase (min 20%)</span><span id="annuityCorpus" style="font-family:var(--font-mono)">₹0</span></div>
+
+          <!-- Pension split visual bar -->
+          <div class="pension-split" id="pensionBar">
+            <div class="pension-annuity" id="annuityBar" style="width:20%">20% Annuity</div>
+            <div class="pension-lumpsum" id="lumpsumBar" style="width:80%">80% Lump Sum</div>
+          </div>
+
+          <div class="result-row" style="margin-top:12px"><span>📅 Est. Monthly Pension</span><span id="monthlyPension" style="font-family:var(--font-mono);font-weight:700;color:var(--green-dark);font-size:16px">₹0</span></div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:2px;padding-left:2px">Based on <span id="annuityRateDisplay">6%</span> annuity rate on 20% corpus · Pension income taxable at slab rate</div>
+        </div>
+
+        <!-- Tax savings — Tier 1 only -->
+        <div id="taxSavingsCard" class="result-card">
+          <div style="font-weight:600;font-size:14px;margin-bottom:12px">💸 Annual Tax Savings</div>
+          <div class="tax-save-grid">
+            <div class="tax-save-box">
+              <div class="label">80CCD(1) — Employee</div>
+              <div class="value" id="tax80ccd1">₹0</div>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:2px">10% of salary · within 80C</div>
+            </div>
+            <div class="tax-save-box">
+              <div class="label">80CCD(1B) — Extra NPS</div>
+              <div class="value" id="tax80ccd1b">₹0</div>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:2px">Up to ₹50,000 · Over 80C</div>
+            </div>
+            <div class="tax-save-box">
+              <div class="label">80CCD(2) — Employer</div>
+              <div class="value" id="tax80ccd2">₹0</div>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:2px">Also in New Regime</div>
+            </div>
+          </div>
+          <div style="margin-top:12px;padding:10px 14px;background:var(--bg);border-radius:var(--radius-sm);display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:13px;font-weight:600">Total Annual Tax Saved</span>
+            <span id="totalTaxSaved" style="font-size:18px;font-weight:700;color:var(--green-dark);font-family:var(--font-mono)">₹0</span>
+          </div>
+        </div>
+
+        <!-- Asset allocation -->
+        <div class="result-card">
+          <div style="font-weight:600;font-size:14px;margin-bottom:12px">📊 Suggested Asset Allocation</div>
+          <div id="allocRows"></div>
+        </div>
+
+        <!-- Share bar -->
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`🏛️ My NPS Calculation\n💰 Monthly Contribution: ${document.getElementById('contribLabel').textContent}\n📅 Investment Period: ${document.getElementById('subYears').textContent}\n🏦 Total Corpus: ${document.getElementById('corpusResult').textContent}\n💵 Monthly Pension: ${document.getElementById('monthlyPension').textContent}\n\nCalculate your NPS 👇`)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg>
+              WhatsApp
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter(`NPS check: ₹${document.getElementById('contribNum').value}/month for ${document.getElementById('subYears').textContent} → Corpus: ${document.getElementById('corpusResult').textContent} · Monthly Pension: ${document.getElementById('monthlyPension').textContent} 🏛️ #NPS #RetirementPlanning`)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </button>
+            <button class="share-btn copylink" onclick="copyLink(this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Copy Link
+            </button>
+            <button class="share-btn download" onclick="downloadPDF('NPS Calculator')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Save PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- YEAR-BY-YEAR TABLE -->
+    <div class="year-table-wrap" style="margin-top:32px">
+      <div class="year-table-head" style="display:flex;justify-content:space-between;align-items:center">
+        <span>📅 Year-by-Year Corpus Growth</span>
+        <span style="font-size:12px;color:var(--text-muted)" id="tableNote">Tier 1 · Compounding annually</span>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="corpus-table">
+          <thead><tr><th>Year</th><th>Age</th><th>Annual Contribution</th><th>Total Invested</th><th>Corpus Value</th></tr></thead>
+          <tbody id="yearTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- KEY FACTS BOX -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px">
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">🔒 NPS Tier 1 — Key Rules</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          Min. contribution/year: <strong>₹1,000</strong><br>
+          Lock-in: <strong>Till age 60</strong><br>
+          Lump sum (non-govt, corpus &gt;₹12L): <strong>Up to 80%</strong><br>
+          Tax-free lump sum: <strong>60% of corpus</strong> (IT Act)<br>
+          Taxable lump sum: <strong>Extra 20%</strong> (IT Act pending)<br>
+          Annuity (mandatory, non-govt): <strong>Min 20% of corpus</strong><br>
+          Full withdrawal if corpus ≤: <strong>₹8 lakh</strong><br>
+          Partial withdrawal: <strong>Up to 25% · 4 times before 60</strong><br>
+          Deferral allowed till: <strong>Age 85</strong><br>
+          80CCD(1B) extra deduction: <strong>₹50,000/year</strong>
+        </div>
+      </div>
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">💼 NPS Tier 2 — Key Rules</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          Min. contribution: <strong>₹250</strong><br>
+          Lock-in: <strong>None (fully flexible)</strong><br>
+          Withdrawal: <strong>Any time, any amount</strong><br>
+          Tax benefit: <strong>None (general public)</strong><br>
+          Central Govt employees: <strong>3-yr lock-in, 80C benefit</strong><br>
+          Returns: <strong>Same as Tier 1 funds</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED CALCULATORS -->
+    <div class="related-section">
+      <div class="related-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Related Calculators
+      </div>
+      <div class="related-grid">
+        <a href="/schemes/ppf/" class="related-card">
+          <div class="related-icon" style="background:#f3e5f5;color:#7b1fa2">🛡️</div>
+          <div><div class="related-name">PPF Calculator</div><div class="related-desc">Tax-free PF returns</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/tax/" class="related-card">
+          <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">🏛️</div>
+          <div><div class="related-name">Tax Calculator</div><div class="related-desc">New vs Old Regime</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/investment/sip/" class="related-card">
+          <div class="related-icon" style="background:#e3f2fd;color:#1565c0">📈</div>
+          <div><div class="related-name">SIP Calculator</div><div class="related-desc">Monthly SIP returns</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/fd/" class="related-card">
+          <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+          <div><div class="related-name">FD Calculator</div><div class="related-desc">Fixed deposit returns</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/tax/salary/" class="related-card">
+          <div class="related-icon" style="background:#e8eaf6;color:#283593">💼</div>
+          <div><div class="related-name">Salary Calculator</div><div class="related-desc">CTC to in-hand</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="seo-section">
+      <hr class="seo-divider">
+
+      <div class="toc-box">
+        <div class="toc-title">On this page</div>
+        <ul class="toc-list">
+          <li><a href="#what-is-nps">What is NPS?</a></li>
+          <li><a href="#nps-tax-benefits">NPS Tax Benefits</a></li>
+          <li><a href="#nps-tier1-vs-tier2">Tier 1 vs Tier 2</a></li>
+          <li><a href="#nps-withdrawal-rules">Withdrawal Rules</a></li>
+          <li><a href="#nps-vs-ppf">NPS vs PPF</a></li>
+          <li><a href="#how-to-open-nps">How to Open NPS</a></li>
+          <li><a href="#frequently-asked-questions">FAQ</a></li>
+        </ul>
+      </div>
+
+      <h2 id="what-is-nps">What is NPS (National Pension System)?</h2>
+      <p>The National Pension System (NPS) is a voluntary, long-term retirement savings scheme launched by the Government of India and regulated by the Pension Fund Regulatory and Development Authority (PFRDA). It was introduced for Central Government employees in 2004 and opened to all Indian citizens in 2009. NPS invests your contributions in a mix of equities, corporate bonds, and government securities, offering market-linked returns that are typically higher than traditional pension schemes.</p>
+      <p>Any Indian citizen between 18 and 70 years of age can open an NPS account. NRIs are also eligible to invest in NPS, though OCI/PIO card holders are not. The minimum annual contribution for Tier 1 is ₹1,000, with no upper limit — making it accessible to a wide range of investors from salaried employees to self-employed professionals.</p>
+
+      <h2 id="nps-tax-benefits">NPS Tax Benefits — Three Layers of Deduction</h2>
+      <p>NPS offers one of the most powerful tax-saving structures available in India, especially under the Old Tax Regime. There are three distinct sections under which you can claim deductions:</p>
+      <table class="seo-table">
+        <thead><tr><th>Section</th><th>Who Benefits</th><th>Deduction Limit</th><th>Regime</th></tr></thead>
+        <tbody>
+          <tr><td>80CCD(1)</td><td>Employee's own contribution</td><td>10% of Basic+DA · Within ₹1.5L (80C)</td><td>Old Regime only</td></tr>
+          <tr><td>80CCD(1B)</td><td>Employee's own contribution (extra)</td><td>₹50,000 · Over and above 80C</td><td>Old Regime only</td></tr>
+          <tr><td>80CCD(2)</td><td>Employer's NPS contribution</td><td>14% of salary (Govt) / 10% (Private) · No cap</td><td>Both Old &amp; New Regime ✅</td></tr>
+        </tbody>
+      </table>
+      <p>The 80CCD(2) deduction for employer contributions is particularly powerful — it is available even under the New Tax Regime with no upper limit, making NPS one of the few instruments that provides tax benefits in both regimes.</p>
+
+      <h2 id="nps-tier1-vs-tier2">NPS Tier 1 vs Tier 2 — Comparison</h2>
+      <table class="seo-table">
+        <thead><tr><th>Feature</th><th>Tier 1 (Pension Account)</th><th>Tier 2 (Savings Account)</th></tr></thead>
+        <tbody>
+          <tr><td>Purpose</td><td>Retirement savings</td><td>Voluntary savings</td></tr>
+          <tr><td>Minimum to open</td><td>₹500</td><td>₹1,000 (Tier 1 must exist)</td></tr>
+          <tr><td>Minimum annual contribution</td><td>₹1,000</td><td>No minimum</td></tr>
+          <tr><td>Lock-in period</td><td>Till age 60</td><td>None</td></tr>
+          <tr><td>Withdrawals</td><td>25% partial (after 3 yrs, specific reasons)</td><td>Anytime, any amount</td></tr>
+          <tr><td>Tax deduction</td><td>80CCD(1), 80CCD(1B), 80CCD(2)</td><td>None (except Central Govt employees)</td></tr>
+          <tr class="highlight"><td>Best for</td><td>Retirement planning + tax saving</td><td>Flexible medium-term savings</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="nps-withdrawal-rules">NPS Withdrawal Rules at Retirement (Age 60)</h2>
+      <p>At retirement, you have the following options for your NPS corpus:</p>
+      <table class="seo-table">
+        <thead><tr><th>Situation</th><th>Lump Sum</th><th>Annuity</th><th>Tax</th></tr></thead>
+        <tbody>
+          <tr><td>Non-govt, corpus &gt; ₹12L (PFRDA 2025)</td><td>Up to <strong>80%</strong></td><td>Min <strong>20%</strong></td><td>60% tax-free · Extra 20% taxable (IT Act)</td></tr>
+          <tr><td>Non-govt, corpus ₹8L–₹12L</td><td>Up to ₹6L lump sum</td><td>Balance via annuity or SUR (6 yrs min)</td><td>60% of total corpus tax-free</td></tr>
+          <tr><td>Corpus ≤ ₹8 lakh</td><td>100% withdrawal allowed</td><td>Not mandatory</td><td>Fully tax-free</td></tr>
+          <tr><td>Govt employees (normal exit)</td><td>Up to 60%</td><td>Min 40%</td><td>60% tax-free</td></tr>
+          <tr><td>Deferral option</td><td>Stay invested till age 85</td><td>Defer annuity purchase</td><td>No tax on deferral</td></tr>
+          <tr class="highlight"><td>Premature exit (before 60)</td><td>Up to 20% lump sum</td><td>Min 80% for annuity</td><td>Lump sum taxable</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="nps-vs-ppf">NPS vs PPF — Which is Better for Retirement?</h2>
+      <table class="seo-table">
+        <thead><tr><th>Parameter</th><th>NPS</th><th>PPF</th></tr></thead>
+        <tbody>
+          <tr><td>Returns</td><td>10–12% (market-linked, equity)</td><td>7.1% (government fixed)</td></tr>
+          <tr><td>Risk</td><td>Market risk (equity portion)</td><td>No risk (government backed)</td></tr>
+          <tr><td>Lock-in</td><td>Till age 60</td><td>15 years (extendable)</td></tr>
+          <tr><td>Tax on maturity</td><td>60% tax-free · 20% taxable lump sum · 20% annuity (taxable income)</td><td>100% tax-free (EEE)</td></tr>
+          <tr><td>Extra deduction</td><td>₹50,000 via 80CCD(1B)</td><td>Within 80C ₹1.5L limit</td></tr>
+          <tr><td>Pension income</td><td>Yes (annuity)</td><td>No</td></tr>
+          <tr class="highlight"><td>Best for</td><td>Higher growth + pension income seekers</td><td>Risk-free, fully tax-free corpus</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="how-to-open-nps">How to Open an NPS Account</h2>
+      <p>You can open an NPS account online through the eNPS portal (enps.nsdl.com) or through any Point of Presence (POP) — which includes major banks like SBI, HDFC, ICICI, Axis, and others. For online registration, you need your PAN card, Aadhaar (for e-KYC), bank account details, and a PRAN (Permanent Retirement Account Number) will be issued instantly. The process takes under 20 minutes. Once registered, you can make contributions online via net banking, UPI, or debit card.</p>
+
+      <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is NPS and who can invest in it?<span class="faq-icon">+</span></button>
+          <div class="faq-a">NPS (National Pension System) is a voluntary, long-term retirement savings scheme regulated by PFRDA. It is open to all Indian citizens aged 18–70, including salaried employees, self-employed professionals, and NRIs. Contributions grow market-linked and the corpus is used to buy an annuity at retirement for regular pension income.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the tax benefit on NPS contributions?<span class="faq-icon">+</span></button>
+          <div class="faq-a">NPS offers three deduction layers: (1) Section 80CCD(1) — up to 10% of salary within the ₹1.5L 80C limit. (2) Section 80CCD(1B) — additional ₹50,000 exclusively for NPS, over and above 80C. (3) Section 80CCD(2) — employer NPS contribution up to <strong>14% of salary for all employees</strong> (both govt and private, effective FY 2025-26) is fully deductible with no upper cap, available even under the New Tax Regime.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What happens to NPS corpus at retirement?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Under PFRDA's December 2025 rules, non-government subscribers with corpus above ₹12 lakh can withdraw up to <strong>80% as a lump sum</strong> and must put at least 20% into an annuity for monthly pension. However, the Income Tax Act currently exempts only <strong>60% of the corpus</strong> as tax-free under Section 10(12A) — the extra 20% lump sum is taxable at slab rates until the IT Act is amended. If total corpus is ₹8 lakh or less, the full 100% can be withdrawn. You can also defer withdrawal till age 85. Annuity income is always taxable at your slab rate.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the difference between NPS Tier 1 and Tier 2?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Tier 1 is the mandatory pension account with lock-in until age 60 and full tax benefits under 80CCD. Tier 2 is a voluntary savings account with no lock-in and full withdrawal flexibility, but offers no tax deduction for general investors. Tier 1 must be opened before Tier 2.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What are the asset allocation options in NPS?<span class="faq-icon">+</span></button>
+          <div class="faq-a">NPS offers two approaches: Active Choice (you decide allocation across Equity/E, Corporate Bonds/C, Government Securities/G, and Alternative Assets/A — equity capped at 75% up to age 50) and Auto Choice (Lifecycle Fund — aggressive, moderate, or conservative — automatically rebalances with age).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is NPS better than PPF for retirement?<span class="faq-icon">+</span></button>
+          <div class="faq-a">NPS typically offers higher returns (10–12% for equity-heavy portfolios) vs PPF's fixed 7.1%, but NPS has market risk and mandatory annuity purchase at retirement. PPF is fully tax-free on maturity (EEE), while only 60% of NPS corpus is tax-free. NPS suits those seeking higher growth and pension income; PPF suits conservative investors wanting guaranteed, fully tax-free returns.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the minimum contribution for NPS?<span class="faq-icon">+</span></button>
+          <div class="faq-a">For NPS Tier 1: minimum at account opening is ₹500, minimum per contribution is ₹500, and minimum per year is ₹1,000. For Tier 2: minimum at account opening is ₹1,000 and minimum per contribution is ₹250. There is no maximum limit — you can invest as much as you want.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I partially withdraw from NPS before retirement?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes. Partial withdrawals from Tier 1 are allowed after 3 years for specific purposes: higher education or marriage of children, purchase or construction of a house, treatment of critical illness, disability, skill development, or settling a loan taken against your NPS account. You can withdraw up to 25% of your own contributions (not employer contributions). Under the updated PFRDA December 2025 rules, you can make up to <strong>4 partial withdrawals before age 60</strong> (once every 4 years), and unlimited withdrawals after 60 (once every 3 years).</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26 &amp; FY 2026-27.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="/investment/sip/">SIP Calculator</a></li>
+        <li><a href="/emi/">EMI Calculator</a></li>
+        <li><a href="/fd/">FD Calculator</a></li>
+        <li><a href="/schemes/ppf/">PPF Calculator</a></li>
+        <li><a href="/schemes/nps/">NPS Calculator</a></li>
+        <li><a href="/tax/">Income Tax</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="/investment/swp/">SWP Calculator</a></li>
+        <li><a href="/investment/lumpsum/">Lumpsum</a></li>
+        <li><a href="/schemes/rd/">RD Calculator</a></li>
+        <li><a href="/schemes/ssy/">SSY Calculator</a></li>
+        <li><a href="/schemes/kvp/">KVP Calculator</a></li>
+        <li><a href="/tax/salary/">Salary Calculator</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2026 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+  <script>
+    let activeTier = 1;
+
+    function switchTier(tier) {
+      activeTier = tier;
+      document.getElementById('tierBtn1').classList.toggle('active', tier === 1);
+      document.getElementById('tierBtn2').classList.toggle('active', tier === 2);
+      document.getElementById('taxSection').style.display = tier === 1 ? '' : 'none';
+      document.getElementById('tier2Note').style.display = tier === 2 ? '' : 'none';
+      document.getElementById('taxSavingsCard').style.display = tier === 1 ? '' : 'none';
+      document.getElementById('tableNote').textContent = `Tier ${tier} · Compounding annually`;
+      calculate();
+    }
+
+    function setPreset(type, val) {
+      if (type === 'contrib') {
+        document.getElementById('contribNum').value = val;
+        document.getElementById('contribSlider').value = val;
+        document.getElementById('contribLabel').textContent = '₹' + val.toLocaleString('en-IN');
+        updateSlider(document.getElementById('contribSlider'));
+      } else if (type === 'return') {
+        document.getElementById('returnNum').value = val;
+        document.getElementById('returnSlider').value = val;
+        document.getElementById('returnLabel').textContent = val + '%';
+        updateSlider(document.getElementById('returnSlider'));
+      }
+      calculate();
+    }
+
+    function calculate() {
+      const monthly = parseFloat(document.getElementById('contribNum').value) || 5000;
+      const currentAge = parseInt(document.getElementById('ageNum').value) || 30;
+      const retireAge = parseInt(document.getElementById('retireNum').value) || 60;
+      const annualReturn = parseFloat(document.getElementById('returnNum').value) / 100 || 0.10;
+      const annuityRate = parseFloat(document.getElementById('annuityNum').value) / 100 || 0.06;
+
+      const years = Math.max(0, retireAge - currentAge);
+      const months = years * 12;
+      const monthlyRate = annualReturn / 12;
+
+      // Future value of monthly contributions (SIP formula)
+      let corpus = 0;
+      if (monthlyRate > 0) {
+        corpus = monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) * (1 + monthlyRate);
+      } else {
+        corpus = monthly * months;
+      }
+
+      const totalInvested = monthly * months;
+      const returnsEarned = corpus - totalInvested;
+
+      // PFRDA Dec 2025: Non-govt subscribers (corpus >₹12L) can withdraw up to 80% lump sum, min 20% annuity
+      // Tax law (IT Act): only 60% is tax-free; extra 20% lump sum is taxable until IT Act is amended
+      const lumpSumPct = 0.80;  // PFRDA allows 80% lump sum (non-govt, corpus >₹12L)
+      const annuityPct = 0.20;  // Min 20% annuity (reduced from 40%)
+      const taxFreePct = 0.60;  // Only 60% is tax-free under IT Act Section 10(12A)
+      const lumpSum = corpus * lumpSumPct;
+      const annuityCorpus = corpus * annuityPct;
+      const taxFreeLumpSum = corpus * taxFreePct;
+      const monthlyPension = (annuityCorpus * annuityRate) / 12;
+
+      // Display
+      document.getElementById('corpusResult').textContent = fmt(corpus);
+      document.getElementById('subYears').textContent = years + ' yrs';
+      document.getElementById('subInvested').textContent = fmt(totalInvested);
+      document.getElementById('wealthGained').textContent = fmt(returnsEarned);
+      document.getElementById('returnsMultiple').textContent = totalInvested > 0 ? (corpus / totalInvested).toFixed(1) + '×' : '0×';
+      document.getElementById('totalInvested').textContent = fmtFull(totalInvested);
+      document.getElementById('returnsEarned').textContent = fmtFull(returnsEarned);
+      document.getElementById('totalCorpus').textContent = fmtFull(corpus);
+      document.getElementById('lumpSum').textContent = fmtFull(lumpSum);
+      document.getElementById('taxFreeLumpSum').textContent = fmtFull(taxFreeLumpSum);
+      document.getElementById('taxableLumpSum').textContent = fmtFull(lumpSum - taxFreeLumpSum);
+      document.getElementById('annuityCorpus').textContent = fmtFull(annuityCorpus);
+      document.getElementById('monthlyPension').textContent = fmtFull(monthlyPension);
+      document.getElementById('annuityRateDisplay').textContent = (annuityRate * 100).toFixed(1) + '%';
+
+      // Tax savings (Tier 1 only)
+      if (activeTier === 1) {
+        const salary = parseFloat(document.getElementById('dSalary').value) || 1000000;
+        const slab = parseFloat(document.getElementById('dSlab').value) / 100 || 0.30;
+        const employerPct = parseFloat(document.getElementById('dEmployer').value) / 100 || 0.10;
+        const used80c = document.getElementById('d80cFull').value === 'yes';
+
+        const annual = monthly * 12;
+
+        // 80CCD(1) — employee own contribution, within 80C (10% of salary cap)
+        const maxCCD1 = Math.min(salary * 0.10, 150000);
+        const ccd1Eligible = used80c ? 0 : Math.min(annual, maxCCD1);
+        const tax80ccd1Saved = ccd1Eligible * slab;
+
+        // 80CCD(1B) — extra ₹50,000 over 80C, only for NPS
+        const ccd1bEligible = Math.min(annual, 50000);
+        const tax80ccd1bSaved = ccd1bEligible * slab;
+
+        // 80CCD(2) — employer contribution
+        const employerAnnual = salary * employerPct;
+        const tax80ccd2Saved = employerAnnual * slab;
+
+        const totalSaved = tax80ccd1Saved + tax80ccd1bSaved + tax80ccd2Saved;
+
+        document.getElementById('tax80ccd1').textContent = fmtFull(tax80ccd1Saved);
+        document.getElementById('tax80ccd1b').textContent = fmtFull(tax80ccd1bSaved);
+        document.getElementById('tax80ccd2').textContent = fmtFull(tax80ccd2Saved);
+        document.getElementById('totalTaxSaved').textContent = fmtFull(totalSaved);
+      }
+
+      // Asset allocation suggestion based on age
+      renderAllocation(currentAge);
+
+      // Year-by-year table
+      renderYearTable(monthly, monthlyRate, currentAge, retireAge);
+    }
+
+    function renderAllocation(age) {
+      // Lifecycle moderate fund approximation
+      let equity = Math.max(25, 75 - Math.max(0, age - 50) * 2.5);
+      let corporate = Math.min(40, (100 - equity) * 0.55);
+      let govt = 100 - equity - corporate;
+
+      const allocs = [
+        { label: 'Equity (E)', pct: equity, color: '#00c853' },
+        { label: 'Corporate Bonds (C)', pct: corporate, color: '#2196f3' },
+        { label: 'Govt Securities (G)', pct: govt, color: '#ff9800' },
+      ];
+
+      const container = document.getElementById('allocRows');
+      container.innerHTML = allocs.map(a => `
+        <div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px">
+            <span>${a.label}</span><span style="font-weight:600;font-family:var(--font-mono)">${a.pct.toFixed(1)}%</span>
+          </div>
+          <div class="alloc-bar-wrap">
+            <div class="alloc-bar-fill" style="width:${a.pct}%;background:${a.color}"></div>
+          </div>
+        </div>`).join('');
+    }
+
+    function renderYearTable(monthly, monthlyRate, startAge, retireAge) {
+      const tbody = document.getElementById('yearTableBody');
+      const years = retireAge - startAge;
+      let corpus = 0;
+      let rows = '';
+
+      // Show every 5 years + final year
+      const checkpoints = new Set();
+      for (let y = 5; y <= years; y += 5) checkpoints.add(y);
+      checkpoints.add(years);
+
+      for (let y = 1; y <= years; y++) {
+        const prevCorpus = corpus;
+        // Grow existing corpus for 12 months and add monthly contributions
+        if (monthlyRate > 0) {
+          corpus = corpus * Math.pow(1 + monthlyRate, 12) +
+            monthly * ((Math.pow(1 + monthlyRate, 12) - 1) / monthlyRate) * (1 + monthlyRate);
+        } else {
+          corpus += monthly * 12;
+        }
+
+        if (checkpoints.has(y)) {
+          const invested = monthly * 12 * y;
+          rows += `<tr>
+            <td>Year ${y}</td>
+            <td>${startAge + y}</td>
+            <td>${fmtFull(monthly * 12)}</td>
+            <td>${fmtFull(invested)}</td>
+            <td>${fmtFull(corpus)}</td>
+          </tr>`;
+        }
+      }
+
+      tbody.innerHTML = rows || '<tr><td colspan="5" style="text-align:center;color:var(--text-muted)">Increase investment period to see projections</td></tr>';
+    }
+
+    // Init sliders
+    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+    calculate();
+  </script>
+</body>
+</html>

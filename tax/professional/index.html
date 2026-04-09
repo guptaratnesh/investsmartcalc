@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>Professional Tax Calculator India 2025-26 – State-wise PT Slabs | InvestSmartCalc</title>
+  <meta name="description" content="Professional tax calculator for all Indian states FY 2025-26. Calculate monthly & annual PT for Maharashtra, Karnataka, West Bengal, Andhra Pradesh, Tamil Nadu, Gujarat, Kerala and 15+ states. Includes gender-based slabs, exemptions and income tax deduction under Section 16(iii).">
+  <meta name="keywords" content="professional tax calculator India, PT calculator 2025-26, Maharashtra professional tax, Karnataka professional tax, professional tax slab rates, Section 16 professional tax deduction">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://investsmartcalc.com/tax/professional/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://investsmartcalc.com/tax/professional/">
+  <meta property="og:title" content="Professional Tax Calculator India 2025-26 – All States">
+  <meta property="og:description" content="Calculate professional tax for all Indian states. State-wise PT slabs, gender exemptions, age exemptions and Section 16(iii) income tax deduction. Free & accurate for FY 2025-26.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Professional Tax Calculator India 2025-26 – All States">
+  <meta name="twitter:description" content="Calculate professional tax for all Indian states FY 2025-26. Includes all exemptions and income tax deduction.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <style>
+    .pt-badge { display:inline-block; background:#e8eaf6; color:#283593; padding:3px 12px; border-radius:100px; font-size:12px; font-weight:600; margin-bottom:12px; }
+    [data-theme="dark"] .pt-badge { background:#1a1e3d; color:#7986cb; }
+
+    /* Select */
+    .select-input { width:100%; border:1.5px solid var(--border); border-radius:8px; padding:9px 12px; font-size:14px; font-family:var(--font); background:var(--bg-white); color:var(--text-primary); outline:none; cursor:pointer; }
+    .select-input:focus { border-color:var(--green); }
+    [data-theme="dark"] .select-input { background:#252a3a; color:#d0e0f0; border-color:#3a4a66; }
+
+    /* Checkbox row */
+    .check-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--border); }
+    .check-row:last-child { border-bottom:none; }
+    .check-row input[type=checkbox] { width:18px; height:18px; accent-color:var(--green); cursor:pointer; flex-shrink:0; }
+    .check-row label { font-size:14px; color:var(--text-secondary); cursor:pointer; line-height:1.4; }
+    [data-theme="dark"] .check-row { border-color:#2e3a52; }
+    [data-theme="dark"] .check-row label { color:#9aaab8; }
+
+    /* Deduction row */
+    .deduction-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--border); }
+    .deduction-row:last-child { border-bottom:none; }
+    .deduction-row label { font-size:14px; color:var(--text-secondary); }
+    .ded-input { width:130px; border:1.5px solid var(--border); border-radius:8px; padding:7px 10px; font-size:14px; font-family:var(--font-mono); text-align:right; outline:none; background:var(--bg-white); color:var(--text-primary); }
+    .ded-input:focus { border-color:var(--green); }
+    [data-theme="dark"] .ded-input { background:#252a3a; color:#d0e0f0; border-color:#3a4a66; }
+    [data-theme="dark"] .deduction-row { border-color:#2e3a52; }
+    [data-theme="dark"] .deduction-row label { color:#9aaab8; }
+
+    /* State info box */
+    .state-info { background:var(--bg); border-radius:var(--radius-sm); padding:12px 16px; margin-bottom:16px; border:1px solid var(--border); font-size:12px; color:var(--text-secondary); line-height:1.7; }
+    [data-theme="dark"] .state-info { background:#1a2236; border-color:#3a4a66; color:#8aa8c8; }
+    .state-info strong { color:var(--text-primary); }
+    [data-theme="dark"] .state-info strong { color:#d0e0f0; }
+
+    /* Exemption alert */
+    .exemption-alert { background:#e8f5e9; border:1.5px solid var(--green); border-radius:var(--radius-sm); padding:12px 16px; font-size:13px; color:#1b5e20; font-weight:600; display:none; }
+    [data-theme="dark"] .exemption-alert { background:#002a12; border-color:#00a152; color:#00e676; }
+
+    /* No-PT alert */
+    .no-pt-alert { background:#fff3e0; border:1.5px solid #ffb74d; border-radius:var(--radius-sm); padding:12px 16px; font-size:13px; color:#e65100; font-weight:600; display:none; }
+    [data-theme="dark"] .no-pt-alert { background:#2a1500; border-color:#bf6600; color:#ff9a5c; }
+
+    /* Monthly slab table */
+    .slab-grid { width:100%; border-collapse:collapse; font-size:13px; }
+    .slab-grid th { background:var(--bg); padding:7px 12px; text-align:left; color:var(--text-muted); font-weight:500; }
+    .slab-grid td { padding:7px 12px; border-bottom:1px solid var(--border); font-family:var(--font-mono); }
+    .slab-grid tr.active-slab td { background:var(--green-light); color:var(--green-dark); font-weight:700; }
+    [data-theme="dark"] .slab-grid th { background:#1a2236; color:#8aa8c8; }
+    [data-theme="dark"] .slab-grid td { border-color:#2e3a52; color:#9aaab8; background:#232b3e; }
+    [data-theme="dark"] .slab-grid tr.active-slab td { background:#002a14; color:#00e676; }
+
+    /* State comparison table */
+    .compare-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .compare-table th { background:var(--bg); padding:8px 12px; text-align:left; color:var(--text-muted); font-weight:500; }
+    .compare-table td { padding:8px 12px; border-bottom:1px solid var(--border); }
+    .compare-table tr.no-pt td { color:var(--text-muted); font-style:italic; }
+    .compare-table tr.highlight td { background:var(--green-light); color:var(--green-dark); font-weight:600; }
+    [data-theme="dark"] .compare-table th { background:#1a2236; color:#8aa8c8; }
+    [data-theme="dark"] .compare-table td { border-color:#2e3a52; color:#9aaab8; }
+    [data-theme="dark"] .compare-table tr.highlight td { background:#002a14; color:#00e676; }
+    [data-theme="dark"] .compare-table tr.no-pt td { color:#3a4a66; }
+
+    .info-tag { display:inline-block; background:#e3f2fd; color:#1565c0; font-size:11px; font-weight:600; padding:1px 7px; border-radius:100px; margin-left:4px; vertical-align:middle; }
+    [data-theme="dark"] .info-tag { background:#001a3d; color:#64b5f6; }
+
+    /* IT deduction box */
+    .it-box { background:linear-gradient(135deg,#e8f5e9,#f1f8e9); border:1.5px solid var(--green); border-radius:var(--radius-sm); padding:14px 16px; margin-top:12px; }
+    [data-theme="dark"] .it-box { background:linear-gradient(135deg,#002a12,#001a08); border-color:#00a152; }
+
+    /* Month breakdown */
+    .month-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:8px; }
+    .month-cell { background:var(--bg); border-radius:6px; padding:7px 6px; text-align:center; font-size:11px; border:1px solid var(--border); }
+    .month-cell .m-name { color:var(--text-muted); font-size:10px; }
+    .month-cell .m-val { font-weight:700; font-family:var(--font-mono); font-size:12px; color:var(--text-primary); margin-top:2px; }
+    .month-cell.special { border-color:var(--green); background:var(--green-light); }
+    .month-cell.special .m-val { color:var(--green-dark); }
+    .month-cell.zero .m-val { color:var(--text-muted); }
+    [data-theme="dark"] .month-cell { background:#1a2236; border-color:#2e3a52; }
+    [data-theme="dark"] .month-cell .m-val { color:#d0e0f0; }
+    [data-theme="dark"] .month-cell.special { border-color:var(--green); background:#002a14; }
+    [data-theme="dark"] .month-cell.special .m-val { color:#00e676; }
+    [data-theme="dark"] .month-cell.zero .m-val { color:#3a4a66; }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://investsmartcalc.com",
+  "logo": { "@type": "ImageObject", "url": "https://investsmartcalc.com/logo.png", "width": 200, "height": 60 },
+  "description": "Free online financial calculators for India. Income Tax, EPF, NPS, Professional Tax, Property Tax calculators. Updated for FY 2025-26."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Professional Tax Calculator India FY 2025-26",
+  "url": "https://investsmartcalc.com/professional-tax-calculator.html",
+  "description": "State-wise professional tax calculator for all Indian states FY 2025-26. Calculates monthly PT, annual PT, gender-based Maharashtra slabs, Karnataka February rule, half-yearly Kerala slabs, exemptions for seniors/disabled/armed forces and Section 16(iii) income tax deduction.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "provider": { "@type": "Organization", "name": "InvestSmartCalc", "url": "https://investsmartcalc.com" },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Professional Tax Calculator", "item": "https://investsmartcalc.com/professional-tax-calculator.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is professional tax and who pays it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional Tax (PT) is a state-level direct tax levied under Article 276 of the Indian Constitution on individuals earning income through employment, trade, or profession. It applies to salaried employees (deducted by employer), self-employed professionals like doctors, lawyers, and CAs, and business owners. It is applicable in 21 states and 1 UT. States like Delhi, Uttar Pradesh, Haryana, Punjab, Rajasthan, and Goa do not levy professional tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum professional tax in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The maximum professional tax any state can levy is ₹2,500 per year per person, as mandated by Article 276(2) of the Constitution of India. Most high-income states achieve this by charging ₹200 per month for 11 months and ₹300 in the 12th month (Maharashtra in March, Karnataka in February). No state can levy more than ₹2,500 in a financial year regardless of income level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim professional tax as a deduction in income tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but only under the Old Tax Regime. Professional tax paid is deductible from gross salary under Section 16(iii) of the Income Tax Act. This deduction is not available under the New Tax Regime (Section 115BAC). The full amount paid during the financial year is deductible — e.g., ₹2,500 PT at a 30% slab saves ₹750 in income tax, making the effective net cost only ₹1,750."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is exempt from professional tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common exemptions across states include: individuals aged 65 years and above (60+ in Karnataka), persons with permanent physical disability (40%+ disability), parents or guardians of mentally or physically challenged children, members of the armed forces (Central/State), individuals earning below the minimum threshold (varies by state), and women in Maharashtra earning up to ₹25,000/month. Specific exemptions vary by state and require documentary proof."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is special about Maharashtra professional tax for women?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maharashtra has gender-specific professional tax slabs. Women earning up to ₹25,000 per month are completely exempt from professional tax in Maharashtra. Women earning above ₹25,000 pay ₹200/month (₹300 in February/March). This is more favourable than the male slab where anyone earning above ₹10,000 pays ₹200/month. This exemption was introduced to encourage women's workforce participation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is professional tax ₹300 in February in Karnataka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Karnataka levies ₹200/month for 11 months (March to January) and ₹300 in February. This is because the constitutional maximum is ₹2,500/year (₹200 × 11 = ₹2,200 + ₹300 = ₹2,500). The same logic applies in Maharashtra, where ₹300 is collected in March instead of February. This is a common practice across states to comply with the ₹2,500 annual cap while maximising collection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is professional tax paid — by employee or employer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For salaried employees, the employer is responsible for deducting professional tax from monthly salary and depositing it with the state government. The employer obtains a Professional Tax Registration Certificate (PTRC) for this purpose. Self-employed professionals and business owners obtain a Professional Tax Enrollment Certificate (PTEC) and pay directly to the state. The deducted PT appears on the salary slip and Form 16 annually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the penalties for not paying professional tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Penalties vary by state. Typically: late payment fee of ₹100–₹300 per month, interest of 1–1.25% per month on the outstanding amount, and a penalty up to 50% of the total tax due in some states (e.g., West Bengal, Karnataka). Employers who fail to deduct or deposit PT face stricter penalties and can face legal action. Timely payment by the employer by the 30th of the following month (or state-specific date) is mandatory."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="/index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="/investment/sip/">SIP</a>
+        <a href="/emi/">EMI</a>
+        <a href="/tax/">Tax</a>
+        <a href="/schemes/epf/">EPF</a>
+        <a href="/schemes/nps/">NPS</a>
+        <a href="professional-tax-calculator.html" style="background:var(--green-light);color:var(--green-dark)">Prof. Tax</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/investment/sip/">SIP Calculator</a>
+      <a href="/emi/">EMI Calculator</a>
+      <a href="/tax/">Income Tax</a>
+      <a href="/schemes/epf/">EPF Calculator</a>
+      <a href="/schemes/nps/">NPS Calculator</a>
+      <a href="professional-tax-calculator.html">Professional Tax</a>
+      <a href="property-tax-calculator.html">Property Tax</a>
+      <a href="/tax/salary/">Salary Calculator</a>
+    </div>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="/index.html">Home</a> › Professional Tax Calculator</div>
+      <div class="pt-badge">📋 Professional Tax · FY 2025-26 · All 21 States · Article 276 · Max ₹2,500/year</div>
+      <h1>Professional Tax Calculator</h1>
+      <p>State-wise PT calculation · Gender &amp; age exemptions · Section 16(iii) income tax deduction</p>
+    </div>
+
+    <div class="calc-layout">
+      <!-- INPUT PANEL -->
+      <div class="input-panel">
+        <h3 style="font-size:15px;font-weight:600;margin-bottom:20px">Your Details</h3>
+
+        <!-- State -->
+        <div class="input-group">
+          <div class="input-label"><span>State of Employment</span></div>
+          <select class="select-input" id="stateSelect" onchange="calculate()">
+            <optgroup label="PT Applicable States">
+              <option value="maharashtra">Maharashtra (Mumbai, Pune, Nagpur…)</option>
+              <option value="karnataka">Karnataka (Bengaluru, Mysuru…)</option>
+              <option value="west_bengal">West Bengal (Kolkata…)</option>
+              <option value="andhra_pradesh">Andhra Pradesh</option>
+              <option value="telangana">Telangana (Hyderabad…)</option>
+              <option value="tamil_nadu">Tamil Nadu (Chennai, Coimbatore…)</option>
+              <option value="gujarat">Gujarat (Ahmedabad, Surat…)</option>
+              <option value="kerala">Kerala (Kochi, Thiruvananthapuram…)</option>
+              <option value="madhya_pradesh">Madhya Pradesh</option>
+              <option value="assam">Assam</option>
+              <option value="bihar">Bihar</option>
+              <option value="odisha">Odisha</option>
+              <option value="meghalaya">Meghalaya</option>
+              <option value="tripura">Tripura</option>
+              <option value="manipur">Manipur</option>
+              <option value="sikkim">Sikkim</option>
+              <option value="jharkhand">Jharkhand</option>
+              <option value="puducherry">Puducherry (UT)</option>
+            </optgroup>
+            <optgroup label="No Professional Tax">
+              <option value="no_pt_delhi">Delhi — No PT</option>
+              <option value="no_pt_up">Uttar Pradesh — No PT</option>
+              <option value="no_pt_haryana">Haryana — No PT</option>
+              <option value="no_pt_punjab">Punjab — No PT</option>
+              <option value="no_pt_rajasthan">Rajasthan — No PT</option>
+              <option value="no_pt_goa">Goa — No PT</option>
+              <option value="no_pt_hp">Himachal Pradesh — No PT</option>
+              <option value="no_pt_uk">Uttarakhand — No PT</option>
+              <option value="no_pt_jk">Jammu &amp; Kashmir — No PT</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- No PT alert -->
+        <div class="no-pt-alert" id="noPtAlert">
+          ✅ <span id="noPtStateName">This state</span> does not levy Professional Tax. Your monthly take-home is not reduced by any PT deduction.
+        </div>
+
+        <!-- Monthly Salary -->
+        <div class="input-group" id="salaryGroup">
+          <div class="input-label"><span>Gross Monthly Salary</span><span class="input-value" id="salaryLabel">₹30,000</span></div>
+          <input type="range" id="salarySlider" min="1000" max="200000" step="500" value="30000"
+            oninput="syncInput(this,'salaryNum','salaryLabel','₹',true);calculate()">
+          <input type="number" class="number-input" id="salaryNum" value="30000"
+            oninput="syncSlider(this,'salarySlider','salaryLabel','₹',true);calculate()">
+          <div class="preset-row">
+            <button class="preset-btn" onclick="setPreset(10000)">₹10K</button>
+            <button class="preset-btn" onclick="setPreset(25000)">₹25K</button>
+            <button class="preset-btn" onclick="setPreset(50000)">₹50K</button>
+            <button class="preset-btn" onclick="setPreset(100000)">₹1L</button>
+          </div>
+        </div>
+
+        <!-- Gender (for Maharashtra) -->
+        <div class="input-group" id="genderGroup">
+          <div class="input-label"><span>Gender <span class="info-tag" id="genderNote">Affects Maharashtra slabs</span></span></div>
+          <select class="select-input" id="genderSelect" onchange="calculate()">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <!-- Exemptions -->
+        <div style="margin-top:4px">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text-secondary)">Exemptions</h3>
+          <div class="check-row">
+            <input type="checkbox" id="exemptSenior" onchange="calculate()">
+            <label for="exemptSenior">Senior citizen (65+ years · 60+ in Karnataka) — Fully exempt</label>
+          </div>
+          <div class="check-row">
+            <input type="checkbox" id="exemptDisabled" onchange="calculate()">
+            <label for="exemptDisabled">Person with permanent disability (40%+) — Fully exempt</label>
+          </div>
+          <div class="check-row">
+            <input type="checkbox" id="exemptArmed" onchange="calculate()">
+            <label for="exemptArmed">Armed Forces personnel — Fully exempt</label>
+          </div>
+          <div class="check-row" style="border-bottom:none">
+            <input type="checkbox" id="exemptParent" onchange="calculate()">
+            <label for="exemptParent">Parent of mentally/physically challenged child — Exempt (select states)</label>
+          </div>
+        </div>
+
+        <!-- Exemption alert -->
+        <div class="exemption-alert" id="exemptionAlert" style="margin-top:12px">
+          ✅ Exemption applies — ₹0 Professional Tax for you
+        </div>
+
+        <!-- Income tax section -->
+        <div style="margin-top:16px">
+          <h3 style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--text-secondary)">Income Tax Saving <span class="info-tag">Old Regime only</span></h3>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:10px">PT is deductible under Section 16(iii) — Old Regime only. Not available in New Regime.</div>
+          <div class="deduction-row">
+            <label>Your Income Tax Slab (Old Regime)</label>
+            <select class="ded-input" id="itSlab" onchange="calculate()" style="cursor:pointer">
+              <option value="5">5%</option>
+              <option value="10">10%</option>
+              <option value="20">20%</option>
+              <option value="30" selected>30%</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS PANEL -->
+      <div class="result-panel">
+
+        <!-- Main result -->
+        <div class="result-card result-highlight">
+          <div class="result-label" id="resultLabel">Monthly Professional Tax</div>
+          <div class="result-amount" id="ptMonthly">₹0</div>
+          <div class="result-sub">
+            <div class="result-sub-item">
+              <span class="result-sub-label">Annual PT</span>
+              <span class="result-sub-value" id="subAnnual">—</span>
+            </div>
+            <div class="result-sub-item">
+              <span class="result-sub-label">% of salary</span>
+              <span class="result-sub-value" id="subPct">—</span>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;opacity:0.85">Take-home after PT: <strong id="takeHome">₹0</strong> &nbsp;|&nbsp; Annual PT: <strong id="annualPTDisplay">₹0</strong></div>
+        </div>
+
+        <!-- Slab breakdown -->
+        <div class="result-card" id="slabCard">
+          <div style="font-weight:600;font-size:14px;margin-bottom:10px">📊 State Tax Slab Breakdown</div>
+          <div class="state-info" id="stateInfoBox"></div>
+          <table class="slab-grid">
+            <thead><tr><th>Monthly Salary Range</th><th>Monthly PT</th><th>Status</th></tr></thead>
+            <tbody id="slabTableBody"></tbody>
+          </table>
+        </div>
+
+        <!-- Month-by-month breakdown -->
+        <div class="result-card" id="monthCard">
+          <div style="font-weight:600;font-size:14px;margin-bottom:4px">📅 Month-by-Month Deduction</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px" id="monthNote">Highlighted months have special higher rate</div>
+          <div class="month-grid" id="monthGrid"></div>
+        </div>
+
+        <!-- IT saving -->
+        <div class="it-box" id="itBox">
+          <div style="font-size:13px;font-weight:700;color:var(--green-dark);margin-bottom:8px">💸 Income Tax Saving (Old Regime — Sec. 16(iii))</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <div style="font-size:11px;color:var(--text-muted)">Annual PT paid (deductible)</div>
+              <div id="itDeductible" style="font-size:20px;font-weight:700;color:var(--green-dark);font-family:var(--font-mono)">₹0</div>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text-muted)">Tax saved @ <span id="itSlabDisplay">30%</span> slab</div>
+              <div id="itSaved" style="font-size:20px;font-weight:700;color:var(--green-dark);font-family:var(--font-mono)">₹0</div>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:12px;color:var(--text-secondary)">Net effective PT cost = Annual PT − Tax saved = <strong id="netCost">₹0</strong></div>
+          <div style="margin-top:4px;font-size:11px;color:var(--text-muted)">⚠️ Not available under New Tax Regime (Section 115BAC)</div>
+        </div>
+
+        <!-- Share bar -->
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`📋 My Professional Tax (FY 2025-26)\n💰 Monthly Salary: ${document.getElementById('salaryLabel').textContent}\n🏛️ State: ${document.getElementById('stateSelect').options[document.getElementById('stateSelect').selectedIndex].text.split('—')[0].trim()}\n💸 Monthly PT: ${document.getElementById('ptMonthly').textContent}\n📅 Annual PT: ${document.getElementById('annualPTDisplay').textContent}\n\nCalculate your PT 👇`)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg>
+              WhatsApp
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter(`Professional Tax FY 2025-26: ₹${document.getElementById('salaryNum').value}/month salary → Monthly PT: ${document.getElementById('ptMonthly').textContent} · Annual: ${document.getElementById('annualPTDisplay').textContent} 📋 #ProfessionalTax #India`)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </button>
+            <button class="share-btn copylink" onclick="copyLink(this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Copy Link
+            </button>
+            <button class="share-btn download" onclick="downloadPDF('Professional Tax Calculator FY 2025-26')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Save PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATE COMPARISON TABLE -->
+    <div class="year-table-wrap" style="margin-top:32px">
+      <div class="year-table-head" style="display:flex;justify-content:space-between;align-items:center">
+        <span>🏙️ State-wise PT Comparison — Your Salary: <span id="compareTitle">₹30,000/month</span></span>
+        <span style="font-size:12px;color:var(--text-muted)">Annual PT for Male employee</span>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="compare-table">
+          <thead><tr><th>State</th><th>Method</th><th>Your Annual PT</th><th>Max Annual PT</th><th>Special Rule</th></tr></thead>
+          <tbody id="compareTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- KEY RULES CARDS -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px">
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">📋 Key PT Rules — All States</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          Constitutional max: <strong>₹2,500/year (Article 276)</strong><br>
+          Applicable in: <strong>21 states + 1 UT</strong><br>
+          NOT applicable in: <strong>Delhi, UP, Haryana, Punjab, Rajasthan, Goa</strong><br>
+          Deductible under: <strong>Section 16(iii) — Old Regime only</strong><br>
+          Employer responsibility: <strong>Deduct &amp; deposit by 30th of next month</strong><br>
+          Annual return: <strong>By April 30</strong><br>
+          Late fee: <strong>₹100–₹300/month + 1.25% interest</strong><br>
+          Senior citizen exemption: <strong>65+ (60+ in Karnataka)</strong>
+        </div>
+      </div>
+      <div class="result-card" style="padding:18px">
+        <div style="font-weight:600;margin-bottom:10px;font-size:14px">⚡ State-specific Highlights</div>
+        <div style="font-size:12px;color:var(--text-secondary);line-height:1.9">
+          Maharashtra women: <strong>Exempt up to ₹25,000/month</strong><br>
+          Maharashtra special: <strong>₹300 in February/March</strong><br>
+          Karnataka revised: <strong>₹25,000 threshold (Apr 2025)</strong><br>
+          Karnataka special: <strong>₹300 in February</strong><br>
+          Kerala: <strong>Half-yearly payment (not monthly)</strong><br>
+          Bihar: <strong>Annual slab (not monthly)</strong><br>
+          Andhra/Telangana: <strong>Same slabs, ₹150–₹200/month</strong><br>
+          Tamil Nadu: <strong>₹208/month + ₹212 last month</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED CALCULATORS -->
+    <div class="related-section">
+      <div class="related-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Related Calculators
+      </div>
+      <div class="related-grid">
+        <a href="/tax/" class="related-card">
+          <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📋</div>
+          <div><div class="related-name">Income Tax Calculator</div><div class="related-desc">New vs Old Regime</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/tax/salary/" class="related-card">
+          <div class="related-icon" style="background:#e8eaf6;color:#283593">💼</div>
+          <div><div class="related-name">Salary Calculator</div><div class="related-desc">CTC to in-hand</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="/schemes/epf/" class="related-card">
+          <div class="related-icon" style="background:#fce4ec;color:#880e4f">🏦</div>
+          <div><div class="related-name">EPF Calculator</div><div class="related-desc">PF corpus & interest</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+        <a href="property-tax-calculator.html" class="related-card">
+          <div class="related-icon" style="background:#fff3e0;color:#e65100">🏠</div>
+          <div><div class="related-name">Property Tax</div><div class="related-desc">Municipal house tax</div></div>
+          <span class="related-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="seo-section">
+      <hr class="seo-divider">
+      <div class="toc-box">
+        <div class="toc-title">On this page</div>
+        <ul class="toc-list">
+          <li><a href="#what-is-professional-tax">What is Professional Tax?</a></li>
+          <li><a href="#state-wise-slabs">State-wise PT Slabs</a></li>
+          <li><a href="#maharashtra-pt">Maharashtra PT Rates</a></li>
+          <li><a href="#karnataka-pt">Karnataka PT Rates</a></li>
+          <li><a href="#pt-exemptions">Exemptions</a></li>
+          <li><a href="#pt-income-tax-deduction">Income Tax Deduction</a></li>
+          <li><a href="#states-no-pt">States with No PT</a></li>
+          <li><a href="#frequently-asked-questions">FAQ</a></li>
+        </ul>
+      </div>
+
+      <h2 id="what-is-professional-tax">What is Professional Tax?</h2>
+      <p>Professional Tax (PT) is a state-level direct tax levied under Article 276(2) of the Indian Constitution on individuals earning income through employment, business, or profession. Despite the name, it is not limited to "professionals" — it applies equally to all salaried employees. It is the only tax in India for which the Constitution itself caps the maximum amount: no state can levy more than <strong>₹2,500 per year</strong> per person.</p>
+      <p>PT is currently applicable in 21 states and 1 Union Territory (Puducherry). The employer is responsible for deducting PT from employees' monthly salaries and remitting it to the state government. Self-employed professionals and business owners pay directly through a PT Enrollment Certificate (PTEC).</p>
+
+      <h2 id="state-wise-slabs">State-wise Professional Tax Slabs — FY 2025-26</h2>
+      <table class="seo-table">
+        <thead><tr><th>State</th><th>Min. Threshold</th><th>Monthly PT</th><th>Annual PT (Max)</th><th>Special Rule</th></tr></thead>
+        <tbody>
+          <tr><td>Maharashtra</td><td>₹7,500/month (Male)</td><td>₹175–₹200</td><td>₹2,500</td><td>₹300 in Feb/Mar · Women exempt ≤₹25K</td></tr>
+          <tr><td>Karnataka</td><td>₹25,000/month</td><td>₹200</td><td>₹2,500</td><td>₹300 in February (revised Apr 2025)</td></tr>
+          <tr><td>West Bengal</td><td>₹10,000/month</td><td>₹110–₹208</td><td>₹2,500</td><td>₹212 in last month</td></tr>
+          <tr><td>Andhra Pradesh</td><td>₹15,001/month</td><td>₹150–₹200</td><td>₹2,400</td><td>3 slabs</td></tr>
+          <tr><td>Telangana</td><td>₹15,001/month</td><td>₹150–₹200</td><td>₹2,400</td><td>Same as AP</td></tr>
+          <tr><td>Tamil Nadu</td><td>₹21,001/month</td><td>₹208</td><td>₹2,500</td><td>₹212 in last month</td></tr>
+          <tr><td>Gujarat</td><td>₹12,000/month</td><td>₹200</td><td>₹2,400</td><td>Flat ₹200 above threshold</td></tr>
+          <tr><td>Kerala</td><td>₹2,000/half-year</td><td>Half-yearly</td><td>₹2,500</td><td>6-monthly payment</td></tr>
+          <tr><td>Madhya Pradesh</td><td>₹18,751/month</td><td>₹208</td><td>₹2,500</td><td>₹212 in last month</td></tr>
+          <tr class="highlight"><td>Bihar</td><td>₹3,00,001/year</td><td>Annual slab</td><td>₹2,500</td><td>Annual payment, not monthly</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="maharashtra-pt">Maharashtra Professional Tax — FY 2025-26</h2>
+      <p>Maharashtra has India's most detailed PT structure with separate slabs for male and female employees. The annual target is ₹2,500, collected over 12 months with a higher deduction in one special month.</p>
+      <table class="seo-table">
+        <thead><tr><th>Monthly Salary</th><th>Male PT/Month</th><th>Female PT/Month</th></tr></thead>
+        <tbody>
+          <tr><td>Up to ₹7,500</td><td>Nil</td><td>Nil</td></tr>
+          <tr><td>₹7,501 – ₹10,000</td><td>₹175</td><td>Nil</td></tr>
+          <tr><td>₹10,001 – ₹25,000</td><td>₹200 (₹300 in Feb/Mar)</td><td>Nil</td></tr>
+          <tr class="highlight"><td>Above ₹25,000</td><td>₹200 (₹300 in Feb/Mar)</td><td>₹200 (₹300 in Feb/Mar)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="karnataka-pt">Karnataka Professional Tax — FY 2025-26 (Revised April 2025)</h2>
+      <p>Karnataka revised its PT structure effective April 1, 2025. The threshold was raised significantly, and the special February rate was introduced to hit the ₹2,500 annual cap.</p>
+      <table class="seo-table">
+        <thead><tr><th>Monthly Salary</th><th>Monthly PT</th><th>Annual Total</th></tr></thead>
+        <tbody>
+          <tr><td>Up to ₹24,999</td><td>Nil</td><td>₹0</td></tr>
+          <tr class="highlight"><td>₹25,000 and above</td><td>₹200 (₹300 in February)</td><td>₹2,500</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="pt-exemptions">Professional Tax Exemptions</h2>
+      <table class="seo-table">
+        <thead><tr><th>Exemption Category</th><th>States</th><th>Condition</th></tr></thead>
+        <tbody>
+          <tr><td>Senior Citizens (65+)</td><td>All PT states</td><td>Age 65+ (60+ in Karnataka)</td></tr>
+          <tr><td>Persons with Disability</td><td>All PT states</td><td>Permanent disability ≥40%</td></tr>
+          <tr><td>Armed Forces Personnel</td><td>All PT states</td><td>Serving Central/State Armed Forces</td></tr>
+          <tr><td>Women (income limit)</td><td>Maharashtra</td><td>Monthly salary ≤₹25,000</td></tr>
+          <tr><td>Parents of Disabled Children</td><td>Maharashtra, Tamil Nadu, others</td><td>With documentary proof</td></tr>
+          <tr class="highlight"><td>Badminton/Other Sports Champions</td><td>Select states</td><td>International award winners</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="pt-income-tax-deduction">Professional Tax and Income Tax — Section 16(iii)</h2>
+      <p>Professional tax paid during the year is allowed as a <strong>full deduction from gross salary</strong> under Section 16(iii) of the Income Tax Act when computing income from salaries. This is an automatic deduction — you don't need to separately claim it. Important: this deduction is <strong>only available under the Old Tax Regime</strong>. Under the New Tax Regime (Section 115BAC), Section 16(iii) deduction for professional tax is not available.</p>
+      <table class="seo-table">
+        <thead><tr><th>Annual PT Paid</th><th>IT Saved @ 20% Slab</th><th>IT Saved @ 30% Slab</th><th>Net Effective PT Cost (30%)</th></tr></thead>
+        <tbody>
+          <tr><td>₹1,200</td><td>₹240</td><td>₹360</td><td>₹840</td></tr>
+          <tr><td>₹2,400</td><td>₹480</td><td>₹720</td><td>₹1,680</td></tr>
+          <tr class="highlight"><td>₹2,500 (max)</td><td>₹500</td><td>₹750</td><td>₹1,750</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="states-no-pt">States Where Professional Tax is NOT Applicable</h2>
+      <p>Professional tax is not levied in the following states and Union Territories: Delhi, Uttar Pradesh, Haryana, Punjab, Rajasthan, Goa, Himachal Pradesh, Uttarakhand, Jammu &amp; Kashmir (now UT), Arunachal Pradesh, Chandigarh, Dadra &amp; Nagar Haveli, Daman &amp; Diu, Lakshadweep, Mizoram, and Nagaland. Employees in these states have no PT deducted and cannot claim Section 16(iii) deduction since nothing is paid.</p>
+
+      <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is professional tax and who pays it?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Professional Tax (PT) is a state-level direct tax levied under Article 276 of the Constitution on individuals earning through employment, trade, or profession. It applies to all salaried employees (deducted by employer), self-employed professionals, and business owners in 21 states. States like Delhi, UP, Haryana, Punjab, Rajasthan, and Goa do not levy it.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the maximum professional tax in India?<span class="faq-icon">+</span></button>
+          <div class="faq-a">The constitutional maximum is ₹2,500 per year per person under Article 276(2). No state can exceed this. Most high-income states hit this cap by charging ₹200/month for 11 months and ₹300 in the 12th (Maharashtra in February/March, Karnataka in February).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I claim professional tax as a deduction in income tax?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes — but only under the Old Tax Regime. PT is deductible from gross salary under Section 16(iii) of the Income Tax Act. This deduction is NOT available under the New Tax Regime (Section 115BAC). At a 30% slab, ₹2,500 annual PT saves ₹750 in income tax, making the effective net cost only ₹1,750.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Who is exempt from professional tax?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Common exemptions: individuals aged 65+ (60+ in Karnataka), persons with permanent disability (40%+), members of the Armed Forces, parents of mentally/physically challenged children, and women in Maharashtra earning ≤₹25,000/month. Proof of eligibility must be provided to the employer or state authority.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is special about Maharashtra professional tax for women?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Maharashtra has gender-specific slabs. Women earning up to ₹25,000/month are completely exempt from professional tax — a higher threshold than men (₹10,000). Women earning above ₹25,000 pay ₹200/month (₹300 in the special month). This was introduced to promote women's workforce participation.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Why is professional tax ₹300 in February in Karnataka?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Karnataka levies ₹200/month for 11 months and ₹300 in February to total exactly ₹2,500/year — the constitutional maximum. Maharashtra does the same in February/March. This is a common design across states to maximise collection while staying within the ₹2,500 annual cap.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is professional tax paid — by employee or employer?<span class="faq-icon">+</span></button>
+          <div class="faq-a">For salaried employees, the employer deducts PT from monthly salary and deposits it with the state government using a Professional Tax Registration Certificate (PTRC). The deduction appears on the salary slip and Form 16. Self-employed individuals pay directly using a Professional Tax Enrollment Certificate (PTEC).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What are the penalties for not paying professional tax?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Late payment typically attracts ₹100–₹300 per month as late fee, plus 1–1.25% interest per month on outstanding amounts. West Bengal and Karnataka can levy penalties up to 50% of the total tax due. Employers face stricter action for non-deduction. Timely payment by the 30th of the following month is mandatory in most states.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="/tax/">Income Tax</a></li>
+        <li><a href="professional-tax-calculator.html">Professional Tax</a></li>
+        <li><a href="property-tax-calculator.html">Property Tax</a></li>
+        <li><a href="/schemes/epf/">EPF Calculator</a></li>
+        <li><a href="/schemes/nps/">NPS Calculator</a></li>
+        <li><a href="/investment/sip/">SIP Calculator</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="/emi/">EMI Calculator</a></li>
+        <li><a href="/fd/">FD Calculator</a></li>
+        <li><a href="/schemes/ppf/">PPF Calculator</a></li>
+        <li><a href="/schemes/rd/">RD Calculator</a></li>
+        <li><a href="/schemes/ssy/">SSY Calculator</a></li>
+        <li><a href="/tax/salary/">Salary Calculator</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2026 InvestSmartCalc · For informational purposes only · Verify with state PT authority</span>
+        <div class="footer-bottom-links">
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+  <script>
+    // ── STATE DATA ────────────────────────────────────────────────────────────
+    // Each state: { name, info, slabs, specialMonth (1-indexed), specialAmt, payFreq, maxAnnual }
+    // slabs: [{ min, max, monthly }] — monthly for regular months
+    const STATE_DATA = {
+      maharashtra: {
+        name: 'Maharashtra',
+        info: 'Gender-specific slabs. Men: ₹175 (₹7.5K–₹10K), ₹200 above ₹10K. Women: Exempt up to ₹25K, ₹200 above ₹25K. Special month: ₹300 in February/March to reach ₹2,500 annual cap.',
+        payFreq: 'monthly',
+        specialMonth: 2, // February (0-indexed: 0=Apr…11=Mar) → index 11 = March
+        maxAnnual: 2500,
+        getMaleSlabs: () => [
+          { label:'Up to ₹7,500', min:0, max:7500, monthly:0 },
+          { label:'₹7,501 – ₹10,000', min:7501, max:10000, monthly:175 },
+          { label:'Above ₹10,000', min:10001, max:Infinity, monthly:200 },
+        ],
+        getFemaleSlabs: () => [
+          { label:'Up to ₹10,000', min:0, max:10000, monthly:0 },
+          { label:'₹10,001 – ₹25,000', min:10001, max:25000, monthly:0 },
+          { label:'Above ₹25,000', min:25001, max:Infinity, monthly:200 },
+        ],
+      },
+      karnataka: {
+        name: 'Karnataka',
+        info: 'Revised April 2025. Threshold raised to ₹25,000/month. ₹200/month for 11 months + ₹300 in February = ₹2,500/year. Exemption at age 60+.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹24,999', min:0, max:24999, monthly:0 },
+          { label:'₹25,000 and above', min:25000, max:Infinity, monthly:200 },
+        ],
+        specialMonthIndex: 10, // February in financial year (Apr=0, Feb=10)
+        specialAmt: 300,
+      },
+      west_bengal: {
+        name: 'West Bengal',
+        info: 'Multiple slabs based on monthly salary. Annual total ₹2,500 achieved via ₹208/month × 11 + ₹212 in March.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹10,000', min:0, max:10000, monthly:0 },
+          { label:'₹10,001 – ₹15,000', min:10001, max:15000, monthly:110 },
+          { label:'₹15,001 – ₹25,000', min:15001, max:25000, monthly:130 },
+          { label:'₹25,001 – ₹40,000', min:25001, max:40000, monthly:150 },
+          { label:'Above ₹40,000', min:40001, max:Infinity, monthly:208 },
+        ],
+        specialMonthIndex: 11, // March
+        specialAmt: 212,
+      },
+      andhra_pradesh: {
+        name: 'Andhra Pradesh',
+        info: 'Three-slab structure. Exempt up to ₹15,000/month. ₹150 from ₹15,001–₹20,000; ₹200 above ₹20,000. Annual max ₹2,400.',
+        payFreq: 'monthly',
+        maxAnnual: 2400,
+        slabs: [
+          { label:'Up to ₹15,000', min:0, max:15000, monthly:0 },
+          { label:'₹15,001 – ₹20,000', min:15001, max:20000, monthly:150 },
+          { label:'Above ₹20,000', min:20001, max:Infinity, monthly:200 },
+        ],
+      },
+      telangana: {
+        name: 'Telangana',
+        info: 'Same as Andhra Pradesh. Three-slab structure. Exempt up to ₹15,000/month. Annual max ₹2,400.',
+        payFreq: 'monthly',
+        maxAnnual: 2400,
+        slabs: [
+          { label:'Up to ₹15,000', min:0, max:15000, monthly:0 },
+          { label:'₹15,001 – ₹20,000', min:15001, max:20000, monthly:150 },
+          { label:'Above ₹20,000', min:20001, max:Infinity, monthly:200 },
+        ],
+      },
+      tamil_nadu: {
+        name: 'Tamil Nadu',
+        info: 'Exempt up to ₹21,000/month. ₹208/month for 11 months + ₹212 in the last month = ₹2,500/year.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹21,000', min:0, max:21000, monthly:0 },
+          { label:'Above ₹21,000', min:21001, max:Infinity, monthly:208 },
+        ],
+        specialMonthIndex: 11, // March
+        specialAmt: 212,
+      },
+      gujarat: {
+        name: 'Gujarat',
+        info: 'Simple flat rate. ₹0 for salary below ₹12,000; ₹200/month flat for salary ≥₹12,000. Annual max ₹2,400.',
+        payFreq: 'monthly',
+        maxAnnual: 2400,
+        slabs: [
+          { label:'Up to ₹11,999', min:0, max:11999, monthly:0 },
+          { label:'₹12,000 and above', min:12000, max:Infinity, monthly:200 },
+        ],
+      },
+      kerala: {
+        name: 'Kerala',
+        info: 'Half-yearly payment (not monthly). Slabs based on half-yearly salary. Max ₹1,250 per half-year (₹2,500/year).',
+        payFreq: 'halfyearly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹11,999/half-yr', min:0, max:11999, monthly:0 },
+          { label:'₹12,000 – ₹17,999', min:12000, max:17999, monthly:120 },
+          { label:'₹18,000 – ₹29,999', min:18000, max:29999, monthly:180 },
+          { label:'₹30,000 – ₹44,999', min:30000, max:44999, monthly:300 },
+          { label:'₹45,000 – ₹59,999', min:45000, max:59999, monthly:450 },
+          { label:'₹60,000 – ₹74,999', min:60000, max:74999, monthly:600 },
+          { label:'₹75,000 – ₹99,999', min:75000, max:99999, monthly:750 },
+          { label:'₹1,00,000 – ₹1,24,999', min:100000, max:124999, monthly:1000 },
+          { label:'₹1,25,000 and above', min:125000, max:Infinity, monthly:1250 },
+        ],
+      },
+      madhya_pradesh: {
+        name: 'Madhya Pradesh',
+        info: 'Exempt up to ₹18,750/month. ₹208/month for 11 months + ₹212 in last month = ₹2,500/year.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹18,750', min:0, max:18750, monthly:0 },
+          { label:'Above ₹18,750', min:18751, max:Infinity, monthly:208 },
+        ],
+        specialMonthIndex: 11,
+        specialAmt: 212,
+      },
+      assam: {
+        name: 'Assam',
+        info: 'Multiple slabs. Exempt below ₹10,000/month. Max ₹2,500/year.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹9,999', min:0, max:9999, monthly:0 },
+          { label:'₹10,000 – ₹14,999', min:10000, max:14999, monthly:150 },
+          { label:'₹15,000 – ₹24,999', min:15000, max:24999, monthly:180 },
+          { label:'Above ₹25,000', min:25000, max:Infinity, monthly:208 },
+        ],
+        specialMonthIndex: 11,
+        specialAmt: 212,
+      },
+      bihar: {
+        name: 'Bihar',
+        info: 'Annual slab-based (not monthly). Tax paid once a year based on annual income.',
+        payFreq: 'annual',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹3,00,000/yr', min:0, max:300000, monthly:0 },
+          { label:'₹3,00,001 – ₹5,00,000/yr', min:300001, max:500000, monthly:1000 },
+          { label:'₹5,00,001 – ₹10,00,000/yr', min:500001, max:1000000, monthly:2000 },
+          { label:'Above ₹10,00,000/yr', min:1000001, max:Infinity, monthly:2500 },
+        ],
+      },
+      odisha: {
+        name: 'Odisha',
+        info: 'Exempt below ₹5,000/month. Multiple slabs up to ₹208/month.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹4,999', min:0, max:4999, monthly:0 },
+          { label:'₹5,000 – ₹9,999', min:5000, max:9999, monthly:50 },
+          { label:'₹10,000 – ₹14,999', min:10000, max:14999, monthly:100 },
+          { label:'₹15,000 – ₹19,999', min:15000, max:19999, monthly:150 },
+          { label:'Above ₹20,000', min:20000, max:Infinity, monthly:208 },
+        ],
+        specialMonthIndex: 11,
+        specialAmt: 212,
+      },
+      meghalaya: {
+        name: 'Meghalaya',
+        info: 'Annual slab structure. Tax based on annual gross income.',
+        payFreq: 'annual',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹4,00,000/yr', min:0, max:400000, monthly:0 },
+          { label:'₹4,00,001 – ₹7,50,000/yr', min:400001, max:750000, monthly:1000 },
+          { label:'₹7,50,001 – ₹10,00,000/yr', min:750001, max:1000000, monthly:2000 },
+          { label:'Above ₹10,00,000/yr', min:1000001, max:Infinity, monthly:2500 },
+        ],
+      },
+      tripura: {
+        name: 'Tripura',
+        info: 'Exempt below ₹7,500/month. ₹208/month for 11 months + ₹212 last month.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹7,500', min:0, max:7500, monthly:0 },
+          { label:'₹7,501 – ₹15,000', min:7501, max:15000, monthly:150 },
+          { label:'Above ₹15,000', min:15001, max:Infinity, monthly:208 },
+        ],
+        specialMonthIndex: 11,
+        specialAmt: 212,
+      },
+      manipur: {
+        name: 'Manipur',
+        info: '₹208/month for 11 months + ₹212 in the last month = ₹2,500/year.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹7,500', min:0, max:7500, monthly:0 },
+          { label:'Above ₹7,500', min:7501, max:Infinity, monthly:208 },
+        ],
+        specialMonthIndex: 11,
+        specialAmt: 212,
+      },
+      sikkim: {
+        name: 'Sikkim',
+        info: 'Annual slab. Tax paid annually based on gross annual income.',
+        payFreq: 'annual',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹1,20,000/yr', min:0, max:120000, monthly:0 },
+          { label:'₹1,20,001 – ₹2,00,000/yr', min:120001, max:200000, monthly:500 },
+          { label:'₹2,00,001 – ₹3,00,000/yr', min:200001, max:300000, monthly:1200 },
+          { label:'Above ₹3,00,000/yr', min:300001, max:Infinity, monthly:2500 },
+        ],
+      },
+      jharkhand: {
+        name: 'Jharkhand',
+        info: 'Exempt below ₹10,000/month. Multiple slabs up to ₹208/month.',
+        payFreq: 'monthly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹9,999', min:0, max:9999, monthly:0 },
+          { label:'₹10,000 – ₹25,000', min:10000, max:25000, monthly:100 },
+          { label:'Above ₹25,000', min:25001, max:Infinity, monthly:208 },
+        ],
+        specialMonthIndex: 11,
+        specialAmt: 212,
+      },
+      puducherry: {
+        name: 'Puducherry',
+        info: 'UT with PT. Half-yearly slabs similar to Tamil Nadu.',
+        payFreq: 'halfyearly',
+        maxAnnual: 2500,
+        slabs: [
+          { label:'Up to ₹21,000/half-yr', min:0, max:21000, monthly:0 },
+          { label:'₹21,001 – ₹30,000/half-yr', min:21001, max:30000, monthly:250 },
+          { label:'Above ₹30,000/half-yr', min:30001, max:Infinity, monthly:1250 },
+        ],
+      },
+    };
+
+    const NO_PT_STATES = {
+      no_pt_delhi: 'Delhi',
+      no_pt_up: 'Uttar Pradesh',
+      no_pt_haryana: 'Haryana',
+      no_pt_punjab: 'Punjab',
+      no_pt_rajasthan: 'Rajasthan',
+      no_pt_goa: 'Goa',
+      no_pt_hp: 'Himachal Pradesh',
+      no_pt_uk: 'Uttarakhand',
+      no_pt_jk: 'Jammu & Kashmir',
+    };
+
+    const MONTHS = ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar'];
+
+    function setPreset(val) {
+      document.getElementById('salaryNum').value = val;
+      document.getElementById('salarySlider').value = val;
+      document.getElementById('salaryLabel').textContent = '₹' + val.toLocaleString('en-IN');
+      updateSlider(document.getElementById('salarySlider'));
+      calculate();
+    }
+
+    function getMonthlyPT(state, salary, gender) {
+      if (state === 'maharashtra') {
+        const slabs = gender === 'female' ? STATE_DATA.maharashtra.getFemaleSlabs() : STATE_DATA.maharashtra.getMaleSlabs();
+        const slab = slabs.find(s => salary >= s.min && salary <= s.max);
+        return slab ? slab.monthly : 0;
+      }
+      const data = STATE_DATA[state];
+      if (!data) return 0;
+      if (data.payFreq === 'annual') {
+        const annual = salary * 12;
+        const slab = data.slabs.find(s => annual >= s.min && annual <= s.max);
+        return slab ? slab.monthly / 12 : 0; // return monthly equivalent
+      }
+      if (data.payFreq === 'halfyearly') {
+        const halfYearly = salary * 6;
+        const slab = data.slabs.find(s => halfYearly >= s.min && halfYearly <= s.max);
+        return slab ? slab.monthly / 6 : 0; // return monthly equivalent
+      }
+      // monthly
+      const slab = data.slabs.find(s => salary >= s.min && salary <= s.max);
+      return slab ? slab.monthly : 0;
+    }
+
+    function getAnnualPT(state, salary, gender) {
+      if (state === 'maharashtra') {
+        const regular = getMonthlyPT(state, salary, gender);
+        if (regular === 0) return 0;
+        // ₹300 in 2 months (Feb=index 10, Mar=index 11 in financial year)
+        return regular * 10 + 300 * 2;
+      }
+      const data = STATE_DATA[state];
+      if (!data) return 0;
+      if (data.payFreq === 'annual') {
+        const annual = salary * 12;
+        const slab = data.slabs.find(s => annual >= s.min && annual <= s.max);
+        return slab ? slab.monthly : 0;
+      }
+      if (data.payFreq === 'halfyearly') {
+        const halfYearly = salary * 6;
+        const slab = data.slabs.find(s => halfYearly >= s.min && halfYearly <= s.max);
+        return slab ? slab.monthly * 2 : 0;
+      }
+      const monthly = getMonthlyPT(state, salary, gender);
+      if (monthly === 0) return 0;
+      if (data.specialMonthIndex !== undefined && data.specialAmt) {
+        return monthly * 11 + data.specialAmt;
+      }
+      return monthly * 12;
+    }
+
+    function calculate() {
+      const stateKey = document.getElementById('stateSelect').value;
+      const salary   = parseFloat(document.getElementById('salaryNum').value) || 30000;
+      const gender   = document.getElementById('genderSelect').value;
+      const itSlab   = parseFloat(document.getElementById('itSlab').value) / 100;
+
+      const isExempt = document.getElementById('exemptSenior').checked ||
+                       document.getElementById('exemptDisabled').checked ||
+                       document.getElementById('exemptArmed').checked ||
+                       document.getElementById('exemptParent').checked;
+
+      const isNoPT = stateKey.startsWith('no_pt_');
+      const noPtAlert = document.getElementById('noPtAlert');
+      const exemptAlert = document.getElementById('exemptionAlert');
+      const slabCard = document.getElementById('slabCard');
+      const monthCard = document.getElementById('monthCard');
+      const itBox = document.getElementById('itBox');
+      const salaryGroup = document.getElementById('salaryGroup');
+      const genderGroup = document.getElementById('genderGroup');
+
+      // Handle No-PT states
+      if (isNoPT) {
+        const stateName = NO_PT_STATES[stateKey];
+        document.getElementById('noPtStateName').textContent = stateName;
+        noPtAlert.style.display = 'block';
+        exemptAlert.style.display = 'none';
+        salaryGroup.style.display = 'none';
+        genderGroup.style.display = 'none';
+        slabCard.style.display = 'none';
+        monthCard.style.display = 'none';
+        itBox.style.display = 'none';
+        document.getElementById('ptMonthly').textContent = '₹0';
+        document.getElementById('subAnnual').textContent = '₹0';
+        document.getElementById('subPct').textContent = '0%';
+        document.getElementById('takeHome').textContent = fmtFull(salary);
+        document.getElementById('annualPTDisplay').textContent = '₹0';
+        document.getElementById('resultLabel').textContent = 'Professional Tax (Not Applicable)';
+        updateCompareTable(salary, gender);
+        return;
+      }
+
+      noPtAlert.style.display = 'none';
+      salaryGroup.style.display = '';
+      genderGroup.style.display = '';
+      slabCard.style.display = '';
+      monthCard.style.display = '';
+      itBox.style.display = '';
+
+      // Handle exemptions
+      if (isExempt) {
+        exemptAlert.style.display = 'block';
+        document.getElementById('ptMonthly').textContent = '₹0';
+        document.getElementById('subAnnual').textContent = '₹0';
+        document.getElementById('subPct').textContent = '0%';
+        document.getElementById('takeHome').textContent = fmtFull(salary);
+        document.getElementById('annualPTDisplay').textContent = '₹0';
+        document.getElementById('itDeductible').textContent = '₹0';
+        document.getElementById('itSaved').textContent = '₹0';
+        document.getElementById('netCost').textContent = '₹0';
+        document.getElementById('itSlabDisplay').textContent = (itSlab * 100).toFixed(0) + '%';
+        renderSlabs(stateKey, salary, gender, true);
+        renderMonths(stateKey, salary, gender, true);
+        updateCompareTable(salary, gender);
+        return;
+      }
+      exemptAlert.style.display = 'none';
+
+      const monthlyPT = getMonthlyPT(stateKey, salary, gender);
+      const annualPT  = getAnnualPT(stateKey, salary, gender);
+      const pct       = salary > 0 ? ((monthlyPT / salary) * 100).toFixed(2) : 0;
+      const data      = STATE_DATA[stateKey];
+
+      // Main display
+      document.getElementById('resultLabel').textContent = `Monthly Professional Tax (${data.name})`;
+      document.getElementById('ptMonthly').textContent  = fmtFull(monthlyPT);
+      document.getElementById('subAnnual').textContent  = fmtFull(annualPT);
+      document.getElementById('subPct').textContent     = pct + '%';
+      document.getElementById('takeHome').textContent   = fmtFull(salary - monthlyPT);
+      document.getElementById('annualPTDisplay').textContent = fmtFull(annualPT);
+
+      // IT saving
+      document.getElementById('itDeductible').textContent = fmtFull(annualPT);
+      document.getElementById('itSaved').textContent      = fmtFull(annualPT * itSlab);
+      document.getElementById('netCost').textContent      = fmtFull(annualPT - annualPT * itSlab);
+      document.getElementById('itSlabDisplay').textContent = (itSlab * 100).toFixed(0) + '%';
+
+      renderSlabs(stateKey, salary, gender, false);
+      renderMonths(stateKey, salary, gender, false);
+      updateCompareTable(salary, gender);
+    }
+
+    function renderSlabs(stateKey, salary, gender, exempt) {
+      const data = STATE_DATA[stateKey];
+      const slabs = stateKey === 'maharashtra'
+        ? (gender === 'female' ? STATE_DATA.maharashtra.getFemaleSlabs() : STATE_DATA.maharashtra.getMaleSlabs())
+        : data.slabs;
+
+      document.getElementById('stateInfoBox').innerHTML = `<strong>${data.name}:</strong> ${data.info}`;
+      const monthly = exempt ? 0 : getMonthlyPT(stateKey, salary, gender);
+
+      const isActive = (slab) => {
+        if (data.payFreq === 'annual') return (salary * 12) >= slab.min && (salary * 12) <= slab.max;
+        if (data.payFreq === 'halfyearly') return (salary * 6) >= slab.min && (salary * 6) <= slab.max;
+        return salary >= slab.min && salary <= slab.max;
+      };
+
+      document.getElementById('slabTableBody').innerHTML = slabs.map(s =>
+        `<tr class="${isActive(s) && !exempt ? 'active-slab' : ''}">
+          <td>${s.label}</td>
+          <td>${s.monthly === 0 ? 'Nil' : '₹' + s.monthly + '/month'}</td>
+          <td>${isActive(s) && !exempt ? '✅ Your slab' : (isActive(s) && exempt ? '⊘ Exempt' : '—')}</td>
+        </tr>`
+      ).join('');
+    }
+
+    function renderMonths(stateKey, salary, gender, exempt) {
+      const data = STATE_DATA[stateKey];
+      const baseMonthly = exempt ? 0 : getMonthlyPT(stateKey, salary, gender);
+
+      // Build 12 months (Apr–Mar)
+      const monthAmts = MONTHS.map((m, i) => {
+        if (baseMonthly === 0) return 0;
+        if (stateKey === 'maharashtra') {
+          // Special months: Feb (index 10) and Mar (index 11)
+          return (i === 10 || i === 11) ? 300 : baseMonthly;
+        }
+        if (data.specialMonthIndex !== undefined && i === data.specialMonthIndex) return data.specialAmt;
+        return baseMonthly;
+      });
+
+      document.getElementById('monthNote').textContent =
+        data.specialMonthIndex !== undefined || stateKey === 'maharashtra'
+          ? `Highlighted month(s) have ₹300 special rate to reach ₹2,500 annual cap`
+          : data.payFreq === 'halfyearly' ? 'Kerala/Puducherry: Half-yearly payment — shown as monthly equivalent'
+          : data.payFreq === 'annual' ? 'Annual slab — shown as monthly equivalent'
+          : 'Uniform monthly deduction';
+
+      document.getElementById('monthGrid').innerHTML = MONTHS.map((m, i) => {
+        const amt = monthAmts[i];
+        const isSpecial = amt > 0 && ((stateKey === 'maharashtra' && (i === 10 || i === 11)) ||
+                          (data.specialMonthIndex !== undefined && i === data.specialMonthIndex));
+        const cls = amt === 0 ? 'month-cell zero' : isSpecial ? 'month-cell special' : 'month-cell';
+        return `<div class="${cls}">
+          <div class="m-name">${m}</div>
+          <div class="m-val">${amt === 0 ? '₹0' : '₹' + amt}</div>
+        </div>`;
+      }).join('');
+    }
+
+    function updateCompareTable(salary, gender) {
+      const states = [
+        'maharashtra','karnataka','west_bengal','andhra_pradesh','telangana',
+        'tamil_nadu','gujarat','kerala','madhya_pradesh','assam',
+      ];
+      const noPTRows = [
+        { name:'Delhi', annual:0 }, { name:'Uttar Pradesh', annual:0 },
+        { name:'Haryana', annual:0 }, { name:'Rajasthan', annual:0 },
+      ];
+
+      document.getElementById('compareTitle').textContent = '₹' + salary.toLocaleString('en-IN') + '/month';
+
+      const rows = states.map(s => {
+        const data = STATE_DATA[s];
+        const annual = getAnnualPT(s, salary, s === 'maharashtra' ? gender : 'male');
+        const isSelected = document.getElementById('stateSelect').value === s;
+        return `<tr${isSelected ? ' class="highlight"' : ''}>
+          <td>${data.name}${isSelected ? ' ✅' : ''}</td>
+          <td>${data.payFreq === 'monthly' ? 'Monthly slabs' : data.payFreq === 'halfyearly' ? 'Half-yearly' : 'Annual'}</td>
+          <td style="font-family:var(--font-mono);font-weight:600">${annual > 0 ? '₹' + annual.toLocaleString('en-IN') : 'Nil'}</td>
+          <td style="font-family:var(--font-mono)">₹${data.maxAnnual.toLocaleString('en-IN')}</td>
+          <td style="font-size:12px;color:var(--text-muted)">${
+            s === 'maharashtra' ? 'Women exempt ≤₹25K' :
+            s === 'karnataka'   ? '₹300 in February' :
+            s === 'gujarat'     ? 'Flat above ₹12K' :
+            s === 'kerala'      ? 'Half-yearly slabs' :
+            data.specialMonthIndex !== undefined ? '₹' + data.specialAmt + ' in ' + MONTHS[data.specialMonthIndex] : '—'
+          }</td>
+        </tr>`;
+      }).join('');
+
+      const noRows = noPTRows.map(r =>
+        `<tr class="no-pt"><td>${r.name}</td><td>—</td><td>No PT applicable</td><td>—</td><td>Not levied</td></tr>`
+      ).join('');
+
+      document.getElementById('compareTableBody').innerHTML = rows + noRows;
+    }
+
+    // Init
+    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+    calculate();
+  </script>
+</body>
+</html>

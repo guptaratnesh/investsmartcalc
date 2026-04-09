@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <title>Gratuity Calculator 2025 – Social Security Code New Rules | InvestSmartCalc</title>
+  <meta name="description" content="Calculate gratuity under Social Security Code 2020 (effective Nov 2025). Covers permanent, fixed-term & govt employees. ₹20L/₹25L cap applied.">
+  <meta name="keywords" content="gratuity calculator India 2025, gratuity calculator new rules, social security code 2020 gratuity, gratuity formula calculator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://investsmartcalc.com/schemes/gratuity/">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://investsmartcalc.com/schemes/gratuity/">
+  <meta property="og:title" content="Gratuity Calculator 2025 – Social Security Code New Rules">
+  <meta property="og:description" content="Calculate gratuity under Social Security Code 2020 (effective Nov 2025). Covers permanent, fixed-term & govt employees. ₹20L/₹25L cap applied.">
+  <meta property="og:site_name" content="InvestSmartCalc">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Gratuity Calculator 2025 – Social Security Code New Rules">
+  <meta name="twitter:description" content="Calculate gratuity under Social Security Code 2020 (effective Nov 2025). Covers permanent, fixed-term & govt employees. ₹20L/₹25L cap applied."><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <style>
+    .emp-type-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; }
+    .emp-type-btn { padding:12px 10px; border:1.5px solid var(--border); border-radius:12px; font-size:13px; font-weight:500; cursor:pointer; background:white; font-family:var(--font); transition:all 0.18s; text-align:center; line-height:1.5; }
+    .emp-type-btn.active { border-color:var(--green); background:var(--green-light); color:var(--green-dark); }
+    .emp-type-btn small { display:block; font-size:11px; color:var(--text-muted); font-weight:400; }
+    .emp-type-btn.active small { color:var(--green-dark); opacity:0.8; }
+    .rule-banner { border-radius:10px; padding:12px 16px; font-size:13px; margin-bottom:16px; display:flex; gap:10px; align-items:flex-start; }
+    .rule-new  { background:#e8f5e9; border:1px solid #a5d6a7; }
+    .rule-warn { background:#fff8e1; border:1px solid #ffe082; }
+    .rule-err  { background:#fce4ec; border:1px solid #f48fb1; }
+    [data-theme="dark"] .rule-new  { background:#002a12; border-color:#004d22; }
+    [data-theme="dark"] .rule-warn { background:#2a1e00; border-color:#4a3500; }
+    [data-theme="dark"] .rule-err  { background:#2a0010; border-color:#4a0025; }
+    .rule-banner-icon { font-size:18px; flex-shrink:0; margin-top:1px; }
+    .rule-banner strong { display:block; font-size:13px; margin-bottom:3px; color:var(--text-primary); }
+    .rule-banner span { color:var(--text-secondary); line-height:1.5; }
+    .badge { display:inline-block; font-size:10px; padding:2px 7px; border-radius:100px; font-weight:700; vertical-align:middle; margin-left:5px; }
+    .badge-new { background:#e8f5e9; color:#1b5e20; }
+    .badge-old { background:#fce4ec; color:#b71c1c; }
+    [data-theme="dark"] .badge-new { background:#003d1a; color:#00e676; }
+    [data-theme="dark"] .badge-old { background:#3d0014; color:#ff6b8a; }
+    .calc-note { font-size:11px; margin-top:5px; }
+    .breakdown-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border); font-size:14px; }
+    .breakdown-row:last-child { border-bottom:none; }
+    .breakdown-row .lbl { color:var(--text-secondary); }
+    .breakdown-row .val { font-family:var(--font-mono); font-weight:600; }
+    .tax-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:6px; }
+    .tax-table th { background:var(--bg); padding:8px 12px; text-align:left; color:var(--text-muted); font-weight:500; }
+    .tax-table td { padding:9px 12px; border-bottom:1px solid var(--border); }
+    .tax-table .num { font-family:var(--font-mono); }
+    .tax-table tr.exempt-row td { background:var(--green-light); color:var(--green-dark); font-weight:600; }
+    .cmp-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .cmp-table th { background:var(--bg); padding:9px 12px; text-align:left; color:var(--text-muted); font-weight:500; border-bottom:2px solid var(--border); }
+    .cmp-table td { padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+    .cmp-table tr.changed td { background:#e8f5e9; }
+    [data-theme="dark"] .cmp-table { background:#232b3e; border-radius:10px; overflow:hidden; box-shadow:0 0 0 1px #3a4a66; }
+    [data-theme="dark"] .cmp-table th { background:#1a2236; color:#d0e0f0; border-color:#3a4a66; }
+    [data-theme="dark"] .cmp-table td { color:#9aaab8; border-color:#2e3a52; background:#232b3e; }
+    [data-theme="dark"] .cmp-table tr:nth-child(even) td { background:#1e2535; }
+    [data-theme="dark"] .cmp-table tr.changed td { background:#002a14; color:#9aaab8; border-left:3px solid #00c853; }
+    [data-theme="dark"] .cmp-table tr.changed td strong { color:#00e676; }
+    [data-theme="dark"] .tax-table tr.exempt-row td { background:#002a12; color:#00e676; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "InvestSmartCalc",
+  "url": "https://investsmartcalc.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://investsmartcalc.com/logo.png",
+    "width": 200,
+    "height": 60
+  },
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gratuity Calculator 2025",
+  "url": "https://investsmartcalc.com/gratuity-calculator.html",
+  "description": "Calculate gratuity under Social Security Code 2020. Covers permanent, fixed-term and government employees. Applies ₹20 lakh and ₹25 lakh caps correctly.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "InvestSmartCalc",
+    "url": "https://investsmartcalc.com"
+  },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Free to use",
+    "No signup required",
+    "Mobile responsive",
+    "Instant calculations",
+    "Year-wise breakdown"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://investsmartcalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Gratuity Calculator 2025",
+      "item": "https://investsmartcalc.com/gratuity-calculator.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the gratuity formula in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For employees covered under the Social Security Code 2020 (or earlier Payment of Gratuity Act): Gratuity = (15/26) × Last Drawn Wages × Years of Service. For employees not covered: Gratuity = (15/30) × Last Drawn Wages × Years of Service. Wages must be at least 50% of CTC as per Code of Wages 2019. The maximum gratuity is ₹20 lakh for private sector and ₹25 lakh for central government employees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Am I eligible for gratuity if I resign before 5 years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For permanent employees, the minimum qualifying service is 5 years. Under the Social Security Code 2020 (effective November 21, 2025), fixed-term contract employees become eligible for gratuity after just 1 year of service. If an employee dies or becomes permanently disabled, gratuity is payable regardless of years of service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is gratuity taxable in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For government employees, gratuity is fully tax-exempt under Section 10(10)(i). For private sector employees covered by the Gratuity Act, gratuity is tax-exempt up to ₹20 lakh under Section 10(10)(ii). Any amount exceeding ₹20 lakh is taxable as salary income. For employees of non-covered companies, the exemption limit under Section 10(10)(iii) is also ₹20 lakh."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What changed in gratuity rules under Social Security Code 2020?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three key changes under the Social Security Code 2020 effective November 21, 2025: (1) Fixed-term employees are now eligible after 1 year (previously not covered); (2) The wage base for gratuity calculation must be at least 50% of CTC as per Code of Wages 2019; (3) Government employee cap increased to ₹25 lakh. The formula (15/26) and ₹20 lakh private sector cap remain unchanged."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="/index.html" class="logo"><span class="logo-icon">📊</span><span class="logo-text">InvestSmart<span class="accent">Calc</span></span></a>
+      <div class="nav-links">
+        <a href="/investment/sip/">SIP</a><a href="/emi/">EMI</a><a href="/fd/">FD</a>
+        <a href="/schemes/ppf/">PPF</a><a href="/tax/">Tax</a><a href="/tax/salary/">Salary</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+        <div class="dark-toggle-wrap">
+          <span class="toggle-icon">☀️</span>
+          <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">All Calculators</a>
+      <a href="/tax/salary/">Salary Breakup</a><a href="/tax/salary/hra-calculator.html">HRA</a><a href="/tax/">Tax</a>
+    
+      <a href="/schemes/ssy/">SSY Calculator</a>
+      <a href="/schemes/kvp/">KVP Calculator</a>
+      <a href="/schemes/pomis/">POMIS Calculator</a></div>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-page-header">
+      <div class="breadcrumb"><a href="/index.html">Home</a> › Gratuity Calculator</div>
+      <h1>Gratuity Calculator</h1>
+      <p>Social Security Code 2020 · Effective <strong>Nov 21, 2025</strong></p>
+    </div>
+
+    <div class="rule-banner rule-new" style="margin-bottom:24px">
+      <div class="rule-banner-icon">🆕</div>
+      <div>
+        <strong>3 Key Changes under Social Security Code 2020 (effective Nov 21, 2025)</strong>
+        <span>
+          1. Fixed-term employees eligible after <strong>1 year</strong> (was 5 years) &nbsp;·&nbsp;
+          2. Wages (gratuity base) must be <strong>≥ 50% of CTC</strong> — excess allowances added back &nbsp;·&nbsp;
+          3. Formula &amp; ₹20L cap unchanged
+        </span>
+      </div>
+    </div>
+
+    <div class="calc-layout">
+      <div class="input-panel">
+
+        <div style="font-size:14px;font-weight:600;margin-bottom:10px">Employee Type</div>
+        <div class="emp-type-grid">
+          <button class="emp-type-btn active" id="btn_permanent" onclick="setType('permanent')">
+            👔 Permanent<small>Min 5 years · 15/26</small>
+          </button>
+          <button class="emp-type-btn" id="btn_fixed" onclick="setType('fixed')">
+            📋 Fixed-Term<small>Min 1 year <span class="badge badge-new">New</span></small>
+          </button>
+          <button class="emp-type-btn" id="btn_govt" onclick="setType('govt')">
+            🏛️ Govt Employee<small>Cap ₹25L · Fully tax-free</small>
+          </button>
+          <button class="emp-type-btn" id="btn_notcovered" onclick="setType('notcovered')">
+            🏢 Not Covered<small>15/30 formula</small>
+          </button>
+        </div>
+
+        <div class="input-group">
+          <div class="input-label"><span>Monthly CTC</span><span class="input-value" id="ctcLabel">₹1,00,000</span></div>
+          <input type="range" id="ctcSlider" min="10000" max="1000000" step="1000" value="100000"
+            oninput="syncInput(this,'ctcNum','ctcLabel','₹',true);deriveWages();calculate()">
+          <input type="number" class="number-input" id="ctcNum" value="100000"
+            oninput="syncSlider(this,'ctcSlider','ctcLabel','₹',true);deriveWages();calculate()">
+        </div>
+
+        <div class="input-group">
+          <div class="input-label">
+            <span>Last Drawn Wages (Basic+DA) <span class="badge badge-new">≥50% CTC</span></span>
+            <span class="input-value" id="salLabel">₹50,000</span>
+          </div>
+          <input type="range" id="salary" min="5000" max="600000" step="500" value="50000"
+            oninput="syncInput(this,'salNum','salLabel','₹',true);checkWage();calculate()">
+          <input type="number" class="number-input" id="salNum" value="50000"
+            oninput="syncSlider(this,'salary','salLabel','₹',true);checkWage();calculate()">
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(15000)">₹15,000</button><button class="preset-btn" onclick="setPreset(30000)">₹30,000</button><button class="preset-btn" onclick="setPreset(50000)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000)">₹1L</button></div>
+          <div class="calc-note" id="wageNote"></div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-label"><span>Years of Service</span><span class="input-value" id="yrLabel">10 yr</span></div>
+          <input type="range" id="serviceYr" min="1" max="40" step="0.5" value="10"
+            oninput="syncInput(this,'yrNum','yrLabel','',false,' yr');checkElig();calculate()">
+          <input type="number" class="number-input" id="yrNum" value="10" step="0.5"
+            oninput="syncSlider(this,'serviceYr','yrLabel','',false,' yr');checkElig();calculate()">
+          <div class="calc-note" id="eligNote"></div>
+        </div>
+
+      </div>
+
+      <div class="result-panel">
+
+        <div id="eligBanner" class="rule-banner rule-new" style="margin-bottom:0">
+          <div class="rule-banner-icon" id="eligIcon">✅</div>
+          <div><strong id="eligTitle">Eligible for Gratuity</strong><br><span id="eligDesc"></span></div>
+        </div>
+
+        <div class="result-card result-highlight">
+          <div class="result-label">Gratuity Payable</div>
+          <div class="result-amount" id="gratuityAmt">₹2,88,462</div>
+          <div id="cappedMsg" style="font-size:12px;opacity:0.85;margin-top:5px;display:none">⚠️ Capped at statutory maximum</div><div class="result-sub">
+          <div class="result-sub-item">
+            <span class="result-sub-label">Years of service</span>
+            <span class="result-sub-value" id="subYears">—</span>
+          </div>
+          <div class="result-sub-item">
+            <span class="result-sub-label">Tax-free amount</span>
+            <span class="result-sub-value" id="subTaxFree">—</span>
+          </div>
+        </div>
+        </div>
+
+        <div class="result-card">
+          <div class="breakdown-row"><span class="lbl">Employee Type</span><span class="val" id="d_type">Permanent</span></div>
+          <div class="breakdown-row"><span class="lbl">Monthly Wages Used</span><span class="val" id="d_wages">₹50,000</span></div>
+          <div class="breakdown-row"><span class="lbl">Wages % of CTC</span><span class="val" id="d_pct">50%</span></div>
+          <div class="breakdown-row"><span class="lbl">Effective Years</span><span class="val" id="d_yrs">10</span></div>
+          <div class="breakdown-row"><span class="lbl">Formula</span><span class="val" id="d_formula">(15/26)×W×Y</span></div>
+          <div class="breakdown-row"><span class="lbl">Raw Amount</span><span class="val" id="d_raw">₹2,88,462</span></div>
+          <div class="breakdown-row"><span class="lbl">Statutory Cap</span><span class="val" id="d_cap">₹20,00,000</span></div>
+          <div class="breakdown-row"><span class="lbl" style="font-weight:700">Final Gratuity</span><span class="val" id="d_final" style="color:var(--green-dark)">₹2,88,462</span></div>
+        </div>
+
+        <div class="result-card">
+          <div style="font-size:13px;font-weight:700;margin-bottom:8px">💰 Tax Treatment (Sec 10(10))</div>
+          <table class="tax-table">
+            <thead><tr><th>Component</th><th class="num">Amount</th><th>Status</th></tr></thead>
+            <tbody id="taxBody"></tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="year-table-wrap" style="margin-top:28px">
+      <div class="year-table-head">📜 Old Law vs New Law — Side by Side</div>
+      <div style="overflow-x:auto">
+        <table class="cmp-table">
+          <thead><tr>
+            <th>Rule</th>
+            <th>Payment of Gratuity Act 1972 <span class="badge badge-old">Replaced</span></th>
+            <th>Social Security Code 2020 <span class="badge badge-new">Active from Nov 21, 2025</span></th>
+          </tr></thead>
+          <tbody>
+            <tr><td>Permanent employee min service</td><td>5 continuous years</td><td>5 continuous years (unchanged)</td></tr>
+            <tr class="changed"><td><strong>Fixed-term employee eligibility</strong></td><td>❌ Not eligible</td><td>✅ <strong>1 year</strong> (pro-rata)</td></tr>
+            <tr class="changed"><td><strong>Wages definition / calculation base</strong></td><td>Basic + DA (employer could manipulate)</td><td>✅ Wages ≥ 50% of CTC; excess allowances added back</td></tr>
+            <tr><td>Formula (covered companies)</td><td>(15/26) × Salary × Years</td><td>(15/26) × Wages × Years (unchanged)</td></tr>
+            <tr><td>Formula (not covered)</td><td>(15/30) × Salary × Years</td><td>(15/30) × Wages × Years (unchanged)</td></tr>
+            <tr><td>Cap — Private sector</td><td>₹20,00,000</td><td>₹20,00,000 (unchanged)</td></tr>
+            <tr class="changed"><td><strong>Cap — Central Govt employees</strong></td><td>₹20,00,000</td><td>✅ <strong>₹25,00,000</strong> (Jan 2024 DA hike)</td></tr>
+            <tr><td>Tax-exempt — Private (Sec 10(10)(ii))</td><td>Up to ₹20 lakh</td><td>Up to ₹20 lakh (unchanged)</td></tr>
+            <tr><td>Tax-exempt — Govt (Sec 10(10)(i))</td><td>Fully exempt</td><td>Fully exempt (unchanged)</td></tr>
+            <tr><td>Year rounding rule</td><td>&gt;6 months = full year</td><td>&gt;6 months = full year (unchanged)</td></tr>
+            <tr class="changed"><td><strong>Gig / Platform workers</strong></td><td>❌ Not covered</td><td>✅ Covered (state rules being notified)</td></tr>
+            <tr><td>Payment deadline</td><td>30 days from due date</td><td>30 days from due date (unchanged)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="info-box" style="margin-top:20px">
+      ⚖️ <strong>Important:</strong> The Social Security Code 2020 is legally effective from Nov 21, 2025 across India. State-level subordinate rules are still being notified and may cause phased implementation. Consult a labour law professional for your specific situation.
+    </div>
+  
+
+<div class="related-section">
+  <div class="related-header">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Related Calculators
+  </div>
+  <div class="related-grid">
+    <a href="/tax/salary/" class="related-card">
+      <div class="related-icon" style="background:#e8eaf6;color:#283593">💼</div>
+      <div>
+        <div class="related-name">Salary Calculator</div>
+        <div class="related-desc">CTC to in-hand</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="/schemes/ppf/" class="related-card">
+      <div class="related-icon" style="background:#f3e5f5;color:#7b1fa2">🛡️</div>
+      <div>
+        <div class="related-name">PPF Calculator</div>
+        <div class="related-desc">Tax-free PF returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="/tax/" class="related-card">
+      <div class="related-icon" style="background:#fafafa;color:#424242">📋</div>
+      <div>
+        <div class="related-name">Tax Calculator</div>
+        <div class="related-desc">New vs Old Regime</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="/investment/sip/" class="related-card">
+      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div>
+        <div class="related-name">SIP Calculator</div>
+        <div class="related-desc">Monthly SIP returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+    <a href="/fd/" class="related-card">
+      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div>
+        <div class="related-name">FD Calculator</div>
+        <div class="related-desc">Fixed Deposit returns</div>
+      </div>
+      <span class="related-arrow">→</span>
+    </a>
+  </div>
+</div>
+<div class="seo-section">
+  <hr class="seo-divider">
+
+<div class="toc-box">
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+    <li><a href="#what-is-gratuity">What is Gratuity</a></li>
+    <li><a href="#gratuity-formula">Formula</a></li>
+    <li><a href="#how-to-calculate-gratuity-in-india">How to Calculate Gratuity</a></li>
+    <li><a href="#gratuity-calculation-example">Worked Example</a></li>
+    <li><a href="#gratuity-rules-for-private-employees">Rules for Private Employees</a></li>
+    <li><a href="#gratuity-eligibility-after-resignation">Eligibility After Resignation</a></li>
+    <li><a href="#key-changes-under-social-security-code-2020">New Rules 2025</a></li>
+    <li><a href="#frequently-asked-questions">FAQ</a></li>
+  </ul>
+</div>
+
+
+  <h2 id="what-is-gratuity">What is Gratuity?</h2>
+  <p>Gratuity is a lump-sum monetary benefit paid by an employer to an employee as a token of appreciation for the services rendered. It is governed by the <strong>Social Security Code 2020</strong> (effective November 21, 2025), which replaced the Payment of Gratuity Act 1972. Gratuity is payable on retirement, resignation, death, or disablement — provided the employee has completed the minimum qualifying service.</p>
+
+  <h2 id="gratuity-formula">Gratuity Formula</h2>
+  <div class="formula-box">
+    <span class="f-label">Gratuity Calculation Formula</span>
+    <span class="f-main">Gratuity = (15 / 26) × Last Wages × Years of Service</span>
+    <div class="f-vars">
+      15 = 15 working days &nbsp;|&nbsp; 26 = Working days in a month (for covered companies)<br>
+      Last Wages = Basic + DA (must be ≥ 50% of CTC as per Code of Wages 2019)<br>
+      For companies NOT covered by the Act: use 30 instead of 26
+    </div>
+  </div>
+
+  <h2 id="key-changes-under-social-security-code-2020">Key Changes under Social Security Code 2020</h2>
+  <table class="seo-table">
+    <thead><tr><th>Rule</th><th>Old Law</th><th>New Law (Nov 2025)</th></tr></thead>
+    <tbody>
+      <tr><td>Permanent employee eligibility</td><td>5 years</td><td>5 years (unchanged)</td></tr>
+      <tr class="highlight"><td>Fixed-term employee eligibility</td><td>Not eligible</td><td>1 year (new rule)</td></tr>
+      <tr class="highlight"><td>Calculation base (wages)</td><td>Basic + DA</td><td>Wages ≥ 50% of CTC</td></tr>
+      <tr><td>Cap (private sector)</td><td>₹20 lakh</td><td>₹20 lakh (unchanged)</td></tr>
+      <tr class="highlight"><td>Cap (government employees)</td><td>₹20 lakh</td><td>₹25 lakh</td></tr>
+      <tr><td>Tax exemption (private)</td><td>Up to ₹20L — Sec 10(10)(ii)</td><td>Up to ₹20L (unchanged)</td></tr>
+      <tr><td>Tax exemption (govt)</td><td>Fully exempt — Sec 10(10)(i)</td><td>Fully exempt (unchanged)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="how-to-calculate-gratuity-in-india">How to Calculate Gratuity in India</h2>
+  <p>Many employees are underpaid gratuity because the wrong wage base is used. Here are the correct four steps:</p>
+  <ol>
+    <li><strong>Check eligibility:</strong> Permanent employees need 5 years of continuous service. Fixed-term contract employees need just 1 year under Social Security Code 2020.</li>
+    <li><strong>Determine the correct wage base:</strong> Use Basic + DA. Under Code of Wages 2019, this must be ≥ 50% of CTC. If your employer keeps basic below 50% CTC, gratuity must be calculated on 50% of CTC.</li>
+    <li><strong>Apply the right formula:</strong> Covered companies (10+ employees): (15÷26) × Monthly Wages × Years. Non-covered: (15÷30) × Monthly Wages × Years.</li>
+    <li><strong>Apply the statutory cap:</strong> ₹20 lakh for private sector, ₹25 lakh for central government employees.</li>
+  </ol>
+  <h2 id="gratuity-calculation-example">Gratuity Calculation — Worked Example</h2>
+  <div class="example-box">
+    <div class="ex-title">📘 Private employee — ₹60,000/month basic, 8 years service, covered company</div>
+    <table>
+      <tr><td>Last Drawn Basic + DA</td><td>₹60,000/month</td></tr>
+      <tr><td>Years of Service</td><td>8 years</td></tr>
+      <tr><td>Formula</td><td>(15 ÷ 26) × 60,000 × 8</td></tr>
+      <tr class="ex-result"><td>Gratuity Payable</td><td>₹2,76,923</td></tr>
+      <tr class="ex-result"><td>Tax Status</td><td>100% tax-free (below ₹20L cap)</td></tr>
+    </table>
+  </div>
+  <h2 id="gratuity-rules-for-private-employees">Gratuity Rules for Private Sector Employees</h2>
+  <ul>
+    <li><strong>Minimum service:</strong> 5 years for permanent roles. Fixed-term workers qualify after 1 year — a major change under Social Security Code 2020.</li>
+    <li><strong>Wage base protection:</strong> Code of Wages 2019 mandates Basic + DA ≥ 50% of CTC. Employers who artificially kept basic low to reduce gratuity liability are now legally non-compliant.</li>
+    <li><strong>Cap:</strong> ₹20 lakh maximum. Amounts above ₹20L are taxable as salary income at your slab rate.</li>
+    <li><strong>Tax exemption:</strong> Up to ₹20 lakh exempt under Section 10(10)(ii) of the Income Tax Act.</li>
+    <li><strong>Payment deadline:</strong> Employer must pay within 30 days. Interest accrues on delayed payments.</li>
+  </ul>
+  <h2 id="gratuity-eligibility-after-resignation">Gratuity Eligibility After Resignation</h2>
+  <p>Yes — gratuity is payable even on voluntary resignation after completing qualifying service. Gratuity is triggered by:</p>
+  <ul>
+    <li>Voluntary resignation after 5 years (permanent) or 1 year (fixed-term)</li>
+    <li>Superannuation or retirement</li>
+    <li>Death or permanent disability — <strong>no minimum service required</strong></li>
+    <li>Retrenchment or layoff</li>
+  </ul>
+  <p>If your employer refuses payment, file a complaint with the Labour Commissioner under Section 8 of the Social Security Code. The employer is liable to pay gratuity plus compound interest on the delay.</p>
+
+  <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Am I eligible for gratuity if I resign before 5 years?<span class="faq-icon">+</span></button>
+      <div class="faq-a">For permanent employees, the minimum qualifying service is 5 years. However, under the Social Security Code 2020, fixed-term employees are eligible after just 1 year of service. Also, if an employee dies or becomes permanently disabled, gratuity is payable regardless of the years of service. Some employers voluntarily pay gratuity before 5 years as an ex-gratia payment, but they are not legally obligated to.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is gratuity taxable?<span class="faq-icon">+</span></button>
+      <div class="faq-a">For government employees (central, state, defence, local authorities): gratuity is fully exempt under Section 10(10)(i) — no tax at all. For private sector employees covered by the Gratuity Act: tax-exempt up to the least of (a) actual gratuity received, (b) ₹20 lakh, or (c) (15/26) × last salary × years of service — under Section 10(10)(ii). Any amount above ₹20L is taxable as salary income. For private sector employees not covered by the Act: exempt up to ₹20L under Section 10(10)(iii).</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the 4.81% gratuity component in CTC?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Many employers include gratuity as part of the CTC structure. The 4.81% is derived from the gratuity formula: (15/26) ÷ 12 months = 4.8077% ≈ 4.81% of monthly basic salary. So if your basic is ₹50,000/month, the gratuity accrual is approximately ₹2,404/month or ₹28,846/year, which the employer sets aside (though it is paid only on exit after qualifying service).</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Within how many days must gratuity be paid?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Under the Social Security Code 2020, gratuity must be paid within 30 days from the date it becomes payable. If the employer fails to pay within this period, they are liable to pay simple interest at the rate notified by the Central Government from the due date until actual payment. The employer must acknowledge the gratuity application within 15 days and determine the amount within 30 days.
+        <div class="share-bar">
+          <div class="share-bar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share Result
+          </div>
+          <div class="share-buttons">
+            <button class="share-btn whatsapp" onclick="shareWhatsApp(`🎖️ My Gratuity Calculation\n👔 Employee Type: ${document.getElementById('d_type').textContent}\n💰 Monthly Wages: ${document.getElementById('salLabel').textContent}\n📅 Years of Service: ${document.getElementById('d_yrs').textContent}\n🎯 Gratuity Amount: ${document.getElementById('gratuityAmt').textContent}\n\nCalculate your gratuity 👇`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L0 24l6.335-1.507A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.368l-.36-.214-3.732.978.996-3.636-.235-.374A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg> WhatsApp</button>
+            <button class="share-btn twitter" onclick="shareTwitter(`Calculated my gratuity under Social Security Code 2020: ${document.getElementById('gratuityAmt').textContent} for ${document.getElementById('d_yrs').textContent} of service 🎖️ #Gratuity #LabourLaw #Finance`)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Twitter / X</button>
+            <button class="share-btn copylink" onclick="copyLink(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link</button>
+            <button class="share-btn download" onclick="downloadPDF('Gratuity Calculator')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Save PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
+        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4><ul>
+        <li><a href="/investment/sip/">SIP Calculator</a></li>
+        <li><a href="/emi/">EMI Calculator</a></li>
+        <li><a href="/fd/">FD Calculator</a></li>
+        <li><a href="/schemes/ppf/">PPF Calculator</a></li>
+        <li><a href="/tax/">Income Tax</a></li>
+        <li><a href="/tax/salary/">Salary Breakup</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More Tools</h4><ul>
+        <li><a href="/investment/swp/">SWP Calculator</a></li>
+        <li><a href="/investment/lumpsum/">Lumpsum</a></li>
+        <li><a href="/schemes/rd/">RD Calculator</a></li>
+        <li><a href="/schemes/ssy/">SSY Calculator</a></li>
+        <li><a href="/schemes/kvp/">KVP Calculator</a></li>
+        <li><a href="/schemes/pomis/">POMIS Calculator</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="footer-bottom">
+        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <div class="footer-bottom-links">
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+  <script>
+    let empType = 'permanent';
+
+    function setType(t) {
+      empType = t;
+      ['permanent','fixed','govt','notcovered'].forEach(x =>
+        document.getElementById('btn_'+x).classList.toggle('active', x===t));
+      checkElig(); calculate();
+    }
+
+    function deriveWages() {
+      const ctc = parseFloat(document.getElementById('ctcNum').value)||100000;
+      const w = Math.round(ctc * 0.5);
+      document.getElementById('salNum').value = w;
+      document.getElementById('salary').value = w;
+      document.getElementById('salLabel').textContent = '₹'+w.toLocaleString('en-IN');
+      updateSlider(document.getElementById('salary'));
+      checkWage();
+    }
+
+    function checkWage() {
+      const ctc   = parseFloat(document.getElementById('ctcNum').value)||100000;
+      const wages = parseFloat(document.getElementById('salNum').value)||50000;
+      const pct   = (wages/ctc*100).toFixed(1);
+      const n = document.getElementById('wageNote');
+      if(wages >= ctc*0.5) {
+        n.style.color='var(--green-dark)';
+        n.textContent=`✅ ${pct}% of CTC — compliant with Code of Wages 2019`;
+      } else {
+        n.style.color='#e65100';
+        n.textContent=`⚠️ ${pct}% of CTC — must be ≥50%. Gratuity will be rebased to 50% of CTC.`;
+      }
+    }
+
+    function checkElig() {
+      const yrs = parseFloat(document.getElementById('yrNum').value)||0;
+      const min = empType==='fixed' ? 1 : 5;
+      const n = document.getElementById('eligNote');
+      if(yrs >= min) { n.style.color='var(--green-dark)'; n.textContent=`✅ Eligible`; }
+      else            { n.style.color='#e65100';           n.textContent=`❌ Need ${min} year${min>1?'s':''} minimum`; }
+    }
+
+    function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
+      const val=parseFloat(slider.value); document.getElementById(numId).value=val;
+      document.getElementById(labelId).textContent=prefix+(isCurrency?val.toLocaleString('en-IN'):val)+suffix;
+      updateSlider(slider);
+    }
+    function syncSlider(input, sliderId, labelId, prefix, isCurrency, suffix='') {
+      const val=parseFloat(input.value); const s=document.getElementById(sliderId); s.value=val;
+      document.getElementById(labelId).textContent=prefix+(isCurrency?val.toLocaleString('en-IN'):val)+suffix;
+      updateSlider(s);
+    }
+
+    function calculate() {
+      const ctc   = parseFloat(document.getElementById('ctcNum').value)||100000;
+      const sal   = parseFloat(document.getElementById('salNum').value)||50000;
+      const yrs   = parseFloat(document.getElementById('yrNum').value)||10;
+
+      // Social Security Code 2020: wages = max(entered wages, 50% of CTC)
+      const wages = Math.max(sal, ctc * 0.5);
+
+      // Rounding: >6 months fraction = round up
+      const effYrs = Math.round(yrs);
+
+      const divisor = empType==='notcovered' ? 30 : 26;
+      const min = empType==='fixed' ? 1 : 5;
+      const eligible = yrs >= min;
+
+      const raw = (15/divisor) * wages * effYrs;
+      const cap = empType==='govt' ? 2500000 : 2000000;
+      const capped = raw > cap;
+      const final = eligible ? Math.min(raw, cap) : 0;
+
+      // Tax
+      const exempt = empType==='govt' ? final : Math.min(final, 2000000);
+      const taxable = Math.max(0, final - exempt);
+
+      // Eligibility banner
+      const banner = document.getElementById('eligBanner');
+      const icon   = document.getElementById('eligIcon');
+      const title  = document.getElementById('eligTitle');
+      const desc   = document.getElementById('eligDesc');
+      const typeLabel = {permanent:'Permanent employee',fixed:'Fixed-term employee (new rule)',govt:'Government employee',notcovered:'Non-covered company employee'}[empType];
+      if(!eligible) {
+        banner.className='rule-banner rule-err';
+        icon.textContent='❌'; title.textContent='Not Yet Eligible';
+        desc.textContent=`${typeLabel} · Needs ${min} year${min>1?'s':''} minimum · Current: ${yrs} yr${yrs!==1?'s':''}`;
+      } else {
+        banner.className='rule-banner rule-new';
+        icon.textContent='✅'; title.textContent='Eligible for Gratuity';
+        desc.textContent=`${typeLabel} · ${effYrs} year${effYrs!==1?'s':''} of service`;
+      }
+
+      document.getElementById('gratuityAmt').textContent = eligible ? fmtFull(final) : '—';
+      document.getElementById('subYears').textContent = effYrs + ' yr';
+      document.getElementById('subTaxFree').textContent = eligible ? fmt(exempt) : '—';
+      document.getElementById('cappedMsg').style.display = capped ? 'block' : 'none';
+
+      const pct = (wages/ctc*100).toFixed(1);
+      document.getElementById('d_type').textContent    = {permanent:'Permanent',fixed:'Fixed-Term',govt:'Government',notcovered:'Not Covered'}[empType];
+      document.getElementById('d_wages').textContent   = fmtFull(wages) + (sal < ctc*0.5 ? ` (rebased from ${fmtFull(sal)})` : '');
+      document.getElementById('d_pct').textContent     = pct + '%' + (sal < ctc*0.5 ? ' ⚠️ rebased' : ' ✅');
+      document.getElementById('d_yrs').textContent     = effYrs + (yrs!==effYrs ? ` (from ${yrs})` : '') + ' years';
+      document.getElementById('d_formula').textContent = empType==='notcovered' ? '(15/30)×Wages×Yrs' : '(15/26)×Wages×Yrs';
+      document.getElementById('d_raw').textContent     = eligible ? fmtFull(raw) : '—';
+      document.getElementById('d_cap').textContent     = empType==='govt' ? '₹25,00,000' : '₹20,00,000';
+      document.getElementById('d_final').textContent   = eligible ? fmtFull(final) : 'Not eligible';
+
+      const tb = document.getElementById('taxBody');
+      if(!eligible) {
+        tb.innerHTML=`<tr><td colspan="3" style="text-align:center;color:var(--text-muted);padding:14px">Not eligible for gratuity</td></tr>`;
+      } else {
+        tb.innerHTML=`
+          <tr class="exempt-row"><td>Tax-Exempt Portion</td><td class="num">${fmtFull(exempt)}</td><td>${empType==='govt'?'Sec 10(10)(i) — Fully exempt':'Sec 10(10)(ii) — Up to ₹20L'}</td></tr>
+          ${taxable>0?`<tr><td>Taxable Portion</td><td class="num">${fmtFull(taxable)}</td><td>⚠️ Taxable as Salary Income</td></tr>`:''}
+          <tr><td><strong>Total Gratuity</strong></td><td class="num"><strong>${fmtFull(final)}</strong></td><td><strong>${taxable>0?'Partially taxable':'100% Tax-Free'}</strong></td></tr>`;
+      }
+    }
+
+    
+    function setPreset(val) {
+      document.getElementById('salNum').value = val;
+      document.getElementById('salary').value = val;
+      document.getElementById('salLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      updateSlider(document.getElementById('salary'));
+      // Highlight active preset
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      calculate();
+    }
+    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+    checkWage(); checkElig(); calculate();
+  </script>
+</body>
+</html>
