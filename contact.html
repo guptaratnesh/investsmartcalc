@@ -2,6 +2,11 @@
 <html lang="en" data-theme="">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – InvestSmartCalc</title>
   <meta name="description" content="Contact InvestSmartCalc. Report a calculation error, suggest a new calculator, or send general feedback.">
@@ -120,7 +125,7 @@
     </div>
     <div style="max-width:1200px;margin:0 auto">
       <div class="footer-bottom">
-        <span>© 2025 InvestSmartCalc · For informational purposes only · Not financial advice</span>
+        <span>© 2026 InvestSmartCalc · For informational purposes only · Not financial advice</span>
         <div class="footer-bottom-links">
           <a href="/about.html">About</a><a href="/privacy.html">Privacy</a>
           <a href="/disclaimer.html">Disclaimer</a><a href="/contact.html">Contact</a>
@@ -130,7 +135,7 @@
   </footer>
 
   <script>
-    function submitForm() {
+    async function submitForm() {
       const name = document.getElementById('fname').value.trim();
       const email = document.getElementById('femail').value.trim();
       const subject = document.getElementById('fsubject').value;
@@ -139,10 +144,32 @@
         alert('Please fill in all fields before submitting.');
         return;
       }
-      // In production, replace this with a real form backend (Formspree, EmailJS, etc.)
-      document.getElementById('successMsg').style.display = 'block';
-      document.querySelector('.submit-btn').disabled = true;
-      document.querySelector('.submit-btn').textContent = '✅ Sent!';
+      const btn = document.querySelector('.submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      try {
+        // Replace YOUR_FORM_ID below with your Formspree form ID
+        // Sign up free at https://formspree.io — takes 2 minutes
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ access_key: 'ab9188d4-0c51-407d-bed3-27923b088e3f', name, email, subject, message: msg })
+        });
+        if (res.ok) {
+          document.getElementById('successMsg').style.display = 'block';
+          btn.textContent = '✅ Sent!';
+          document.getElementById('fname').value = '';
+          document.getElementById('femail').value = '';
+          document.getElementById('fsubject').value = '';
+          document.getElementById('fmessage').value = '';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch(e) {
+        btn.disabled = false;
+        btn.textContent = 'Send Message →';
+        alert('Sorry, something went wrong. Please email us directly at contact@investsmartcalc.com');
+      }
     }
   </script>
 </body>
