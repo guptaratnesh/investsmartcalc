@@ -36,8 +36,9 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"Schemes","item":"https://investsmartcalc.com/schemes/"},{"@type":"ListItem","position":3,"name":"SSY Calculator","item":"https://investsmartcalc.com/schemes/ssy/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the current SSY interest rate in 2026?","acceptedAnswer":{"@type":"Answer","text":"The SSY interest rate for Q1 FY 2026-27 is 8.2% per annum, compounded annually. The rate is reviewed quarterly by the Government of India and is typically higher than PPF."}},{"@type":"Question","name":"What is the maximum investment in SSY per year?","acceptedAnswer":{"@type":"Answer","text":"The maximum investment in SSY is ₹1,50,000 per financial year. The minimum investment is ₹250 per year. Missing the minimum deposit makes the account inactive, which can be revived by paying ₹50 penalty per year."}},{"@type":"Question","name":"Is SSY maturity amount tax-free?","acceptedAnswer":{"@type":"Answer","text":"Yes. SSY has EEE (Exempt-Exempt-Exempt) tax status — the investment qualifies for Section 80C deduction, the interest earned is completely tax-free, and the maturity amount is also fully tax-free."}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SSY Calculator 2026 — Sukanya Samriddhi Yojana Returns","description":"Free SSY calculator. Calculate 8.2% p.a. returns, maturity value, year-wise growth for Sukanya Samriddhi Yojana.","url":"https://investsmartcalc.com/schemes/ssy/","publisher":{"@type":"Organization","name":"InvestSmartCalc"},"dateModified":"2026-04-15","datePublished":"2026-04-15","inLanguage":"en-IN","author":{"@type":"Organization","name":"InvestSmartCalc Research Team"}}</script>
+  <script src="/assets/js/app.js"></script>
   <script>
-const SSY = {
+    const SSY = {
   LAST_UPDATED:    "April 15, 2026",
   EFFECTIVE_DATE:  "April 1, 2026",
   QUARTER:         "Q1 FY 2026-27",
@@ -117,10 +118,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <input type="number" class="number-input" id="amtNum" value="150000"
             oninput="syncSlider(this,'amount','amtLabel','₹',true);calculate()">
           <div class="preset-row">
-            <button class="preset-btn" onclick="setPreset(250)">₹250</button>
-            <button class="preset-btn" onclick="setPreset(50000)">₹50,000</button>
-            <button class="preset-btn" onclick="setPreset(100000)">₹1L</button>
-            <button class="preset-btn" onclick="setPreset(150000)">₹1.5L</button>
+            <button class="preset-btn" onclick="setPreset(250, this)">₹250</button>
+            <button class="preset-btn" onclick="setPreset(50000, this)">₹50,000</button>
+            <button class="preset-btn" onclick="setPreset(100000, this)">₹1L</button>
+            <button class="preset-btn" onclick="setPreset(150000, this)">₹1.5L</button>
           </div>
         </div>
 
@@ -436,8 +437,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </main>
 
-<script src="/assets/js/app.js" defer></script>
-  <script>
+<script>
     function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
       const val = parseFloat(slider.value);
       document.getElementById(numId).value = val;
@@ -451,13 +451,13 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById(labelId).textContent = prefix + (isCurrency ? val.toLocaleString('en-IN') : val) + suffix;
       updateSlider(slider);
     }
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('amtNum').value = val;
       document.getElementById('amount').value = val;
       document.getElementById('amtLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('amount'));
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
     function calculate() {
@@ -503,8 +503,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById('subReturns').textContent    = fmt(interest);
       drawDonut('donut', totalInvested, interest, ['#00c853','#e8f5e9'], 'Maturity Value');
     }
-    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+      calculate();
+        });
   </script>
 
   <footer class="footer">

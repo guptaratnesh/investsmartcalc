@@ -43,7 +43,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -52,7 +52,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "RD Calculator",
-  "url": "https://investsmartcalc.com/rd-calculator.html",
+  "url": "https://investsmartcalc.com/schemes/rd/",
   "description": "Calculate Recurring Deposit maturity amount with quarterly compounding. Enter monthly deposit, interest rate and tenure. Free RD calculator for all Indian banks.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -93,7 +93,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "RD Calculator",
-      "item": "https://investsmartcalc.com/rd-calculator.html"
+      "item": "https://investsmartcalc.com/schemes/rd/"
     }
   ]
 }
@@ -168,7 +168,7 @@
             oninput="syncInput(this,'amtNum','amtLabel','₹',true);calculate()">
           <input type="number" class="number-input" id="amtNum" value="5000"
             oninput="syncSlider(this,'amount','amtLabel','₹',true);calculate()">
-        <div class="preset-row"><button class="preset-btn" onclick="setPreset(1000)">₹1,000</button><button class="preset-btn" onclick="setPreset(5000)">₹5,000</button><button class="preset-btn" onclick="setPreset(10000)">₹10,000</button><button class="preset-btn" onclick="setPreset(25000)">₹25,000</button></div>
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(1000, this)">₹1,000</button><button class="preset-btn" onclick="setPreset(5000, this)">₹5,000</button><button class="preset-btn" onclick="setPreset(10000, this)">₹10,000</button><button class="preset-btn" onclick="setPreset(25000, this)">₹25,000</button></div>
         </div>
         <div class="input-group">
           <div class="input-label"><span>Interest Rate (p.a.)</span><span class="input-value" id="rateLabel">7%</span></div>
@@ -229,7 +229,7 @@
   </div>
   <div class="related-grid">
     <a href="/fd/" class="related-card">
-      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div class="related-icon" style="background:#fff3e0;color:#bf360c">🏦</div>
       <div>
         <div class="related-name">FD Calculator</div>
         <div class="related-desc">Fixed Deposit returns</div>
@@ -237,7 +237,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/sip/" class="related-card">
-      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">📈</div>
       <div>
         <div class="related-name">SIP Calculator</div>
         <div class="related-desc">Monthly SIP returns</div>
@@ -245,7 +245,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/lumpsum/" class="related-card">
-      <div class="related-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+      <div class="related-icon" style="background:#e3f2fd;color:#1565c0">💰</div>
       <div>
         <div class="related-name">Lumpsum Calculator</div>
         <div class="related-desc">One-time investment</div>
@@ -261,7 +261,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/tools/inflation/" class="related-card">
-      <div class="related-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+      <div class="related-icon" style="background:#fff8e1;color:#7c5c00">🔥</div>
       <div>
         <div class="related-name">Inflation Calculator</div>
         <div class="related-desc">Future value of money</div>
@@ -322,7 +322,7 @@
   <table class="seo-table">
     <thead><tr><th>Feature</th><th>Post Office RD</th><th>Bank RD</th></tr></thead>
     <tbody>
-      <tr><td>Interest Rate (2025)</td><td>6.7% p.a.</td><td>5.5–8.5% (varies by bank)</td></tr>
+      <tr><td>Interest Rate (2026)</td><td>6.7% p.a.</td><td>5.5–8.5% (varies by bank)</td></tr>
       <tr><td>Tenure</td><td>5 years (fixed)</td><td>6 months to 10 years</td></tr>
       <tr><td>Minimum Deposit</td><td>₹100/month</td><td>₹100–₹500/month</td></tr>
       <tr><td>Safety</td><td>Sovereign government guarantee</td><td>DICGC insured up to ₹5L</td></tr>
@@ -354,7 +354,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -393,7 +393,7 @@
       </div>
     </div>
   </footer>
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js"></script>
   <script>
     function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
       const val = parseFloat(slider.value); document.getElementById(numId).value = val;
@@ -424,18 +424,20 @@
       document.getElementById('subInterest').textContent = fmt(interest);
     }
     
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('amtNum').value = val;
       document.getElementById('amount').value = val;
-      document.getElementById('amtLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      document.getElementById('amtLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('amount'));
       // Highlight active preset
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
-    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+      calculate();
+        });
   </script>
 </body>
 </html>

@@ -44,7 +44,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -53,7 +53,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "EMI Calculator",
-  "url": "https://investsmartcalc.com/emi-calculator.html",
+  "url": "https://investsmartcalc.com/emi/",
   "description": "Calculate monthly EMI for Home, Car or Personal Loan. Get full amortization schedule, total interest and principal split. Free online EMI calculator India.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -94,7 +94,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "EMI Calculator",
-      "item": "https://investsmartcalc.com/emi-calculator.html"
+      "item": "https://investsmartcalc.com/emi/"
     }
   ]
 }
@@ -189,7 +189,7 @@
             oninput="syncInput(this,'loanNum','loanLabel','₹',true);calculate()">
           <input type="number" class="number-input" id="loanNum" value="3000000"
             oninput="syncSlider(this,'loan','loanLabel','₹',true);calculate()">
-        <div class="preset-row"><button class="preset-btn" onclick="setPreset(500000)">₹5L</button><button class="preset-btn" onclick="setPreset(1000000)">₹10L</button><button class="preset-btn" onclick="setPreset(2000000)">₹20L</button><button class="preset-btn" onclick="setPreset(5000000)">₹50L</button></div>
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(500000, this)">₹5L</button><button class="preset-btn" onclick="setPreset(1000000, this)">₹10L</button><button class="preset-btn" onclick="setPreset(2000000, this)">₹20L</button><button class="preset-btn" onclick="setPreset(5000000, this)">₹50L</button></div>
         </div>
         <div class="input-group">
           <div class="input-label"><span>Interest Rate (p.a.)</span><span class="input-value" id="rateLabel">8.5%</span></div>
@@ -283,7 +283,7 @@
   </div>
   <div class="related-grid">
     <a href="/investment/lumpsum/" class="related-card">
-      <div class="related-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+      <div class="related-icon" style="background:#e3f2fd;color:#1565c0">💰</div>
       <div>
         <div class="related-name">Lumpsum Calculator</div>
         <div class="related-desc">One-time investment</div>
@@ -291,7 +291,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/fd/" class="related-card">
-      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div class="related-icon" style="background:#fff3e0;color:#bf360c">🏦</div>
       <div>
         <div class="related-name">FD Calculator</div>
         <div class="related-desc">Fixed Deposit returns</div>
@@ -299,7 +299,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/tools/inflation/" class="related-card">
-      <div class="related-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+      <div class="related-icon" style="background:#fff8e1;color:#7c5c00">🔥</div>
       <div>
         <div class="related-name">Inflation Calculator</div>
         <div class="related-desc">Future value of money</div>
@@ -307,7 +307,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/sip/" class="related-card">
-      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">📈</div>
       <div>
         <div class="related-name">SIP Calculator</div>
         <div class="related-desc">Monthly SIP returns</div>
@@ -444,7 +444,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -484,7 +484,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js"></script>
   <script>
     const loanDefaults = { home: [3000000,8.5,20,10000000], car: [800000,9.5,7,2000000], personal: [500000,14,5,1500000] };
 
@@ -552,25 +552,27 @@
         tbody.innerHTML += `<tr class="${isLast?'total-row':''}">
           <td>Year ${y}</td>
           <td>${fmtFull(yearPrin)}</td>
-          <td style="color:#e65100">${fmtFull(yearInt)}</td>
+          <td style="color:#bf360c">${fmtFull(yearInt)}</td>
           <td>${fmtFull(Math.max(0,balance))}</td>
         </tr>`;
       }
     }
 
     
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('loanNum').value = val;
       document.getElementById('loan').value = val;
-      document.getElementById('loanLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      document.getElementById('loanLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('loan'));
       // Highlight active preset
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
-    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+      calculate();
+        });
   </script>
 </body>
 </html>

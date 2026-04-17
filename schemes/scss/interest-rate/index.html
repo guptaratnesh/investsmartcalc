@@ -33,10 +33,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"SCSS Interest Rate"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "SCSS Interest Rate", "item": "https://investsmartcalc.com/schemes/scss/interest-rate/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the current SCSS interest rate 2026?","acceptedAnswer":{"@type":"Answer","text":"The SCSS interest rate is <span class="interest-rate-val" data-scss="INTEREST_RATE">8.2%</span> per annum for Q1 FY 2026-27 (April – June 2026), confirmed by the Ministry of Finance on March 30, 2026."}},{"@type":"Question","name":"Is the SCSS rate locked once I invest?","acceptedAnswer":{"@type":"Answer","text":"Yes. The rate at account opening is locked for the full 5-year tenure. Future government revisions only apply to new accounts opened after that revision."}},{"@type":"Question","name":"When is SCSS interest paid?","acceptedAnswer":{"@type":"Answer","text":"Quarterly: on 1st April, 1st July, 1st October, and 1st January each year, directly to your linked savings account."}},{"@type":"Question","name":"How often does the SCSS rate change?","acceptedAnswer":{"@type":"Answer","text":"The Ministry of Finance reviews small savings rates every quarter — typically on the last working day of March, June, September, and December."}},{"@type":"Question","name":"Is 8.2% the highest guaranteed rate in India?","acceptedAnswer":{"@type":"Answer","text":"Yes. At 8.2% p.a. with sovereign backing, SCSS currently offers the highest guaranteed (non-market-linked) return available for Indian investors, exceeding the best senior citizen bank FDs by 0.45–0.70%."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the current SCSS interest rate 2026?","acceptedAnswer":{"@type":"Answer","text":"The SCSS interest rate is 8.2% per annum for Q1 FY 2026-27 (April – June 2026), confirmed by the Ministry of Finance on March 30, 2026."}},{"@type":"Question","name":"Is the SCSS rate locked once I invest?","acceptedAnswer":{"@type":"Answer","text":"Yes. The rate at account opening is locked for the full 5-year tenure. Future government revisions only apply to new accounts opened after that revision."}},{"@type":"Question","name":"When is SCSS interest paid?","acceptedAnswer":{"@type":"Answer","text":"Quarterly: on 1st April, 1st July, 1st October, and 1st January each year, directly to your linked savings account."}},{"@type":"Question","name":"How often does the SCSS rate change?","acceptedAnswer":{"@type":"Answer","text":"The Ministry of Finance reviews small savings rates every quarter — typically on the last working day of March, June, September, and December."}},{"@type":"Question","name":"Is 8.2% the highest guaranteed rate in India?","acceptedAnswer":{"@type":"Answer","text":"Yes. At 8.2% p.a. with sovereign backing, SCSS currently offers the highest guaranteed (non-market-linked) return available for Indian investors, exceeding the best senior citizen bank FDs by 0.45–0.70%."}}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"SCSS Interest Rate 2026 — 8.2% p.a.","description":"Current SCSS rate, history, quarterly credit dates and rate lock-in rules.","url":"https://investsmartcalc.com/schemes/scss/interest-rate/","publisher":{"@type":"Organization","name":"InvestSmartCalc","url":"https://investsmartcalc.com"},"dateModified":"2026-04-15","datePublished":"2026-04-15","inLanguage":"en-IN","author":{"@type":"Organization","name":"InvestSmartCalc Research Team"}}
@@ -50,7 +50,7 @@ const SCSS = {
   QUARTER_PERIOD:       "April – June 2026",
   INTEREST_RATE:        "8.2%",
   INTEREST_RATE_NUM:    8.2,
-  MAX_DEPOSIT:          "<span data-scss="MAX_DEPOSIT">₹30,00,000</span>",
+  MAX_DEPOSIT:          "₹30,00,000",
   MIN_DEPOSIT:          "₹1,000",
   TENURE:               "5 years",
   EXTENSION:            "3 years",
@@ -165,16 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </tbody>
       </table>
       <p style="font-size:12.5px;color:var(--text-muted);margin-top:8px">Source: Ministry of Finance quarterly notifications. Rates shown are approximate ranges for each period.</p>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/" class="ctx-link">SCSS Calculator — calculate your returns <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/scss-vs-fd/" class="ctx-link">SCSS vs FD — compare rates side by side <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/maturity-calculator/" class="ctx-link">Maturity calculator at 8.2% <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/tax-benefits/" class="ctx-link">Tax benefits on SCSS interest <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="rate-lock">The Rate Lock-in Advantage Explained</h2>
+      <h2 id="rate-lock">The Rate Lock-in Advantage Explained</h2>
       <p>When you open an SCSS account today at <strong class="interest-rate-val">8.2%</strong>, that rate is locked for the full <strong>5-year tenure</strong> — even if the government reduces the rate next quarter. This is a significant advantage over bank FDs, where renewal rates are often lower.</p>
       <div class="example-box">
         <div class="ex-title">📘 Example: Rate lock-in in action</div>
@@ -256,12 +247,14 @@ document.addEventListener('DOMContentLoaded', () => {
           </ul>
         </div>
       </div></div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/maturity-calculator/" class="ctx-link">📈 Calculate your exact returns at 8.2% <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/scss-vs-fd/" class="ctx-link">🏦 SCSS rate vs best bank FD rates <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/extension-calculator/" class="ctx-link">📆 Extension rate rules explained <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/maturity-calculator/" class="ctx-link">📈 Calculate your exact returns at 8.2% <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/scss-vs-fd/" class="ctx-link">🏦 SCSS rate vs best bank FD rates <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/extension-calculator/" class="ctx-link">📆 Extension rate rules explained <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
     <div class="related-section">
 
       <div class="related-header">

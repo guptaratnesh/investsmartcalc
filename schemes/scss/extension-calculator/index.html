@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"Extension Calculator"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "Extension Calculator", "item": "https://investsmartcalc.com/schemes/scss/extension-calculator/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What rate will I get when I extend SCSS?","acceptedAnswer":{"@type":"Answer","text":"The extension rate is the SCSS rate notified by the Ministry of Finance for the quarter in which you submit Form B. It is not your original opening rate. If the rate at extension is 7.8% (if it falls in future), you earn 7.8% for the 3-year extension. The rate is then locked for that 3-year block."}},{"@type":"Question","name":"Can I extend SCSS multiple times?","acceptedAnswer":{"@type":"Answer","text":"Yes — since the November 2023 amendment, SCSS can be extended unlimited times in successive 3-year blocks. After each 3-year extension period, submit Form B again within 1 year to extend further."}},{"@type":"Question","name":"Is there a penalty for closing SCSS during the extension period?","acceptedAnswer":{"@type":"Answer","text":"After 1 year of the extension period has passed, you can close the account without any penalty. If you close within 1 year of the extension start date, a penalty of 1% of the deposit applies."}},{"@type":"Question","name":"If I don't extend SCSS at maturity, what happens?","acceptedAnswer":{"@type":"Answer","text":"The balance earns the Post Office Savings Account interest rate (currently ~4%) until you close the account. You have 1 year from maturity to submit Form B for extension. After 1 year without action, the account continues at 4% — not 8.2%. Always act before the 1-year post-maturity window closes."}},{"@type":"Question","name":"Can I add fresh money when extending SCSS?","acceptedAnswer":{"@type":"Answer","text":"No. Extensions do not allow additional deposits. Only the original principal continues into the extension period. If you want to invest additional funds, open a separate new SCSS account (subject to the &#8377;30L aggregate limit) alongside the extended account."}}]}
@@ -163,16 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <li>Quarterly interest continues to be paid throughout the extension period</li>
         <li>After the 3-year extension matures, you can extend again (unlimited times) or close the account</li>
       </ol>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/" class="ctx-link">SCSS Calculator — recalculate fresh <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/maturity-calculator/" class="ctx-link">Maturity calculator — 5-year returns <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/premature-withdrawal/" class="ctx-link">Premature closure vs extension <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/rules/" class="ctx-link">SCSS extension rules — Nov 2023 amendment <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="extend-vs-fresh">Extend vs Open Fresh SCSS Account — When to Choose What</h2>
+      <h2 id="extend-vs-fresh">Extend vs Open Fresh SCSS Account — When to Choose What</h2>
       <table class="seo-table">
         <thead><tr><th>Factor</th><th>Extend (Form B)</th><th>Close &amp; Open Fresh</th></tr></thead>
         <tbody>
@@ -242,12 +233,15 @@ document.addEventListener('DOMContentLoaded', function() {
         <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. Extension rules per SCSS Amendment November 2023 (unlimited blocks). Original 5-year rules per SCSS Rules 2004, Rule 9. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
       </div>
     </div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/maturity-calculator/" class="ctx-link">📈 5-year maturity returns table <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/premature-withdrawal/" class="ctx-link">💰 Close during extension — rules <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/rules/" class="ctx-link">📋 SCSS extension rules in full <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+        
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/maturity-calculator/" class="ctx-link">📈 5-year maturity returns table <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/premature-withdrawal/" class="ctx-link">💰 Close during extension — rules <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/rules/" class="ctx-link">📋 SCSS extension rules in full <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
     <div class="related-section">
 
       <div class="related-header">

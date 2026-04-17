@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"SCSS FAQ"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "SCSS FAQ", "item": "https://investsmartcalc.com/schemes/scss/faq/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is SCSS?","acceptedAnswer":{"@type":"Answer","text":"Senior Citizen Savings Scheme is a government-backed savings scheme for Indians aged 60+ (or retirees 55+). It offers 8.2% interest p.a. paid quarterly, with a maximum deposit of ₹30 lakh and a 5-year tenure."}},{"@type":"Question","name":"What is the SCSS interest rate in 2026?","acceptedAnswer":{"@type":"Answer","text":"8.2% per annum for Q1 FY 2026-27 (April–June 2026), confirmed by Ministry of Finance on March 30, 2026."}},{"@type":"Question","name":"Can an NRI open SCSS?","acceptedAnswer":{"@type":"Answer","text":"No. SCSS is only for resident Indians."}},{"@type":"Question","name":"Is SCSS interest taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes. SCSS interest is taxable as Income from Other Sources at your slab rate."}},{"@type":"Question","name":"What is the maximum deposit in SCSS?","acceptedAnswer":{"@type":"Answer","text":"₹30 lakh across all SCSS accounts per individual."}}]}
@@ -149,18 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can my wife and I each have SCSS accounts?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a">Yes. If both spouses are eligible, each can independently open SCSS accounts with up to &#8377;30L each &mdash; giving a combined &#8377;60L. Each account is separate for tax and deposit limit purposes.</div></div>
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I open SCSS at 58?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a">Only if you have retired under superannuation or VRS and open the account <strong>within 1 month</strong> of receiving your retirement lump sum. Otherwise, wait until 60.</div></div>
       </div>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/" class="ctx-link">SCSS Calculator — calculate your returns <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/eligibility/" class="ctx-link">SCSS eligibility — who can open? <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/rules/" class="ctx-link">Complete SCSS rules 2026 <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/tax-benefits/" class="ctx-link">SCSS tax benefits — 80C and 80TTB <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/scss-vs-fd/" class="ctx-link">SCSS vs FD — which is better? <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/premature-withdrawal/" class="ctx-link">Premature withdrawal rules <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="tax-faqs">Tax Questions</h2>
+      <h2 id="tax-faqs">Tax Questions</h2>
       <div class="faq-list" style="margin-bottom:28px">
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is SCSS interest taxable?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a">Yes. SCSS interest is taxable as &ldquo;Income from Other Sources&rdquo; at your slab rate. Senior citizens can claim 80TTB deduction (&#8377;50K, old regime) and 80C on principal (&#8377;1.5L, old regime). Under new regime, income up to &#8377;12L is tax-free.</div></div>
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What is the TDS threshold for SCSS in 2026?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a">From FY 2025-26 (Budget 2025): TDS applies only if annual SCSS interest exceeds <strong data-scss="TDS_THRESHOLD_60PLUS">&#8377;1,00,000</strong> for senior citizens (60+). For age 55&ndash;59: <strong data-scss="TDS_THRESHOLD_55_60">&#8377;50,000</strong>.</div></div>
@@ -205,15 +194,18 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     </div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/what-is-scss/" class="ctx-link">📖 What is SCSS — complete beginner guide <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/eligibility/" class="ctx-link">✅ SCSS eligibility — all 3 categories <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/tax-benefits/" class="ctx-link">💸 SCSS tax benefits — 80C, 80TTB, TDS <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/rules/" class="ctx-link">📋 SCSS rules 2026 — complete reference <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/interest-rate/" class="ctx-link">📊 SCSS interest rate — 8.2% p.a. <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/premature-withdrawal/" class="ctx-link">💰 Premature withdrawal rules <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+        
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/what-is-scss/" class="ctx-link">📖 What is SCSS — complete beginner guide <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/eligibility/" class="ctx-link">✅ SCSS eligibility — all 3 categories <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/tax-benefits/" class="ctx-link">💸 SCSS tax benefits — 80C, 80TTB, TDS <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/rules/" class="ctx-link">📋 SCSS rules 2026 — complete reference <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/interest-rate/" class="ctx-link">📊 SCSS interest rate — 8.2% p.a. <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/premature-withdrawal/" class="ctx-link">💰 Premature withdrawal rules <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
 <div class="related-section">
       <div class="related-header">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>

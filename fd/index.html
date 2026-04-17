@@ -44,7 +44,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -53,7 +53,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "FD Calculator",
-  "url": "https://investsmartcalc.com/fd-calculator.html",
+  "url": "https://investsmartcalc.com/fd/",
   "description": "Calculate Fixed Deposit maturity amount and interest earned. Supports quarterly, monthly, half-yearly and yearly compounding. Free FD calculator for all Indian banks.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -94,7 +94,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "FD Calculator",
-      "item": "https://investsmartcalc.com/fd-calculator.html"
+      "item": "https://investsmartcalc.com/fd/"
     }
   ]
 }
@@ -188,7 +188,7 @@
             oninput="syncInput(this,'prinNum','prinLabel','₹',true);calculate()">
           <input type="number" class="number-input" id="prinNum" value="100000"
             oninput="syncSlider(this,'principal','prinLabel','₹',true);calculate()">
-        <div class="preset-row"><button class="preset-btn" onclick="setPreset(25000)">₹25,000</button><button class="preset-btn" onclick="setPreset(50000)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000)">₹1L</button><button class="preset-btn" onclick="setPreset(500000)">₹5L</button></div>
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(25000, this)">₹25,000</button><button class="preset-btn" onclick="setPreset(50000, this)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000, this)">₹1L</button><button class="preset-btn" onclick="setPreset(500000, this)">₹5L</button></div>
         </div>
         <div class="input-group">
           <div class="input-label"><span>Interest Rate (p.a.)</span><span class="input-value" id="rateLabel">7%</span></div>
@@ -271,7 +271,7 @@
   </div>
   <div class="related-grid">
     <a href="/schemes/rd/" class="related-card">
-      <div class="related-icon" style="background:#e0f7fa;color:#00838f">💳</div>
+      <div class="related-icon" style="background:#e0f7fa;color:#006064">💳</div>
       <div>
         <div class="related-name">RD Calculator</div>
         <div class="related-desc">Recurring Deposit</div>
@@ -287,7 +287,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/sip/" class="related-card">
-      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">📈</div>
       <div>
         <div class="related-name">SIP Calculator</div>
         <div class="related-desc">Monthly SIP returns</div>
@@ -295,7 +295,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/tools/inflation/" class="related-card">
-      <div class="related-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+      <div class="related-icon" style="background:#fff8e1;color:#7c5c00">🔥</div>
       <div>
         <div class="related-name">Inflation Calculator</div>
         <div class="related-desc">Future value of money</div>
@@ -445,7 +445,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -484,7 +484,7 @@
       </div>
     </div>
   </footer>
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js"></script>
   <script>
     let compFreq = 4;
     function setComp(btn, n) {
@@ -522,18 +522,20 @@
       drawDonut('donut', P, interest, ['#00c853','#e8f5e9'], 'Maturity Value');
     }
     
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('prinNum').value = val;
       document.getElementById('principal').value = val;
-      document.getElementById('prinLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      document.getElementById('prinLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('principal'));
       // Highlight active preset
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
-    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+      calculate();
+        });
   </script>
 </body>
 </html>

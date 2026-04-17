@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"Maturity Calculator"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "Maturity Calculator", "item": "https://investsmartcalc.com/schemes/scss/maturity-calculator/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the SCSS principal increase at maturity?","acceptedAnswer":{"@type":"Answer","text":"No. SCSS uses simple interest — interest is paid out quarterly to your savings account throughout the tenure. At maturity, you receive back exactly the original deposit amount (principal). Total earnings = interest received over tenure. The principal does not grow."}},{"@type":"Question","name":"What is the maturity amount for &#8377;30 lakh SCSS?","acceptedAnswer":{"@type":"Answer","text":"At 8.2% for 5 years: you receive &#8377;61,500 every quarter (20 payments = &#8377;12,30,000 total interest). At maturity, your &#8377;30,00,000 principal is returned. Total value received = &#8377;42,30,000."}},{"@type":"Question","name":"Is the SCSS maturity amount taxable?","acceptedAnswer":{"@type":"Answer","text":"The principal returned at maturity is not taxable — it is a return of capital. The quarterly interest you received during the tenure was taxable as income in the year it was received (as 'Income from Other Sources'). There is no additional tax event at maturity."}},{"@type":"Question","name":"How is SCSS interest different from compound interest?","acceptedAnswer":{"@type":"Answer","text":"SCSS earns simple interest: 8.2% of the original principal every year, paid quarterly. Compound interest schemes (like bank RDs or debt mutual funds) reinvest interest so the next quarter earns interest on a growing amount. SCSS does not compound — but the quarterly payout serves a different purpose: regular income for retirees."}}]}
@@ -162,16 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <tr class="highlight"><td><strong data-scss="MAX_DEPOSIT">&#8377;30,00,000</strong> (max)</td><td><strong>&#8377;61,500</strong></td><td><strong>&#8377;2,46,000</strong></td><td><strong>&#8377;12,30,000</strong></td><td><strong>&#8377;20,500</strong></td></tr>
         </tbody>
       </table>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/" class="ctx-link">Main SCSS Calculator — full interactive tool <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/extension-calculator/" class="ctx-link">Extension calculator — 5+3 year returns <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/quarterly-interest-calculator/" class="ctx-link">Calculate quarterly interest payouts <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/scss-vs-fd/" class="ctx-link">How does SCSS maturity compare to FD? <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="8yr-table">SCSS Returns for 8-Year Tenure (5 + 3-Year Extension)</h2>
+      <h2 id="8yr-table">SCSS Returns for 8-Year Tenure (5 + 3-Year Extension)</h2>
       <table class="seo-table">
         <caption style="caption-side:top;text-align:left;font-size:12px;color:var(--text-muted);padding-bottom:8px">Assumes extension rate = <span data-scss="INTEREST_RATE">8.2%</span>. Actual extension rate depends on the rate at time of extension request.</caption>
         <thead><tr><th>Deposit</th><th>5-yr interest</th><th>3-yr extension interest</th><th>8-yr total interest</th></tr></thead>
@@ -259,12 +250,15 @@ document.addEventListener('DOMContentLoaded', function() {
         <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. Interest calculations based on SCSS Rules 2004. Simple interest confirmed by India Post and Ministry of Finance guidelines. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
       </div>
     </div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/extension-calculator/" class="ctx-link">📆 5+3 year extension returns calculator <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/quarterly-interest-calculator/" class="ctx-link">📅 Exact quarterly payout calculator <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/interest-rate/" class="ctx-link">📊 Current SCSS interest rate — 8.2% <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+        
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/extension-calculator/" class="ctx-link">📆 5+3 year extension returns calculator <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/quarterly-interest-calculator/" class="ctx-link">📅 Exact quarterly payout calculator <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/interest-rate/" class="ctx-link">📊 Current SCSS interest rate — 8.2% <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
     <div class="related-section">
 
       <div class="related-header">

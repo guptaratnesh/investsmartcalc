@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"Premature Withdrawal"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "Premature Withdrawal", "item": "https://investsmartcalc.com/schemes/scss/premature-withdrawal/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I do a partial withdrawal from SCSS?","acceptedAnswer":{"@type":"Answer","text":"No. Partial withdrawals are not allowed in SCSS. If you need funds, you must close the entire account (with applicable penalty). This is a key difference from PPF, which allows partial withdrawals from Year 7. Think carefully before committing your entire corpus to SCSS without a liquid buffer."}},{"@type":"Question","name":"What is the penalty for closing SCSS after exactly 2 years?","acceptedAnswer":{"@type":"Answer","text":"After 2 years (24 months or more), the penalty is 1% of the original deposit. For &#8377;10 lakh, that is &#8377;10,000 deducted from the principal. The quarterly interest you received during the 2 years (&#8377;1,64,000) is yours to keep."}},{"@type":"Question","name":"I need money urgently. Should I break my SCSS?","acceptedAnswer":{"@type":"Answer","text":"Before breaking SCSS, explore: (1) use your emergency fund, (2) take a personal loan or gold loan — interest may cost less than the SCSS penalty, (3) redeem liquid mutual funds or RD, (4) sell other assets. Close SCSS only as a last resort. If you must, wait past the 2-year mark to pay 1% instead of 1.5% penalty."}},{"@type":"Question","name":"Is the SCSS penalty calculated on the original deposit or balance?","acceptedAnswer":{"@type":"Answer","text":"The penalty (1.5% or 1%) is calculated on the original principal deposit amount — not on the current balance or interest earned. So if you deposited &#8377;25 lakh and close after 18 months, the penalty is 1.5% × &#8377;25L = &#8377;37,500."}},{"@type":"Question","name":"What happens if I die with no nominee on my SCSS?","acceptedAnswer":{"@type":"Answer","text":"Without a nominee, the legal heirs must approach the bank or post office with a succession certificate or letter of administration from a civil court. This is a lengthy and costly legal process that can take months. Always appoint a nominee to ensure your family can access the funds quickly."}}]}
@@ -181,16 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <tr class="ex-result"><td>Amount returned at closure</td><td><strong>&#8377;9,59,000</strong></td></tr>
         </table>
       </div>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/extension-calculator/" class="ctx-link">Extension vs closure — compare returns <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/rules/" class="ctx-link">Full SCSS rules — tenure and lock-in <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/scss-vs-fd/" class="ctx-link">SCSS vs FD — flexibility comparison <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/" class="ctx-link">SCSS Calculator — recalculate your returns <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="how-to-close">How to Close SCSS Prematurely — Step by Step</h2>
+      <h2 id="how-to-close">How to Close SCSS Prematurely — Step by Step</h2>
       <ol style="margin:12px 0 12px 24px;line-height:2.3">
         <li>Visit the branch where your SCSS account is held</li>
         <li>Carry your <strong>SCSS passbook</strong> and a valid identity proof (Aadhaar or PAN)</li>
@@ -274,12 +265,15 @@ document.addEventListener('DOMContentLoaded', function() {
         <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. Premature closure rules are per SCSS Rules 2004, Section 9. Death claim rules are per Section 12 of SCSS Rules 2004. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
       </div>
     </div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/rules/" class="ctx-link">📋 Full SCSS rules reference <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/nomination/" class="ctx-link">📜 Death claim process for nominee <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/extension-calculator/" class="ctx-link">📆 Consider extending instead of closing <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+        
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/rules/" class="ctx-link">📋 Full SCSS rules reference <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/nomination/" class="ctx-link">📜 Death claim process for nominee <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/extension-calculator/" class="ctx-link">📆 Consider extending instead of closing <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
     <div class="related-section">
 
       <div class="related-header">

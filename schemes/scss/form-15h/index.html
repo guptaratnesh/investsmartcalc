@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"SCSS Form 15H"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "SCSS Form 15H", "item": "https://investsmartcalc.com/schemes/scss/form-15h/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between Form 15G and Form 15H?","acceptedAnswer":{"@type":"Answer","text":"Form 15H is specifically for senior citizens aged 60+. Form 15G is for individuals aged below 60. Both serve the same purpose (preventing TDS), but 15H has a more relaxed condition: for 15H, only the final tax liability needs to be nil (even if gross income exceeds basic exemption), whereas 15G requires both estimated income and tax to be nil."}},{"@type":"Question","name":"Can I submit Form 15H even if my SCSS interest exceeds &#8377;1 lakh?","acceptedAnswer":{"@type":"Answer","text":"Yes — you can submit Form 15H as long as your total tax liability for the year is zero, even if the gross SCSS interest exceeds &#8377;1 lakh. If your total income after deductions (80C, 80TTB, basic exemption) results in zero tax, Form 15H is valid."}},{"@type":"Question","name":"Do I need to submit Form 15H at every bank separately?","acceptedAnswer":{"@type":"Answer","text":"Yes. Form 15H applies only to the specific institution where it is submitted. If you have SCSS at SBI and HDFC, you must submit separate Form 15H at both institutions. There is no central declaration that covers all banks."}},{"@type":"Question","name":"What happens if I submit Form 15H late (e.g., in June)?","acceptedAnswer":{"@type":"Answer","text":"TDS may already have been deducted for the April–June quarter before you submitted. The Form 15H will prevent TDS from July onwards. To recover the April–June TDS, file an ITR and claim the TDS credit as a refund."}},{"@type":"Question","name":"My SCSS interest is &#8377;80,000 per year. Do I need Form 15H?","acceptedAnswer":{"@type":"Answer","text":"The TDS threshold for 60+ holders is &#8377;1,00,000. At &#8377;80,000, no TDS is deducted anyway — you don't need Form 15H for TDS prevention. However, you still need to declare this interest income in your ITR and pay tax on it (if your total income exceeds the taxable limit)."}}]}
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2 id="what-15h">What is Form 15H?</h2>
       <p>Form 15H is a <strong>self-declaration form</strong> that senior citizens (age 60+) submit to their bank or post office at the start of each financial year. By submitting it, you declare that your total estimated income for that year is below the taxable limit. On receiving Form 15H, the institution is <em>legally obligated</em> to pay SCSS interest without deducting any TDS, even if the interest exceeds <span data-scss="TDS_THRESHOLD_60PLUS">&#8377;1,00,000</span>.</p>
 
-      <h2 id="tds-threshold">SCSS TDS Threshold — Updated for FY 2025-26</h2>
+      <h2 id="tds-threshold">SCSS TDS Threshold — Updated for FY 2026-27</h2>
       <table class="seo-table">
         <thead><tr><th>SCSS holder category</th><th>TDS threshold (FY 2025-26+)</th><th>TDS rate</th></tr></thead>
         <tbody>
@@ -163,15 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <tr class="highlight"><td>SCSS deposit of &#8377;30,00,000 (max)</td><td>Annual interest = &#8377;2,46,000 — <strong>TDS on &#8377;1,46,000</strong> (unless 15H submitted)</td></tr>
         </table>
       </div>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/tax-benefits/" class="ctx-link">All SCSS tax benefits — 80C and 80TTB <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/new-vs-old-tax-regime/" class="ctx-link">Should you switch tax regimes? <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/" class="ctx-link">SCSS Calculator — plan your returns <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="who-can-submit">Who Can Submit Form 15H for SCSS?</h2>
+      <h2 id="who-can-submit">Who Can Submit Form 15H for SCSS?</h2>
       <table class="seo-table">
         <thead><tr><th>Condition</th><th>Can submit Form 15H?</th></tr></thead>
         <tbody>
@@ -263,14 +255,17 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <div class="eeat-box" role="note" aria-label="Disclaimer and source">
-        <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. TDS rules updated per Finance Act 2025 (Budget 2025). Effective FY 2025-26. Source: Income Tax Act Section 194A as amended. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
+        <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. TDS rules updated per Finance Act 2025 (Budget 2025). Effective FY 2026-27. Source: Income Tax Act Section 194A as amended. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
       </div>
     </div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/tax-benefits/" class="ctx-link">💸 Full SCSS tax benefits guide — 80C, 80TTB <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/new-vs-old-tax-regime/" class="ctx-link">⚖️ Which tax regime suits your income? <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+        
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/tax-benefits/" class="ctx-link">💸 Full SCSS tax benefits guide — 80C, 80TTB <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/new-vs-old-tax-regime/" class="ctx-link">⚖️ Which tax regime suits your income? <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
     <div class="related-section">
 
       <div class="related-header">

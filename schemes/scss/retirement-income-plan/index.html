@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"Retirement Income Plan"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "Retirement Income Plan", "item": "https://investsmartcalc.com/schemes/scss/retirement-income-plan/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much corpus do I need to retire comfortably in India?","acceptedAnswer":{"@type":"Answer","text":"A practical rule: 25× your annual expenses (the '25x rule'). If you need &#8377;5L/year (&#8377;42K/month), target a &#8377;1.25 crore corpus. With SCSS at 8.2% + POMIS at 7.4%, you can generate &#8377;3–4L/year on &#8377;40–50L — requiring a smaller corpus than equity-only approaches, but with zero market risk."}},{"@type":"Question","name":"Should I put all my retirement savings into SCSS?","acceptedAnswer":{"@type":"Answer","text":"Not all of it. SCSS is capped at &#8377;30,00,000 per person. Also, keeping 100% in SCSS with no liquid reserves is risky — if an emergency arises, you'll face premature closure penalties. Keep 12 months of expenses liquid, invest &#8377;30L in SCSS, and distribute the rest across POMIS, FDs, and a small equity allocation."}},{"@type":"Question","name":"Is &#8377;30,000/month enough for retirement in India?","acceptedAnswer":{"@type":"Answer","text":"It depends on your city and lifestyle. In tier-2/3 cities with your own home (no rent), &#8377;30,000/month covers most needs. In metros with rent, &#8377;50,000–&#8377;80,000+ is more realistic. Medical costs increase with age — factor in health insurance premiums and a medical emergency fund. Use our Inflation Calculator to project future needs."}},{"@type":"Question","name":"What if SCSS interest rate falls in future years?","acceptedAnswer":{"@type":"Answer","text":"Your current rate is locked for 5 years — rate reductions don't affect your existing account. However, when you extend after 5 years, the extension rate is whatever the government sets at that time. To hedge: lock some corpus in a 5-year senior citizen FD now (alongside SCSS), so both have rates locked simultaneously."}},{"@type":"Question","name":"How do I convert SCSS quarterly income into monthly expenses?","acceptedAnswer":{"@type":"Answer","text":"Keep a separate 'buffer' savings account. When SCSS pays quarterly (e.g., &#8377;61,500 in July), immediately transfer &#8377;41,000 to the buffer and use &#8377;20,500 for July. In August and September, draw from the buffer. POMIS (if held) provides monthly income to supplement this. The buffer earns savings account interest too."}}]}
@@ -163,18 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <tr class="ex-result"><td>Annual income</td><td>&#8377;4,24,500</td></tr>
         </table>
       </div>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/" class="ctx-link">SCSS Calculator — build your income plan <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/quarterly-interest-calculator/" class="ctx-link">Calculate your exact quarterly payout <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/scss-vs-pomis/" class="ctx-link">Combine SCSS + POMIS for monthly income <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/scss-vs-nps/" class="ctx-link">SCSS vs NPS — post-retirement strategy <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/tax-benefits/" class="ctx-link">Minimise tax on retirement income <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/extension-calculator/" class="ctx-link">Extend SCSS after 5 years <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="smoothing">Managing Quarterly SCSS Payouts as Monthly Income</h2>
+      <h2 id="smoothing">Managing Quarterly SCSS Payouts as Monthly Income</h2>
       <p>SCSS pays quarterly — but most household expenses are monthly. Here is the simple smoothing method most retirees use:</p>
       <ol style="margin:12px 0 12px 24px;line-height:2.3">
         <li>When SCSS pays &#8377;61,500 on 1st July (for example), <strong>spend &#8377;20,500 in July</strong></li>
@@ -255,14 +244,17 @@ document.addEventListener('DOMContentLoaded', function() {
         <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. Portfolio strategy is for informational purposes. Actual income depends on rates at time of investment. All rates cited are as of April 2026. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
       </div>
     </div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/scss-vs-pomis/" class="ctx-link">📬 SCSS + POMIS combined strategy details <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/scss-vs-fd/" class="ctx-link">🏦 SCSS + FD combined portfolio <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/scss-vs-nps/" class="ctx-link">🎯 Using NPS corpus to fund SCSS <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/tax-benefits/" class="ctx-link">💸 Tax planning for retirement income <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/maturity-calculator/" class="ctx-link">📈 Calculate exact returns for your corpus <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+        
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/scss-vs-pomis/" class="ctx-link">📬 SCSS + POMIS combined strategy details <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/scss-vs-fd/" class="ctx-link">🏦 SCSS + FD combined portfolio <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/scss-vs-nps/" class="ctx-link">🎯 Using NPS corpus to fund SCSS <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/tax-benefits/" class="ctx-link">💸 Tax planning for retirement income <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/maturity-calculator/" class="ctx-link">📈 Calculate exact returns for your corpus <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
     <div class="related-section">
 
       <div class="related-header">

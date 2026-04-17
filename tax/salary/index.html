@@ -8,15 +8,16 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
   <title>Salary Calculator – CTC to In-Hand, PF & TDS Breakup | InvestSmartCalc</title>
-  <meta name="description" content="Convert CTC to in-hand salary with full breakup – Basic, HRA, PF, TDS, Gratuity. Applies Code of Wages 2019 50% basic rule. Free salary calculator 2025.">
-  <meta name="keywords" content="salary calculator India, CTC to in-hand salary calculator, salary breakup calculator, take home salary calculator India 2025">
+  <meta name="description" content="Convert CTC to in-hand salary with full breakup – Basic, HRA, PF, TDS, Gratuity. Applies Code of Wages 2019 50% basic rule. Free salary calculator 2026.">
+  <meta name="keywords" content="salary calculator India, CTC to in-hand salary calculator, salary breakup calculator, take home salary calculator India 2026">
+  <meta name="author" content="InvestSmartCalc Research Team">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://investsmartcalc.com/salary.html">
+  <link rel="canonical" href="https://investsmartcalc.com/tax/salary/">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://investsmartcalc.com/salary.html">
+  <meta property="og:url" content="https://investsmartcalc.com/tax/salary/">
   <meta property="og:title" content="Salary Calculator – CTC to In-Hand, PF & TDS Breakup">
-  <meta property="og:description" content="Convert CTC to in-hand salary with full breakup – Basic, HRA, PF, TDS, Gratuity. Applies Code of Wages 2019 50% basic rule. Free salary calculator 2025.">
+  <meta property="og:description" content="Convert CTC to in-hand salary with full breakup – Basic, HRA, PF, TDS, Gratuity. Applies Code of Wages 2019 50% basic rule. Free salary calculator 2026.">
   <meta property="og:site_name" content="InvestSmartCalc">
   <!-- Twitter Card -->
   <meta property="og:image" content="https://investsmartcalc.com/assets/images/social/og-image.png">
@@ -25,7 +26,7 @@
   <meta name="twitter:image" content="https://investsmartcalc.com/assets/images/social/og-image.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Salary Calculator – CTC to In-Hand, PF & TDS Breakup">
-  <meta name="twitter:description" content="Convert CTC to in-hand salary with full breakup – Basic, HRA, PF, TDS, Gratuity. Applies Code of Wages 2019 50% basic rule. Free salary calculator 2025.">
+  <meta name="twitter:description" content="Convert CTC to in-hand salary with full breakup – Basic, HRA, PF, TDS, Gratuity. Applies Code of Wages 2019 50% basic rule. Free salary calculator 2026.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +46,7 @@
 
     .rule-tag { display:inline-block; font-size:10px; padding:2px 7px; border-radius:100px; font-weight:600; margin-left:6px; }
     .rule-govt { background:#e8f5e9; color:#2e7d32; }
-    .rule-warn { background:#fff3e0; color:#e65100; }
+    .rule-warn { background:#fff3e0; color:#bf360c; }
     .rule-info { background:#e3f2fd; color:#1565c0; }
 
     .pct-bar-wrap { height:6px; background:var(--border); border-radius:4px; margin-top:4px; }
@@ -64,6 +65,19 @@
     .toggle-slider:before { content:''; position:absolute; width:16px; height:16px; left:3px; bottom:3px; background:white; border-radius:50%; transition:0.2s; }
     .toggle-switch input:checked + .toggle-slider { background:var(--green); }
     .toggle-switch input:checked + .toggle-slider:before { transform:translateX(18px); }
+
+    /* Dark mode overrides for salary-specific components */
+    [data-theme="dark"] .compliance-pass { background: #002a12; border-left-color: #00c853; }
+    [data-theme="dark"] .compliance-fail { background: #2a1500; border-left-color: #ff6d00; }
+    [data-theme="dark"] .compliance-title { color: var(--text-primary); }
+    [data-theme="dark"] .rule-govt { background: #0a2e0f; color: #69f0ae; }
+    [data-theme="dark"] .rule-info { background: #0d1b2e; color: #90caf9; }
+    [data-theme="dark"] .rule-warn { background: #2a1500; color: #ff9a5c; }
+    [data-theme="dark"] .toggle-row { border-color: var(--border); color: var(--text-secondary); }
+    [data-theme="dark"] .toggle-slider { background: var(--border); }
+    [data-theme="dark"] .toggle-switch input:checked + .toggle-slider { background: var(--green); }
+    [data-theme="dark"] .pct-bar-wrap { background: var(--border); }
+    [data-theme="dark"] .breakup-table .net-row td { background: #0a2e0f; color: #00e676; }
   </style>
 <script type="application/ld+json">
 {
@@ -77,7 +91,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -86,8 +100,8 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Salary Breakup Calculator India",
-  "url": "https://investsmartcalc.com/salary.html",
-  "description": "Convert CTC to in-hand salary with full breakup including Basic, HRA, PF, TDS and Gratuity. Applies Code of Wages 2019 50% basic rule. Free salary calculator 2025.",
+  "url": "https://investsmartcalc.com/tax/salary/",
+  "description": "Convert CTC to in-hand salary with full breakup including Basic, HRA, PF, TDS and Gratuity. Applies Code of Wages 2019 50% basic rule. Free salary calculator 2026.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
   "browserRequirements": "Requires JavaScript",
@@ -117,18 +131,9 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://investsmartcalc.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Salary Breakup Calculator India",
-      "item": "https://investsmartcalc.com/salary.html"
-    }
+    {"@type": "ListItem","position": 1,"name": "Home","item": "https://investsmartcalc.com/"},
+    {"@type": "ListItem","position": 2,"name": "Tax","item": "https://investsmartcalc.com/tax/"},
+    {"@type": "ListItem","position": 3,"name": "Salary Breakup Calculator","item": "https://investsmartcalc.com/tax/salary/"}
   ]
 }
 </script>
@@ -158,7 +163,7 @@
       "name": "How is employee PF calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Employee Provident Fund (EPF) contribution is 12% of the employee's basic salary per month. The employer also contributes 12% of basic — of which 8.33% goes to Employee Pension Scheme (EPS, capped at ₹1,250/month based on ₹15,000 wage ceiling) and 3.67% goes to EPF. Both employee and employer contributions to EPF earn interest at 8.25% per annum (FY 2024-25)."
+        "text": "Employee Provident Fund (EPF) contribution is 12% of the employee's basic salary per month. The employer also contributes 12% of basic — of which 8.33% goes to Employee Pension Scheme (EPS, capped at ₹1,250/month based on ₹15,000 wage ceiling) and 3.67% goes to EPF. Both employee and employer contributions to EPF earn interest at 8.25% per annum (FY 2025-26)."
       }
     },
     {
@@ -171,6 +176,9 @@
     }
   ]
 }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Salary Breakup Calculator — CTC to In-Hand with PF & TDS","description":"Convert CTC to in-hand salary with full breakup including Basic, HRA, PF, TDS and Gratuity. Code of Wages 2019 compliant.","url":"https://investsmartcalc.com/tax/salary/","publisher":{"@type":"Organization","name":"InvestSmartCalc"},"dateModified":"2026-04-15","datePublished":"2026-04-15","inLanguage":"en-IN","author":{"@type":"Organization","name":"InvestSmartCalc Research Team"}}
 </script>
 </head>
 <body>
@@ -201,10 +209,21 @@
   </nav>
 
   <main class="calc-page">
+  <div class="page-meta-bar" role="note" aria-label="Page information">
+    <div class="meta-item">📅 Last Updated: <strong>April 15, 2026</strong></div>
+    <div class="meta-item">🏛 Source: <strong>Ministry of Finance, Govt. of India · EPF Act · Code of Wages 2019</strong></div>
+    <div class="meta-item"><span class="page-meta-badge">FY 2026-27</span></div>
+    <div class="meta-item">✓ New Regime: <strong>₹75K</strong> std. deduction</div>
+  </div>
+  <div class="update-banner" role="alert" aria-live="polite">
+    <span class="ub-icon">🔔</span>
+    <div class="ub-body"><strong>FY 2026-27:</strong> New Tax Regime standard deduction <strong>₹75,000</strong> (Budget 2025). New regime tax-free limit <strong>₹12 lakh</strong> with rebate. EPF interest rate <strong>8.25%</strong> (FY 2025-26). Code of Wages 2019 50% basic rule applies.</div>
+  </div>
+
     <div class="calc-page-header">
-      <div class="breadcrumb"><a href="/index.html">Home</a> › Salary Breakup Calculator</div>
+      <div class="breadcrumb"><a href="/index.html">Home</a> › <a href="/tax/">Tax</a> › Salary Breakup Calculator</div>
       <h1>Salary Breakup Calculator</h1>
-      <p>As per Code of Wages 2019 · EPF Act · Income Tax Act · FY 2024-25</p>
+      <p>As per Code of Wages 2019 · EPF Act · Income Tax Act · FY 2025-26</p>
     </div>
 
     <div class="calc-layout">
@@ -218,7 +237,7 @@
             oninput="syncInput(this,'ctcNum','ctcLabel','₹',true);calculate()">
           <input type="number" class="number-input" id="ctcNum" value="1200000"
             oninput="syncSlider(this,'ctcSlider','ctcLabel','₹',true);calculate()">
-        <div class="preset-row"><button class="preset-btn" onclick="setPreset(500000)">₹5L</button><button class="preset-btn" onclick="setPreset(1000000)">₹10L</button><button class="preset-btn" onclick="setPreset(1500000)">₹15L</button><button class="preset-btn" onclick="setPreset(2500000)">₹25L</button></div>
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(500000, this)">₹5L</button><button class="preset-btn" onclick="setPreset(1000000, this)">₹10L</button><button class="preset-btn" onclick="setPreset(1500000, this)">₹15L</button><button class="preset-btn" onclick="setPreset(2500000, this)">₹25L</button></div>
         </div>
 
         <h3 style="font-size:14px;font-weight:600;margin-bottom:14px;color:var(--text-secondary)">Options</h3>
@@ -315,6 +334,61 @@
       </div>
     </div>
 
+
+  <div class="key-takeaways" role="note" aria-label="Key takeaways">
+    <h3>⚡ Key Takeaways — Salary Breakup 2026</h3>
+    <ul>
+      <li>CTC ≠ In-hand: employer PF (12%), gratuity (4.81%) and your own PF (12%) reduce take-home significantly</li>
+      <li><strong>Code of Wages 2019</strong>: Basic salary must be ≥50% of gross — this calculator enforces it</li>
+      <li>New Tax Regime: ₹75,000 standard deduction, ₹12L tax-free with rebate — better for most under ₹15L CTC</li>
+      <li>Old Regime: claim 80C (₹1.5L), 80D, HRA exemption to reduce taxable income</li>
+      <li>Employer PF (3.67% to EPF + 8.33% to EPS capped at ₹1,250/mo) is part of your CTC but not in-hand</li>
+      <li>Professional Tax varies by state — up to ₹2,500/year, deductible under Section 16(iii)</li>
+    </ul>
+  </div>
+
+  <div class="who-should-box">
+    <div class="who-card-yes">
+      <h3>✅ Who should use this calculator</h3>
+      <ul>
+        <li>Job seekers evaluating a CTC offer — understand actual in-hand amount</li>
+        <li>Employees choosing between New and Old tax regime</li>
+        <li>HR teams verifying Code of Wages 2019 compliance</li>
+        <li>Those planning salary restructuring to maximise take-home</li>
+      </ul>
+    </div>
+    <div class="who-card-no">
+      <h3>⚠️ Limitations to know</h3>
+      <ul>
+        <li>Does not include all allowances (LTA, medical, meal coupons)</li>
+        <li>Professional tax shown as flat ₹200/mo — actual varies by state and slab</li>
+        <li>HRA exemption assumes full rent paid = HRA received</li>
+        <li>Surcharge applies above ₹50L income — not shown in result cards</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pros-cons-grid">
+    <div class="pros-box">
+      <h4>✓ New Tax Regime — Pros</h4>
+      <ul>
+        <li>₹75,000 standard deduction (Budget 2025)</li>
+        <li>Zero tax up to ₹12L income with rebate</li>
+        <li>Lower rates — simpler, no need to track deductions</li>
+        <li>Employer NPS contribution (80CCD(2)) still deductible</li>
+      </ul>
+    </div>
+    <div class="cons-box">
+      <h4>✗ New Tax Regime — Cons</h4>
+      <ul>
+        <li>No HRA exemption, 80C, 80D deductions</li>
+        <li>Higher tax for those with large 80C investments</li>
+        <li>House loan interest (Sec 24b) not available</li>
+        <li>Old regime better if deductions exceed ₹3.75L</li>
+      </ul>
+    </div>
+  </div>
+
     <!-- FULL BREAKUP TABLE -->
     <div class="year-table-wrap" style="margin-top:28px">
       <div class="year-table-head">📋 Complete Salary Breakup (Monthly)</div>
@@ -341,10 +415,21 @@
       Employee PF = 12% of Basic+DA (EPF Act) ·
       Employer PF = 12% of Basic+DA (8.33% to EPS capped at ₹1,250/mo, rest to EPF) ·
       Gratuity = 4.81% of Basic+DA ·
-      Standard Deduction = ₹75,000 (New Regime, Budget 2024) / ₹50,000 (Old Regime) ·
+      Standard Deduction = ₹75,000 (New Regime, Budget 2025) / ₹50,000 (Old Regime) ·
       Professional Tax varies by state (₹200/month shown if enabled)
     </div>
   
+
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/tax/" class="ctx-link">Income Tax Calculator — new vs old regime <span class="ctx-arrow">→</span></a>
+      <a href="/tax/salary/hra-calculator.html" class="ctx-link">HRA Calculator — exemption on rent <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/gratuity/" class="ctx-link">Gratuity Calculator — Social Security Code <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/epf/" class="ctx-link">EPF Calculator — retirement corpus at 8.25% <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/ppf/" class="ctx-link">PPF Calculator — tax-free returns <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
 
 <div class="related-section">
   <div class="related-header">
@@ -377,7 +462,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/sip/" class="related-card">
-      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">📈</div>
       <div>
         <div class="related-name">SIP Calculator</div>
         <div class="related-desc">Monthly SIP returns</div>
@@ -397,18 +482,17 @@
 <div class="seo-section">
   <hr class="seo-divider">
 
-<div class="toc-box">
-  <div class="toc-title">On this page</div>
-  <ul class="toc-list">
+<div class="page-toc">
+  <h3>On this page</h3>
+  <ol>
     <li><a href="#what-is-ctc-and-how-is-it-different-from-take-home-salary">CTC vs Take-Home</a></li>
     <li><a href="#typical-salary-structure-components">Salary Components</a></li>
     <li><a href="#how-to-negotiate-salary-in-india">How to Negotiate Salary</a></li>
     <li><a href="#how-to-increase-take-home-salary-legally">Increase Take-Home</a></li>
     <li><a href="#code-of-wages-2019-the-50-basic-rule">50% Basic Rule</a></li>
     <li><a href="#frequently-asked-questions">FAQ</a></li>
-  </ul>
+  </ol>
 </div>
-
 
   <h2 id="what-is-ctc-and-how-is-it-different-from-take-home">What is CTC and How is it Different from Take-Home Salary?</h2>
   <p>CTC (Cost to Company) is the total annual expense an employer incurs for an employee — including not just your salary but also employer's PF contribution, gratuity provision, insurance, and other benefits. Your <strong>take-home (in-hand) salary</strong> is significantly lower than CTC because it excludes employer contributions and deductions like employee PF, TDS, and professional tax.</p>
@@ -462,7 +546,11 @@
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What is professional tax and who pays it?<span class="faq-icon">+</span></button>
       <div class="faq-a">Professional Tax is a state-level tax levied on employment and professions. Not all states levy it — Maharashtra, Karnataka, West Bengal, Tamil Nadu, Andhra Pradesh, Gujarat, and a few others do. The maximum is ₹2,500/year nationally. In Maharashtra, the monthly slab goes up to ₹200/month for salaries above ₹10,000. Professional tax paid is deductible from income under Section 16(iii) of the Income Tax Act.
-        <div class="share-bar">
+      </div>
+    </div>
+  </div>
+
+<div class="share-bar">
           <div class="share-bar-title">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
             Share Result
@@ -474,10 +562,11 @@
             <button class="share-btn download" onclick="downloadPDF('Salary Breakup Calculator')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Save PDF</button>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 </div>
+
+  <div class="eeat-box" role="note" aria-label="Disclaimer">
+    <strong>📋 Disclaimer &amp; Source:</strong> Salary calculations are based on the <strong>Code of Wages 2019</strong>, <strong>EPF Act 1952</strong>, and <strong>Income Tax Act</strong> as updated for FY 2026-27. Tax slabs reflect Budget 2025 provisions. EPF interest rate 8.25% is for FY 2025-26. Professional tax rates vary by state — consult your employer or CA for precise figures. This calculator is for informational purposes only and does not constitute financial or legal advice. Last reviewed: <strong>April 15, 2026</strong>. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
+  </div>
 
 </main>
 
@@ -485,7 +574,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -525,7 +614,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js"></script>
   <script>
     let taxRegime = 'new';
 
@@ -732,18 +821,20 @@
     }
 
     
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('ctcNum').value = val;
       document.getElementById('ctcSlider').value = val;
-      document.getElementById('ctcLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      document.getElementById('ctcLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('ctcSlider'));
       // Highlight active preset
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
-    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+      calculate();
+    });
   </script>
 </body>
 </html>

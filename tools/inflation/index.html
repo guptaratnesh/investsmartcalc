@@ -43,7 +43,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -52,7 +52,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Inflation Calculator",
-  "url": "https://investsmartcalc.com/inflation-calculator.html",
+  "url": "https://investsmartcalc.com/tools/inflation/",
   "description": "Find out how inflation erodes purchasing power. Calculate future cost of money at any inflation rate. Essential for retirement and financial goal planning in India.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -93,7 +93,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Inflation Calculator",
-      "item": "https://investsmartcalc.com/inflation-calculator.html"
+      "item": "https://investsmartcalc.com/tools/inflation/"
     }
   ]
 }
@@ -166,7 +166,7 @@
             oninput="syncInput(this,'amtNum','amtLabel','₹',true);calculate()">
           <input type="number" class="number-input" id="amtNum" value="100000"
             oninput="syncSlider(this,'amount','amtLabel','₹',true);calculate()">
-        <div class="preset-row"><button class="preset-btn" onclick="setPreset(50000)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000)">₹1L</button><button class="preset-btn" onclick="setPreset(500000)">₹5L</button><button class="preset-btn" onclick="setPreset(1000000)">₹10L</button></div>
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(50000, this)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000, this)">₹1L</button><button class="preset-btn" onclick="setPreset(500000, this)">₹5L</button><button class="preset-btn" onclick="setPreset(1000000, this)">₹10L</button></div>
         </div>
         <div class="input-group">
           <div class="input-label"><span>Inflation Rate (p.a.)</span><span class="input-value" id="rateLabel">6%</span></div>
@@ -200,7 +200,7 @@
         <div class="result-card">
           <div class="result-row"><span>Today's Value</span><span id="r1">₹1,00,000</span></div>
           <div class="result-row"><span>Future Value</span><span id="r2">₹1,79,085</span></div>
-          <div class="result-row"><span>Purchasing Power Loss</span><span id="r3" style="color:#e65100">₹79,085</span></div>
+          <div class="result-row"><span>Purchasing Power Loss</span><span id="r3" style="color:#bf360c">₹79,085</span></div>
           <div class="result-row"><span>Inflation Rate</span><span id="r4">6% p.a.</span></div>
         </div>
         <div class="info-box">💡 To maintain the same purchasing power, your investments must grow at a rate higher than inflation.
@@ -228,7 +228,7 @@
   </div>
   <div class="related-grid">
     <a href="/investment/sip/" class="related-card">
-      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">📈</div>
       <div>
         <div class="related-name">SIP Calculator</div>
         <div class="related-desc">Monthly SIP returns</div>
@@ -236,7 +236,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/lumpsum/" class="related-card">
-      <div class="related-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+      <div class="related-icon" style="background:#e3f2fd;color:#1565c0">💰</div>
       <div>
         <div class="related-name">Lumpsum Calculator</div>
         <div class="related-desc">One-time investment</div>
@@ -244,7 +244,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/fd/" class="related-card">
-      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div class="related-icon" style="background:#fff3e0;color:#bf360c">🏦</div>
       <div>
         <div class="related-name">FD Calculator</div>
         <div class="related-desc">Fixed Deposit returns</div>
@@ -322,7 +322,7 @@
     <li><strong>The FD trap:</strong> At 7% FD rate and 6% inflation, real return is ~1% pre-tax. After 30% tax, real return is negative. FDs cannot protect retirement purchasing power over 20+ years.</li>
     <li><strong>The solution:</strong> At least 50–60% of retirement corpus in equity mutual funds, which historically deliver 12–15% in India — beating inflation by 6–9% annually over long periods.</li>
   </ul>
-  <h2 id="best-investments-to-beat-inflation-in-india">Best Investments to Beat Inflation in India (2025)</h2>
+  <h2 id="best-investments-to-beat-inflation-in-india">Best Investments to Beat Inflation in India (2026)</h2>
   <table class="seo-table">
     <thead><tr><th>Investment</th><th>Avg. Long-Term Return</th><th>Beats 6% Inflation?</th></tr></thead>
     <tbody>
@@ -356,7 +356,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -395,7 +395,7 @@
       </div>
     </div>
   </footer>
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js"></script>
   <script>
     function syncInput(slider, numId, labelId, prefix, isCurrency, suffix='') {
       const val = parseFloat(slider.value); document.getElementById(numId).value = val;
@@ -422,18 +422,20 @@
       document.getElementById('subLoss').textContent = fmt(loss);
     }
     
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('amtNum').value = val;
       document.getElementById('amount').value = val;
-      document.getElementById('amtLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      document.getElementById('amtLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('amount'));
       // Highlight active preset
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
-    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+      calculate();
+        });
   </script>
 </body>
 </html>

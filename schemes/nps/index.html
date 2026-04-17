@@ -8,14 +8,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
   <title>NPS Calculator – National Pension Scheme Returns & Corpus | InvestSmartCalc</title>
-  <meta name="description" content="NPS calculator India. Calculate National Pension Scheme corpus, monthly pension, tax benefits under 80CCD(1), 80CCD(1B) & 80CCD(2). Compare Tier 1 vs Tier 2. Free NPS calculator FY 2025-26.">
+  <meta name="description" content="Free NPS calculator 2026. Calculate National Pension Scheme corpus and annuity at retirement. Tier I vs Tier II, 80CCD deductions, annuity options — complete guide.">
   <meta name="keywords" content="NPS calculator, national pension scheme calculator, NPS returns calculator, NPS tax benefit, 80CCD calculator, NPS corpus calculator India">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://investsmartcalc.com/schemes/nps/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://investsmartcalc.com/schemes/nps/">
   <meta property="og:title" content="NPS Calculator – National Pension Scheme Returns & Corpus">
-  <meta property="og:description" content="Calculate NPS corpus, monthly pension and tax savings. 80CCD(1B) extra ₹50,000 deduction. Free NPS calculator for India.">
+  <meta property="og:description" content="Free NPS calculator 2026. Calculate National Pension Scheme corpus and annuity at retirement. Tier I vs Tier II, 80CCD deductions, annuity options — complete guide.">
   <meta property="og:site_name" content="InvestSmartCalc">
   <meta property="og:image" content="https://investsmartcalc.com/assets/images/social/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="https://investsmartcalc.com/assets/images/social/og-image.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="NPS Calculator – National Pension Scheme Returns & Corpus">
-  <meta name="twitter:description" content="Calculate NPS corpus, monthly pension and tax savings. 80CCD(1B) extra ₹50,000 deduction. Free NPS calculator for India.">
+  <meta name="twitter:description" content="Free NPS calculator 2026. Calculate National Pension Scheme corpus and annuity at retirement. Tier I vs Tier II, 80CCD deductions, annuity options — complete guide.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,7 +95,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, NPS, HRA, Gratuity and Salary calculators. Updated for FY 2025-26."
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, NPS, HRA, Gratuity and Salary calculators. Updated for FY 2026-27."
 }
 </script>
 <script type="application/ld+json">
@@ -103,7 +103,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "NPS Calculator – National Pension Scheme",
-  "url": "https://investsmartcalc.com/nps-calculator.html",
+  "url": "https://investsmartcalc.com/schemes/nps/",
   "description": "Calculate NPS corpus at retirement, monthly pension estimate, lump sum withdrawal, and total tax savings under Sections 80CCD(1), 80CCD(1B), and 80CCD(2). Free India NPS calculator.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -120,7 +120,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/" },
-    { "@type": "ListItem", "position": 2, "name": "NPS Calculator", "item": "https://investsmartcalc.com/nps-calculator.html" }
+    { "@type": "ListItem", "position": 2, "name": "NPS Calculator", "item": "https://investsmartcalc.com/schemes/nps/" }
   ]
 }
 </script>
@@ -261,10 +261,10 @@
           <input type="number" class="number-input" id="contribNum" value="5000"
             oninput="syncSlider(this,'contribSlider','contribLabel','₹',true);calculate()">
           <div class="preset-row">
-            <button class="preset-btn" onclick="setPreset('contrib',2000)">₹2K</button>
-            <button class="preset-btn" onclick="setPreset('contrib',5000)">₹5K</button>
-            <button class="preset-btn" onclick="setPreset('contrib',10000)">₹10K</button>
-            <button class="preset-btn" onclick="setPreset('contrib',25000)">₹25K</button>
+            <button class="preset-btn" onclick=\"setPreset('contrib',2000, this)\">₹2K</button>
+            <button class="preset-btn" onclick=\"setPreset('contrib',5000, this)\">₹5K</button>
+            <button class="preset-btn" onclick=\"setPreset('contrib',10000, this)\">₹10K</button>
+            <button class="preset-btn" onclick=\"setPreset('contrib',25000, this)\">₹25K</button>
           </div>
         </div>
 
@@ -294,9 +294,9 @@
           <input type="number" class="number-input" id="returnNum" value="10" step="0.5"
             oninput="syncSlider(this,'returnSlider','returnLabel','',false,'%');calculate()">
           <div class="preset-row">
-            <button class="preset-btn" onclick="setPreset('return',8)">8% Conservative</button>
-            <button class="preset-btn" onclick="setPreset('return',10)">10% Moderate</button>
-            <button class="preset-btn" onclick="setPreset('return',12)">12% Aggressive</button>
+            <button class="preset-btn" onclick=\"setPreset('return',8, this)\">8% Conservative</button>
+            <button class="preset-btn" onclick=\"setPreset('return',10, this)\">10% Moderate</button>
+            <button class="preset-btn" onclick=\"setPreset('return',12, this)\">12% Aggressive</button>
           </div>
         </div>
 
@@ -375,7 +375,7 @@
           <hr style="border:none;border-top:1px solid var(--border);margin:8px 0">
           <div class="result-row"><span>🏦 Lump Sum (80% · PFRDA 2025)</span><span id="lumpSum" style="font-family:var(--font-mono);color:var(--green-dark)">₹0</span></div>
           <div class="result-row" style="padding-left:12px;font-size:12px"><span style="color:var(--text-muted)">↳ Tax-free portion (60% of corpus)</span><span id="taxFreeLumpSum" style="font-family:var(--font-mono);color:var(--green-dark)">₹0</span></div>
-          <div class="result-row" style="padding-left:12px;font-size:12px"><span style="color:var(--text-muted)">↳ Taxable portion (20% · IT Act pending)</span><span id="taxableLumpSum" style="font-family:var(--font-mono);color:#e65100">₹0</span></div>
+          <div class="result-row" style="padding-left:12px;font-size:12px"><span style="color:var(--text-muted)">↳ Taxable portion (20% · IT Act pending)</span><span id="taxableLumpSum" style="font-family:var(--font-mono);color:#bf360c">₹0</span></div>
           <div class="result-row"><span>📋 Annuity Purchase (min 20%)</span><span id="annuityCorpus" style="font-family:var(--font-mono)">₹0</span></div>
 
           <!-- Pension split visual bar -->
@@ -505,7 +505,7 @@
           <span class="related-arrow">→</span>
         </a>
         <a href="/tax/" class="related-card">
-          <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">🏛️</div>
+          <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">🏛️</div>
           <div><div class="related-name">Tax Calculator</div><div class="related-desc">New vs Old Regime</div></div>
           <span class="related-arrow">→</span>
         </a>
@@ -515,7 +515,7 @@
           <span class="related-arrow">→</span>
         </a>
         <a href="/fd/" class="related-card">
-          <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+          <div class="related-icon" style="background:#fff3e0;color:#bf360c">🏦</div>
           <div><div class="related-name">FD Calculator</div><div class="related-desc">Fixed deposit returns</div></div>
           <span class="related-arrow">→</span>
         </a>
@@ -658,7 +658,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26 &amp; FY 2026-27.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27 &amp; FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -698,7 +698,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js"></script>
   <script>
     let activeTier = 1;
 
@@ -713,7 +713,7 @@
       calculate();
     }
 
-    function setPreset(type, val) {
+    function setPreset(type, val, btn) {
       if (type === 'contrib') {
         document.getElementById('contribNum').value = val;
         document.getElementById('contribSlider').value = val;
@@ -725,6 +725,7 @@
         document.getElementById('returnLabel').textContent = val + '%';
         updateSlider(document.getElementById('returnSlider'));
       }
+      if(btn){document.querySelectorAll('.preset-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
       calculate();
     }
 
@@ -872,10 +873,11 @@
 
       tbody.innerHTML = rows || '<tr><td colspan="5" style="text-align:center;color:var(--text-muted)">Increase investment period to see projections</td></tr>';
     }
-
-    // Init sliders
-    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      // Init sliders
+      document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+      calculate();
+        });
   </script>
 </body>
 </html>

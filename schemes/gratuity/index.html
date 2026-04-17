@@ -9,7 +9,7 @@
   <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
   <title>Gratuity Calculator 2026 – Social Security Code New Rules | InvestSmartCalc</title>
   <meta name="description" content="Calculate gratuity under Social Security Code 2020 (effective Nov 2025). Covers permanent, fixed-term & govt employees. ₹20L/₹25L cap applied.">
-  <meta name="keywords" content="gratuity calculator India 2025, gratuity calculator new rules, social security code 2020 gratuity, gratuity formula calculator">
+  <meta name="keywords" content="gratuity calculator India 2026, gratuity calculator new rules, social security code 2020 gratuity, gratuity formula calculator">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://investsmartcalc.com/schemes/gratuity/">
   <!-- Open Graph / Social Sharing -->
@@ -86,7 +86,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -95,7 +95,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Gratuity Calculator 2026",
-  "url": "https://investsmartcalc.com/gratuity-calculator.html",
+  "url": "https://investsmartcalc.com/schemes/gratuity/",
   "description": "Calculate gratuity under Social Security Code 2020. Covers permanent, fixed-term and government employees. Applies ₹20 lakh and ₹25 lakh caps correctly.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -136,7 +136,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Gratuity Calculator 2026",
-      "item": "https://investsmartcalc.com/gratuity-calculator.html"
+      "item": "https://investsmartcalc.com/schemes/gratuity/"
     }
   ]
 }
@@ -262,7 +262,7 @@
             oninput="syncInput(this,'salNum','salLabel','₹',true);checkWage();calculate()">
           <input type="number" class="number-input" id="salNum" value="50000"
             oninput="syncSlider(this,'salary','salLabel','₹',true);checkWage();calculate()">
-        <div class="preset-row"><button class="preset-btn" onclick="setPreset(15000)">₹15,000</button><button class="preset-btn" onclick="setPreset(30000)">₹30,000</button><button class="preset-btn" onclick="setPreset(50000)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000)">₹1L</button></div>
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(15000, this)">₹15,000</button><button class="preset-btn" onclick="setPreset(30000, this)">₹30,000</button><button class="preset-btn" onclick="setPreset(50000, this)">₹50,000</button><button class="preset-btn" onclick="setPreset(100000, this)">₹1L</button></div>
           <div class="calc-note" id="wageNote"></div>
         </div>
 
@@ -385,7 +385,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/sip/" class="related-card">
-      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">📈</div>
       <div>
         <div class="related-name">SIP Calculator</div>
         <div class="related-desc">Monthly SIP returns</div>
@@ -393,7 +393,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/fd/" class="related-card">
-      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div class="related-icon" style="background:#fff3e0;color:#bf360c">🏦</div>
       <div>
         <div class="related-name">FD Calculator</div>
         <div class="related-desc">Fixed Deposit returns</div>
@@ -525,7 +525,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -565,7 +565,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js"></script>
   <script>
     let empType = 'permanent';
 
@@ -686,18 +686,20 @@
     }
 
     
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('salNum').value = val;
       document.getElementById('salary').value = val;
-      document.getElementById('salLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      document.getElementById('salLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('salary'));
       // Highlight active preset
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
-    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
-    checkWage(); checkElig(); calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+      checkWage(); checkElig(); calculate();
+        });
   </script>
 </body>
 </html>

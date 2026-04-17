@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"New vs Old Tax Regime"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "New vs Old Tax Regime", "item": "https://investsmartcalc.com/schemes/scss/new-vs-old-tax-regime/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I switch to the new tax regime if I invest in SCSS?","acceptedAnswer":{"@type":"Answer","text":"If your total annual income (pension + SCSS interest + rent + other) is below &#8377;12,00,000, the new regime almost certainly gives you zero tax with no effort. If your income exceeds &#8377;12L and you have large 80C/80TTB investments, run a comparison — old regime may save &#8377;20,000–&#8377;50,000 more."}},{"@type":"Question","name":"Can I claim 80C deduction on SCSS under the new tax regime?","acceptedAnswer":{"@type":"Answer","text":"No. Section 80C deductions (including on SCSS principal deposits) are not available under the new tax regime. Only old tax regime allows 80C. If getting the 80C deduction is important to you, stick with the old regime."}},{"@type":"Question","name":"Is SCSS interest effectively tax-free under the new regime?","acceptedAnswer":{"@type":"Answer","text":"For most SCSS-only retirees, yes. Under the new regime, income up to &#8377;12 lakh is tax-free. Maximum SCSS interest (&#8377;30L × 8.2% = &#8377;2.46L/year) is well within this limit. Combine with pension up to &#8377;9.54L and you're still at &#8377;12L — no tax."}},{"@type":"Question","name":"Can I switch between old and new tax regime every year?","acceptedAnswer":{"@type":"Answer","text":"Yes, if your income is from salary, pension, or other non-business sources, you can switch between old and new regime each year at the time of filing your ITR. Compare both each year before filing — the optimal choice may change as your income or investments change."}},{"@type":"Question","name":"I have PPF, ELSS, and SCSS. Which regime is better?","acceptedAnswer":{"@type":"Answer","text":"With PPF, ELSS, and life insurance, your 80C investments reach &#8377;1.5L. Add 80TTB &#8377;50K and standard deduction &#8377;50K — total &#8377;2.5L in deductions under the old regime. If your income is &#8377;14.5L, old regime taxable = &#8377;12L, new regime taxable = &#8377;13.75L (after &#8377;75K std deduction). Old regime wins in this case. Always compare with your actual numbers."}}]}
@@ -183,16 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <tr class="ex-result"><td>&#128161; Verdict</td><td>New regime slightly better (by ~&#8377;5,000). But close — run your own numbers.</td></tr>
         </table>
       </div>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/tax-benefits/" class="ctx-link">SCSS tax benefits — 80C and 80TTB rules <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/form-15h/" class="ctx-link">Submit Form 15H to avoid TDS <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/scss-vs-ppf/" class="ctx-link">SCSS vs PPF — which wins on tax? <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/" class="ctx-link">SCSS Calculator — see your net returns <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="decision-rule">Simple Rule of Thumb</h2>
+      <h2 id="decision-rule">Simple Rule of Thumb</h2>
       <table class="seo-table">
         <thead><tr><th>Your total annual income</th><th>Recommended regime</th></tr></thead>
         <tbody>
@@ -256,14 +247,17 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <div class="eeat-box" role="note" aria-label="Disclaimer and source">
-        <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. Tax regime details per Finance Act 2025 and Income Tax Act 2025 (formerly IT Act 1961). Effective FY 2025-26. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
+        <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. Tax regime details per Finance Act 2025 and Income Tax Act 2025 (formerly IT Act 1961). Effective FY 2026-27. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
       </div>
     </div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/tax-benefits/" class="ctx-link">💸 Full SCSS tax benefits — 80C, 80TTB, TDS <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/form-15h/" class="ctx-link">📝 Submit Form 15H to prevent TDS <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+        
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/tax-benefits/" class="ctx-link">💸 Full SCSS tax benefits — 80C, 80TTB, TDS <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/form-15h/" class="ctx-link">📝 Submit Form 15H to prevent TDS <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
     <div class="related-section">
 
       <div class="related-header">

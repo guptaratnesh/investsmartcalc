@@ -49,7 +49,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -58,7 +58,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "HRA Calculator",
-  "url": "https://investsmartcalc.com/hra-calculator.html",
+  "url": "https://investsmartcalc.com/tax/salary/hra-calculator.html",
   "description": "Calculate HRA tax exemption under Section 10(13A). Enter basic salary, HRA received and rent paid to find exempt and taxable HRA. Metro and non-metro rates applied.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -85,24 +85,7 @@
 }
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://investsmartcalc.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "HRA Calculator",
-      "item": "https://investsmartcalc.com/hra-calculator.html"
-    }
-  ]
-}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "Tax", "item": "https://investsmartcalc.com/tax/"}, {"@type": "ListItem", "position": 3, "name": "Salary", "item": "https://investsmartcalc.com/tax/salary/"}, {"@type": "ListItem", "position": 4, "name": "HRA Calculator", "item": "https://investsmartcalc.com/tax/salary/hra-calculator.html"}]}
 </script>
 <script type="application/ld+json">
 {
@@ -168,7 +151,7 @@
   </nav>
   <main class="calc-page">
     <div class="calc-page-header">
-      <div class="breadcrumb"><a href="/index.html">Home</a> › HRA Calculator</div>
+      <div class="breadcrumb"><a href="/index.html">Home</a> › <a href="/tax/">Tax</a> › <a href="/tax/salary/">Salary</a> › HRA Calculator</div>
       <h1>HRA Calculator</h1>
       <p>Calculate House Rent Allowance tax exemption under Section 10(13A)</p>
     </div>
@@ -194,14 +177,14 @@
             <span>Basic Salary (Monthly)</span>
             <span style="display:flex;align-items:center;gap:6px">
               <span class="input-value" id="basicLabel">₹50,000</span>
-              <span id="basicWarn" style="font-size:11px;color:#e65100;display:none">⚠ &lt;50% CTC</span>
+              <span id="basicWarn" style="font-size:11px;color:#bf360c;display:none">⚠ &lt;50% CTC</span>
             </span>
           </div>
           <input type="range" id="basic" min="10000" max="300000" step="1000" value="50000"
             oninput="syncInput(this,'basicNum','basicLabel','₹',true);checkBasicRule();calculate()">
           <input type="number" class="number-input" id="basicNum" value="50000"
             oninput="syncSlider(this,'basic','basicLabel','₹',true);checkBasicRule();calculate()">
-        <div class="preset-row"><button class="preset-btn" onclick="setPreset(20000)">₹20,000</button><button class="preset-btn" onclick="setPreset(40000)">₹40,000</button><button class="preset-btn" onclick="setPreset(75000)">₹75,000</button><button class="preset-btn" onclick="setPreset(100000)">₹1L</button></div>
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(20000, this)">₹20,000</button><button class="preset-btn" onclick="setPreset(40000, this)">₹40,000</button><button class="preset-btn" onclick="setPreset(75000, this)">₹75,000</button><button class="preset-btn" onclick="setPreset(100000, this)">₹1L</button></div>
           <div style="font-size:11px;color:var(--text-muted);margin-top:6px">📌 Code of Wages 2019: Basic+DA must be ≥ 50% of CTC</div>
         </div>
         <div class="input-group">
@@ -260,7 +243,7 @@
           </div>
           <div class="result-row">
             <span>Taxable HRA</span>
-            <span id="c5" style="color:#e65100">₹0</span>
+            <span id="c5" style="color:#bf360c">₹0</span>
           </div>
         </div>
         <div class="info-box">💡 HRA exemption is the minimum of the 3 conditions. Rent receipts and landlord's PAN (if rent > ₹1L/yr) are required.
@@ -304,7 +287,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/sip/" class="related-card">
-      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">📈</div>
       <div>
         <div class="related-name">SIP Calculator</div>
         <div class="related-desc">Monthly SIP returns</div>
@@ -312,7 +295,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/fd/" class="related-card">
-      <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+      <div class="related-icon" style="background:#fff3e0;color:#bf360c">🏦</div>
       <div>
         <div class="related-name">FD Calculator</div>
         <div class="related-desc">Fixed Deposit returns</div>
@@ -320,7 +303,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/tools/inflation/" class="related-card">
-      <div class="related-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+      <div class="related-icon" style="background:#fff8e1;color:#7c5c00">🔥</div>
       <div>
         <div class="related-name">Inflation Calculator</div>
         <div class="related-desc">Future value of money</div>
@@ -426,7 +409,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -465,7 +448,7 @@
       </div>
     </div>
   </footer>
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js"></script>
   <script>
     let cityMultiplier = 0.5;
     function setCity(btn, type) {
@@ -523,18 +506,20 @@
       document.getElementById('subTaxSaved').textContent = fmt(exemption * 0.30);
     }
     
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('basicNum').value = val;
       document.getElementById('basic').value = val;
-      document.getElementById('basicLabel').textContent = ('₹' ? '₹' + val.toLocaleString('en-IN') : val.toLocaleString('en-IN')) + '';
+      document.getElementById('basicLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('basic'));
       // Highlight active preset
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
-    document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r=>updateSlider(r));
+      calculate();
+        });
   </script>
 </body>
 </html>

@@ -44,7 +44,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -229,6 +229,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"SCSS Calculator 2026 — Senior Citizen Savings Scheme","description":"Free SCSS calculator. Calculate 8.2% p.a. returns, quarterly interest, maturity amount for any deposit.","url":"https://investsmartcalc.com/schemes/scss/","publisher":{"@type":"Organization","name":"InvestSmartCalc"},"dateModified":"2026-04-15","datePublished":"2026-04-15","inLanguage":"en-IN","author":{"@type":"Organization","name":"InvestSmartCalc Research Team"}}
 </script>
+<script src="/assets/js/app.js"></script>
 <script>
 const SCSS = {
   LAST_UPDATED: "April 15, 2026", EFFECTIVE_DATE: "April 1, 2026",
@@ -298,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="ub-body"><strong>Q1 FY 2026-27:</strong> SCSS rate confirmed at <strong>8.2% p.a.</strong> for April&ndash;June 2026 by Ministry of Finance on March 30, 2026. &middot; <a href="/schemes/scss/interest-rate/">Full Rate History &rarr;</a></div>
   </div>
     <div class="calc-page-header">
-      <div class="breadcrumb"><a href="/index.html">Home</a> › <a href="/schemes/scss/">Schemes</a> › SCSS Calculator</div>
+      <div class="breadcrumb"><a href="/index.html">Home</a> › <a href="/schemes/">Schemes</a> › SCSS Calculator</div>
       <h1>SCSS Calculator</h1>
       <p>Senior Citizen Savings Scheme — Calculate quarterly interest &amp; maturity at 8.2% p.a.</p>
     </div>
@@ -309,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <span class="trust-pill-sc">✔ Max ₹30 lakh deposit</span>
       <span class="trust-pill-sc">✔ Quarterly interest payout</span>
       <span class="trust-pill-sc">✔ 80C deduction eligible</span>
-      <span class="trust-pill-sc">✔ Updated FY 2025-26</span>
+      <span class="trust-pill-sc">✔ Updated FY 2026-27</span>
     </div>
 
     <div class="calc-layout">
@@ -424,7 +425,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
 
-        <div class="info-box">💡 SCSS interest is <strong>taxable</strong>. From FY 2025-26 (Budget 2025), TDS for senior citizens (60+) only if annual interest exceeds <strong>₹1 lakh</strong>. Submit Form 15H to avoid TDS. New regime: income up to ₹12L is tax-free. Principal qualifies for <strong>Section 80C</strong> deduction up to ₹1.5L (old regime only).
+        <div class="info-box">💡 SCSS interest is <strong>taxable</strong>. From FY 2026-27 (Budget 2025), TDS for senior citizens (60+) only if annual interest exceeds <strong>₹1 lakh</strong>. Submit Form 15H to avoid TDS. New regime: income up to ₹12L is tax-free. Principal qualifies for <strong>Section 80C</strong> deduction up to ₹1.5L (old regime only).
           <div class="share-bar">
             <div class="share-bar-title">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
@@ -479,7 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="related-arrow">→</span>
         </a>
         <a href="/fd/" class="related-card">
-          <div class="related-icon" style="background:#fff3e0;color:#e65100">🏦</div>
+          <div class="related-icon" style="background:#fff3e0;color:#bf360c">🏦</div>
           <div>
             <div class="related-name">FD Calculator</div>
             <div class="related-desc">Fixed Deposit returns</div>
@@ -503,7 +504,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="related-arrow">→</span>
         </a>
         <a href="/investment/swp/" class="related-card">
-          <div class="related-icon" style="background:#f1f8e9;color:#558b2f">🔄</div>
+          <div class="related-icon" style="background:#f1f8e9;color:#33691e">🔄</div>
           <div>
             <div class="related-name">SWP Calculator</div>
             <div class="related-desc">Systematic withdrawal plan</div>
@@ -777,7 +778,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -816,7 +817,6 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </footer>
 
-  <script src="/assets/js/app.js" defer></script>
   <script>
     let currentTenure = 5;
 
@@ -886,9 +886,10 @@ document.addEventListener("DOMContentLoaded", () => {
         <td><strong style="color:var(--green-dark)">${fmtFull(totalInterest)}</strong></td>
       </tr>`;
     }
-
-    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+      calculate();
+        });
   </script>
 
   <style>

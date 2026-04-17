@@ -30,6 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <script src="/assets/js/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
   <style>
     /* ══════════════════════════════════════════════════════════════════
@@ -561,7 +562,7 @@
     "width": 200,
     "height": 60
   },
-  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2025-26.",
+  "description": "Free online financial calculators for India. SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity and Salary calculators. Updated for FY 2026-27.",
   "sameAs": []
 }
 </script>
@@ -570,7 +571,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "SWP Calculator",
-  "url": "https://investsmartcalc.com/swp-calculator.html",
+  "url": "https://investsmartcalc.com/investment/swp/",
   "description": "Calculate how long your mutual fund corpus lasts with monthly SWP withdrawals. Get instant results, year-wise breakdown, and corpus depletion alerts. Free SWP calculator India.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
@@ -614,7 +615,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "SWP Calculator",
-      "item": "https://investsmartcalc.com/swp-calculator.html"
+      "item": "https://investsmartcalc.com/investment/swp/"
     }
   ]
 }
@@ -723,7 +724,7 @@
             oninput="syncInput(this,'wdNum','wdLabel','₹',true);calculate()">
           <input type="number" class="number-input" id="wdNum" value="20000"
             oninput="syncSlider(this,'withdrawal','wdLabel','₹',true);calculate()">
-        <div class="preset-row"><button class="preset-btn" onclick="setPreset(5000)">₹5,000</button><button class="preset-btn" onclick="setPreset(10000)">₹10,000</button><button class="preset-btn" onclick="setPreset(20000)">₹20,000</button><button class="preset-btn" onclick="setPreset(50000)">₹50,000</button></div>
+        <div class="preset-row"><button class="preset-btn" onclick="setPreset(5000, this)">₹5,000</button><button class="preset-btn" onclick="setPreset(10000, this)">₹10,000</button><button class="preset-btn" onclick="setPreset(20000, this)">₹20,000</button><button class="preset-btn" onclick="setPreset(50000, this)">₹50,000</button></div>
         </div>
         <div class="input-group">
           <div class="input-label"><span>Expected Return Rate (p.a.)</span><span class="input-value" id="rateLabel">12%</span></div>
@@ -815,7 +816,7 @@
   </div>
   <div class="related-grid">
     <a href="/investment/sip/" class="related-card">
-      <div class="related-icon" style="background:#e8f5e9;color:#1a9e5c">📈</div>
+      <div class="related-icon" style="background:#e8f5e9;color:#2e7d32">📈</div>
       <div>
         <div class="related-name">SIP Calculator</div>
         <div class="related-desc">Monthly SIP returns</div>
@@ -823,7 +824,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/investment/lumpsum/" class="related-card">
-      <div class="related-icon" style="background:#e3f2fd;color:#1976d2">💰</div>
+      <div class="related-icon" style="background:#e3f2fd;color:#1565c0">💰</div>
       <div>
         <div class="related-name">Lumpsum Calculator</div>
         <div class="related-desc">One-time investment</div>
@@ -839,7 +840,7 @@
       <span class="related-arrow">→</span>
     </a>
     <a href="/tools/inflation/" class="related-card">
-      <div class="related-icon" style="background:#fff8e1;color:#f9a825">🔥</div>
+      <div class="related-icon" style="background:#fff8e1;color:#7c5c00">🔥</div>
       <div>
         <div class="related-name">Inflation Calculator</div>
         <div class="related-desc">Future value of money</div>
@@ -892,13 +893,13 @@
     <div class="use-case-card">
       <div class="use-case-icon">🏖️</div>
       <div class="use-case-title">SWP for Retirement Income</div>
-      <div class="use-case-desc">Retire with ₹50L–₹1Cr and withdraw a fixed monthly amount. Your equity corpus keeps growing, giving you <a href="#swp-for-retirement-income-in-india" style="color:#1a9e5c;font-weight:600">inflation-beating income</a> for 25–30 years.</div>
+      <div class="use-case-desc">Retire with ₹50L–₹1Cr and withdraw a fixed monthly amount. Your equity corpus keeps growing, giving you <a href="#swp-for-retirement-income-in-india" style="color:#2e7d32;font-weight:600">inflation-beating income</a> for 25–30 years.</div>
       <a href="#swp-for-retirement-income-in-india" class="use-case-link">Learn retirement strategy →</a>
     </div>
     <div class="use-case-card">
       <div class="use-case-icon">💼</div>
       <div class="use-case-title">SWP for Passive Income</div>
-      <div class="use-case-desc">Already have a lump sum from a bonus, inheritance, or property sale? Use <a href="/investment/swp/basics/what-is-swp.html"l" style="color:#1a9e5c;font-weight:600">SWP as a salary replacement</a> — generate ₹15,000–₹50,000/month while your investment grows.</div>
+      <div class="use-case-desc">Already have a lump sum from a bonus, inheritance, or property sale? Use <a href="/investment/swp/basics/what-is-swp.html"l" style="color:#2e7d32;font-weight:600">SWP as a salary replacement</a> — generate ₹15,000–₹50,000/month while your investment grows.</div>
       <a href="/investment/swp/basics/what-is-swp.html"l" class="use-case-link">See passive income guide →</a>
     </div>
   </div>
@@ -998,7 +999,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
-        <p>Free, accurate financial calculators for India. Updated for FY 2025-26.</p>
+        <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
       <div class="footer-col"><h4>Calculators</h4><ul>
@@ -1050,7 +1051,6 @@
     🔄 Try Another Scenario — Scroll to Calculator
   </div>
 
-  <script src="/assets/js/app.js" defer></script>
   <script>
     // ── Formatting helpers ──
     function fmt(v) {
@@ -1387,18 +1387,19 @@
       if (miniS) miniS.textContent = finalCorpus <= 0 ? '⚠️ Corpus depletes!' : '✅ Corpus sustained';
     }
     
-    function setPreset(val) {
+    function setPreset(val, btn) {
       document.getElementById('wdNum').value = val;
       document.getElementById('withdrawal').value = val;
       document.getElementById('wdLabel').textContent = '₹' + val.toLocaleString('en-IN');
       updateSlider(document.getElementById('withdrawal'));
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
+      (btn || document.activeElement).classList.add('active');
       calculate();
     }
-
-    document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
-    calculate();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type=range]').forEach(r => updateSlider(r));
+      calculate();
+        });
   </script>
 </body>
 </html>

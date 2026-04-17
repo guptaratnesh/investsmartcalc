@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"},{"@type":"ListItem","position":2,"name":"SCSS","item":"https://investsmartcalc.com/schemes/scss/"},{"@type":"ListItem","position":3,"name":"Quarterly Interest Calculator"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://investsmartcalc.com/"}, {"@type": "ListItem", "position": 2, "name": "SCSS", "item": "https://investsmartcalc.com/schemes/scss/"}, {"@type": "ListItem", "position": 3, "name": "Quarterly Interest Calculator", "item": "https://investsmartcalc.com/schemes/scss/quarterly-interest-calculator/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the quarterly interest on &#8377;30 lakh SCSS?","acceptedAnswer":{"@type":"Answer","text":"&#8377;61,500 per quarter (&#8377;30,00,000 × 8.2% ÷ 4). This is credited on 1st April, 1st July, 1st October, and 1st January every year to your linked savings account."}},{"@type":"Question","name":"Does SCSS pay interest on the date I open the account?","acceptedAnswer":{"@type":"Answer","text":"No. Interest accrues from the date of deposit, but the first credit happens on the next scheduled quarterly date (1st of April, July, October, or January). If you open in May, your first credit (for May–June interest) arrives on 1st July."}},{"@type":"Question","name":"Can I get SCSS interest monthly instead of quarterly?","acceptedAnswer":{"@type":"Answer","text":"No. SCSS mandatorily pays interest quarterly — there is no monthly option within SCSS. If you need monthly income, consider POMIS (7.4% p.a.) which pays monthly. Many retirees hold both for a combination of quarterly + monthly income."}},{"@type":"Question","name":"What happens to my SCSS interest if I don't withdraw it?","acceptedAnswer":{"@type":"Answer","text":"The interest is credited to your linked savings account automatically via ECS. If you don't spend it, it remains in your savings account earning savings account interest (typically 2.5–3.5%). It does not compound back into SCSS."}}]}
@@ -167,16 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </tbody>
       </table>
       <p>If 1st falls on a bank/post office holiday, interest is credited on the next working day. Interest is auto-credited via ECS/NACH to your linked savings account.</p>
-      <div class="contextual-links-box">
-        <div class="ctx-header">🔗 Also read</div>
-        <div class="ctx-links">
-          <a href="/schemes/scss/" class="ctx-link">SCSS Calculator — full interactive tool <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/maturity-calculator/" class="ctx-link">Calculate total maturity amount <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/retirement-income-plan/" class="ctx-link">Build ₹30,000+/month income plan <span class="ctx-arrow">→</span></a>
-          <a href="/schemes/scss/extension-calculator/" class="ctx-link">What happens after 5 years? <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
-<h2 id="formula">Quick Formula — Calculate Your Own</h2>
+      <h2 id="formula">Quick Formula — Calculate Your Own</h2>
       <div class="formula-box">
         <span class="f-label">SCSS Quarterly Interest Formula</span>
         <span class="f-main">Quarterly Interest = Principal &times; (<span data-scss="INTEREST_RATE">8.2</span> &divide; 400)</span>
@@ -253,12 +244,15 @@ document.addEventListener('DOMContentLoaded', function() {
         <strong>&#128203; Disclaimer &amp; Source:</strong> All SCSS data is sourced from the <strong>Ministry of Finance, Government of India</strong> and India Post official guidelines. Current rate of <strong data-scss="INTEREST_RATE">8.2%</strong> p.a. is effective from <span data-scss="EFFECTIVE_DATE">April 1, 2026</span> (<span data-scss="QUARTER">Q1 FY 2026-27</span>). Next review expected: <span data-scss="NEXT_REVIEW">June 30, 2026</span>. Credit dates per SCSS Rules 2004, Rule 8. ECS guidelines per India Post and RBI NACH framework. This page was last reviewed on <strong data-scss="LAST_UPDATED">April 15, 2026</strong>. Content is for informational purposes only and does not constitute financial advice. Consult a SEBI-registered financial advisor before making investment decisions. &middot; <a href="/disclaimer.html">Full Disclaimer</a>
       </div>
     </div>
-        <div class="ctx-links">
-        <a href="/schemes/scss/maturity-calculator/" class="ctx-link">📈 SCSS maturity returns table <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/extension-calculator/" class="ctx-link">📆 Returns for 5+3 year tenure <span class="ctx-arrow">→</span></a>
-        <a href="/schemes/scss/retirement-income-plan/" class="ctx-link">💡 Build ₹30,000+/month retirement income <span class="ctx-arrow">→</span></a>
-        </div>
-      </div>
+        
+  <div class="contextual-links-box">
+    <div class="ctx-header">🔗 Also read</div>
+    <div class="ctx-links">
+      <a href="/schemes/scss/maturity-calculator/" class="ctx-link">📈 SCSS maturity returns table <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/extension-calculator/" class="ctx-link">📆 Returns for 5+3 year tenure <span class="ctx-arrow">→</span></a>
+      <a href="/schemes/scss/retirement-income-plan/" class="ctx-link">💡 Build ₹30,000+/month retirement income <span class="ctx-arrow">→</span></a>
+    </div>
+  </div>
     <div class="related-section">
 
       <div class="related-header">
