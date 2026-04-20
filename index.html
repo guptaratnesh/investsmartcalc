@@ -18,6 +18,7 @@
   <meta property="og:title" content="InvestSmartCalc — Free Financial Calculators India | InvestSmartCalc">
   <meta property="og:description" content="Free online financial calculators for India – SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity & more. Fast, accurate, mobile-friendly. Updated for FY 2026-27.">
   <meta property="og:site_name" content="InvestSmartCalc">
+  <meta property="og:locale" content="en_IN">
   <!-- Twitter Card -->
   <meta property="og:image" content="https://investsmartcalc.com/assets/images/social/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -26,6 +27,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="InvestSmartCalc — Free Financial Calculators India | InvestSmartCalc">
   <meta name="twitter:description" content="Free online financial calculators for India – SIP, EMI, PPF, FD, Income Tax, HRA, Gratuity & more. Fast, accurate, mobile-friendly. Updated for FY 2026-27.">
+  <meta name="theme-color" content="#1a9e5c">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,6 +66,9 @@
     "query-input": "required name=search_term_string"
   }
 }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investsmartcalc.com/"}]}
 </script>
 </head>
 <body>
@@ -119,6 +124,8 @@
         <a href="/fd/">FD</a>
     </div>
   </nav>
+  <main id="main-content">
+
 
   <!-- HERO -->
   <section class="hero">
@@ -391,14 +398,16 @@
       </div>
     </div>
   </div>
-  <footer class="footer">
+  
+  </main>
+<footer class="footer">
     <div class="footer-main">
       <div class="footer-brand">
         <span class="logo-text">InvestSmart<span class="accent">Calc</span></span>
         <p>Free, accurate financial calculators for India. Updated for FY 2026-27.</p>
         <div class="dark-toggle-wrap"><span class="toggle-icon">☀️</span><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"></button><span>Dark Mode</span></div>
       </div>
-      <div class="footer-col"><h4>Calculators</h4><ul>
+      <div class="footer-col"><h4 aria-hidden="true">Calculators</h4><ul>
         <li><a href="/investment/sip/">SIP Calculator</a></li>
         <li><a href="/emi/">EMI Calculator</a></li>
         <li><a href="/fd/">FD Calculator</a></li>
@@ -406,7 +415,7 @@
         <li><a href="/tax/">Income Tax</a></li>
         <li><a href="/tax/salary/">Salary Breakup</a></li>
       </ul></div>
-      <div class="footer-col"><h4>More Tools</h4><ul>
+      <div class="footer-col"><h4 aria-hidden="true">More Tools</h4><ul>
         <li><a href="/investment/swp/">SWP Calculator</a></li>
         <li><a href="/investment/lumpsum/">Lumpsum</a></li>
         <li><a href="/schemes/rd/">RD Calculator</a></li>
@@ -414,7 +423,7 @@
         <li><a href="/schemes/kvp/">KVP Calculator</a></li>
         <li><a href="/schemes/pomis/">POMIS Calculator</a></li>
       </ul></div>
-      <div class="footer-col"><h4>Company</h4><ul>
+      <div class="footer-col"><h4 aria-hidden="true">Company</h4><ul>
         <li><a href="/about.html">About Us</a></li>
         <li><a href="/disclaimer.html">Disclaimer</a></li>
         <li><a href="/privacy.html">Privacy Policy</a></li>
